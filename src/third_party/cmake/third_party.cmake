@@ -6,10 +6,6 @@
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 ###############################################################################
-# 定义USE_BUFFEREVENT宏，使用buffer event方式。注释掉则不使用buffer event方式。
-add_definitions(-DUSE_BUFFEREVENT)
-
-###############################################################################
 # c++11
 if (CXX_LANGUAGE)
     include(CheckCXXCompilerFlag)
@@ -21,12 +17,14 @@ endif ()
 # treat_warn_as_error: TRUR/FALSE
 function(SetCompileFlags treat_warn_as_error)
     if (${treat_warn_as_error})
-        set(COMPILE_FLAGS "-g -Wall -Werror -Wno-deprecated-declarations -Wno-unused-function -Wno-unused-result -Wno-unused-variable -Wno-unused-but-set-variable")
+        # set(COMPILE_FLAGS "-g -Wall -Wextra -Werror -Wno-deprecated-declarations -Wno-unused-function -Wno-unused-result -Wno-unused-variable -Wno-unused-but-set-variable")
+        set(COMPILE_FLAGS "-g -Wall -Wextra -Werror -Wno-deprecated-declarations")
     else (${treat_warn_as_error})
-        set(COMPILE_FLAGS "-g -Wall")
+        set(COMPILE_FLAGS "-g -Wall -Wextra")
     endif ()
 
-    set(CPP11_FLAG "-std=c++11")
+    # set(CXX11_FLAG "-std=c++11")
+    set(CXX11_FLAG "-std=gnu++11")
 
     if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
         set(OPTIMIZE_FLAG "-O0")
@@ -35,12 +33,10 @@ function(SetCompileFlags treat_warn_as_error)
 
         if (COMPILER_SUPPORTS_CXX11)
             # set(CMAKE_CXX_STANDARD 11)
-            set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} ${OPTIMIZE_FLAG} ${COMPILE_FLAGS} ${CPP11_FLAG}" PARENT_SCOPE)
+            set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} ${OPTIMIZE_FLAG} ${COMPILE_FLAGS} ${CXX11_FLAG}" PARENT_SCOPE)
         else (COMPILER_SUPPORTS_CXX11)
             set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} ${OPTIMIZE_FLAG} ${COMPILE_FLAGS}" PARENT_SCOPE)
         endif ()
-
-        # add_definitions(-DENABLE_DEBUG) # 定义一个宏，在c++中可以使用
     elseif (${CMAKE_BUILD_TYPE} STREQUAL "Release")
         set(OPTIMIZE_FLAG "-O2")
 
@@ -48,19 +44,19 @@ function(SetCompileFlags treat_warn_as_error)
 
         if (COMPILER_SUPPORTS_CXX11)
             # set(CMAKE_CXX_STANDARD 11)
-            set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} ${OPTIMIZE_FLAG} ${COMPILE_FLAGS} ${CPP11_FLAG}" PARENT_SCOPE)
+            set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} ${OPTIMIZE_FLAG} ${COMPILE_FLAGS} ${CXX11_FLAG}" PARENT_SCOPE)
         else (COMPILER_SUPPORTS_CXX11)
             set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} ${OPTIMIZE_FLAG} ${COMPILE_FLAGS}" PARENT_SCOPE)
         endif ()
 
-        add_definitions(-DNDEBUG)
+        add_definitions(-DNDEBUG) # 定义一个宏，在c++代码中可以使用
     endif ()
 endfunction()
 
 ###############################################################################
 # test and gtest
 include(CTest)
-set(GTEST_EXE_OPTS --gtest_shuffle --gtest_color=yes --gtest_output=xml:Report/)
+set(GTEST_EXE_OPTS --gtest_shuffle --gtest_color=yes --gtest_output=xml:report/)
 
 ###############################################################################
 # function: SetOutputDir
@@ -98,10 +94,10 @@ function(CreateVersionFile dir proj_name lib_name)
     STRING(TOUPPER ${lib_name} UPPER_LIB_NAME)
 
     FILE(WRITE ${dir}/version.h
-            "\#ifndef " ${UPPER_PROJ_NAME} "_" ${UPPER_LIB_NAME} "_VERSION_H_ \n"
-            "\#define " ${UPPER_PROJ_NAME} "_" ${UPPER_LIB_NAME} "_VERSION_H_\n\n"
-            "\#define " ${UPPER_PROJ_NAME} "_" ${UPPER_LIB_NAME} "_VERSION \"" ${BUILD_VERSION} "\"\n\n"
-            "\#endif // " ${UPPER_PROJ_NAME} "_" ${UPPER_LIB_NAME} "_VERSION_H_\n\n")
+            "\#ifndef " ${UPPER_PROJ_NAME} "_SRC_VERSION_H_ \n"
+            "\#define " ${UPPER_PROJ_NAME} "_SRC_VERSION_H_\n\n"
+            "\#define " ${UPPER_PROJ_NAME} "_VERSION \"" ${BUILD_VERSION} "\"\n\n"
+            "\#endif // " ${UPPER_PROJ_NAME} "_SRC_VERSION_H_\n\n")
 endfunction()
 
 ###############################################################################
@@ -165,7 +161,7 @@ endif ()
 # 下列include需要先定义THIRD_PARTY_DIR
 include(${THIRD_PARTY_DIR}/cmake/common_define.cmake)
 
-# 下列几个库的include路径有修改，覆盖common_define.cmake中的值
+# 下列几个库的include和lib路径有修改，需要覆盖common_define.cmake中的值
 set(LIBXML2_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/libxml2/include/libxml2)
 set(IMAGE_MAGICK_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/image_magick/include/ImageMagick-6)
 set(ZOOKEEPER_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/zookeeper/include/zookeeper)

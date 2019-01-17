@@ -1,11 +1,12 @@
 #include "local_logic.h"
-#include "common_define.h"
+#include <errno.h>
+#include <string.h>
+#include <unistd.h>
 #include "log_util.h"
 #include "tcp_scheduler_interface.h"
 
-namespace raw_tcp
+namespace tcp
 {
-
 LocalLogic::LocalLogic()
 {
 }
@@ -31,7 +32,7 @@ void LocalLogic::Release()
 
 int LocalLogic::Initialize(const void* ctx)
 {
-    if (tcp::LogicInterface::Initialize(ctx) != 0)
+    if (LogicInterface::Initialize(ctx) != 0)
     {
         return -1;
     }
@@ -61,34 +62,31 @@ void LocalLogic::OnReload()
 {
 }
 
-void LocalLogic::OnClientConnected(const ConnGuid* conn_guid)
+void LocalLogic::OnClientConnected(const ConnGUID* conn_guid)
 {
-    LOG_TRACE("conn connected, " << conn_guid);
+    LOG_DEBUG("conn connected, " << conn_guid);
 }
 
-void LocalLogic::OnClientClosed(const ConnGuid* conn_guid)
+void LocalLogic::OnClientClosed(const ConnGUID* conn_guid)
 {
-    LOG_TRACE("conn closed, " << conn_guid);
+    LOG_DEBUG("conn closed, " << conn_guid);
 }
 
 #if defined(USE_BUFFEREVENT)
-
-void LocalLogic::OnRecvClientRawData(const ConnGuid* conn_guid, const void* data, size_t data_len)
+void LocalLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
-    LOG_TRACE("recv client raw data, len: " << data_len << ", " << *conn_guid);
+    LOG_DEBUG("recv client data, len: " << len << ", " << *conn_guid);
 
     // echo, for test only
-    logic_ctx_.scheduler->SendRawToClient(conn_guid, data, data_len);
+    logic_ctx_.scheduler->SendToClient(conn_guid, data, len);
 }
-
 #else
-
-void LocalLogic::OnClientRawData(bool& closed, const ConnGuid* conn_guid, int sock_fd)
+void LocalLogic::OnRecvClientData(bool& closed, const ConnGUID* conn_guid, int sock_fd)
 {
-    LOG_TRACE("client raw data coming, socket fd: " << sock_fd << ", " << *conn_guid);
+    LOG_DEBUG("client data coming, socket fd: " << sock_fd << ", " << *conn_guid);
 
-    char buf[524288 + 1] = "";
-    int max_read_len = 524288;
+    char buf[16384] = "";
+    int max_read_len = 16384;
 
     while (true)
     {
@@ -102,12 +100,13 @@ void LocalLogic::OnClientRawData(bool& closed, const ConnGuid* conn_guid, int so
         else if (n < 0)
         {
             const int err = errno;
+
             if (EINTR == err)
             {
-                // 被中断了，可以继续读
+                // 被信号中断了，可以继续读
                 continue;
             }
-            else if (EAGAIN == err)
+            else if (EAGAIN == err || EWOULDBLOCK == err)
             {
                 // 没有数据可读了
                 return;
@@ -121,16 +120,24 @@ void LocalLogic::OnClientRawData(bool& closed, const ConnGuid* conn_guid, int so
             else
             {
                 LOG_ERROR("read error, n: " << n << ", socket fd: " << sock_fd << ", errno: " << err
-                              << ", err msg: " << strerror(err));
+                          << ", err msg: " << strerror(err));
                 return;
             }
         }
 
-        LOG_TRACE("recved len: " << n);
+        LOG_DEBUG("read len: " << n);
 
         // echo, for test only
-        logic_ctx_.scheduler->SendRawToClient(conn_guid, buf, n);
+        logic_ctx_.scheduler->SendToClient(conn_guid, buf, n);
     }
 }
 #endif
+
+void LocalLogic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
+{
+    (void) conn_guid;
+    (void) source_thread;
+    (void) data;
+    (void) len;
+}
 }

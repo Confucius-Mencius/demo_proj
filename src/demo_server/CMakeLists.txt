@@ -29,7 +29,6 @@ SetOutputDir(${PROJECT_SOURCE_DIR}/../build/output ${PROJ_NAME})
 # 打印编译选项
 ShowBuildOptions()
 
-
 # proj util lib
 set(UTIL_LIB_NAME util)
 
@@ -39,6 +38,3 @@ set(PROJ_INC_DIR ${PROJECT_SOURCE_DIR}/${UTIL_LIB_NAME}/inc)
 ###############################################################################
 # sub dir
 add_subdirectory(tcp)
-add_subdirectory(http)
-add_subdirectory(udp)
-add_subdirectory(raw_tcp)

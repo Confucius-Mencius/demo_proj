@@ -1,8 +1,10 @@
 #include "logic.h"
+#include "log_util.h"
+#include "tcp_scheduler_interface.h"
 
 namespace tcp
 {
-Logic::Logic() : msg_handler_mgr_()
+Logic::Logic()
 {
 }
 
@@ -32,34 +34,20 @@ int Logic::Initialize(const void* ctx)
         return -1;
     }
 
-    if (msg_handler_mgr_.Initialize(&logic_ctx_) != 0)
-    {
-        return -1;
-    }
-
     return 0;
 }
 
 void Logic::Finalize()
 {
-    msg_handler_mgr_.Finalize();
 }
 
 int Logic::Activate()
 {
-    msg_handler_mgr_.SetLogic(this);
-
-    if (msg_handler_mgr_.Activate() != 0)
-    {
-        return -1;
-    }
-
     return 0;
 }
 
 void Logic::Freeze()
 {
-    msg_handler_mgr_.Freeze();
 }
 
 void Logic::OnStop()
@@ -71,25 +59,37 @@ void Logic::OnReload()
 {
 }
 
-void Logic::OnClientConnected(const ConnGuid* conn_guid)
+void Logic::OnClientConnected(const ConnGUID* conn_guid)
 {
+    (void) conn_guid;
 }
 
-void Logic::OnClientClosed(const ConnGuid* conn_guid)
+void Logic::OnClientClosed(const ConnGUID* conn_guid)
 {
+    (void) conn_guid;
 }
 
 #if defined(USE_BUFFEREVENT)
-
-void Logic::OnRecvClientRawData(const ConnGuid* conn_guid, const void* data, size_t data_len)
+void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
+    (void) conn_guid;
+    (void) data;
+    (void) len;
 }
-
 #else
-
-void Logic::OnClientRawData(bool& closed, const ConnGuid* conn_guid, int sock_fd)
+void Logic::OnRecvClientData(bool& closed, const ConnGUID* conn_guid, int sock_fd)
 {
-
+    (void) closed;
+    (void) conn_guid;
+    (void) sock_fd;
 }
 #endif
+
+void Logic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
+{
+    (void) conn_guid;
+    (void) source_thread;
+    (void) data;
+    (void) len;
+}
 }

@@ -69,7 +69,7 @@ set(JSONCPP_LIB_NAME jsoncpp)
 
 set(LIBEVENT_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/libevent/include)
 set(LIBEVENT_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/libevent/lib)
-set(LIBEVENT_LIB_NAME event_core event_extra event_pthreads event_openssl)
+set(LIBEVENT_LIB_NAME event_core event_extra event_pthreads)
 
 set(LIBEVHTP_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/libevhtp/include)
 set(LIBEVHTP_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/libevhtp/lib)
@@ -173,9 +173,9 @@ set(ZEROMQ_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/zeromq/include)
 set(ZEROMQ_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/zeromq/lib)
 set(ZEROMQ_LIB_NAME zmq)
 
-set(LIBUDT_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/libudt/include)
-set(LIBUDT_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/libudt/lib)
-set(LIBUDT_LIB_NAME udt)
+set(UDT_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/udt/include)
+set(UDT_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/udt/lib)
+set(UDT_LIB_NAME udt)
 
 set(MYSQL_CLIENT_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/mysql_client/include)
 set(MYSQL_CLIENT_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/mysql_client/lib)
@@ -209,8 +209,16 @@ set(FFMPEG_BIN_NAME ffmpeg ffprobe)
 
 set(SPDLOG_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/spdlog/include)
 
-set(LIBRTMP_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/librtmp/include)
-set(LIBRTMP_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/librtmp/lib)
-set(LIBRTMP_BIN_DIR ${THIRD_PARTY_INSTALL_PREFIX}/librtmp/bin)
-set(LIBRTMP_LIB_NAME rtmp)
-set(LIBRTMP_BIN_NAME rtmpdump rtmpgw rtmpsrv rtmpsuck)
+set(RTMPDUMP_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/rtmpdump/include)
+set(RTMPDUMP_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/rtmpdump/lib)
+set(RTMPDUMP_BIN_DIR ${THIRD_PARTY_INSTALL_PREFIX}/rtmpdump/bin)
+set(RTMPDUMP_LIB_NAME rtmp)
+set(RTMPDUMP_BIN_NAME rtmpdump rtmpgw rtmpsrv rtmpsuck)
+
+set(FDK_AAC_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/fdk_aac/include)
+set(FDK_AAC_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/fdk_aac/lib)
+set(FDK_AAC_LIB_NAME fdk_aac)
+
+set(X264_INC_DIR ${THIRD_PARTY_INSTALL_PREFIX}/x264/include)
+set(X264_LIB_DIR ${THIRD_PARTY_INSTALL_PREFIX}/x264/lib)
+set(X264_LIB_NAME x264)

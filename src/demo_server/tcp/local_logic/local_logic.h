@@ -1,15 +1,15 @@
-#ifndef DEMO_SERVER_TCP_LOGICS_LOGIC_H_
-#define DEMO_SERVER_TCP_LOGICS_LOGIC_H_
+#ifndef DEMO_SERVER_TCP_LOCAL_LOGIC_LOCAL_LOGIC_H_
+#define DEMO_SERVER_TCP_LOCAL_LOGIC_LOCAL_LOGIC_H_
 
-#include "tcp_logic_interface.h"
+#include "tcp_local_logic_interface.h"
 
 namespace tcp
 {
-class Logic : public LogicInterface
+class LocalLogic : public TheLocalLogicInterface
 {
 public:
-    Logic();
-    virtual ~Logic();
+    LocalLogic();
+    virtual ~LocalLogic();
 
     ///////////////////////// ModuleInterface /////////////////////////
     const char* GetVersion() const override;
@@ -43,4 +43,4 @@ public:
 };
 }
 
-#endif // DEMO_SERVER_TCP_LOGICS_LOGIC_H_
+#endif // DEMO_SERVER_TCP_LOCAL_LOGIC_LOCAL_LOGIC_H_
