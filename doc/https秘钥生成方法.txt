@@ -1,0 +1,10 @@
+openssl genrsa -out https.key 1024 
+openssl req -new -x509 -key https.key -out https.crt
+第二个命名会有交互
+Common Name填ip地址
+其它的依次填：
+cn
+hubei
+wuhan
+moon
+moon

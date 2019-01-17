@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+XML中的特殊符号只有5种，<、>、&、’和”。
+这5种特殊号相对应的字符如下：
+&lt;        <       
+&gt;        >       
+&amp;       &       
+&apos;      '       
+&quot;      "        
+-->
+
+<conf>
+    <gperftools>
+        <!-- =1：开启cpu剖析，=0不开启cpu剖析。不配置则默认为0 -->
+        <enable_cpu_profiling>0</enable_cpu_profiling>
+        <!-- =1：开启内存剖析，=0不开启内存剖析。不配置则默认为0 -->
+        <enable_mem_profiling>0</enable_mem_profiling>
+        <!-- 是否立即清理空闲内存池，=1：清理，=0：不清理。不配置则默认为0 -->
+        <release_free_mem>0</release_free_mem>
+    </gperftools>
+
+    <!-- 定时检查配置文件是否有改动，有改动则自动reload。不配置或配置为0则不启动定时检查，单位：秒。修改此配置需要重启进程 -->
+    <conf_check_interval>60</conf_check_interval>
+
+    <tcp>
+        <!-- tcp监听地址和端口 -->
+        <addr_port>0.0.0.0:10000</addr_port>
+
+        <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
+        <conn_count_limit>0</conn_count_limit>
+
+        <inactive_conn>
+            <!-- 定时检查不再活跃的客户端连接并关闭，inactive_conn_check_interval是定时检查间隔，不配置或配置为0则不启动该定时器 -->
+            <check_interval>
+                <sec>60</sec>
+                <usec>0</usec>
+            </check_interval>
+
+            <!-- 从上次接收消息算起，持续多久未接收新的消息，即认为该连接不再活跃。单位：秒 -->
+            <life>1800</life>
+        </inactive_conn>
+
+        <!-- =1：对消息做checksum校验，=0：不做。不配置则默认为1 -->
+        <do_checksum>1</do_checksum>
+
+        <!-- 消息体的最大长度，单位：字节。不配置则使用默认值1048576（1M） -->
+        <max_msg_body_len>1048576</max_msg_body_len>
+
+        <part_msg>
+            <!-- 定时检查不完整消息间隔，单位：秒。配置为0或者不配置则使用默认值：5秒 -->
+            <check_interval>5</check_interval>
+
+            <!-- 从上次接收到部分消息算起，持续多久未接收到一个完整的消息，即认为该连接非法。单位：秒。配置为0或者不配置则使用默认值：60秒 -->
+            <conn_life>60</conn_life>
+        </part_msg>
+
+        <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
+        <thread_count>2</thread_count>
+
+        <!-- tcp logic_so_group，可配置多个logic_so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+        <logic_so_group>
+            <logic_so>./libtcp_logic.so</logic_so>
+        </logic_so_group>
+    </tcp>
+
+    <raw_tcp>
+        <!-- tcp监听地址和端口 -->
+        <addr_port>0.0.0.0:10001</addr_port>
+
+        <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
+        <conn_count_limit>0</conn_count_limit>
+
+        <inactive_conn>
+            <!-- 定时检查不再活跃的客户端连接并关闭，inactive_conn_check_interval是定时检查间隔，不配置或配置为0则不启动该定时器 -->
+            <check_interval>
+                <sec>60</sec>
+                <usec>0</usec>
+            </check_interval>
+
+            <!-- 从上次接收消息算起，持续多久未接收新的消息，即认为该连接不再活跃。单位：秒 -->
+            <life>1800</life>
+        </inactive_conn>
+
+        <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
+        <thread_count>2</thread_count>
+
+        <!-- 一个tcp线程内所有的logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <local_logic_so>./libraw_tcp_local_logic.so</local_logic_so>
+
+        <!-- tcp logic_so_group，可配置多个logic_so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+        <logic_so_group>
+            <logic_so>./libraw_tcp_logic.so</logic_so>
+        </logic_so_group>
+    </raw_tcp>
+
+    <http>
+        <!-- http监听地址和端口 -->
+        <http_addr_port>0.0.0.0:8080</http_addr_port>
+
+        <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
+        <conn_count_limit>0</conn_count_limit>
+
+        <!-- http头的大小限制，单位：字节。不配置或配置为0则使用系统默认值 -->
+        <max_header_size>32768</max_header_size>
+        
+        <!-- http体的大小限制，单位：字节。不配置或配置为0则使用系统默认值 -->
+        <max_body_size>8388608</max_body_size>
+
+        <!-- the timeout can be used by the server to close idle connections。不配置或全配置为0，则服务器不主动断开空闲连接。 -->
+        <conn_timeout>
+            <sec>60</sec>
+            <usec>0</usec>
+        </conn_timeout>
+
+        <!-- http io线程数。建议等于CPU核心数 -->
+        <thread_count>2</thread_count>
+
+        <!-- http logic so group，可配置多个http_logic_so -->
+        <logic_so_group>
+            <logic_so>./libhttp_logic.so</logic_so>
+        </logic_so_group>
+
+        <!-- 是否打印http请求解析后的详细信息。默认值为1 -->
+        <print_parsed_info>0</print_parsed_info>
+
+        <!-- 是否对http请求的uri做decode，要跟发送方协商一致 -->
+        <decode_uri>0</decode_uri>
+
+        <!-- http回复中的content type头 -->
+        <content_type>application/json; charset=UTF-8</content_type>
+
+        <!-- http回复中是否增加no cache相关的头。默认值为1 -->
+        <no_cache>1</no_cache>
+    </http>
+
+    <udp>
+        <!-- udp监听地址和端口 -->
+        <addr_port>0.0.0.0:20000</addr_port>
+
+        <inactive_conn>
+            <!-- 定时检查不再活跃的客户端连接并关闭，inactive_conn_check_interval是定时检查间隔，不配置或配置为0则不启动该定时器 -->
+            <check_interval>
+                <sec>60</sec>
+                <usec>0</usec>
+            </check_interval>
+
+            <!-- 从上次接收消息算起，持续多久未接收新的消息，即认为该连接不再活跃。单位：秒 -->
+            <life>1800</life>
+        </inactive_conn>
+
+        <!-- =1：对消息做checksum校验，=0：不做。不配置则默认为1 -->
+        <do_checksum>1</do_checksum>
+
+        <!-- 消息体的最大长度，单位：字节。不配置则使用默认值65408（64K-128），128可以认为是最大的头长度。
+        注意：消息头+消息体的长度不要超过0xffff！！ -->
+        <max_msg_body_len>65408</max_msg_body_len>
+
+        <!-- udp io线程数，>=1。建议等于CPU核心数 -->
+        <thread_count>2</thread_count>
+
+        <!-- udp logic_so_group，可配置多个logic_so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+        <logic_so_group>
+            <logic_so>./libudp_logic.so</logic_so>
+        </logic_so_group>
+    </udp>
+    
+    <!-- 应用相关的配置 -->
+    <app>
+        <test_mode>0</test_mode>
+    </app>
+</conf>

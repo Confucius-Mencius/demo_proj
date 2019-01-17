@@ -1,0 +1,20 @@
+最近项目需要， 需要在客户的机器上gdb调试程序， 但是为了代码安全又不能把代码复制过去。用debuginfo可以实现
+
+gcc/g++ 加-g选项编译程序mypro， 依次执行以下命令：
+objcopy --only-keep-debug mypro  mypro.debuginfo  
+objcopy --strip-debug mypro  
+objcopy --add-gnu-debuglink=mypro.debuginfo mypro  
+
+
+只需要把mypro 和 mypro.debuginfo 复制到客户机器上就可以调试了。
+
+遇到问题： 当myproc是静态编译时，myproc多线程无法调试。
+解决方法： 编译机器和客户机器上的libthread_db.so 
+
+.1不一致导致。 复制编译机器的libthread_db.so 
+
+.1到客户机器上
+                    开gdb， 设置set libthread-db-search-path  libthread_db路径，  设置add-auto-load-safe-path  libthread_db路径，就可以了
+
+http://blog.csdn.net/ying357/article/details/51087395 
+http://blog.csdn.net/chinainvent/article/details/24129311?reload 

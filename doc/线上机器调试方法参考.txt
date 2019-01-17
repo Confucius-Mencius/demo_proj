@@ -1,0 +1,15 @@
+假设在编译机上demo_proj的源码路径为/home/hgc/workspace/mine/demo_proj/src
+
+在编译机上，cd /home/hgc/workspace/mine/demo_proj/src，打包demo_server的源码：
+tar -cvf demo_server.tar --exclude-vcs proto common_util demo_server     （proto common_util demo_server是其中的子目录）
+
+在真机上建好目录结构：mkdir -p /home/hgc/workspace/mine/demo_proj/src，cd /home/hgc/workspace/mine/demo_proj/src，将demo_server.tar解压到/home/hgc/workspace/mine/demo_proj/src中，保证路径与编译机上一致。
+
+进入可执行程序demo server so所在目录，执行如下gdb命令：
+export LD_LIBRARY_PATH=.:../third_party
+
+然后attach demo_server_pid，打断点，c
+
+附：
+1，在gdb中也可以通过set env LD_LIBRARY_PATH "..."来设置环境变量，查看命令是show env LD_LIBRARY_PATH
+2，gdb -d可以设置源码路径

@@ -1,0 +1,46 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+*.pyc
+
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
+*.user
+build-*-Debug/
+build-*-Release*/
+
+version.h
+/src/build/cmake/
+/src/build/output/
+/src/build/bin/
+/src/proto/tmp/
+/py_test/**/*.log*
+/py_test/**/*.lock

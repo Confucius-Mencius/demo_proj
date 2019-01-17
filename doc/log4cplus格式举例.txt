@@ -1,0 +1,5 @@
+log4cplus格式举例：
+%F /home/hgc/workspace/mine/c_common_component/app_frame/src/app_frame.cpp
+%L 814
+%l /home/hgc/workspace/mine/c_common_component/app_frame/src/app_frame.cpp:814
+%b app_frame.cpp

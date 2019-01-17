@@ -1,0 +1,38 @@
+{
+    Ignore dlopen() with -lpthread
+    Memcheck:Leak
+    ...
+    fun:_dlerror_run
+    fun:dlopen@@GLIBC_2.2.5
+}
+
+{
+   Ignore dlopen bug
+   Memcheck:Leak
+   ...
+   fun:dl_open_worker
+   ...
+}
+
+{
+   Ignore dlopen indirectly lost 1
+   Memcheck:Leak
+   ...
+   fun:_dl_init
+}
+
+{
+   Ignore dlopen indirectly lost 2
+   Memcheck:Leak
+   ...
+   fun:call_init.part.0
+}
+
+
+{
+   Ignore CRYPTO_malloc still reachable
+   Memcheck:Leak
+   ...
+   fun:CRYPTO_malloc
+   ...
+}

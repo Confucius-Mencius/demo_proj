@@ -1,0 +1,21 @@
+进入scripts目录下，执行：sh -x ./start.sh，打印出LD_LIBRARY_PATH和启动参数，如下：
++ LD_LIBRARY_PATH=/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../demo_server:/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../common_util:/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../proto:/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../common_component:/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../third_party
+
+...
+
++ /home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../common_component/app_launcher -log_conf_file_path=../conf/demo_server_log_conf.properties -logger_name=demo_server -app_conf_file_path=../conf/demo_server_conf.xml -common_component_dir=/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../common_component -daemon=false
+./start.sh: line 12: 27896 Segmentation fault      (core dumped) ${COMMON_COMPONENT_DIR}/app_launcher -log_conf_file_path=../conf/${SERVER}_log_conf.properties -logger_name=${SERVER} -app_conf_file_path=../conf/${SERVER}_conf.xml -common_component_dir=${COMMON_COMPONENT_DIR} -daemon=false
+
+
+进入demo_server目录，执行：
+gdb /home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../common_component/app_launcher
+
+set args -log_conf_file_path=../conf/demo_server_log_conf.properties -logger_name=demo_server -app_conf_file_path=../conf/demo_server_conf.xml -common_component_dir=/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../common_component -daemon=false
+
+set env LD_LIBRARY_PATH /home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../demo_server:/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../common_util:/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../proto:/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../common_component:/home/hgc/workspace/mine/hilton/c_demo_proj/src/build/bin/debug/scripts/../third_party
+
+set follow-fork-mode child
+
+b AppLauncher::Initialize
+
+run
