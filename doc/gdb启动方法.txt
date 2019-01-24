@@ -16,6 +16,15 @@ set env LD_LIBRARY_PATH /home/sunlands/workspace/Confucius-Mencius/echo_proj/src
 
 set follow-fork-mode child
 
-b AppLauncher::Initialize
+b thread.cpp:100
 
 run
+
+
+# shell脚本调试
+1. "-n"可用于测试shell脚本是否存在语法错误，但不会实际执行命令。在shell脚本编写完成之后，实际执行之前，首先使用"-n"选项来测试脚本是否存在语法错误是一个很好的习惯。因为某些shell脚本在执行时会对系统环境产生影响，比如生成或移动文件等，如果在实际执行才发现语法错误，您不得不手工做一些系统环境的恢复工作才能继续测试这个脚本。
+
+2. "-c"选项使shell解释器从一个字符串中而不是从一个文件中读取并执行shell命令。当需要临时测试一小段脚本的执行结果时，可以使用这个选项，如下所示：
+sh -c 'a=1;b=2;let c=$a+$b;echo "c=$c"'
+
+3. -x"选项可用来跟踪脚本的执行，是调试shell脚本的强有力工具。"-x"选项使shell在执行脚本的过程中把它实际执行的每一个命令行显示出来，并且在行首显示一个"+"号。 "+"号后面显示的是经过了变量替换之后的命令行的内容，有助于分析实际执行的是什么命令。

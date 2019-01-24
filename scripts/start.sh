@@ -11,9 +11,10 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 StartServer()
 {
     SERVER=$1
-    ./${SERVER} -log_conf_file_path=../conf/${SERVER}_log_conf.properties -logger_name=${SERVER} -app_conf_file_path=../conf/${SERVER}_conf.xml -common_component_dir=${COMMON_COMPONENT_DIR} -daemon=false -chdir_to_root=false
+    ./${SERVER} -log_conf_file_path=../conf/${SERVER}_log_conf.properties -logger_name=${SERVER} -app_conf_file_path=../conf/${SERVER}_conf.xml -common_component_dir=${COMMON_COMPONENT_DIR} -daemon=true -chdir_to_root=false
 }
 
+# todo 整理所有脚本中的list
 for i in ${START_SERVER_LIST}; do
     SERVER=$i
     export LD_LIBRARY_PATH=${BIN_DIR}/${SERVER}:${MY_LD_LIBRARY_PATH}
