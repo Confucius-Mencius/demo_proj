@@ -64,18 +64,18 @@ void LocalLogic::OnReload()
 
 void LocalLogic::OnClientConnected(const ConnGUID* conn_guid)
 {
-    LOG_DEBUG("conn connected, " << conn_guid);
+    LOG_TRACE("conn connected, " << conn_guid);
 }
 
 void LocalLogic::OnClientClosed(const ConnGUID* conn_guid)
 {
-    LOG_DEBUG("conn closed, " << conn_guid);
+    LOG_TRACE("conn closed, " << conn_guid);
 }
 
 #if defined(USE_BUFFEREVENT)
 void LocalLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
-    LOG_DEBUG("recv client data, len: " << len << ", " << *conn_guid);
+    LOG_TRACE("recv client data, len: " << len << ", " << *conn_guid);
 
     // echo, for test only
     logic_ctx_.scheduler->SendToClient(conn_guid, data, len);
@@ -83,7 +83,7 @@ void LocalLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, s
 #else
 void LocalLogic::OnRecvClientData(bool& closed, const ConnGUID* conn_guid, int sock_fd)
 {
-    LOG_DEBUG("client data coming, socket fd: " << sock_fd << ", " << *conn_guid);
+    LOG_TRACE("recv client data, socket fd: " << sock_fd << ", " << *conn_guid);
 
     char buf[16384] = "";
     int max_read_len = 16384;
