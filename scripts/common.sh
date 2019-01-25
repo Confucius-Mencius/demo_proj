@@ -11,6 +11,6 @@ PROTO_DIR=${BIN_DIR}/proto
 COMMON_UTIL_DIR=${BIN_DIR}/common_util
 
 MY_LD_LIBRARY_PATH=${COMMON_COMPONENT_DIR}:${THIRD_PARTY_LIB_DIR}
-START_SERVER_LIST='demo_server'
-TOP_SERVER_LIST='demo_server'
-STOP_SERVER_LIST='demo_server'
+START_SERVER_LIST=(demo_server)
+TOP_SERVER_LIST=(demo_server)
+STOP_SERVER_LIST=(demo_server)

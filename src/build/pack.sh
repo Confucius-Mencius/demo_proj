@@ -6,7 +6,7 @@
 
 . ${SCRIPT_PATH}/common.sh
 
-function Pack
+function Pack()
 {
     BUILD_TYPE=$1
     PACK_CONF=$2

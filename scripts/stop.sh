@@ -8,32 +8,32 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 . ${SCRIPT_PATH}/common.sh
 
-function MySleep
+function MySleep()
 {
     typeset -i n=0
-    while [[ ${n} -le $1 ]]; do
-        n=${n}+1
+    while [ $n -le $1 ]; do
+        n=$n+1
     done
 }
 
 for i in ${STOP_SERVER_LIST[@]}; do
-    SERVER=${i}
+    SERVER=$i
     cd ${BIN_DIR}/${SERVER}
 
-    if [[ ! -f "./${SERVER}.pid" ]]; then
+    if [ ! -f "./${SERVER}.pid" ]; then
         continue
     fi
 
     PID=`cat ./${SERVER}.pid`
     n=`ps --no-heading ${PID} | wc -l`
 
-    if [[ ${n} == 0 ]]; then
+    if [ $n == 0 ]; then
         continue
     fi
 
     kill -3 ${PID}
 
-    while [[ $n != 0 ]]; do
+    while [ $n != 0 ]; do
         MySleep 100
         n=`ps --no-heading ${PID} | wc -l`
     done

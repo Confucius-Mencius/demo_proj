@@ -12,23 +12,23 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 VALGRIND_PARAMS="--tool=cachegrind -v"
 
-function StartServer
+function StartServer()
 {
     SERVER=$1
     valgrind ${VALGRIND_PARAMS} --log-file=./${SERVER}.cachegrind.log ./${SERVER} -log_conf_file_path=../conf/${SERVER}_log_conf.properties -logger_name=${SERVER} -app_conf_file_path=../conf/${SERVER}_conf.xml -common_component_dir=${COMMON_COMPONENT_DIR} -daemon=true -chdir_to_root=false
 }
 
 for i in ${START_SERVER_LIST[@]}; do
-    SERVER=${i}
+    SERVER=$i
     export LD_LIBRARY_PATH=${BIN_DIR}/${SERVER}:${MY_LD_LIBRARY_PATH}
 
     cd ${BIN_DIR}/${SERVER}
     
-    if [[ -f "./${SERVER}.pid" ]]; then
+    if [ -f "./${SERVER}.pid" ]; then
         PID=`cat ./${SERVER}.pid`
         n=`ps --no-heading ${PID} | wc -l`
 
-        if [[ ${n} != 0 ]]; then
+        if [ $n != 0 ]; then
             echo "${SERVER}(${PID}) already running"
             continue
         else

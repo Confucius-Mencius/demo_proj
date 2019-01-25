@@ -1,13 +1,13 @@
-进入scripts目录下，执行：sh -x ./start.sh，打印出LD_LIBRARY_PATH和启动参数，如下：
-+ export LD_LIBRARY_PATH=/home/sunlands/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../demo_server:/home/sunlands/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../common_component:/home/sunlands/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../third_party
+进入scripts目录下，执行：bash -x ./start.sh，打印出LD_LIBRARY_PATH和启动参数，如下：
++ LD_LIBRARY_PATH=/home/hgc/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../demo_server:/home/hgc/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../common_component:/home/hgc/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../third_party
 
 ...
 
-+ ./demo_server -log_conf_file_path=../conf/demo_server_log_conf.properties -logger_name=demo_server -app_conf_file_path=../conf/demo_server_conf.xml -common_component_dir=/home/sunlands/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../common_component -daemon=true -chdir_to_root=false
++ ./demo_server -log_conf_file_path=../conf/demo_server_log_conf.properties -logger_name=demo_server -app_conf_file_path=../conf/demo_server_conf.xml -common_component_dir=/home/hgc/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../common_component -daemon=true -chdir_to_root=false
 
 
 进入demo_server目录，执行：
-cd /home/sunlands/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../demo_server
+cd /home/hgc/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../demo_server
 gdb demo_server
 
 set args -log_conf_file_path=../conf/demo_server_log_conf.properties -logger_name=demo_server -app_conf_file_path=../conf/demo_server_conf.xml -common_component_dir=/home/sunlands/workspace/Confucius-Mencius/echo_proj/src/build/bin/debug/scripts/../common_component -daemon=true -chdir_to_root=false

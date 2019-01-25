@@ -9,17 +9,17 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 . ${SCRIPT_PATH}/common.sh
 
 for i in ${START_SERVER_LIST[@]}; do
-    SERVER=${i}
+    SERVER=$i
     cd ${BIN_DIR}/${SERVER}
 
-    if [[ ! -f "./${SERVER}.pid" ]]; then
+    if [ ! -f "./${SERVER}.pid" ]; then
         continue
     fi
 
     PID=`cat ./${SERVER}.pid`
     n=`ps --no-heading ${PID} | wc -l`
 
-    if [[ ${n} == 0 ]]; then
+    if [ $n == 0 ]; then
         continue
     fi
 

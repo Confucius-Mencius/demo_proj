@@ -5,6 +5,7 @@
 ###############################################################################
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
+
 . ${SCRIPT_PATH}/common.sh
 
 SERVER=demo_server

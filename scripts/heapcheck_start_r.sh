@@ -13,23 +13,23 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 export PPROF_PATH=/opt/third_party/release/gperftools/bin/pprof
 
-function StartServer
+function StartServer()
 {
     SERVER=$1
     env HEAPCHECK=normal ./${SERVER} -log_conf_file_path=../conf/${SERVER}_log_conf.properties -logger_name=${SERVER} -app_conf_file_path=../conf/${SERVER}_conf.xml -common_component_dir=${COMMON_COMPONENT_DIR} -daemon=false -chdir_to_root=false
 }
 
 for i in ${START_SERVER_LIST[@]}; do
-    SERVER=${i}
+    SERVER=$i
     export LD_LIBRARY_PATH=${BIN_DIR}/${SERVER}:${MY_LD_LIBRARY_PATH}
 
     cd ${BIN_DIR}/${SERVER}
     
-    if [[ -f "./${SERVER}.pid" ]]; then
+    if [ -f "./${SERVER}.pid" ]; then
         PID=`cat ./${SERVER}.pid`
         n=`ps --no-heading ${PID} | wc -l`
 
-        if [[ ${n} != 0 ]]; then
+        if [ $n != 0 ]; then
             echo "${SERVER}(${PID}) already running"
             continue
         else

@@ -13,10 +13,10 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 PID_LIST=""
 
 for i in ${TOP_SERVER_LIST[@]}; do
-    SERVER=${i}
+    SERVER=$i
     cd ${BIN_DIR}/${SERVER}
 
-    if [[ ! -f "./${SERVER}.pid" ]]; then
+    if [ ! -f "./${SERVER}.pid" ]; then
         continue
     fi
 
@@ -27,6 +27,6 @@ for i in ${TOP_SERVER_LIST[@]}; do
     fi
 done
 
-if [[ ${PID_LIST} != "" ]]; then
+if [ ${PID_LIST} != "" ]; then
     top -p ${PID_LIST}
 fi

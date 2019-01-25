@@ -4,12 +4,13 @@
 # author: BrentHuang (guang11cheng@qq.com)
 ###############################################################################
 
+SCRIPT_PATH=$(cd `dirname $0`; pwd)
+
 if [ $# != 1 ]; then
-    echo "usage: ./heapcheck_show.sh HEAP_FILE"
+    echo "Usage: ${SCRIPT_PATH}/heapcheck_show.sh HEAP_FILE"
     exit 1
 fi
 
-SCRIPT_PATH=$(cd `dirname $0`; pwd)
 . ${SCRIPT_PATH}/common.sh
 
 export PPROF_PATH=/opt/third_party/release/gperftools/bin/pprof

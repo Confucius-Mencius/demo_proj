@@ -9,32 +9,30 @@ SCRIPT_PATH=$(cd `dirname $0`; pwd)
 # 编译完成后打包，是否打包配置文件。注意：打包配置文件将会覆盖bin目录下你修改过的配置文件！
 PACK_CONF=1
 
-if [ $# == 0 ]; then
-    echo "usage: ${SCRIPT_PATH}/build.sh
-         -h show this help info.
-         -b debug|release build projects.
-         -r debug|release rebuild projects.
-         -c debug|release clear tmp files.
-         -p debug|release pack projects."
-    exit 1
-fi
+function Usage()
+{
+    echo "Usage: $1
+         -h                show this help info.
+         -b debug|release  build projects.
+         -r debug|release  rebuild projects.
+         -c debug|release  clear tmp files.
+         -p debug|release  pack projects."
+    exit 0   
+}
 
+if [ $# == 0 ]; then
+    Usage $0
+fi
 
 . ${SCRIPT_PATH}/../../../sh_tools/base/util.sh
 . ${SCRIPT_PATH}/../../../sh_tools/base/proj_util.sh
 . ${SCRIPT_PATH}/../../../sh_tools/base/pack_util.sh
 . ${SCRIPT_PATH}/pack.sh
 
-
 while getopts "b:c:r:p:h" opt; do
     case $opt in
         h)
-            echo "usage: ${SCRIPT_PATH}/build.sh
-                 -h show this help info.
-                 -b debug|release build projects.
-                 -r debug|release rebuild projects.
-                 -c debug|release clear tmp files.
-                 -p debug|release pack projects."
+            Usage $0
         ;;
         b)
             if [ "${OPTARG}"x = "debug"x ]; then

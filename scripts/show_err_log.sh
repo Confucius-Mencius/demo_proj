@@ -6,7 +6,7 @@
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
-LOG_DIR=${SCRIPT_PATH}/..
+LOG_DIR=${SCRIPT_PATH}/../logs/
 
 if [ $# -gt 0 ]; then
     find ${LOG_DIR} -name "*.log*" | xargs tail -f | grep ERROR

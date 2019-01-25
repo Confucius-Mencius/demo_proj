@@ -4,12 +4,12 @@
 # author: BrentHuang (guang11cheng@qq.com)
 ###############################################################################
 
-if [ $# != 1 ]; then
-    echo "usage: ./cpuprofile_show.sh PROF_FILE"
-    exit 1
-fi
-
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
+
+if [ $# != 1 ]; then
+    echo "Usage: ${SCRIPT_PATH}/cpuprofile_show.sh PROF_FILE"
+    exit 0
+fi
 
 . ${SCRIPT_PATH}/common.sh
 
