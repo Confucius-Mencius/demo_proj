@@ -1,4 +1,4 @@
-#include "local_logic.h"
+#include "common_logic.h"
 #include <errno.h>
 #include <string.h>
 #include <unistd.h>
@@ -7,30 +7,30 @@
 
 namespace tcp
 {
-LocalLogic::LocalLogic()
+CommonLogic::CommonLogic()
 {
 }
 
-LocalLogic::~LocalLogic()
+CommonLogic::~CommonLogic()
 {
 }
 
-const char* LocalLogic::GetVersion() const
-{
-    return NULL;
-}
-
-const char* LocalLogic::GetLastErrMsg() const
+const char* CommonLogic::GetVersion() const
 {
     return NULL;
 }
 
-void LocalLogic::Release()
+const char* CommonLogic::GetLastErrMsg() const
+{
+    return NULL;
+}
+
+void CommonLogic::Release()
 {
     delete this;
 }
 
-int LocalLogic::Initialize(const void* ctx)
+int CommonLogic::Initialize(const void* ctx)
 {
     if (LogicInterface::Initialize(ctx) != 0)
     {
@@ -40,40 +40,40 @@ int LocalLogic::Initialize(const void* ctx)
     return 0;
 }
 
-void LocalLogic::Finalize()
+void CommonLogic::Finalize()
 {
 }
 
-int LocalLogic::Activate()
+int CommonLogic::Activate()
 {
     return 0;
 }
 
-void LocalLogic::Freeze()
+void CommonLogic::Freeze()
 {
 }
 
-void LocalLogic::OnStop()
+void CommonLogic::OnStop()
 {
     can_exit_ = true;
 }
 
-void LocalLogic::OnReload()
+void CommonLogic::OnReload()
 {
 }
 
-void LocalLogic::OnClientConnected(const ConnGUID* conn_guid)
+void CommonLogic::OnClientConnected(const ConnGUID* conn_guid)
 {
     LOG_TRACE("conn connected, " << conn_guid);
 }
 
-void LocalLogic::OnClientClosed(const ConnGUID* conn_guid)
+void CommonLogic::OnClientClosed(const ConnGUID* conn_guid)
 {
     LOG_TRACE("conn closed, " << conn_guid);
 }
 
 #if defined(USE_BUFFEREVENT)
-void LocalLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
+void CommonLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
     LOG_TRACE("recv client data, len: " << len << ", " << *conn_guid);
 
@@ -81,7 +81,7 @@ void LocalLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, s
     logic_ctx_.scheduler->SendToClient(conn_guid, data, len);
 }
 #else
-void LocalLogic::OnRecvClientData(bool& closed, const ConnGUID* conn_guid, int sock_fd)
+void CommonLogic::OnRecvClientData(bool& closed, const ConnGUID* conn_guid, int sock_fd)
 {
     LOG_TRACE("recv client data, socket fd: " << sock_fd << ", " << *conn_guid);
 
@@ -133,7 +133,7 @@ void LocalLogic::OnRecvClientData(bool& closed, const ConnGUID* conn_guid, int s
 }
 #endif
 
-void LocalLogic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
+void CommonLogic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
 {
     (void) conn_guid;
     (void) source_thread;

@@ -45,7 +45,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <thread_count>2</thread_count>
 
         <!-- 一个tcp线程内所有的logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-        <local_logic_so>./libtcp_local_logic.so</local_logic_so>
+        <common_logic_so>./libtcp_common_logic.so</common_logic_so>
 
         <!-- tcp logic_so_group，可配置多个logic_so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
         <logic_so_group>

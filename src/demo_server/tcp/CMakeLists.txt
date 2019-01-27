@@ -7,5 +7,5 @@ add_definitions(-DUSE_BUFFEREVENT)
 
 ###############################################################################
 # sub dir
-add_subdirectory(local_logic)
+add_subdirectory(common_logic)
 add_subdirectory(logics)

@@ -1,15 +1,15 @@
-#ifndef DEMO_SERVER_TCP_LOCAL_LOGIC_LOCAL_LOGIC_H_
-#define DEMO_SERVER_TCP_LOCAL_LOGIC_LOCAL_LOGIC_H_
+#ifndef DEMO_SERVER_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
+#define DEMO_SERVER_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
 
-#include "tcp_local_logic_interface.h"
+#include "tcp_common_logic_interface.h"
 
 namespace tcp
 {
-class LocalLogic : public TheLocalLogicInterface
+class CommonLogic : public TheCommonLogicInterface
 {
 public:
-    LocalLogic();
-    virtual ~LocalLogic();
+    CommonLogic();
+    virtual ~CommonLogic();
 
     ///////////////////////// ModuleInterface /////////////////////////
     const char* GetVersion() const override;
@@ -40,7 +40,10 @@ public:
 #endif
 
     void OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len) override;
+
+    ///////////////////////// TheCommonLogicInterface /////////////////////////
+
 };
 }
 
-#endif // DEMO_SERVER_TCP_LOCAL_LOGIC_LOCAL_LOGIC_H_
+#endif // DEMO_SERVER_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
