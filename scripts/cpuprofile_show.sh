@@ -6,8 +6,8 @@
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
-if [ $# != 1 ]; then
-    echo "Usage: ${SCRIPT_PATH}/cpuprofile_show.sh PROF_FILE"
+if [ $# != 2 ]; then
+    echo "Usage: ${SCRIPT_PATH}/cpuprofile_show.sh <server> <prof file>"
     exit 0
 fi
 
@@ -15,11 +15,10 @@ fi
 
 export PPROF_PATH=/opt/third_party/release/gperftools/bin/pprof
 
-SERVER=demo_server
-PROF_FILE=$1
+SERVER=$1
+PROF_FILE=$2
 
-cd ${BIN_DIR}/${SERVER}
-${PPROF_PATH} --lib_prefix=${BIN_DIR}/${SERVER}:${THIRD_PARTY_LIB_DIR} --text ./${SERVER} ./${PROF_FILE} > ${WORK_DIR}/performance.txt
+${PPROF_PATH} --lib_prefix=${BIN_DIR}/${SERVER}:${THIRD_PARTY_LIB_DIR} --text ${SERVER} ${PROF_FILE} > ${WORK_DIR}/performance.txt
 
 # 从performance.txt文件中我们可以看到程序的CPU消耗从而对性能进行分析。
 

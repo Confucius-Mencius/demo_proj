@@ -41,7 +41,7 @@ for i in ${START_SERVER_LIST[@]}; do
     fi
 done
 
-# 程序执行结束后，查看demo_server.helgrind.log文件。
+# 程序执行结束后，会在程序目录下生成demo_server.helgrind.log文件。
 # 搜索关键字：Possible data race，a thread error detector，Attempt to re-lock a non-recursive lock I already hold，Lock was previously acquired，deadlock，violated
 
 

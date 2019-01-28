@@ -43,9 +43,9 @@ for i in ${START_SERVER_LIST[@]}; do
 done
 
 # 以-daemon=false运行，程序执行结束后，会在终端输出很多信息，提示生成了一个.heap文件，可以使用pprof进行分析。
-# 命令如下： pprof ./demo_server "/tmp/demo_server.109726._main_-end.heap" --inuse_objects --lines --heapcheck  --edgefraction=1e-10 --nodefraction=1e-10 --text (或者--gv)，使用--gv需要安装apt-get install graphviz gv。
+# 命令如下： pprof ./demo_server "/tmp/demo_server.109726._main_-end.heap" --inuse_objects --lines --heapcheck  --edgefraction=1e-10 --nodefraction=1e-10 --text (或者--gv)，使用--gv需要安装graphviz和gv。
 
-# apt-get install graphviz gv
+# sudo apt-get install graphviz gv
 
 # Output type:
 #    --text              Generate text report

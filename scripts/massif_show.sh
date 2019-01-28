@@ -6,12 +6,15 @@
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
+if [ $# != 1 ]; then
+    echo "Usage: ${SCRIPT_PATH}/cpuprofile_show.sh <massif file>"
+    exit 0
+fi
+
 . ${SCRIPT_PATH}/common.sh
 
-SERVER=demo_server
-MASSIF_FILE="massif.out.11055"
+MASSIF_FILE=$1
 
-cd ${BIN_DIR}/${SERVER}
-ms_print ./${MASSIF_FILE}
+ms_print ${MASSIF_FILE}
 
 # 结果如果比较多，可以重定向到文件中查看。

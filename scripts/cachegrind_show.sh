@@ -7,12 +7,12 @@
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 if [ $# != 1 ]; then
-    echo "Usage: ${SCRIPT_PATH}/cpuprofile_show.sh <callgrind file>"
+    echo "Usage: ${SCRIPT_PATH}/cpuprofile_show.sh <cachegrind file>"
     exit 0
 fi
 
 . ${SCRIPT_PATH}/common.sh
 
-CALLGRIND_FILE=$1
+CACHEGRIND_FILE=$1
 
-kcachegrind ${CALLGRIND_FILE}
+cg_annotate ${CACHEGRIND_FILE}

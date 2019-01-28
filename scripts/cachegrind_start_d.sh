@@ -42,3 +42,4 @@ for i in ${START_SERVER_LIST[@]}; do
 done
 
 # 程序执行结束后，会在程序目录下生成cachegrind.out.pid文件，使用cg_annotate解析生成的cachegrind.out.pid文件，命令如下：cg_annotate cachegrind.out.pid
+# 也可以用kcachegrind打开。
