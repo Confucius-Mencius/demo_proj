@@ -64,12 +64,12 @@ void CommonLogic::OnReload()
 
 void CommonLogic::OnClientConnected(const ConnGUID* conn_guid)
 {
-    LOG_TRACE("conn connected, " << conn_guid);
+    LOG_TRACE("conn connected, " << *conn_guid);
 }
 
 void CommonLogic::OnClientClosed(const ConnGUID* conn_guid)
 {
-    LOG_TRACE("conn closed, " << conn_guid);
+    LOG_TRACE("conn closed, " << *conn_guid);
 }
 
 #if defined(USE_BUFFEREVENT)

@@ -10,29 +10,26 @@ import sys
 sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__file__))[0])  # 导入上级目录中的模块
 # print(sys.path)
 
-from base.tcp_client import *
 from base.multitask_util import *
-
-from test_action.tcp.echo_req import *
+from echo_test import send_to_server1, send_to_server2
 
 
 def proc1():
-    client = TcpClient(conf.demo_server_addr, conf.demo_server_tcp_port)
-    echo_req = EchoReq(client)
-    ret = echo_req.echo()
-    if ret != 0:
-        LOG_ERROR('xxxxxxxxx ret: %d' % ret)
-
-    assert ret == 0
+    assert send_to_server1() == 0
 
 
 def test001():
-    run_multi_process(100, proc1)
+    run_multi_process(10000, proc1)
 
 
-# def test002():
-#     run_multi_thread(100, proc1)
+def proc2():
+    assert send_to_server2() == 0
+
+
+def test002():
+    run_multi_process(10000, proc2)
 
 
 if __name__ == '__main__':
     test001()
+    test002()

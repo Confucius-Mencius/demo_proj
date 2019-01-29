@@ -41,6 +41,10 @@ XML中的特殊符号只有5种，<、>、&、’和”。
             <life>1800</life>
         </inactive_conn>
 
+        <!-- 在一定时间内（单位：秒）收到的消息条数如果超过指定值，则认为是网络风暴，服务器会断开连接 -->
+        <storm_interval>10</storm_interval>
+        <storm_threshold>1000</storm_threshold>
+
         <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
         <thread_count>2</thread_count>
 

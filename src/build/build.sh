@@ -29,6 +29,8 @@ fi
 . ${SCRIPT_PATH}/../../../sh_tools/base/pack_util.sh
 . ${SCRIPT_PATH}/pack.sh
 
+RUN_TEST=1
+
 while getopts "b:c:r:p:h" opt; do
     case $opt in
         h)
@@ -57,7 +59,7 @@ while getopts "b:c:r:p:h" opt; do
                 PROJ=$i
 
                 cd ${CODE_BASE_DIR}
-                BuildProj ${PROJ} ${SCRIPT_PATH}/../${PROJ} ${BUILD_PARENT_DIR}/${PROJ} ${BUILD_TYPE} ${INSTALL_PREFIX}
+                BuildProj ${PROJ} ${SCRIPT_PATH}/../${PROJ} ${BUILD_PARENT_DIR}/${PROJ} ${BUILD_TYPE} ${INSTALL_PREFIX} ${RUN_TEST}
 								
                 # cd ${CODE_BASE_DIR}
                 # InstallProj ${PROJ} ${BUILD_PARENT_DIR}/${PROJ}
@@ -88,7 +90,7 @@ while getopts "b:c:r:p:h" opt; do
                 PROJ=$i
 
                 cd ${CODE_BASE_DIR}
-                RebuildProj ${PROJ} ${SCRIPT_PATH}/../${PROJ} ${BUILD_PARENT_DIR}/${PROJ} ${BUILD_TYPE} ${INSTALL_PREFIX}
+                RebuildProj ${PROJ} ${SCRIPT_PATH}/../${PROJ} ${BUILD_PARENT_DIR}/${PROJ} ${BUILD_TYPE} ${INSTALL_PREFIX} ${RUN_TEST}
 
                 # cd ${CODE_BASE_DIR}
                 # InstallProj ${PROJ} ${BUILD_PARENT_DIR}/${PROJ}
