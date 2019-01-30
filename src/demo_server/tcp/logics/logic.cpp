@@ -69,21 +69,12 @@ void Logic::OnClientClosed(const ConnGUID* conn_guid)
     (void) conn_guid;
 }
 
-#if defined(USE_BUFFEREVENT)
 void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
     (void) conn_guid;
     (void) data;
     (void) len;
 }
-#else
-void Logic::OnRecvClientData(bool& closed, const ConnGUID* conn_guid, int sock_fd)
-{
-    (void) closed;
-    (void) conn_guid;
-    (void) sock_fd;
-}
-#endif
 
 void Logic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
 {

@@ -25,20 +25,7 @@ public:
     void OnReload() override;
     void OnClientConnected(const ConnGUID* conn_guid) override;
     void OnClientClosed(const ConnGUID* conn_guid) override;
-
-#if defined(USE_BUFFEREVENT)
     void OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len) override;
-#else
-    /**
-     *
-     * @param closed 如果read返回0，表示对端关闭了，需要将closed置为true。如果read返回-1，且errno为ECONNRESET，也要将closed置为true
-     * @param conn_guid
-     * @param sock_fd
-     * @attention 需要循环读到出错为止
-     */
-    void OnRecvClientData(bool& closed, const ConnGUID* conn_guid, int sock_fd) override;
-#endif
-
     void OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len) override;
 };
 }
