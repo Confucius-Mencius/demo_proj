@@ -1,4 +1,4 @@
-*.h linguist-language=c++
-*.cpp linguist-language=c++
-*.hpp linguist-language=c++
-*.cc linguist-language=c++
+*.h linguist-language=C++
+*.cpp linguist-language=C++
+*.hpp linguist-language=C++
+*.cc linguist-language=C++
