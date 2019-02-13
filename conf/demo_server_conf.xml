@@ -28,7 +28,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <conn_count_limit>0</conn_count_limit>
 
         <inactive_conn>
-            <!-- 定时检查不再活跃的客户端连接并关闭，inactive_conn_check_interval是定时检查间隔，不配置或配置为0则不启动该定时器 -->
+            <!-- 定时检查不再活跃的客户端连接并关闭，不配置或配置为0则不启动该定时器 -->
             <check_interval>
                 <sec>60</sec>
                 <usec>0</usec>
@@ -45,14 +45,57 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
         <thread_count>2</thread_count>
 
-        <!-- 一个tcp线程内所有的logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
         <common_logic_so>./libtcp_common_logic.so</common_logic_so>
 
-        <!-- tcp logic_so_group，可配置多个logic_so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+        <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
         <logic_so_group>
             <logic_so>./libtcp_logic.so</logic_so>
         </logic_so_group>
     </tcp>
+
+    <ws>
+        <!-- ws监听网卡和端口 -->
+        <ws_iface>ens33</ws_iface>
+        <ws_port>10080</ws_port>
+
+        <!-- ws监听网卡和端口 -->
+        <wss_iface>ens33</wss_iface>
+        <wss_port>10443</wss_port>
+
+        <!-- wss秘钥文件 -->
+        <certificate_chain_file_path>../conf/xxx_com.crt</certificate_chain_file_path>
+        <private_key_file_path>../conf/xxx_com.key</private_key_file_path>
+
+        <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
+        <conn_count_limit>0</conn_count_limit>
+
+        <inactive_conn>
+            <!-- 定时检查不再活跃的客户端连接并关闭，不配置或配置为0则不启动该定时器 -->
+            <check_interval>
+                <sec>60</sec>
+                <usec>0</usec>
+            </check_interval>
+
+            <!-- 从上次接收消息算起，持续多久未接收新的消息，即认为该连接不再活跃。单位：秒 -->
+            <life>1800</life>
+        </inactive_conn>
+
+        <!-- 在一定时间内（单位：秒）收到的消息条数如果超过指定值，则认为是网络风暴，服务器会断开连接 -->
+        <storm_interval>10</storm_interval>
+        <storm_threshold>1000</storm_threshold>
+
+        <!-- ws io线程数，>=1。建议等于CPU核心数 -->
+        <thread_count>2</thread_count>
+
+        <!-- 一个ws线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <common_logic_so>./libws_common_logic.so</common_logic_so>
+
+        <!-- ws logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+        <logic_so_group>
+            <logic_so>./libws_logic.so</logic_so>
+        </logic_so_group>
+    </ws>
     
     <!-- 应用相关的配置 -->
     <app>
