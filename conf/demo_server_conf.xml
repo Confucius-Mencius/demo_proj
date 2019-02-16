@@ -56,7 +56,8 @@ XML中的特殊符号只有5种，<、>、&、’和”。
 
     <ws>
         <!-- ws监听网卡和端口 -->
-        <iface>ens33</iface>
+        <!-- <iface>ens33</iface> -->
+        <iface>wlp4s0</iface>
         <ws_port>10080</ws_port>
         <wss_port>10443</wss_port>
 
