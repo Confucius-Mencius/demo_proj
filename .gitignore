@@ -44,3 +44,4 @@ version.h
 /src/proto/tmp/
 /py_test/**/*.log*
 /py_test/**/*.lock
+/py_test/venv/
