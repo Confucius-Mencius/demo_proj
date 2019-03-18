@@ -75,6 +75,7 @@ void CommonLogic::OnClientClosed(const ConnGUID* conn_guid)
 void CommonLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
     // echo, for test only
+    LOG_DEBUG((char*) data << ", len: " << len);
     logic_ctx_.scheduler->SendToClient(conn_guid, data, len);
 }
 
