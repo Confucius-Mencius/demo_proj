@@ -71,7 +71,7 @@ def send_to_server2():
             if not rsp:
                 break
 
-            print(len(rsp))
+            LOG_DEBUG(len(rsp))
             recv_len += len(rsp)
             recv_data += rsp
 

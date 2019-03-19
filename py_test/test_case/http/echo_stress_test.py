@@ -15,8 +15,8 @@ import echo_test
 
 
 def proc1():
-    echo_test.test001()
-    echo_test.test002()
+    echo_test.get1()
+    echo_test.post1()
 
 
 def test001():

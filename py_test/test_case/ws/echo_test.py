@@ -30,7 +30,7 @@ def send_to_server1(s=False):
         ws.send(data)
 
         rsp = ws.recv()
-        print(rsp)
+        LOG_DEBUG(rsp)
 
         assert rsp == data
 
@@ -63,7 +63,7 @@ def send_to_server2(s=False):
         ws.send(data)
 
         rsp = ws.recv()
-        print(rsp)
+        LOG_DEBUG(rsp)
         assert rsp == data
 
         ws.close()

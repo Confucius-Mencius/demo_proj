@@ -8,11 +8,11 @@ import httplib
 from util.log_util import *
 
 
-def test001():
-    ret = 0
-
+def get1():
     try:
-        http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_http_port)
+        http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_ws_port)
+        LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_ws_port))
+
         http_conn.request('GET', '/echo')
 
         http_rsp = http_conn.getresponse()
@@ -27,18 +27,25 @@ def test001():
         LOG_DEBUG('rsp body: %s' % rsp_body)
 
         http_conn.close()
+        ret = 0
     except Exception as e:
         LOG_ERROR('exception: %s' % e)
         ret = -1
 
-    assert ret == 0
+    return ret
 
 
-def test002():
+def test001():
+    assert get1() == 0
+
+
+def post1():
     ret = 0
 
     try:
-        http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_http_port)
+        http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_ws_port)
+        LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_ws_port))
+
         http_conn.request('POST', '/echo', 'x' * 10240)
 
         http_rsp = http_conn.getresponse()
@@ -60,6 +67,10 @@ def test002():
     assert ret == 0
 
 
+def test002():
+    assert post1() == 0
+
+
 if __name__ == '__main__':
     test001()
-    test002()
+    # test002()
