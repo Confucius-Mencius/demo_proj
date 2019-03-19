@@ -16,3 +16,4 @@ demo_server_tcp_port = 10000
 max_tcp_msg_len = 1024
 
 demo_server_ws_port = 10080
+demo_server_wss_port = 10443

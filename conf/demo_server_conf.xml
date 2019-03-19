@@ -64,6 +64,9 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <certificate_chain_file_path>../conf/xxx_com.crt</certificate_chain_file_path>
         <private_key_file_path>../conf/xxx_com.key</private_key_file_path>
 
+<!--         <certificate_chain_file_path>../conf/sunlands_com/star_sunlands_com.crt</certificate_chain_file_path>
+        <private_key_file_path>../conf/sunlands_com/star_sunlands_com.key</private_key_file_path>
+ -->
         <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
         <conn_count_limit>0</conn_count_limit>
 

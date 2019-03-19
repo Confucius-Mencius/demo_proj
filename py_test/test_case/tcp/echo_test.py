@@ -17,9 +17,9 @@ from util.log_util import *
 
 # 发送小于16k的数据
 def send_to_server1():
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
     try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
         sock.connect((conf.demo_server_addr, conf.demo_server_tcp_port))
         LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_tcp_port))
 
@@ -38,12 +38,12 @@ def send_to_server1():
         # else:
         #     print(len(rsp))
 
+        sock.close()
         ret = 0
     except socket.error as e:
         LOG_ERROR('exception: %s' % e)
         ret = -1
 
-    sock.close()
     return ret
 
 
@@ -53,9 +53,9 @@ def test001():
 
 # 发送大于16k的数据
 def send_to_server2():
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
     try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
         sock.connect((conf.demo_server_addr, conf.demo_server_tcp_port))
         LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_tcp_port))
 
@@ -64,6 +64,7 @@ def send_to_server2():
 
         want_recv_len = len(data)
         recv_len = 0
+        recv_data = ''
 
         while recv_len < want_recv_len:
             rsp = sock.recv(want_recv_len)
@@ -72,14 +73,17 @@ def send_to_server2():
 
             print(len(rsp))
             recv_len += len(rsp)
+            recv_data += rsp
 
         assert recv_len == len(data)
+        assert recv_data == data
+
+        sock.close()
         ret = 0
     except socket.error as e:
         LOG_ERROR('exception: %s' % e)
         ret = -1
 
-    sock.close()
     return ret
 
 

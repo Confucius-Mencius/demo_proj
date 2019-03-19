@@ -18,15 +18,15 @@ from util.log_util import *
 
 
 def proc1():
-    l_onoff = 1
-    l_linger = 0
-
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-    # 设置为linger时，close的时候服务器"Connection reset by peer"的ERROR日志
-    sock.setsockopt(socket.SOL_SOCKET, socket.SO_LINGER, struct.pack('ii', l_onoff, l_linger))
-
     try:
+        l_onoff = 1
+        l_linger = 0
+
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+        # 设置为linger时，close的时候服务器"Connection reset by peer"的ERROR日志
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_LINGER, struct.pack('ii', l_onoff, l_linger))
+
         sock.connect((conf.demo_server_addr, conf.demo_server_tcp_port))
         LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_tcp_port))
     except socket.error as arg:
