@@ -100,7 +100,7 @@ DESCRIPTOR.message_types_by_name['EchoReq'] = _ECHOREQ
 DESCRIPTOR.message_types_by_name['EchoRsp'] = _ECHORSP
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-EchoReq = _reflection.GeneratedProtocolMessageType('EchoReq', (_message.Message,), dict(
+EchoReq = _reflection.GeneratedProtocolMessaype('EchoReq', (_message.Message,), dict(
   DESCRIPTOR = _ECHOREQ,
   __module__ = 'cs_msg_pb2'
   # @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.EchoReq)

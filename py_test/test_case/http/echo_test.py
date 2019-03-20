@@ -8,12 +8,15 @@ import httplib
 from util.log_util import *
 
 
-def get1():
+def get1(query):
     try:
         http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_ws_port)
         LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_ws_port))
 
-        http_conn.request('GET', '/echo')
+        if query:
+            http_conn.request('GET', '/echo?x=1&y=abc')
+        else:
+            http_conn.request('GET', '/echo')
 
         http_rsp = http_conn.getresponse()
         LOG_DEBUG('rsp code: %d(%s)' % (http_rsp.status, http_rsp.reason))
@@ -36,17 +39,21 @@ def get1():
 
 
 def test001():
-    assert get1() == 0
+    assert get1(False) == 0
+    assert get1(True) == 0
 
 
-def post1():
+def post1(query, body_len):
     ret = 0
 
     try:
         http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_ws_port)
         LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_ws_port))
 
-        http_conn.request('POST', '/echo', 'x' * 10240)
+        if query:
+            http_conn.request('POST', '/echo?x=aaa&y=100', 'x' * body_len)
+        else:
+            http_conn.request('POST', '/echo', 'x' * body_len)
 
         http_rsp = http_conn.getresponse()
         LOG_DEBUG('rsp code: %d(%s)' % (http_rsp.status, http_rsp.reason if http_rsp.reason else ''))
@@ -68,9 +75,12 @@ def post1():
 
 
 def test002():
-    assert post1() == 0
+    assert post1(False, 1024) == 0
+    assert post1(True, 1024) == 0
+    assert post1(False, 16385) == 0
+    assert post1(True, 16385) == 0
 
 
 if __name__ == '__main__':
     test001()
-    # test002()
+    test002()
