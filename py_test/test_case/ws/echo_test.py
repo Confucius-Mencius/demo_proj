@@ -16,14 +16,18 @@ from util.log_util import *
 
 
 # 发送小于16k的数据
-def send_to_server1(s=False):
+def send_to_server1(s):
     try:
         if s:
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_wss_port),
-                                   sslopt={"cert_reqs": ssl.CERT_NONE}) # disable ssl cert verification
+                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   cookie='xx',
+                                   sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_wss_port))
         else:
-            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_ws_port))
+            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_ws_port),
+                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   cookie='xx')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_ws_port))
 
         data = 'Hello, World'
@@ -44,19 +48,23 @@ def send_to_server1(s=False):
 
 
 def test001():
-    assert send_to_server1() == 0
+    assert send_to_server1(False) == 0
     assert send_to_server1(True) == 0
 
 
 # 发送大于16k的数据
-def send_to_server2(s=False):
+def send_to_server2(s):
     try:
         if s:
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_wss_port),
+                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   cookie='xx',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_wss_port))
         else:
-            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_ws_port))
+            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_ws_port),
+                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   cookie='xx')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_ws_port))
 
         data = 'x' * 16 * 1024 + 'y'
@@ -76,7 +84,7 @@ def send_to_server2(s=False):
 
 
 def test002():
-    assert send_to_server2() == 0
+    assert send_to_server2(False) == 0
     assert send_to_server2(True) == 0
 
 
