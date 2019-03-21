@@ -15,7 +15,8 @@ from echo_test import send_to_server1, send_to_server2
 
 
 def proc1():
-    assert send_to_server1() == 0
+    assert send_to_server1(False) == 0
+    assert send_to_server1(True) == 0
 
 
 def test001():
@@ -23,7 +24,8 @@ def test001():
 
 
 def proc2():
-    assert send_to_server2() == 0
+    assert send_to_server2(False) == 0
+    assert send_to_server2(True) == 0
 
 
 def test002():
