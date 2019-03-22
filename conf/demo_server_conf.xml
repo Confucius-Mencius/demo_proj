@@ -57,23 +57,33 @@ XML中的特殊符号只有5种，<、>、&、’和”。
     <ws>
         <!-- ws监听网卡和端口，不配置iface表示在所有ip上监听 -->
         <!-- <iface>wlp4s0</iface> -->
-        <ws_port>10080</ws_port>
-        <wss_port>10443</wss_port>
 
-        <!-- wss秘钥文件 -->
-        <certificate_chain_file_path>../conf/xxx_com.crt</certificate_chain_file_path>
-        <private_key_file_path>../conf/xxx_com.key</private_key_file_path>
+        <port>10080</port>
 
-<!--         <certificate_chain_file_path>../conf/sunlands_com/star_sunlands_com.crt</certificate_chain_file_path>
-        <private_key_file_path>../conf/sunlands_com/star_sunlands_com.key</private_key_file_path>
- -->
+        <security>
+            <port>10443</port>
+
+            <!-- wss秘钥文件 -->
+            <certificate_chain_file_path>../conf/xxx_com.crt</certificate_chain_file_path>
+            <private_key_file_path>../conf/xxx_com.key</private_key_file_path>
+
+            <!-- <certificate_chain_file_path>../conf/sunlands_com/star_sunlands_com.crt</certificate_chain_file_path>
+            <private_key_file_path>../conf/sunlands_com/star_sunlands_com.key</private_key_file_path> -->
+        </security>
+
+        <!-- 网络收发超时，单位：秒 -->
+        <network_roundtrip_timeout>10</network_roundtrip_timeout>
+
+        <!-- 在idle连接上发送ping的间隔，单位：秒 -->
+        <ping_pong_interval></ping_pong_interval>
+
         <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
         <conn_count_limit>0</conn_count_limit>
 
         <inactive_conn>
             <!-- 定时检查不再活跃的客户端连接并关闭，不配置或配置为0则不启动该定时器 -->
             <check_interval>
-                <sec>60</sec>
+                <sec>0</sec>
                 <usec>0</usec>
             </check_interval>
 
@@ -88,13 +98,26 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <!-- ws io线程数，>=1。建议等于CPU核心数 -->
         <thread_count>2</thread_count>
 
-        <!-- 一个ws线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <!-- 一个ws线程内所有的ws logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
         <common_logic_so>./libws_common_logic.so</common_logic_so>
 
         <!-- ws logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
         <logic_so_group>
             <logic_so>./libws_logic.so</logic_so>
         </logic_so_group>
+
+        <http>
+            <!-- idle连接持续时间，单位：秒 -->
+            <keepalive_timeout>30</keepalive_timeout>
+
+            <!-- 一个ws线程内所有的http logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+            <common_logic_so>./libhttp_common_logic.so</common_logic_so>
+
+            <!-- http logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+            <logic_so_group>
+                <logic_so>./libhttp_logic.so</logic_so>
+            </logic_so_group>
+        </http>
     </ws>
     
     <!-- 应用相关的配置 -->

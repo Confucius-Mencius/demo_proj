@@ -22,12 +22,14 @@ def send_to_server1(s):
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_wss_port),
                                    header=["Sec-WebSocket-Protocol: protocol-ws"],
                                    cookie='xx',
+                                   host='www.qq.com',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_wss_port))
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_ws_port),
                                    header=["Sec-WebSocket-Protocol: protocol-ws"],
-                                   cookie='xx')
+                                   cookie='xx',
+                                   host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_ws_port))
 
         data = 'Hello, World'
@@ -59,12 +61,14 @@ def send_to_server2(s):
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_wss_port),
                                    header=["Sec-WebSocket-Protocol: protocol-ws"],
                                    cookie='xx',
+                                   host='www.qq.com',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_wss_port))
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_ws_port),
                                    header=["Sec-WebSocket-Protocol: protocol-ws"],
-                                   cookie='xx')
+                                   cookie='xx',
+                                   host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_ws_port))
 
         data = 'x' * 16 * 1024 + 'y'
