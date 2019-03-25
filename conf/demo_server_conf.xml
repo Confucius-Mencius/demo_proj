@@ -15,15 +15,12 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <!-- =1：开启cpu剖析，=0不开启cpu剖析。不配置则默认为0 -->
         <enable_cpu_profiling>0</enable_cpu_profiling>
         <!-- =1：开启内存剖析，=0不开启内存剖析。不配置则默认为0 -->
-        <enable_mem_profiling>0</enable_mem_profiling>
+        <enable_heap_profiling>0</enable_heap_profiling>
         <!-- 是否立即清理空闲内存池，=1：清理，=0：不清理。不配置则默认为0 -->
         <release_free_mem>0</release_free_mem>
     </gperftools>
 
     <tcp>
-        <!-- tcp监听地址和端口 -->
-        <addr_port>0.0.0.0:10000</addr_port>
-
         <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
         <conn_count_limit>0</conn_count_limit>
 
@@ -42,48 +39,96 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <storm_interval>10</storm_interval>
         <storm_threshold>1000</storm_threshold>
 
-        <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
-        <thread_count>2</thread_count>
+        <!-- raw tcp，字节流内容需要在logic中自己解析 -->
+        <raw>
+            <!-- tcp监听地址和端口，ip:port或者host:port格式 -->
+            <addr>0.0.0.0</addr>
+            <port>5555</port>
 
-        <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-        <common_logic_so>./libtcp_common_logic.so</common_logic_so>
+            <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
+            <thread_count>2</thread_count>
 
-        <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
-        <logic_so_group>
-            <logic_so>./libtcp_logic.so</logic_so>
-        </logic_so_group>
+            <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+            <common_logic_so>./libtcp_common_logic.so</common_logic_so>
+
+            <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+            <logic_so_group>
+                <logic_so>./libtcp_logic.so</logic_so>
+            </logic_so_group>
+        </raw>
+
+        <!-- 框架自定义协议的tcp -->
+        <proto>
+            <!-- =1：对消息做checksum校验，=0：不做。不配置则默认为1 -->
+            <do_checksum>1</do_checksum>
+
+            <!-- 消息体的最大长度，单位：字节。不配置则使用默认值1048576（1M） -->
+            <max_msg_body_len>1048576</max_msg_body_len>
+
+            <part_msg>
+                <!-- 定时检查不完整消息间隔，单位：秒。配置为0或者不配置则使用默认值：5秒 -->
+                <check_interval>5</check_interval>
+
+                <!-- 从上次接收到部分消息算起，持续多久未接收到一个完整的消息，即认为该连接非法。单位：秒。配置为0或者不配置则使用默认值：60秒 -->
+                <conn_life>60</conn_life>
+            </part_msg>
+
+            <!-- tcp监听地址和端口，ip:port或者host:port格式 -->
+            <addr>0.0.0.0</addr>
+            <port>6666</port>
+
+            <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
+            <thread_count>2</thread_count>
+
+            <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+            <common_logic_so>./libproto_common_logic.so</common_logic_so>
+
+            <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+            <logic_so_group>
+                <logic_so>./libproto_logic.so</logic_so>
+            </logic_so_group>
+        </proto>
+
+        <!-- http和websocket -->
+        <ws>
+            <part_msg>
+                <!-- 定时检查不完整消息间隔，单位：秒。配置为0或者不配置则使用默认值：5秒 -->
+                <check_interval>5</check_interval>
+
+                <!-- 从上次接收到部分消息算起，持续多久未接收到一个完整的消息，即认为该连接非法。单位：秒。配置为0或者不配置则使用默认值：60秒 -->
+                <conn_life>60</conn_life>
+            </part_msg>
+
+            <!-- tcp监听地址和端口，ip:port或者host:port格式 -->
+            <addr>0.0.0.0</addr>
+            <port>10080</port>
+
+            <security>
+                <port>10443</port>
+
+                <!-- https-wss秘钥文件 -->
+                <certificate_chain_file_path>../conf/wss.crt</certificate_chain_file_path>
+                <private_key_file_path>../conf/wss.key</private_key_file_path>
+            </security>
+
+            <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
+            <thread_count>2</thread_count>
+
+            <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+            <common_logic_so>./libws_common_logic.so</common_logic_so>
+
+            <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+            <logic_so_group>
+                <logic_so>./libws_logic.so</logic_so>
+            </logic_so_group>
+        </ws>
     </tcp>
 
-    <ws>
-        <!-- ws监听网卡和端口，不配置iface表示在所有ip上监听 -->
-        <!-- <iface>wlp4s0</iface> -->
-
-        <port>10080</port>
-
-        <security>
-            <port>10443</port>
-
-            <!-- wss秘钥文件 -->
-            <certificate_chain_file_path>../conf/xxx_com.crt</certificate_chain_file_path>
-            <private_key_file_path>../conf/xxx_com.key</private_key_file_path>
-
-            <!-- <certificate_chain_file_path>../conf/sunlands_com/star_sunlands_com.crt</certificate_chain_file_path>
-            <private_key_file_path>../conf/sunlands_com/star_sunlands_com.key</private_key_file_path> -->
-        </security>
-
-        <!-- 网络收发超时，单位：秒 -->
-        <network_roundtrip_timeout>10</network_roundtrip_timeout>
-
-        <!-- 在idle连接上发送ping的间隔，单位：秒 -->
-        <ping_pong_interval></ping_pong_interval>
-
-        <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
-        <conn_count_limit>0</conn_count_limit>
-
+    <udp>
         <inactive_conn>
             <!-- 定时检查不再活跃的客户端连接并关闭，不配置或配置为0则不启动该定时器 -->
             <check_interval>
-                <sec>0</sec>
+                <sec>60</sec>
                 <usec>0</usec>
             </check_interval>
 
@@ -91,35 +136,58 @@ XML中的特殊符号只有5种，<、>、&、’和”。
             <life>1800</life>
         </inactive_conn>
 
-        <!-- 在一定时间内（单位：秒）收到的消息条数如果超过指定值，则认为是网络风暴，服务器会断开连接 -->
-        <storm_interval>10</storm_interval>
-        <storm_threshold>1000</storm_threshold>
+        <!-- udp监听地址和端口，ip:port或者host:port格式 -->
+        <addr>0.0.0.0</addr>
+        <port>7777</port>
 
-        <!-- ws io线程数，>=1。建议等于CPU核心数 -->
+        <!-- udp io线程数，>=1。建议等于CPU核心数 -->
         <thread_count>2</thread_count>
 
-        <!-- 一个ws线程内所有的ws logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-        <common_logic_so>./libws_common_logic.so</common_logic_so>
+        <!-- 一个udp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <common_logic_so>./libudp_common_logic.so</common_logic_so>
 
-        <!-- ws logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+        <!-- udp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
         <logic_so_group>
-            <logic_so>./libws_logic.so</logic_so>
+            <logic_so>./libudp_logic.so</logic_so>
         </logic_so_group>
+    </udp>
 
-        <http>
-            <!-- idle连接持续时间，单位：秒 -->
-            <keepalive_timeout>30</keepalive_timeout>
+    <global>
+        <!-- 所有的global logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <common_logic_so>./libglobal_common_logic.so</common_logic_so>
 
-            <!-- 一个ws线程内所有的http logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-            <common_logic_so>./libhttp_common_logic.so</common_logic_so>
+        <!-- 全局的公共逻辑so，供所有线程访问的逻辑，其中的代码通常需要加锁。没有则不配置 -->
+        <logic_so_group>
+            <logic_so>./libglobal_logic.so</logic_so>
+        </logic_so_group>
+    </global>
 
-            <!-- http logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
-            <logic_so_group>
-                <logic_so>./libhttp_logic.so</logic_so>
-            </logic_so_group>
-        </http>
-    </ws>
-    
+    <work>
+         <!-- work线程数，>=0。建议为IO线程数的2倍 -->
+        <thread_count>4</thread_count>
+
+        <!-- 一个work线程内所有的work_logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <common_logic_so>./libwork_common_logic.so</common_logic_so>
+
+        <!-- work_logic_so_group，可配置多个work_logic_so，没有则不配置 -->
+        <logic_so_group>
+            <logic_so>./libwork_logic.so</logic_so>
+        </logic_so_group>
+    </work>
+
+    <burden>
+        <!-- burden线程数，>=0。必须在有work线程和work_logic_so的情况下才配置burden线程及burden_logic_so，没有则不配置。建议为IO线程数的2倍 -->
+        <thread_count>4</thread_count>
+
+        <!-- 一个burden线程内所有的burden_logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <common_logic_so>./libburden_local_logic.so</common_logic_so>
+
+        <!-- burden_logic_so_group，可配置多个burden_logic_so，没有则不配置 -->
+        <logic_so_group>
+            <logic_so>./libburden_logic.so</logic_so>
+        </logic_so_group>
+    </burden>
+
     <!-- 应用相关的配置 -->
     <app>
         <test_mode>0</test_mode>
