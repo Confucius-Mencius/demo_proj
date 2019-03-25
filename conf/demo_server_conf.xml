@@ -48,7 +48,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <thread_count>4</thread_count>
 
         <!-- 一个burden线程内所有的burden_logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-        <common_logic_so>./libburden_local_logic.so</common_logic_so>
+        <common_logic_so>./libburden_common_logic.so</common_logic_so>
 
         <!-- burden_logic_so_group，可配置多个burden_logic_so，没有则不配置 -->
         <logic_so_group>
@@ -117,11 +117,11 @@ XML中的特殊符号只有5种，<、>、&、’和”。
             <thread_count>2</thread_count>
 
             <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-            <common_logic_so>./libtcp_common_logic.so</common_logic_so>
+            <common_logic_so>./libproto_tcp_common_logic.so</common_logic_so>
 
             <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
             <logic_so_group>
-                <logic_so>./libtcp_logic.so</logic_so>
+                <logic_so>./libproto_tcp_logic.so</logic_so>
             </logic_so_group>
         </proto>
 
