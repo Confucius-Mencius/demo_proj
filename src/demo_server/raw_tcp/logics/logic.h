@@ -1,15 +1,17 @@
-#ifndef DEMO_SERVER_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
-#define DEMO_SERVER_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
+#ifndef DEMO_SERVER_RAW_TCP_LOGICS_LOGIC_H_
+#define DEMO_SERVER_RAW_TCP_LOGICS_LOGIC_H_
 
-#include "tcp_common_logic_interface.h"
+#include "raw_tcp_logic_interface.h"
 
 namespace tcp
 {
-class CommonLogic : public TheCommonLogicInterface
+namespace raw
+{
+class Logic : public LogicInterface
 {
 public:
-    CommonLogic();
-    virtual ~CommonLogic();
+    Logic();
+    virtual ~Logic();
 
     ///////////////////////// ModuleInterface /////////////////////////
     const char* GetVersion() const override;
@@ -27,10 +29,8 @@ public:
     void OnClientClosed(const ConnGUID* conn_guid) override;
     void OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len) override;
     void OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len) override;
-
-    ///////////////////////// TheCommonLogicInterface /////////////////////////
-
 };
 }
+}
 
-#endif // DEMO_SERVER_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
+#endif // DEMO_SERVER_RAW_TCP_LOGICS_LOGIC_H_

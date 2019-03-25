@@ -37,5 +37,5 @@ set(PROJ_INC_DIR ${PROJECT_SOURCE_DIR}/${UTIL_LIB_NAME}/inc)
 
 ###############################################################################
 # sub dir
-add_subdirectory(tcp)
-add_subdirectory(ws)
+add_subdirectory(raw_tcp)
+#add_subdirectory(ws)

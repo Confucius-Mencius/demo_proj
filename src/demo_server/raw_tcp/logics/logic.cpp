@@ -1,8 +1,10 @@
 #include "logic.h"
 #include "log_util.h"
-#include "tcp_scheduler_interface.h"
+#include "raw_tcp_scheduler_interface.h"
 
 namespace tcp
+{
+namespace raw
 {
 Logic::Logic()
 {
@@ -82,5 +84,6 @@ void Logic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, co
     (void) source_thread;
     (void) data;
     (void) len;
+}
 }
 }

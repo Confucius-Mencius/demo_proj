@@ -27,8 +27,8 @@ def proc1():
         # 设置为linger时，close的时候服务器"Connection reset by peer"的ERROR日志
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_LINGER, struct.pack('ii', l_onoff, l_linger))
 
-        sock.connect((conf.demo_server_addr, conf.demo_server_tcp_port))
-        LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_tcp_port))
+        sock.connect((conf.demo_server_addr, conf.demo_server_raw_tcp_port))
+        LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_raw_tcp_port))
     except socket.error as arg:
         LOG_ERROR('failed to connect server: %s' % arg)
         assert False

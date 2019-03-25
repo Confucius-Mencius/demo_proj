@@ -2,7 +2,7 @@
 # author: BrentHuang (guang11cheng@qq.com)
 ###############################################################################
 
-set(LIB_NAME tcp_common_logic)
+set(LIB_NAME raw_tcp_common_logic)
 
 ###############################################################################
 # lib version

@@ -3,9 +3,11 @@
 #include <string.h>
 #include <unistd.h>
 #include "log_util.h"
-#include "tcp_scheduler_interface.h"
+#include "raw_tcp_scheduler_interface.h"
 
 namespace tcp
+{
+namespace raw
 {
 CommonLogic::CommonLogic()
 {
@@ -84,5 +86,6 @@ void CommonLogic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thre
     (void) source_thread;
     (void) data;
     (void) len;
+}
 }
 }

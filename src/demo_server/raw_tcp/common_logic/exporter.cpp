@@ -1,4 +1,4 @@
 #include "exporter.h"
 #include "common_logic.h"
 
-MODULE_EXPORTER_IMPL(tcp::CommonLogic);
+MODULE_EXPORTER_IMPL(tcp::raw::CommonLogic);

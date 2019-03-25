@@ -20,8 +20,8 @@ def send_to_server1():
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        sock.connect((conf.demo_server_addr, conf.demo_server_tcp_port))
-        LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_tcp_port))
+        sock.connect((conf.demo_server_addr, conf.demo_server_raw_tcp_port))
+        LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_raw_tcp_port))
 
         sock.send(struct.pack('!iIii', 1, 2, 3, 4))
 
@@ -56,8 +56,8 @@ def send_to_server2():
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        sock.connect((conf.demo_server_addr, conf.demo_server_tcp_port))
-        LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_tcp_port))
+        sock.connect((conf.demo_server_addr, conf.demo_server_raw_tcp_port))
+        LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_raw_tcp_port))
 
         data = 'x' * 16 * 1024 + 'y'
         sock.send(data)

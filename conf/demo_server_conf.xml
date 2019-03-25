@@ -20,6 +20,42 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <release_free_mem>0</release_free_mem>
     </gperftools>
 
+    <global>
+        <!-- 所有的global logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <common_logic_so>./libglobal_common_logic.so</common_logic_so>
+
+        <!-- 全局的公共逻辑so，供所有线程访问的逻辑，其中的代码通常需要加锁。没有则不配置 -->
+        <logic_so_group>
+            <logic_so>./libglobal_logic.so</logic_so>
+        </logic_so_group>
+    </global>
+
+    <work>
+         <!-- work线程数，>=0。建议为IO线程数的2倍 -->
+        <thread_count>4</thread_count>
+
+        <!-- 一个work线程内所有的work_logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <common_logic_so>./libwork_common_logic.so</common_logic_so>
+
+        <!-- work_logic_so_group，可配置多个work_logic_so，没有则不配置 -->
+        <logic_so_group>
+            <logic_so>./libwork_logic.so</logic_so>
+        </logic_so_group>
+    </work>
+
+    <burden>
+        <!-- burden线程数，>=0。必须在有work线程和work_logic_so的情况下才配置burden线程及burden_logic_so，没有则不配置。建议为IO线程数的2倍 -->
+        <thread_count>4</thread_count>
+
+        <!-- 一个burden线程内所有的burden_logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+        <common_logic_so>./libburden_local_logic.so</common_logic_so>
+
+        <!-- burden_logic_so_group，可配置多个burden_logic_so，没有则不配置 -->
+        <logic_so_group>
+            <logic_so>./libburden_logic.so</logic_so>
+        </logic_so_group>
+    </burden>
+
     <tcp>
         <!-- 限制最大连接数，即同时在线数，不配置或配置为0表示无限制，依据系统处理能力 -->
         <conn_count_limit>0</conn_count_limit>
@@ -49,11 +85,11 @@ XML中的特殊符号只有5种，<、>、&、’和”。
             <thread_count>2</thread_count>
 
             <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-            <common_logic_so>./libtcp_common_logic.so</common_logic_so>
+            <common_logic_so>./libraw_tcp_common_logic.so</common_logic_so>
 
             <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
             <logic_so_group>
-                <logic_so>./libtcp_logic.so</logic_so>
+                <logic_so>./libraw_tcp_logic.so</logic_so>
             </logic_so_group>
         </raw>
 
@@ -81,11 +117,11 @@ XML中的特殊符号只有5种，<、>、&、’和”。
             <thread_count>2</thread_count>
 
             <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-            <common_logic_so>./libproto_common_logic.so</common_logic_so>
+            <common_logic_so>./libtcp_common_logic.so</common_logic_so>
 
             <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
             <logic_so_group>
-                <logic_so>./libproto_logic.so</logic_so>
+                <logic_so>./libtcp_logic.so</logic_so>
             </logic_so_group>
         </proto>
 
@@ -151,42 +187,6 @@ XML中的特殊符号只有5种，<、>、&、’和”。
             <logic_so>./libudp_logic.so</logic_so>
         </logic_so_group>
     </udp>
-
-    <global>
-        <!-- 所有的global logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-        <common_logic_so>./libglobal_common_logic.so</common_logic_so>
-
-        <!-- 全局的公共逻辑so，供所有线程访问的逻辑，其中的代码通常需要加锁。没有则不配置 -->
-        <logic_so_group>
-            <logic_so>./libglobal_logic.so</logic_so>
-        </logic_so_group>
-    </global>
-
-    <work>
-         <!-- work线程数，>=0。建议为IO线程数的2倍 -->
-        <thread_count>4</thread_count>
-
-        <!-- 一个work线程内所有的work_logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-        <common_logic_so>./libwork_common_logic.so</common_logic_so>
-
-        <!-- work_logic_so_group，可配置多个work_logic_so，没有则不配置 -->
-        <logic_so_group>
-            <logic_so>./libwork_logic.so</logic_so>
-        </logic_so_group>
-    </work>
-
-    <burden>
-        <!-- burden线程数，>=0。必须在有work线程和work_logic_so的情况下才配置burden线程及burden_logic_so，没有则不配置。建议为IO线程数的2倍 -->
-        <thread_count>4</thread_count>
-
-        <!-- 一个burden线程内所有的burden_logic_so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-        <common_logic_so>./libburden_local_logic.so</common_logic_so>
-
-        <!-- burden_logic_so_group，可配置多个burden_logic_so，没有则不配置 -->
-        <logic_so_group>
-            <logic_so>./libburden_logic.so</logic_so>
-        </logic_so_group>
-    </burden>
 
     <!-- 应用相关的配置 -->
     <app>
