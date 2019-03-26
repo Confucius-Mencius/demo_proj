@@ -1,2 +1,2 @@
 # demo_proj
-demo proj
+demo project written using the framework
