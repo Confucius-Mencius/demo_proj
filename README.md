@@ -1,2 +1,2 @@
-# echo_proj
-echo proj for performance test
+# demo_proj
+demo proj
