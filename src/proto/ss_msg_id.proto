@@ -1,0 +1,11 @@
+syntax = "proto3";
+package com.moon.demo.proto.ss;
+
+enum MsgId {
+    PLACE_HOLDER = 0;
+    MSG_ID_GLOBAL_REQ = 2000;
+    MSG_ID_GLOBAL_RSP = 2001;
+    MSG_ID_DEMO_1_REQ = 2002;
+    MSG_ID_DEMO_1_RSP = 2003;
+    MSG_ID_DEMO_1_NFY = 2004;
+}

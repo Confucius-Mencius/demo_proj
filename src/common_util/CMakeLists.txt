@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 2.8)
 
 ###############################################################################
 # project name
-set(PROJ_NAME demo_server)
+set(PROJ_NAME common_util)
 project(${PROJ_NAME} CXX)
 
 set(CXX_LANGUAGE on CACHE INTERNAL "this is a cxx language project")
@@ -29,13 +29,11 @@ SetOutputDir(${PROJECT_SOURCE_DIR}/../build/output ${PROJ_NAME})
 # 打印编译选项
 ShowBuildOptions()
 
-# proj util lib
-set(UTIL_LIB_NAME util)
-
-# proj inc dir
-set(PROJ_INC_DIR ${PROJECT_SOURCE_DIR}/${UTIL_LIB_NAME}/inc)
+###############################################################################
+# project inc dir
+set(PROJ_INC_DIR ${PROJECT_SOURCE_DIR}/inc)
 
 ###############################################################################
 # sub dir
-add_subdirectory(raw_tcp)
-add_subdirectory(proto_tcp)
+add_subdirectory(src)
+add_subdirectory(test)
