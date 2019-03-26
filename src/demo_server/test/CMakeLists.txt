@@ -11,8 +11,10 @@ set(EXE_NAME ${TEST_NAME})
 
 ###############################################################################
 # include/link dir
-include_directories(${PROJ_INC_DIR} ${UTIL_SRC_DIR} ${COMMON_COMPONENT_INC_DIR} ${LOG4CPLUS_INC_DIR} ${GTEST_INC_DIR})
-link_directories(${COMMON_COMPONENT_LIB_DIR} ${LOG4CPLUS_LIB_DIR} ${CURL_LIB_DIR} ${GTEST_LIB_DIR} ${GPERFTOOLS_LIB_DIR})
+include_directories(${PROJ_INC_DIR} ${UTIL_SRC_DIR} ${COMMON_COMPONENT_INC_DIR}
+        ${LOG4CPLUS_INC_DIR} ${GTEST_INC_DIR})
+link_directories(${COMMON_COMPONENT_LIB_DIR} ${LOG4CPLUS_LIB_DIR} ${GTEST_LIB_DIR}
+        ${GPERFTOOLS_LIB_DIR})
 
 ###############################################################################
 # target and linked library
@@ -20,8 +22,8 @@ file(GLOB HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h ${PROJ_INC_DIR}/*.h)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} CUR_DIR_SRCS)
 add_executable(${EXE_NAME} ${HEADERS} ${CUR_DIR_SRCS})
 
-target_link_libraries(${EXE_NAME} ${UTIL_LIB_NAME} ${COMMON_COMPONENT_LIB_NAME} ${LOG4CPLUS_LIB_NAME}
-        ${GTEST_LIB_NAME} pthread ${GPERFTOOLS_LIB_NAME})
+target_link_libraries(${EXE_NAME} ${UTIL_LIB_NAME} ${COMMON_COMPONENT_LIB_NAME}
+        ${LOG4CPLUS_LIB_NAME} ${GTEST_LIB_NAME} pthread ${GPERFTOOLS_LIB_NAME})
 
 ###############################################################################
 # output dir

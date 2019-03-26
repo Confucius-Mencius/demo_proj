@@ -1,7 +1,7 @@
 syntax = "proto3";
 package com.moon.demo.proto.cs;
 
-enum MsgId {
+enum MsgID {
     PLACE_HOLDER = 0;
     MSG_ID_DEMO_1_REQ = 1000;
     MSG_ID_DEMO_1_RSP = 1001;

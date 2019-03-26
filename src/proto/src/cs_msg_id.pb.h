@@ -60,7 +60,7 @@ namespace demo {
 namespace proto {
 namespace cs {
 
-enum MsgId {
+enum MsgID {
   PLACE_HOLDER = 0,
   MSG_ID_DEMO_1_REQ = 1000,
   MSG_ID_DEMO_1_RSP = 1001,
@@ -74,23 +74,23 @@ enum MsgId {
   MSG_ID_DEMO_5_RSP = 1009,
   MSG_ID_DEMO_6_REQ = 1010,
   MSG_ID_DEMO_6_RSP = 1011,
-  MsgId_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  MsgId_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+  MsgID_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  MsgID_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-bool MsgId_IsValid(int value);
-const MsgId MsgId_MIN = PLACE_HOLDER;
-const MsgId MsgId_MAX = MSG_ID_DEMO_6_RSP;
-const int MsgId_ARRAYSIZE = MsgId_MAX + 1;
+bool MsgID_IsValid(int value);
+const MsgID MsgID_MIN = PLACE_HOLDER;
+const MsgID MsgID_MAX = MSG_ID_DEMO_6_RSP;
+const int MsgID_ARRAYSIZE = MsgID_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor* MsgId_descriptor();
-inline const ::std::string& MsgId_Name(MsgId value) {
+const ::google::protobuf::EnumDescriptor* MsgID_descriptor();
+inline const ::std::string& MsgID_Name(MsgID value) {
   return ::google::protobuf::internal::NameOfEnum(
-    MsgId_descriptor(), value);
+    MsgID_descriptor(), value);
 }
-inline bool MsgId_Parse(
-    const ::std::string& name, MsgId* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<MsgId>(
-    MsgId_descriptor(), name, value);
+inline bool MsgID_Parse(
+    const ::std::string& name, MsgID* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<MsgID>(
+    MsgID_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -119,10 +119,10 @@ inline bool MsgId_Parse(
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::com::moon::demo::proto::cs::MsgId> : ::std::true_type {};
+template <> struct is_proto_enum< ::com::moon::demo::proto::cs::MsgID> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::com::moon::demo::proto::cs::MsgId>() {
-  return ::com::moon::demo::proto::cs::MsgId_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::com::moon::demo::proto::cs::MsgID>() {
+  return ::com::moon::demo::proto::cs::MsgID_descriptor();
 }
 
 }  // namespace protobuf

@@ -23,12 +23,10 @@ void SomeCommonUtilTest::TearDownTestCase()
 
 void SomeCommonUtilTest::SetUp()
 {
-    Test::SetUp();
 }
 
 void SomeCommonUtilTest::TearDown()
 {
-    Test::TearDown();
 }
 
 void SomeCommonUtilTest::Test001()

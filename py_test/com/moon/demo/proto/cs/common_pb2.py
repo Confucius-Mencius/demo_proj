@@ -7,7 +7,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -18,8 +17,9 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='common.proto',
   package='com.moon.demo.proto',
-  syntax='proto2',
-  serialized_pb=_b('\n\x0c\x63ommon.proto\x12\x13\x63om.moon.demo.proto\"+\n\x06\x45rrCtx\x12\x10\n\x08\x65rr_code\x18\x01 \x02(\x05\x12\x0f\n\x07\x65rr_msg\x18\x02 \x01(\t')
+  syntax='proto3',
+  serialized_options=None,
+  serialized_pb=_b('\n\x0c\x63ommon.proto\x12\x13\x63om.moon.demo.proto\"+\n\x06\x45rrCtx\x12\x10\n\x08\x65rr_code\x18\x01 \x01(\x05\x12\x0f\n\x07\x65rr_msg\x18\x02 \x01(\tb\x06proto3')
 )
 
 
@@ -34,27 +34,27 @@ _ERRCTX = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='err_code', full_name='com.moon.demo.proto.ErrCtx.err_code', index=0,
-      number=1, type=5, cpp_type=1, label=2,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='err_msg', full_name='com.moon.demo.proto.ErrCtx.err_msg', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
-  syntax='proto2',
+  syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],

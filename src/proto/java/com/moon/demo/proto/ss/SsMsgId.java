@@ -15,9 +15,9 @@ public final class SsMsgId {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code com.moon.demo.proto.ss.MsgId}
+   * Protobuf enum {@code com.moon.demo.proto.ss.MsgID}
    */
-  public enum MsgId
+  public enum MsgID
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>PLACE_HOLDER = 0;</code>
@@ -84,11 +84,11 @@ public final class SsMsgId {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static MsgId valueOf(int value) {
+    public static MsgID valueOf(int value) {
       return forNumber(value);
     }
 
-    public static MsgId forNumber(int value) {
+    public static MsgID forNumber(int value) {
       switch (value) {
         case 0: return PLACE_HOLDER;
         case 2000: return MSG_ID_GLOBAL_REQ;
@@ -100,15 +100,15 @@ public final class SsMsgId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<MsgId>
+    public static com.google.protobuf.Internal.EnumLiteMap<MsgID>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        MsgId> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<MsgId>() {
-            public MsgId findValueByNumber(int number) {
-              return MsgId.forNumber(number);
+        MsgID> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MsgID>() {
+            public MsgID findValueByNumber(int number) {
+              return MsgID.forNumber(number);
             }
           };
 
@@ -125,9 +125,9 @@ public final class SsMsgId {
       return com.moon.demo.proto.ss.SsMsgId.getDescriptor().getEnumTypes().get(0);
     }
 
-    private static final MsgId[] VALUES = values();
+    private static final MsgID[] VALUES = values();
 
-    public static MsgId valueOf(
+    public static MsgID valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -141,11 +141,11 @@ public final class SsMsgId {
 
     private final int value;
 
-    private MsgId(int value) {
+    private MsgID(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:com.moon.demo.proto.ss.MsgId)
+    // @@protoc_insertion_point(enum_scope:com.moon.demo.proto.ss.MsgID)
   }
 
 
@@ -158,7 +158,7 @@ public final class SsMsgId {
   static {
     java.lang.String[] descriptorData = {
       "\n\017ss_msg_id.proto\022\026com.moon.demo.proto.s" +
-      "s*\221\001\n\005MsgId\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_" +
+      "s*\221\001\n\005MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_" +
       "GLOBAL_REQ\020\320\017\022\026\n\021MSG_ID_GLOBAL_RSP\020\321\017\022\026\n" +
       "\021MSG_ID_DEMO_1_REQ\020\322\017\022\026\n\021MSG_ID_DEMO_1_R" +
       "SP\020\323\017\022\026\n\021MSG_ID_DEMO_1_NFY\020\324\017b\006proto3"

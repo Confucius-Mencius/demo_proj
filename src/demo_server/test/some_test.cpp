@@ -2,32 +2,26 @@
 
 SomeTest::SomeTest()
 {
-
 }
 
 SomeTest::~SomeTest()
 {
-
 }
 
 void SomeTest::SetUpTestCase()
 {
-
 }
 
 void SomeTest::TearDownTestCase()
 {
-
 }
 
 void SomeTest::SetUp()
 {
-    Test::SetUp();
 }
 
 void SomeTest::TearDown()
 {
-    Test::TearDown();
 }
 
 void SomeTest::Test001()

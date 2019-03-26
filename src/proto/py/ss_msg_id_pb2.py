@@ -20,12 +20,12 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='com.moon.demo.proto.ss',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0fss_msg_id.proto\x12\x16\x63om.moon.demo.proto.ss*\x91\x01\n\x05MsgId\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x16\n\x11MSG_ID_GLOBAL_REQ\x10\xd0\x0f\x12\x16\n\x11MSG_ID_GLOBAL_RSP\x10\xd1\x0f\x12\x16\n\x11MSG_ID_DEMO_1_REQ\x10\xd2\x0f\x12\x16\n\x11MSG_ID_DEMO_1_RSP\x10\xd3\x0f\x12\x16\n\x11MSG_ID_DEMO_1_NFY\x10\xd4\x0f\x62\x06proto3')
+  serialized_pb=_b('\n\x0fss_msg_id.proto\x12\x16\x63om.moon.demo.proto.ss*\x91\x01\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x16\n\x11MSG_ID_GLOBAL_REQ\x10\xd0\x0f\x12\x16\n\x11MSG_ID_GLOBAL_RSP\x10\xd1\x0f\x12\x16\n\x11MSG_ID_DEMO_1_REQ\x10\xd2\x0f\x12\x16\n\x11MSG_ID_DEMO_1_RSP\x10\xd3\x0f\x12\x16\n\x11MSG_ID_DEMO_1_NFY\x10\xd4\x0f\x62\x06proto3')
 )
 
 _MSGID = _descriptor.EnumDescriptor(
-  name='MsgId',
-  full_name='com.moon.demo.proto.ss.MsgId',
+  name='MsgID',
+  full_name='com.moon.demo.proto.ss.MsgID',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -61,7 +61,7 @@ _MSGID = _descriptor.EnumDescriptor(
 )
 _sym_db.RegisterEnumDescriptor(_MSGID)
 
-MsgId = enum_type_wrapper.EnumTypeWrapper(_MSGID)
+MsgID = enum_type_wrapper.EnumTypeWrapper(_MSGID)
 PLACE_HOLDER = 0
 MSG_ID_GLOBAL_REQ = 2000
 MSG_ID_GLOBAL_RSP = 2001
@@ -70,7 +70,7 @@ MSG_ID_DEMO_1_RSP = 2003
 MSG_ID_DEMO_1_NFY = 2004
 
 
-DESCRIPTOR.enum_types_by_name['MsgId'] = _MSGID
+DESCRIPTOR.enum_types_by_name['MsgID'] = _MSGID
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 

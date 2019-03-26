@@ -59,7 +59,7 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\017cs_msg_id.proto\022\026com.moon.demo.proto.c"
-      "s*\271\002\n\005MsgId\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_"
+      "s*\271\002\n\005MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_"
       "DEMO_1_REQ\020\350\007\022\026\n\021MSG_ID_DEMO_1_RSP\020\351\007\022\026\n"
       "\021MSG_ID_DEMO_2_REQ\020\352\007\022\026\n\021MSG_ID_DEMO_2_R"
       "SP\020\353\007\022\026\n\021MSG_ID_DEMO_3_REQ\020\354\007\022\026\n\021MSG_ID_"
@@ -91,11 +91,11 @@ namespace moon {
 namespace demo {
 namespace proto {
 namespace cs {
-const ::google::protobuf::EnumDescriptor* MsgId_descriptor() {
+const ::google::protobuf::EnumDescriptor* MsgID_descriptor() {
   protobuf_cs_5fmsg_5fid_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_cs_5fmsg_5fid_2eproto::file_level_enum_descriptors[0];
 }
-bool MsgId_IsValid(int value) {
+bool MsgID_IsValid(int value) {
   switch (value) {
     case 0:
     case 1000:

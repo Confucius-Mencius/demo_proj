@@ -8,7 +8,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -19,38 +18,94 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='cs_msg_id.proto',
   package='com.moon.demo.proto.cs',
-  syntax='proto2',
-  serialized_pb=_b('\n\x0f\x63s_msg_id.proto\x12\x16\x63om.moon.demo.proto.cs*3\n\x05MsgId\x12\x14\n\x0fMSG_ID_ECHO_REQ\x10\xe8\x07\x12\x14\n\x0fMSG_ID_ECHO_RSP\x10\xe9\x07')
+  syntax='proto3',
+  serialized_options=None,
+  serialized_pb=_b('\n\x0f\x63s_msg_id.proto\x12\x16\x63om.moon.demo.proto.cs*\xb9\x02\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x16\n\x11MSG_ID_DEMO_1_REQ\x10\xe8\x07\x12\x16\n\x11MSG_ID_DEMO_1_RSP\x10\xe9\x07\x12\x16\n\x11MSG_ID_DEMO_2_REQ\x10\xea\x07\x12\x16\n\x11MSG_ID_DEMO_2_RSP\x10\xeb\x07\x12\x16\n\x11MSG_ID_DEMO_3_REQ\x10\xec\x07\x12\x16\n\x11MSG_ID_DEMO_3_RSP\x10\xed\x07\x12\x16\n\x11MSG_ID_DEMO_4_REQ\x10\xee\x07\x12\x16\n\x11MSG_ID_DEMO_4_RSP\x10\xef\x07\x12\x16\n\x11MSG_ID_DEMO_5_REQ\x10\xf0\x07\x12\x16\n\x11MSG_ID_DEMO_5_RSP\x10\xf1\x07\x12\x16\n\x11MSG_ID_DEMO_6_REQ\x10\xf2\x07\x12\x16\n\x11MSG_ID_DEMO_6_RSP\x10\xf3\x07\x62\x06proto3')
 )
 
 _MSGID = _descriptor.EnumDescriptor(
-  name='MsgId',
-  full_name='com.moon.demo.proto.cs.MsgId',
+  name='MsgID',
+  full_name='com.moon.demo.proto.cs.MsgID',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_ECHO_REQ', index=0, number=1000,
-      options=None,
+      name='PLACE_HOLDER', index=0, number=0,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_ECHO_RSP', index=1, number=1001,
-      options=None,
+      name='MSG_ID_DEMO_1_REQ', index=1, number=1000,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_1_RSP', index=2, number=1001,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_2_REQ', index=3, number=1002,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_2_RSP', index=4, number=1003,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_3_REQ', index=5, number=1004,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_3_RSP', index=6, number=1005,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_4_REQ', index=7, number=1006,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_4_RSP', index=8, number=1007,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_5_REQ', index=9, number=1008,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_5_RSP', index=10, number=1009,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_6_REQ', index=11, number=1010,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO_6_RSP', index=12, number=1011,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
-  serialized_start=43,
-  serialized_end=94,
+  serialized_options=None,
+  serialized_start=44,
+  serialized_end=357,
 )
 _sym_db.RegisterEnumDescriptor(_MSGID)
 
-MsgId = enum_type_wrapper.EnumTypeWrapper(_MSGID)
-MSG_ID_ECHO_REQ = 1000
-MSG_ID_ECHO_RSP = 1001
+MsgID = enum_type_wrapper.EnumTypeWrapper(_MSGID)
+PLACE_HOLDER = 0
+MSG_ID_DEMO_1_REQ = 1000
+MSG_ID_DEMO_1_RSP = 1001
+MSG_ID_DEMO_2_REQ = 1002
+MSG_ID_DEMO_2_RSP = 1003
+MSG_ID_DEMO_3_REQ = 1004
+MSG_ID_DEMO_3_RSP = 1005
+MSG_ID_DEMO_4_REQ = 1006
+MSG_ID_DEMO_4_RSP = 1007
+MSG_ID_DEMO_5_REQ = 1008
+MSG_ID_DEMO_5_RSP = 1009
+MSG_ID_DEMO_6_REQ = 1010
+MSG_ID_DEMO_6_RSP = 1011
 
 
-DESCRIPTOR.enum_types_by_name['MsgId'] = _MSGID
+DESCRIPTOR.enum_types_by_name['MsgID'] = _MSGID
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 

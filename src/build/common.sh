@@ -17,6 +17,6 @@ THIRD_PARTY_LIB_LIST=(gflags zlib xz libxml2 log4cplus libevent libuuid openssl 
 COMMON_COMPONENT_INSTALL_PREFIX=/opt/common_component
 
 # 项目自身的proj，根据实际情况修改
-PROJ_LIST=(demo_server) # 全部的proj列表
-PROJ_LIB_LIST=() # lib列表，可执行程序除外
+PROJ_LIST=(proto common_util demo_server) # 全部的proj列表
+PROJ_LIB_LIST=(proto common_util) # lib列表，可执行程序除外
 PROJ_SERVER_LIST=(demo_server) # 可执行程序列表，lib除外
