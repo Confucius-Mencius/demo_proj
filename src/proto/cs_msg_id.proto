@@ -1,5 +1,5 @@
 syntax = "proto3";
-package com.moon.demo.proto.cs;
+package com.moon.demo.cs;
 
 enum MsgID {
     PLACE_HOLDER = 0;

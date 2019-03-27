@@ -48,27 +48,24 @@ void AddDescriptors();
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 class ErrCtx;
 class ErrCtxDefaultTypeInternal;
 extern ErrCtxDefaultTypeInternal _ErrCtx_default_instance_;
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
 namespace google {
 namespace protobuf {
-template<> ::com::moon::demo::proto::ErrCtx* Arena::CreateMaybeMessage<::com::moon::demo::proto::ErrCtx>(Arena*);
+template<> ::com::moon::demo::ErrCtx* Arena::CreateMaybeMessage<::com::moon::demo::ErrCtx>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 
 // ===================================================================
 
-class ErrCtx : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.ErrCtx) */ {
+class ErrCtx : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ErrCtx) */ {
  public:
   ErrCtx();
   virtual ~ErrCtx();
@@ -175,7 +172,7 @@ class ErrCtx : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::google::protobuf::int32 err_code() const;
   void set_err_code(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ErrCtx)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -200,13 +197,13 @@ inline void ErrCtx::clear_err_code() {
   err_code_ = 0;
 }
 inline ::google::protobuf::int32 ErrCtx::err_code() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.ErrCtx.err_code)
+  // @@protoc_insertion_point(field_get:com.moon.demo.ErrCtx.err_code)
   return err_code_;
 }
 inline void ErrCtx::set_err_code(::google::protobuf::int32 value) {
   
   err_code_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.ErrCtx.err_code)
+  // @@protoc_insertion_point(field_set:com.moon.demo.ErrCtx.err_code)
 }
 
 // string err_msg = 2;
@@ -214,41 +211,41 @@ inline void ErrCtx::clear_err_msg() {
   err_msg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ErrCtx::err_msg() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.ErrCtx.err_msg)
+  // @@protoc_insertion_point(field_get:com.moon.demo.ErrCtx.err_msg)
   return err_msg_.GetNoArena();
 }
 inline void ErrCtx::set_err_msg(const ::std::string& value) {
   
   err_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.ErrCtx.err_msg)
+  // @@protoc_insertion_point(field_set:com.moon.demo.ErrCtx.err_msg)
 }
 #if LANG_CXX11
 inline void ErrCtx::set_err_msg(::std::string&& value) {
   
   err_msg_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.proto.ErrCtx.err_msg)
+  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.ErrCtx.err_msg)
 }
 #endif
 inline void ErrCtx::set_err_msg(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   err_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:com.moon.demo.proto.ErrCtx.err_msg)
+  // @@protoc_insertion_point(field_set_char:com.moon.demo.ErrCtx.err_msg)
 }
 inline void ErrCtx::set_err_msg(const char* value, size_t size) {
   
   err_msg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.proto.ErrCtx.err_msg)
+  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.ErrCtx.err_msg)
 }
 inline ::std::string* ErrCtx::mutable_err_msg() {
   
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.ErrCtx.err_msg)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ErrCtx.err_msg)
   return err_msg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ErrCtx::release_err_msg() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.ErrCtx.err_msg)
+  // @@protoc_insertion_point(field_release:com.moon.demo.ErrCtx.err_msg)
   
   return err_msg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -259,7 +256,7 @@ inline void ErrCtx::set_allocated_err_msg(::std::string* err_msg) {
     
   }
   err_msg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), err_msg);
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.ErrCtx.err_msg)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ErrCtx.err_msg)
 }
 
 #ifdef __GNUC__
@@ -268,7 +265,6 @@ inline void ErrCtx::set_allocated_err_msg(::std::string* err_msg) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com

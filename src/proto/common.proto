@@ -1,5 +1,5 @@
 syntax = "proto3";
-package com.moon.demo.proto;
+package com.moon.demo;
 
 message ErrCtx {
     int32 err_code = 1; // 错误码，=0表示成功，>0时客户端根据错误码进行提示

@@ -50,7 +50,6 @@ void AddDescriptors();
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 namespace cs {
 class Demo1Req;
 class Demo1ReqDefaultTypeInternal;
@@ -89,30 +88,28 @@ class Demo6Rsp;
 class Demo6RspDefaultTypeInternal;
 extern Demo6RspDefaultTypeInternal _Demo6Rsp_default_instance_;
 }  // namespace cs
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
 namespace google {
 namespace protobuf {
-template<> ::com::moon::demo::proto::cs::Demo1Req* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo1Req>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo1Rsp* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo1Rsp>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo2Req* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo2Req>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo2Rsp* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo2Rsp>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo3Req* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo3Req>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo3Rsp* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo3Rsp>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo4Req* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo4Req>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo4Rsp* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo4Rsp>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo5Req* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo5Req>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo5Rsp* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo5Rsp>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo6Req* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo6Req>(Arena*);
-template<> ::com::moon::demo::proto::cs::Demo6Rsp* Arena::CreateMaybeMessage<::com::moon::demo::proto::cs::Demo6Rsp>(Arena*);
+template<> ::com::moon::demo::cs::Demo1Req* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo1Req>(Arena*);
+template<> ::com::moon::demo::cs::Demo1Rsp* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo1Rsp>(Arena*);
+template<> ::com::moon::demo::cs::Demo2Req* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo2Req>(Arena*);
+template<> ::com::moon::demo::cs::Demo2Rsp* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo2Rsp>(Arena*);
+template<> ::com::moon::demo::cs::Demo3Req* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo3Req>(Arena*);
+template<> ::com::moon::demo::cs::Demo3Rsp* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo3Rsp>(Arena*);
+template<> ::com::moon::demo::cs::Demo4Req* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo4Req>(Arena*);
+template<> ::com::moon::demo::cs::Demo4Rsp* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo4Rsp>(Arena*);
+template<> ::com::moon::demo::cs::Demo5Req* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo5Req>(Arena*);
+template<> ::com::moon::demo::cs::Demo5Rsp* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo5Rsp>(Arena*);
+template<> ::com::moon::demo::cs::Demo6Req* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo6Req>(Arena*);
+template<> ::com::moon::demo::cs::Demo6Rsp* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo6Rsp>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 namespace cs {
 
 enum Demo4Flag {
@@ -142,7 +139,7 @@ inline bool Demo4Flag_Parse(
 }
 // ===================================================================
 
-class Demo1Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo1Req) */ {
+class Demo1Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo1Req) */ {
  public:
   Demo1Req();
   virtual ~Demo1Req();
@@ -241,7 +238,7 @@ class Demo1Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   bool udp() const;
   void set_udp(bool value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo1Req)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo1Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -252,7 +249,7 @@ class Demo1Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class Demo1Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo1Rsp) */ {
+class Demo1Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo1Rsp) */ {
  public:
   Demo1Rsp();
   virtual ~Demo1Rsp();
@@ -339,29 +336,29 @@ class Demo1Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   // accessors -------------------------------------------------------
 
-  // .com.moon.demo.proto.ErrCtx err_ctx = 1;
+  // .com.moon.demo.ErrCtx err_ctx = 1;
   bool has_err_ctx() const;
   void clear_err_ctx();
   static const int kErrCtxFieldNumber = 1;
   private:
-  const ::com::moon::demo::proto::ErrCtx& _internal_err_ctx() const;
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
   public:
-  const ::com::moon::demo::proto::ErrCtx& err_ctx() const;
-  ::com::moon::demo::proto::ErrCtx* release_err_ctx();
-  ::com::moon::demo::proto::ErrCtx* mutable_err_ctx();
-  void set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx);
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo1Rsp)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo1Rsp)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::com::moon::demo::proto::ErrCtx* err_ctx_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class Demo2Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo2Req) */ {
+class Demo2Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo2Req) */ {
  public:
   Demo2Req();
   virtual ~Demo2Req();
@@ -460,7 +457,7 @@ class Demo2Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   bool udp() const;
   void set_udp(bool value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo2Req)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo2Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -471,7 +468,7 @@ class Demo2Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class Demo2Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo2Rsp) */ {
+class Demo2Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo2Rsp) */ {
  public:
   Demo2Rsp();
   virtual ~Demo2Rsp();
@@ -558,29 +555,29 @@ class Demo2Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   // accessors -------------------------------------------------------
 
-  // .com.moon.demo.proto.ErrCtx err_ctx = 1;
+  // .com.moon.demo.ErrCtx err_ctx = 1;
   bool has_err_ctx() const;
   void clear_err_ctx();
   static const int kErrCtxFieldNumber = 1;
   private:
-  const ::com::moon::demo::proto::ErrCtx& _internal_err_ctx() const;
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
   public:
-  const ::com::moon::demo::proto::ErrCtx& err_ctx() const;
-  ::com::moon::demo::proto::ErrCtx* release_err_ctx();
-  ::com::moon::demo::proto::ErrCtx* mutable_err_ctx();
-  void set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx);
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo2Rsp)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo2Rsp)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::com::moon::demo::proto::ErrCtx* err_ctx_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class Demo3Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo3Req) */ {
+class Demo3Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo3Req) */ {
  public:
   Demo3Req();
   virtual ~Demo3Req();
@@ -679,7 +676,7 @@ class Demo3Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   bool udp() const;
   void set_udp(bool value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo3Req)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo3Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -690,7 +687,7 @@ class Demo3Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class Demo3Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo3Rsp) */ {
+class Demo3Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo3Rsp) */ {
  public:
   Demo3Rsp();
   virtual ~Demo3Rsp();
@@ -777,29 +774,29 @@ class Demo3Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   // accessors -------------------------------------------------------
 
-  // .com.moon.demo.proto.ErrCtx err_ctx = 1;
+  // .com.moon.demo.ErrCtx err_ctx = 1;
   bool has_err_ctx() const;
   void clear_err_ctx();
   static const int kErrCtxFieldNumber = 1;
   private:
-  const ::com::moon::demo::proto::ErrCtx& _internal_err_ctx() const;
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
   public:
-  const ::com::moon::demo::proto::ErrCtx& err_ctx() const;
-  ::com::moon::demo::proto::ErrCtx* release_err_ctx();
-  ::com::moon::demo::proto::ErrCtx* mutable_err_ctx();
-  void set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx);
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo3Rsp)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo3Rsp)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::com::moon::demo::proto::ErrCtx* err_ctx_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class Demo4Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo4Req) */ {
+class Demo4Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo4Req) */ {
  public:
   Demo4Req();
   virtual ~Demo4Req();
@@ -926,13 +923,13 @@ class Demo4Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // .com.moon.demo.proto.cs.Demo4Flag flag = 5;
+  // .com.moon.demo.cs.Demo4Flag flag = 5;
   void clear_flag();
   static const int kFlagFieldNumber = 5;
-  ::com::moon::demo::proto::cs::Demo4Flag flag() const;
-  void set_flag(::com::moon::demo::proto::cs::Demo4Flag value);
+  ::com::moon::demo::cs::Demo4Flag flag() const;
+  void set_flag(::com::moon::demo::cs::Demo4Flag value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo4Req)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo4Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -946,7 +943,7 @@ class Demo4Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class Demo4Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo4Rsp) */ {
+class Demo4Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo4Rsp) */ {
  public:
   Demo4Rsp();
   virtual ~Demo4Rsp();
@@ -1033,29 +1030,29 @@ class Demo4Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   // accessors -------------------------------------------------------
 
-  // .com.moon.demo.proto.ErrCtx err_ctx = 1;
+  // .com.moon.demo.ErrCtx err_ctx = 1;
   bool has_err_ctx() const;
   void clear_err_ctx();
   static const int kErrCtxFieldNumber = 1;
   private:
-  const ::com::moon::demo::proto::ErrCtx& _internal_err_ctx() const;
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
   public:
-  const ::com::moon::demo::proto::ErrCtx& err_ctx() const;
-  ::com::moon::demo::proto::ErrCtx* release_err_ctx();
-  ::com::moon::demo::proto::ErrCtx* mutable_err_ctx();
-  void set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx);
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo4Rsp)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo4Rsp)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::com::moon::demo::proto::ErrCtx* err_ctx_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class Demo5Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo5Req) */ {
+class Demo5Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo5Req) */ {
  public:
   Demo5Req();
   virtual ~Demo5Req();
@@ -1182,7 +1179,7 @@ class Demo5Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo5Req)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo5Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1195,7 +1192,7 @@ class Demo5Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class Demo5Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo5Rsp) */ {
+class Demo5Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo5Rsp) */ {
  public:
   Demo5Rsp();
   virtual ~Demo5Rsp();
@@ -1282,29 +1279,29 @@ class Demo5Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   // accessors -------------------------------------------------------
 
-  // .com.moon.demo.proto.ErrCtx err_ctx = 1;
+  // .com.moon.demo.ErrCtx err_ctx = 1;
   bool has_err_ctx() const;
   void clear_err_ctx();
   static const int kErrCtxFieldNumber = 1;
   private:
-  const ::com::moon::demo::proto::ErrCtx& _internal_err_ctx() const;
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
   public:
-  const ::com::moon::demo::proto::ErrCtx& err_ctx() const;
-  ::com::moon::demo::proto::ErrCtx* release_err_ctx();
-  ::com::moon::demo::proto::ErrCtx* mutable_err_ctx();
-  void set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx);
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo5Rsp)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo5Rsp)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::com::moon::demo::proto::ErrCtx* err_ctx_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class Demo6Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo6Req) */ {
+class Demo6Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo6Req) */ {
  public:
   Demo6Req();
   virtual ~Demo6Req();
@@ -1403,7 +1400,7 @@ class Demo6Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   bool http() const;
   void set_http(bool value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo6Req)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo6Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1414,7 +1411,7 @@ class Demo6Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class Demo6Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.proto.cs.Demo6Rsp) */ {
+class Demo6Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo6Rsp) */ {
  public:
   Demo6Rsp();
   virtual ~Demo6Rsp();
@@ -1501,23 +1498,23 @@ class Demo6Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   // accessors -------------------------------------------------------
 
-  // .com.moon.demo.proto.ErrCtx err_ctx = 1;
+  // .com.moon.demo.ErrCtx err_ctx = 1;
   bool has_err_ctx() const;
   void clear_err_ctx();
   static const int kErrCtxFieldNumber = 1;
   private:
-  const ::com::moon::demo::proto::ErrCtx& _internal_err_ctx() const;
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
   public:
-  const ::com::moon::demo::proto::ErrCtx& err_ctx() const;
-  ::com::moon::demo::proto::ErrCtx* release_err_ctx();
-  ::com::moon::demo::proto::ErrCtx* mutable_err_ctx();
-  void set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx);
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.proto.cs.Demo6Rsp)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo6Rsp)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::com::moon::demo::proto::ErrCtx* err_ctx_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
@@ -1537,13 +1534,13 @@ inline void Demo1Req::clear_a() {
   a_ = 0;
 }
 inline ::google::protobuf::int32 Demo1Req::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo1Req.a)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo1Req.a)
   return a_;
 }
 inline void Demo1Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo1Req.a)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo1Req.a)
 }
 
 // bool udp = 2;
@@ -1551,49 +1548,49 @@ inline void Demo1Req::clear_udp() {
   udp_ = false;
 }
 inline bool Demo1Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo1Req.udp)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo1Req.udp)
   return udp_;
 }
 inline void Demo1Req::set_udp(bool value) {
   
   udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo1Req.udp)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo1Req.udp)
 }
 
 // -------------------------------------------------------------------
 
 // Demo1Rsp
 
-// .com.moon.demo.proto.ErrCtx err_ctx = 1;
+// .com.moon.demo.ErrCtx err_ctx = 1;
 inline bool Demo1Rsp::has_err_ctx() const {
   return this != internal_default_instance() && err_ctx_ != NULL;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo1Rsp::_internal_err_ctx() const {
+inline const ::com::moon::demo::ErrCtx& Demo1Rsp::_internal_err_ctx() const {
   return *err_ctx_;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo1Rsp::err_ctx() const {
-  const ::com::moon::demo::proto::ErrCtx* p = err_ctx_;
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo1Rsp.err_ctx)
-  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::proto::ErrCtx*>(
-      &::com::moon::demo::proto::_ErrCtx_default_instance_);
+inline const ::com::moon::demo::ErrCtx& Demo1Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo1Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo1Rsp::release_err_ctx() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo1Rsp.err_ctx)
+inline ::com::moon::demo::ErrCtx* Demo1Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo1Rsp.err_ctx)
   
-  ::com::moon::demo::proto::ErrCtx* temp = err_ctx_;
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
   err_ctx_ = NULL;
   return temp;
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo1Rsp::mutable_err_ctx() {
+inline ::com::moon::demo::ErrCtx* Demo1Rsp::mutable_err_ctx() {
   
   if (err_ctx_ == NULL) {
-    auto* p = CreateMaybeMessage<::com::moon::demo::proto::ErrCtx>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
     err_ctx_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo1Rsp.err_ctx)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo1Rsp.err_ctx)
   return err_ctx_;
 }
-inline void Demo1Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx) {
+inline void Demo1Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
@@ -1609,7 +1606,7 @@ inline void Demo1Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* er
     
   }
   err_ctx_ = err_ctx;
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo1Rsp.err_ctx)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo1Rsp.err_ctx)
 }
 
 // -------------------------------------------------------------------
@@ -1621,13 +1618,13 @@ inline void Demo2Req::clear_a() {
   a_ = 0;
 }
 inline ::google::protobuf::int32 Demo2Req::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo2Req.a)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo2Req.a)
   return a_;
 }
 inline void Demo2Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo2Req.a)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo2Req.a)
 }
 
 // bool udp = 2;
@@ -1635,49 +1632,49 @@ inline void Demo2Req::clear_udp() {
   udp_ = false;
 }
 inline bool Demo2Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo2Req.udp)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo2Req.udp)
   return udp_;
 }
 inline void Demo2Req::set_udp(bool value) {
   
   udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo2Req.udp)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo2Req.udp)
 }
 
 // -------------------------------------------------------------------
 
 // Demo2Rsp
 
-// .com.moon.demo.proto.ErrCtx err_ctx = 1;
+// .com.moon.demo.ErrCtx err_ctx = 1;
 inline bool Demo2Rsp::has_err_ctx() const {
   return this != internal_default_instance() && err_ctx_ != NULL;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo2Rsp::_internal_err_ctx() const {
+inline const ::com::moon::demo::ErrCtx& Demo2Rsp::_internal_err_ctx() const {
   return *err_ctx_;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo2Rsp::err_ctx() const {
-  const ::com::moon::demo::proto::ErrCtx* p = err_ctx_;
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo2Rsp.err_ctx)
-  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::proto::ErrCtx*>(
-      &::com::moon::demo::proto::_ErrCtx_default_instance_);
+inline const ::com::moon::demo::ErrCtx& Demo2Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo2Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo2Rsp::release_err_ctx() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo2Rsp.err_ctx)
+inline ::com::moon::demo::ErrCtx* Demo2Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo2Rsp.err_ctx)
   
-  ::com::moon::demo::proto::ErrCtx* temp = err_ctx_;
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
   err_ctx_ = NULL;
   return temp;
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo2Rsp::mutable_err_ctx() {
+inline ::com::moon::demo::ErrCtx* Demo2Rsp::mutable_err_ctx() {
   
   if (err_ctx_ == NULL) {
-    auto* p = CreateMaybeMessage<::com::moon::demo::proto::ErrCtx>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
     err_ctx_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo2Rsp.err_ctx)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo2Rsp.err_ctx)
   return err_ctx_;
 }
-inline void Demo2Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx) {
+inline void Demo2Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
@@ -1693,7 +1690,7 @@ inline void Demo2Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* er
     
   }
   err_ctx_ = err_ctx;
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo2Rsp.err_ctx)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo2Rsp.err_ctx)
 }
 
 // -------------------------------------------------------------------
@@ -1705,13 +1702,13 @@ inline void Demo3Req::clear_a() {
   a_ = 0;
 }
 inline ::google::protobuf::int32 Demo3Req::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo3Req.a)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo3Req.a)
   return a_;
 }
 inline void Demo3Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo3Req.a)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo3Req.a)
 }
 
 // bool udp = 2;
@@ -1719,49 +1716,49 @@ inline void Demo3Req::clear_udp() {
   udp_ = false;
 }
 inline bool Demo3Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo3Req.udp)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo3Req.udp)
   return udp_;
 }
 inline void Demo3Req::set_udp(bool value) {
   
   udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo3Req.udp)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo3Req.udp)
 }
 
 // -------------------------------------------------------------------
 
 // Demo3Rsp
 
-// .com.moon.demo.proto.ErrCtx err_ctx = 1;
+// .com.moon.demo.ErrCtx err_ctx = 1;
 inline bool Demo3Rsp::has_err_ctx() const {
   return this != internal_default_instance() && err_ctx_ != NULL;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo3Rsp::_internal_err_ctx() const {
+inline const ::com::moon::demo::ErrCtx& Demo3Rsp::_internal_err_ctx() const {
   return *err_ctx_;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo3Rsp::err_ctx() const {
-  const ::com::moon::demo::proto::ErrCtx* p = err_ctx_;
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo3Rsp.err_ctx)
-  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::proto::ErrCtx*>(
-      &::com::moon::demo::proto::_ErrCtx_default_instance_);
+inline const ::com::moon::demo::ErrCtx& Demo3Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo3Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo3Rsp::release_err_ctx() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo3Rsp.err_ctx)
+inline ::com::moon::demo::ErrCtx* Demo3Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo3Rsp.err_ctx)
   
-  ::com::moon::demo::proto::ErrCtx* temp = err_ctx_;
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
   err_ctx_ = NULL;
   return temp;
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo3Rsp::mutable_err_ctx() {
+inline ::com::moon::demo::ErrCtx* Demo3Rsp::mutable_err_ctx() {
   
   if (err_ctx_ == NULL) {
-    auto* p = CreateMaybeMessage<::com::moon::demo::proto::ErrCtx>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
     err_ctx_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo3Rsp.err_ctx)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo3Rsp.err_ctx)
   return err_ctx_;
 }
-inline void Demo3Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx) {
+inline void Demo3Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
@@ -1777,7 +1774,7 @@ inline void Demo3Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* er
     
   }
   err_ctx_ = err_ctx;
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo3Rsp.err_ctx)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo3Rsp.err_ctx)
 }
 
 // -------------------------------------------------------------------
@@ -1789,13 +1786,13 @@ inline void Demo4Req::clear_a() {
   a_ = 0;
 }
 inline ::google::protobuf::int32 Demo4Req::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo4Req.a)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo4Req.a)
   return a_;
 }
 inline void Demo4Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo4Req.a)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo4Req.a)
 }
 
 // int64 b = 2;
@@ -1803,13 +1800,13 @@ inline void Demo4Req::clear_b() {
   b_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 Demo4Req::b() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo4Req.b)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo4Req.b)
   return b_;
 }
 inline void Demo4Req::set_b(::google::protobuf::int64 value) {
   
   b_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo4Req.b)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo4Req.b)
 }
 
 // string c = 3;
@@ -1817,41 +1814,41 @@ inline void Demo4Req::clear_c() {
   c_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Demo4Req::c() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo4Req.c)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo4Req.c)
   return c_.GetNoArena();
 }
 inline void Demo4Req::set_c(const ::std::string& value) {
   
   c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo4Req.c)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo4Req.c)
 }
 #if LANG_CXX11
 inline void Demo4Req::set_c(::std::string&& value) {
   
   c_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.proto.cs.Demo4Req.c)
+  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.cs.Demo4Req.c)
 }
 #endif
 inline void Demo4Req::set_c(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:com.moon.demo.proto.cs.Demo4Req.c)
+  // @@protoc_insertion_point(field_set_char:com.moon.demo.cs.Demo4Req.c)
 }
 inline void Demo4Req::set_c(const char* value, size_t size) {
   
   c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.proto.cs.Demo4Req.c)
+  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.cs.Demo4Req.c)
 }
 inline ::std::string* Demo4Req::mutable_c() {
   
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo4Req.c)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo4Req.c)
   return c_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Demo4Req::release_c() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo4Req.c)
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo4Req.c)
   
   return c_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1862,7 +1859,7 @@ inline void Demo4Req::set_allocated_c(::std::string* c) {
     
   }
   c_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), c);
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo4Req.c)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo4Req.c)
 }
 
 // bytes d = 4;
@@ -1870,41 +1867,41 @@ inline void Demo4Req::clear_d() {
   d_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Demo4Req::d() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo4Req.d)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo4Req.d)
   return d_.GetNoArena();
 }
 inline void Demo4Req::set_d(const ::std::string& value) {
   
   d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo4Req.d)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo4Req.d)
 }
 #if LANG_CXX11
 inline void Demo4Req::set_d(::std::string&& value) {
   
   d_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.proto.cs.Demo4Req.d)
+  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.cs.Demo4Req.d)
 }
 #endif
 inline void Demo4Req::set_d(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:com.moon.demo.proto.cs.Demo4Req.d)
+  // @@protoc_insertion_point(field_set_char:com.moon.demo.cs.Demo4Req.d)
 }
 inline void Demo4Req::set_d(const void* value, size_t size) {
   
   d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.proto.cs.Demo4Req.d)
+  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.cs.Demo4Req.d)
 }
 inline ::std::string* Demo4Req::mutable_d() {
   
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo4Req.d)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo4Req.d)
   return d_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Demo4Req::release_d() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo4Req.d)
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo4Req.d)
   
   return d_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1915,57 +1912,57 @@ inline void Demo4Req::set_allocated_d(::std::string* d) {
     
   }
   d_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), d);
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo4Req.d)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo4Req.d)
 }
 
-// .com.moon.demo.proto.cs.Demo4Flag flag = 5;
+// .com.moon.demo.cs.Demo4Flag flag = 5;
 inline void Demo4Req::clear_flag() {
   flag_ = 0;
 }
-inline ::com::moon::demo::proto::cs::Demo4Flag Demo4Req::flag() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo4Req.flag)
-  return static_cast< ::com::moon::demo::proto::cs::Demo4Flag >(flag_);
+inline ::com::moon::demo::cs::Demo4Flag Demo4Req::flag() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo4Req.flag)
+  return static_cast< ::com::moon::demo::cs::Demo4Flag >(flag_);
 }
-inline void Demo4Req::set_flag(::com::moon::demo::proto::cs::Demo4Flag value) {
+inline void Demo4Req::set_flag(::com::moon::demo::cs::Demo4Flag value) {
   
   flag_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo4Req.flag)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo4Req.flag)
 }
 
 // -------------------------------------------------------------------
 
 // Demo4Rsp
 
-// .com.moon.demo.proto.ErrCtx err_ctx = 1;
+// .com.moon.demo.ErrCtx err_ctx = 1;
 inline bool Demo4Rsp::has_err_ctx() const {
   return this != internal_default_instance() && err_ctx_ != NULL;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo4Rsp::_internal_err_ctx() const {
+inline const ::com::moon::demo::ErrCtx& Demo4Rsp::_internal_err_ctx() const {
   return *err_ctx_;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo4Rsp::err_ctx() const {
-  const ::com::moon::demo::proto::ErrCtx* p = err_ctx_;
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo4Rsp.err_ctx)
-  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::proto::ErrCtx*>(
-      &::com::moon::demo::proto::_ErrCtx_default_instance_);
+inline const ::com::moon::demo::ErrCtx& Demo4Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo4Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo4Rsp::release_err_ctx() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo4Rsp.err_ctx)
+inline ::com::moon::demo::ErrCtx* Demo4Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo4Rsp.err_ctx)
   
-  ::com::moon::demo::proto::ErrCtx* temp = err_ctx_;
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
   err_ctx_ = NULL;
   return temp;
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo4Rsp::mutable_err_ctx() {
+inline ::com::moon::demo::ErrCtx* Demo4Rsp::mutable_err_ctx() {
   
   if (err_ctx_ == NULL) {
-    auto* p = CreateMaybeMessage<::com::moon::demo::proto::ErrCtx>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
     err_ctx_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo4Rsp.err_ctx)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo4Rsp.err_ctx)
   return err_ctx_;
 }
-inline void Demo4Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx) {
+inline void Demo4Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
@@ -1981,7 +1978,7 @@ inline void Demo4Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* er
     
   }
   err_ctx_ = err_ctx;
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo4Rsp.err_ctx)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo4Rsp.err_ctx)
 }
 
 // -------------------------------------------------------------------
@@ -1993,13 +1990,13 @@ inline void Demo5Req::clear_a() {
   a_ = 0;
 }
 inline ::google::protobuf::int32 Demo5Req::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo5Req.a)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo5Req.a)
   return a_;
 }
 inline void Demo5Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo5Req.a)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo5Req.a)
 }
 
 // int64 b = 2;
@@ -2007,13 +2004,13 @@ inline void Demo5Req::clear_b() {
   b_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 Demo5Req::b() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo5Req.b)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo5Req.b)
   return b_;
 }
 inline void Demo5Req::set_b(::google::protobuf::int64 value) {
   
   b_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo5Req.b)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo5Req.b)
 }
 
 // string c = 3;
@@ -2021,41 +2018,41 @@ inline void Demo5Req::clear_c() {
   c_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Demo5Req::c() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo5Req.c)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo5Req.c)
   return c_.GetNoArena();
 }
 inline void Demo5Req::set_c(const ::std::string& value) {
   
   c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo5Req.c)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo5Req.c)
 }
 #if LANG_CXX11
 inline void Demo5Req::set_c(::std::string&& value) {
   
   c_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.proto.cs.Demo5Req.c)
+  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.cs.Demo5Req.c)
 }
 #endif
 inline void Demo5Req::set_c(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:com.moon.demo.proto.cs.Demo5Req.c)
+  // @@protoc_insertion_point(field_set_char:com.moon.demo.cs.Demo5Req.c)
 }
 inline void Demo5Req::set_c(const char* value, size_t size) {
   
   c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.proto.cs.Demo5Req.c)
+  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.cs.Demo5Req.c)
 }
 inline ::std::string* Demo5Req::mutable_c() {
   
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo5Req.c)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo5Req.c)
   return c_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Demo5Req::release_c() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo5Req.c)
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo5Req.c)
   
   return c_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2066,7 +2063,7 @@ inline void Demo5Req::set_allocated_c(::std::string* c) {
     
   }
   c_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), c);
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo5Req.c)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo5Req.c)
 }
 
 // bytes d = 4;
@@ -2074,41 +2071,41 @@ inline void Demo5Req::clear_d() {
   d_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Demo5Req::d() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo5Req.d)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo5Req.d)
   return d_.GetNoArena();
 }
 inline void Demo5Req::set_d(const ::std::string& value) {
   
   d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo5Req.d)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo5Req.d)
 }
 #if LANG_CXX11
 inline void Demo5Req::set_d(::std::string&& value) {
   
   d_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.proto.cs.Demo5Req.d)
+  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.cs.Demo5Req.d)
 }
 #endif
 inline void Demo5Req::set_d(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:com.moon.demo.proto.cs.Demo5Req.d)
+  // @@protoc_insertion_point(field_set_char:com.moon.demo.cs.Demo5Req.d)
 }
 inline void Demo5Req::set_d(const void* value, size_t size) {
   
   d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.proto.cs.Demo5Req.d)
+  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.cs.Demo5Req.d)
 }
 inline ::std::string* Demo5Req::mutable_d() {
   
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo5Req.d)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo5Req.d)
   return d_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Demo5Req::release_d() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo5Req.d)
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo5Req.d)
   
   return d_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2119,43 +2116,43 @@ inline void Demo5Req::set_allocated_d(::std::string* d) {
     
   }
   d_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), d);
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo5Req.d)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo5Req.d)
 }
 
 // -------------------------------------------------------------------
 
 // Demo5Rsp
 
-// .com.moon.demo.proto.ErrCtx err_ctx = 1;
+// .com.moon.demo.ErrCtx err_ctx = 1;
 inline bool Demo5Rsp::has_err_ctx() const {
   return this != internal_default_instance() && err_ctx_ != NULL;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo5Rsp::_internal_err_ctx() const {
+inline const ::com::moon::demo::ErrCtx& Demo5Rsp::_internal_err_ctx() const {
   return *err_ctx_;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo5Rsp::err_ctx() const {
-  const ::com::moon::demo::proto::ErrCtx* p = err_ctx_;
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo5Rsp.err_ctx)
-  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::proto::ErrCtx*>(
-      &::com::moon::demo::proto::_ErrCtx_default_instance_);
+inline const ::com::moon::demo::ErrCtx& Demo5Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo5Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo5Rsp::release_err_ctx() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo5Rsp.err_ctx)
+inline ::com::moon::demo::ErrCtx* Demo5Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo5Rsp.err_ctx)
   
-  ::com::moon::demo::proto::ErrCtx* temp = err_ctx_;
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
   err_ctx_ = NULL;
   return temp;
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo5Rsp::mutable_err_ctx() {
+inline ::com::moon::demo::ErrCtx* Demo5Rsp::mutable_err_ctx() {
   
   if (err_ctx_ == NULL) {
-    auto* p = CreateMaybeMessage<::com::moon::demo::proto::ErrCtx>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
     err_ctx_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo5Rsp.err_ctx)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo5Rsp.err_ctx)
   return err_ctx_;
 }
-inline void Demo5Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx) {
+inline void Demo5Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
@@ -2171,7 +2168,7 @@ inline void Demo5Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* er
     
   }
   err_ctx_ = err_ctx;
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo5Rsp.err_ctx)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo5Rsp.err_ctx)
 }
 
 // -------------------------------------------------------------------
@@ -2183,13 +2180,13 @@ inline void Demo6Req::clear_a() {
   a_ = 0;
 }
 inline ::google::protobuf::int32 Demo6Req::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo6Req.a)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo6Req.a)
   return a_;
 }
 inline void Demo6Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo6Req.a)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo6Req.a)
 }
 
 // bool http = 2;
@@ -2197,49 +2194,49 @@ inline void Demo6Req::clear_http() {
   http_ = false;
 }
 inline bool Demo6Req::http() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo6Req.http)
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo6Req.http)
   return http_;
 }
 inline void Demo6Req::set_http(bool value) {
   
   http_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.proto.cs.Demo6Req.http)
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo6Req.http)
 }
 
 // -------------------------------------------------------------------
 
 // Demo6Rsp
 
-// .com.moon.demo.proto.ErrCtx err_ctx = 1;
+// .com.moon.demo.ErrCtx err_ctx = 1;
 inline bool Demo6Rsp::has_err_ctx() const {
   return this != internal_default_instance() && err_ctx_ != NULL;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo6Rsp::_internal_err_ctx() const {
+inline const ::com::moon::demo::ErrCtx& Demo6Rsp::_internal_err_ctx() const {
   return *err_ctx_;
 }
-inline const ::com::moon::demo::proto::ErrCtx& Demo6Rsp::err_ctx() const {
-  const ::com::moon::demo::proto::ErrCtx* p = err_ctx_;
-  // @@protoc_insertion_point(field_get:com.moon.demo.proto.cs.Demo6Rsp.err_ctx)
-  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::proto::ErrCtx*>(
-      &::com::moon::demo::proto::_ErrCtx_default_instance_);
+inline const ::com::moon::demo::ErrCtx& Demo6Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo6Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo6Rsp::release_err_ctx() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.proto.cs.Demo6Rsp.err_ctx)
+inline ::com::moon::demo::ErrCtx* Demo6Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo6Rsp.err_ctx)
   
-  ::com::moon::demo::proto::ErrCtx* temp = err_ctx_;
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
   err_ctx_ = NULL;
   return temp;
 }
-inline ::com::moon::demo::proto::ErrCtx* Demo6Rsp::mutable_err_ctx() {
+inline ::com::moon::demo::ErrCtx* Demo6Rsp::mutable_err_ctx() {
   
   if (err_ctx_ == NULL) {
-    auto* p = CreateMaybeMessage<::com::moon::demo::proto::ErrCtx>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
     err_ctx_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.proto.cs.Demo6Rsp.err_ctx)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo6Rsp.err_ctx)
   return err_ctx_;
 }
-inline void Demo6Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* err_ctx) {
+inline void Demo6Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
@@ -2255,7 +2252,7 @@ inline void Demo6Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* er
     
   }
   err_ctx_ = err_ctx;
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.proto.cs.Demo6Rsp.err_ctx)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo6Rsp.err_ctx)
 }
 
 #ifdef __GNUC__
@@ -2287,7 +2284,6 @@ inline void Demo6Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* er
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace cs
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
@@ -2295,10 +2291,10 @@ inline void Demo6Rsp::set_allocated_err_ctx(::com::moon::demo::proto::ErrCtx* er
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::com::moon::demo::proto::cs::Demo4Flag> : ::std::true_type {};
+template <> struct is_proto_enum< ::com::moon::demo::cs::Demo4Flag> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::com::moon::demo::proto::cs::Demo4Flag>() {
-  return ::com::moon::demo::proto::cs::Demo4Flag_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::com::moon::demo::cs::Demo4Flag>() {
+  return ::com::moon::demo::cs::Demo4Flag_descriptor();
 }
 
 }  // namespace protobuf

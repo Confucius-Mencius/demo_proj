@@ -22,10 +22,8 @@
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 namespace ss {
 }  // namespace ss
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
@@ -58,14 +56,14 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\017ss_msg_id.proto\022\026com.moon.demo.proto.s"
-      "s*\221\001\n\005MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_"
-      "GLOBAL_REQ\020\320\017\022\026\n\021MSG_ID_GLOBAL_RSP\020\321\017\022\026\n"
-      "\021MSG_ID_DEMO_1_REQ\020\322\017\022\026\n\021MSG_ID_DEMO_1_R"
-      "SP\020\323\017\022\026\n\021MSG_ID_DEMO_1_NFY\020\324\017b\006proto3"
+      "\n\017ss_msg_id.proto\022\020com.moon.demo.ss*\221\001\n\005"
+      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_GLOBAL"
+      "_REQ\020\320\017\022\026\n\021MSG_ID_GLOBAL_RSP\020\321\017\022\026\n\021MSG_I"
+      "D_DEMO_1_REQ\020\322\017\022\026\n\021MSG_ID_DEMO_1_RSP\020\323\017\022"
+      "\026\n\021MSG_ID_DEMO_1_NFY\020\324\017b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 197);
+      descriptor, 191);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ss_msg_id.proto", &protobuf_RegisterTypes);
 }
@@ -84,7 +82,6 @@ struct StaticDescriptorInitializer {
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 namespace ss {
 const ::google::protobuf::EnumDescriptor* MsgID_descriptor() {
   protobuf_ss_5fmsg_5fid_2eproto::protobuf_AssignDescriptorsOnce();
@@ -107,7 +104,6 @@ bool MsgID_IsValid(int value) {
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace ss
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com

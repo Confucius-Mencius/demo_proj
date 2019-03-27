@@ -17,15 +17,15 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ss_msg_id.proto',
-  package='com.moon.demo.proto.ss',
+  package='com.moon.demo.ss',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0fss_msg_id.proto\x12\x16\x63om.moon.demo.proto.ss*\x91\x01\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x16\n\x11MSG_ID_GLOBAL_REQ\x10\xd0\x0f\x12\x16\n\x11MSG_ID_GLOBAL_RSP\x10\xd1\x0f\x12\x16\n\x11MSG_ID_DEMO_1_REQ\x10\xd2\x0f\x12\x16\n\x11MSG_ID_DEMO_1_RSP\x10\xd3\x0f\x12\x16\n\x11MSG_ID_DEMO_1_NFY\x10\xd4\x0f\x62\x06proto3')
+  serialized_pb=_b('\n\x0fss_msg_id.proto\x12\x10\x63om.moon.demo.ss*\x91\x01\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x16\n\x11MSG_ID_GLOBAL_REQ\x10\xd0\x0f\x12\x16\n\x11MSG_ID_GLOBAL_RSP\x10\xd1\x0f\x12\x16\n\x11MSG_ID_DEMO_1_REQ\x10\xd2\x0f\x12\x16\n\x11MSG_ID_DEMO_1_RSP\x10\xd3\x0f\x12\x16\n\x11MSG_ID_DEMO_1_NFY\x10\xd4\x0f\x62\x06proto3')
 )
 
 _MSGID = _descriptor.EnumDescriptor(
   name='MsgID',
-  full_name='com.moon.demo.proto.ss.MsgID',
+  full_name='com.moon.demo.ss.MsgID',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -56,8 +56,8 @@ _MSGID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=44,
-  serialized_end=189,
+  serialized_start=38,
+  serialized_end=183,
 )
 _sym_db.RegisterEnumDescriptor(_MSGID)
 

@@ -20,15 +20,8 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <release_free_mem>0</release_free_mem>
     </gperftools>
 
-    <global>
-        <!-- 所有的global logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-        <common_logic_so>./libglobal_common_logic.so</common_logic_so>
-
-        <!-- 全局的公共逻辑so，供所有线程访问的逻辑，其中的代码通常需要加锁。没有则不配置 -->
-        <logic_so_group>
-            <logic_so>./libglobal_logic.so</logic_so>
-        </logic_so_group>
-    </global>
+    <!-- 全局的公共逻辑so，供所有线程访问的逻辑，其中的代码通常需要加锁。没有则不配置 -->
+    <global_logic_so>./libglobal_logic.so</global_logic_so>
 
     <work>
          <!-- work线程数，>=0。建议为IO线程数的2倍 -->
@@ -143,8 +136,8 @@ XML中的特殊符号只有5种，<、>、&、’和”。
                 <port>10443</port>
 
                 <!-- https-wss秘钥文件 -->
-                <certificate_chain_file_path>../conf/wss.crt</certificate_chain_file_path>
-                <private_key_file_path>../conf/wss.key</private_key_file_path>
+                <certificate_chain_file_path>../conf/xxx_com.crt</certificate_chain_file_path>
+                <private_key_file_path>../conf/xxx_com.key</private_key_file_path>
             </security>
 
             <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
@@ -191,5 +184,27 @@ XML中的特殊符号只有5种，<、>、&、’和”。
     <!-- 应用相关的配置 -->
     <app>
         <test_mode>0</test_mode>
+
+        <mongodb>
+            <db_conn_str>127.0.0.1</db_conn_str>
+            <!-- <db_conn_str>admin:admin@192.168.6.132:7000,192.168.6.132:7001,192.168.6.132:7002/?replicaSet=yunpanrs</db_conn_str> -->
+        </mongodb>
+
+        <zk>        
+             <!-- zookeeper集群地址 -->
+            <host>10.0.5.7:2181,10.0.5.7:2182,10.0.5.7:2183</host>
+
+            <!-- zookeeper连接超时时间，单位：秒 -->
+            <timeout>30</timeout>
+
+            <!-- zookeeper日志级别 ZOO_LOG_LEVEL_ERROR=1,ZOO_LOG_LEVEL_WARN=2,ZOO_LOG_LEVEL_INFO=3,ZOO_LOG_LEVEL_DEBUG=4 -->
+            <log_level>3</log_level>
+
+            <!-- zookeeper日志文件路径 -->
+            <log_file_path>../logs/zk.log</log_file_path>
+
+            <!-- zookeeper用户名密码 -->
+            <user_pass>quantum:quantum</user_pass>
+        </zk>
     </app>
 </conf>

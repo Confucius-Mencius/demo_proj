@@ -17,10 +17,10 @@ import common_pb2 as common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ss_msg.proto',
-  package='com.moon.demo.proto.ss',
+  package='com.moon.demo.ss',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0css_msg.proto\x12\x16\x63om.moon.demo.proto.ss\x1a\x0c\x63ommon.proto\"!\n\tGlobalReq\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\"9\n\tGlobalRsp\x12,\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x1b.com.moon.demo.proto.ErrCtx\"\"\n\x08\x44\x65mo1Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"8\n\x08\x44\x65mo1Rsp\x12,\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x1b.com.moon.demo.proto.ErrCtx\"\x15\n\x08\x44\x65mo1Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\x62\x06proto3')
+  serialized_pb=_b('\n\x0css_msg.proto\x12\x10\x63om.moon.demo.ss\x1a\x0c\x63ommon.proto\"!\n\tGlobalReq\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\"3\n\tGlobalRsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\"\n\x08\x44\x65mo1Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"2\n\x08\x44\x65mo1Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo1Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\x62\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
@@ -29,20 +29,20 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _GLOBALREQ = _descriptor.Descriptor(
   name='GlobalReq',
-  full_name='com.moon.demo.proto.ss.GlobalReq',
+  full_name='com.moon.demo.ss.GlobalReq',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='a', full_name='com.moon.demo.proto.ss.GlobalReq.a', index=0,
+      name='a', full_name='com.moon.demo.ss.GlobalReq.a', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='b', full_name='com.moon.demo.proto.ss.GlobalReq.b', index=1,
+      name='b', full_name='com.moon.demo.ss.GlobalReq.b', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -60,20 +60,20 @@ _GLOBALREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54,
-  serialized_end=87,
+  serialized_start=48,
+  serialized_end=81,
 )
 
 
 _GLOBALRSP = _descriptor.Descriptor(
   name='GlobalRsp',
-  full_name='com.moon.demo.proto.ss.GlobalRsp',
+  full_name='com.moon.demo.ss.GlobalRsp',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='err_ctx', full_name='com.moon.demo.proto.ss.GlobalRsp.err_ctx', index=0,
+      name='err_ctx', full_name='com.moon.demo.ss.GlobalRsp.err_ctx', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -91,27 +91,27 @@ _GLOBALRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=89,
-  serialized_end=146,
+  serialized_start=83,
+  serialized_end=134,
 )
 
 
 _DEMO1REQ = _descriptor.Descriptor(
   name='Demo1Req',
-  full_name='com.moon.demo.proto.ss.Demo1Req',
+  full_name='com.moon.demo.ss.Demo1Req',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='a', full_name='com.moon.demo.proto.ss.Demo1Req.a', index=0,
+      name='a', full_name='com.moon.demo.ss.Demo1Req.a', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.proto.ss.Demo1Req.udp', index=1,
+      name='udp', full_name='com.moon.demo.ss.Demo1Req.udp', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -129,20 +129,20 @@ _DEMO1REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=148,
-  serialized_end=182,
+  serialized_start=136,
+  serialized_end=170,
 )
 
 
 _DEMO1RSP = _descriptor.Descriptor(
   name='Demo1Rsp',
-  full_name='com.moon.demo.proto.ss.Demo1Rsp',
+  full_name='com.moon.demo.ss.Demo1Rsp',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='err_ctx', full_name='com.moon.demo.proto.ss.Demo1Rsp.err_ctx', index=0,
+      name='err_ctx', full_name='com.moon.demo.ss.Demo1Rsp.err_ctx', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -160,20 +160,20 @@ _DEMO1RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=184,
-  serialized_end=240,
+  serialized_start=172,
+  serialized_end=222,
 )
 
 
 _DEMO1NFY = _descriptor.Descriptor(
   name='Demo1Nfy',
-  full_name='com.moon.demo.proto.ss.Demo1Nfy',
+  full_name='com.moon.demo.ss.Demo1Nfy',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='a', full_name='com.moon.demo.proto.ss.Demo1Nfy.a', index=0,
+      name='a', full_name='com.moon.demo.ss.Demo1Nfy.a', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -191,8 +191,8 @@ _DEMO1NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=242,
-  serialized_end=263,
+  serialized_start=224,
+  serialized_end=245,
 )
 
 _GLOBALRSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
@@ -207,35 +207,35 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 GlobalReq = _reflection.GeneratedProtocolMessageType('GlobalReq', (_message.Message,), dict(
   DESCRIPTOR = _GLOBALREQ,
   __module__ = 'ss_msg_pb2'
-  # @@protoc_insertion_point(class_scope:com.moon.demo.proto.ss.GlobalReq)
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.GlobalReq)
   ))
 _sym_db.RegisterMessage(GlobalReq)
 
 GlobalRsp = _reflection.GeneratedProtocolMessageType('GlobalRsp', (_message.Message,), dict(
   DESCRIPTOR = _GLOBALRSP,
   __module__ = 'ss_msg_pb2'
-  # @@protoc_insertion_point(class_scope:com.moon.demo.proto.ss.GlobalRsp)
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.GlobalRsp)
   ))
 _sym_db.RegisterMessage(GlobalRsp)
 
 Demo1Req = _reflection.GeneratedProtocolMessageType('Demo1Req', (_message.Message,), dict(
   DESCRIPTOR = _DEMO1REQ,
   __module__ = 'ss_msg_pb2'
-  # @@protoc_insertion_point(class_scope:com.moon.demo.proto.ss.Demo1Req)
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Req)
   ))
 _sym_db.RegisterMessage(Demo1Req)
 
 Demo1Rsp = _reflection.GeneratedProtocolMessageType('Demo1Rsp', (_message.Message,), dict(
   DESCRIPTOR = _DEMO1RSP,
   __module__ = 'ss_msg_pb2'
-  # @@protoc_insertion_point(class_scope:com.moon.demo.proto.ss.Demo1Rsp)
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Rsp)
   ))
 _sym_db.RegisterMessage(Demo1Rsp)
 
 Demo1Nfy = _reflection.GeneratedProtocolMessageType('Demo1Nfy', (_message.Message,), dict(
   DESCRIPTOR = _DEMO1NFY,
   __module__ = 'ss_msg_pb2'
-  # @@protoc_insertion_point(class_scope:com.moon.demo.proto.ss.Demo1Nfy)
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Nfy)
   ))
 _sym_db.RegisterMessage(Demo1Nfy)
 

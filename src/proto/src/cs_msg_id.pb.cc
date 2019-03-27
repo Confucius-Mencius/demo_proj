@@ -22,10 +22,8 @@
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 namespace cs {
 }  // namespace cs
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
@@ -58,19 +56,18 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\017cs_msg_id.proto\022\026com.moon.demo.proto.c"
-      "s*\271\002\n\005MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_"
-      "DEMO_1_REQ\020\350\007\022\026\n\021MSG_ID_DEMO_1_RSP\020\351\007\022\026\n"
-      "\021MSG_ID_DEMO_2_REQ\020\352\007\022\026\n\021MSG_ID_DEMO_2_R"
-      "SP\020\353\007\022\026\n\021MSG_ID_DEMO_3_REQ\020\354\007\022\026\n\021MSG_ID_"
-      "DEMO_3_RSP\020\355\007\022\026\n\021MSG_ID_DEMO_4_REQ\020\356\007\022\026\n"
-      "\021MSG_ID_DEMO_4_RSP\020\357\007\022\026\n\021MSG_ID_DEMO_5_R"
-      "EQ\020\360\007\022\026\n\021MSG_ID_DEMO_5_RSP\020\361\007\022\026\n\021MSG_ID_"
-      "DEMO_6_REQ\020\362\007\022\026\n\021MSG_ID_DEMO_6_RSP\020\363\007b\006p"
-      "roto3"
+      "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\271\002\n\005"
+      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_DEMO_1"
+      "_REQ\020\350\007\022\026\n\021MSG_ID_DEMO_1_RSP\020\351\007\022\026\n\021MSG_I"
+      "D_DEMO_2_REQ\020\352\007\022\026\n\021MSG_ID_DEMO_2_RSP\020\353\007\022"
+      "\026\n\021MSG_ID_DEMO_3_REQ\020\354\007\022\026\n\021MSG_ID_DEMO_3"
+      "_RSP\020\355\007\022\026\n\021MSG_ID_DEMO_4_REQ\020\356\007\022\026\n\021MSG_I"
+      "D_DEMO_4_RSP\020\357\007\022\026\n\021MSG_ID_DEMO_5_REQ\020\360\007\022"
+      "\026\n\021MSG_ID_DEMO_5_RSP\020\361\007\022\026\n\021MSG_ID_DEMO_6"
+      "_REQ\020\362\007\022\026\n\021MSG_ID_DEMO_6_RSP\020\363\007b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 365);
+      descriptor, 359);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "cs_msg_id.proto", &protobuf_RegisterTypes);
 }
@@ -89,7 +86,6 @@ struct StaticDescriptorInitializer {
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 namespace cs {
 const ::google::protobuf::EnumDescriptor* MsgID_descriptor() {
   protobuf_cs_5fmsg_5fid_2eproto::protobuf_AssignDescriptorsOnce();
@@ -119,7 +115,6 @@ bool MsgID_IsValid(int value) {
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace cs
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com

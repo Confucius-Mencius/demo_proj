@@ -22,13 +22,11 @@
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 class ErrCtxDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<ErrCtx>
       _instance;
 } _ErrCtx_default_instance_;
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
@@ -37,11 +35,11 @@ static void InitDefaultsErrCtx() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::com::moon::demo::proto::_ErrCtx_default_instance_;
-    new (ptr) ::com::moon::demo::proto::ErrCtx();
+    void* ptr = &::com::moon::demo::_ErrCtx_default_instance_;
+    new (ptr) ::com::moon::demo::ErrCtx();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::com::moon::demo::proto::ErrCtx::InitAsDefaultInstance();
+  ::com::moon::demo::ErrCtx::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_ErrCtx =
@@ -55,19 +53,19 @@ void InitDefaults() {
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::proto::ErrCtx, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ErrCtx, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::proto::ErrCtx, err_code_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::proto::ErrCtx, err_msg_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ErrCtx, err_code_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ErrCtx, err_msg_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::com::moon::demo::proto::ErrCtx)},
+  { 0, -1, sizeof(::com::moon::demo::ErrCtx)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::proto::_ErrCtx_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::_ErrCtx_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -91,12 +89,12 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\014common.proto\022\023com.moon.demo.proto\"+\n\006E"
-      "rrCtx\022\020\n\010err_code\030\001 \001(\005\022\017\n\007err_msg\030\002 \001(\t"
-      "b\006proto3"
+      "\n\014common.proto\022\rcom.moon.demo\"+\n\006ErrCtx\022"
+      "\020\n\010err_code\030\001 \001(\005\022\017\n\007err_msg\030\002 \001(\tb\006prot"
+      "o3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 88);
+      descriptor, 82);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "common.proto", &protobuf_RegisterTypes);
 }
@@ -115,7 +113,6 @@ struct StaticDescriptorInitializer {
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 
 // ===================================================================
 
@@ -131,7 +128,7 @@ ErrCtx::ErrCtx()
   ::google::protobuf::internal::InitSCC(
       &protobuf_common_2eproto::scc_info_ErrCtx.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(constructor:com.moon.demo.ErrCtx)
 }
 ErrCtx::ErrCtx(const ErrCtx& from)
   : ::google::protobuf::Message(),
@@ -142,7 +139,7 @@ ErrCtx::ErrCtx(const ErrCtx& from)
     err_msg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.err_msg_);
   }
   err_code_ = from.err_code_;
-  // @@protoc_insertion_point(copy_constructor:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(copy_constructor:com.moon.demo.ErrCtx)
 }
 
 void ErrCtx::SharedCtor() {
@@ -151,7 +148,7 @@ void ErrCtx::SharedCtor() {
 }
 
 ErrCtx::~ErrCtx() {
-  // @@protoc_insertion_point(destructor:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(destructor:com.moon.demo.ErrCtx)
   SharedDtor();
 }
 
@@ -174,7 +171,7 @@ const ErrCtx& ErrCtx::default_instance() {
 
 
 void ErrCtx::Clear() {
-// @@protoc_insertion_point(message_clear_start:com.moon.demo.proto.ErrCtx)
+// @@protoc_insertion_point(message_clear_start:com.moon.demo.ErrCtx)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -188,7 +185,7 @@ bool ErrCtx::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(parse_start:com.moon.demo.ErrCtx)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -217,7 +214,7 @@ bool ErrCtx::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->err_msg().data(), static_cast<int>(this->err_msg().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "com.moon.demo.proto.ErrCtx.err_msg"));
+            "com.moon.demo.ErrCtx.err_msg"));
         } else {
           goto handle_unusual;
         }
@@ -236,17 +233,17 @@ bool ErrCtx::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(parse_success:com.moon.demo.ErrCtx)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(parse_failure:com.moon.demo.ErrCtx)
   return false;
 #undef DO_
 }
 
 void ErrCtx::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(serialize_start:com.moon.demo.ErrCtx)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -260,7 +257,7 @@ void ErrCtx::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->err_msg().data(), static_cast<int>(this->err_msg().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "com.moon.demo.proto.ErrCtx.err_msg");
+      "com.moon.demo.ErrCtx.err_msg");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->err_msg(), output);
   }
@@ -269,13 +266,13 @@ void ErrCtx::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(serialize_end:com.moon.demo.ErrCtx)
 }
 
 ::google::protobuf::uint8* ErrCtx::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.ErrCtx)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -289,7 +286,7 @@ void ErrCtx::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->err_msg().data(), static_cast<int>(this->err_msg().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "com.moon.demo.proto.ErrCtx.err_msg");
+      "com.moon.demo.ErrCtx.err_msg");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->err_msg(), target);
@@ -299,12 +296,12 @@ void ErrCtx::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.ErrCtx)
   return target;
 }
 
 size_t ErrCtx::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.proto.ErrCtx)
+// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.ErrCtx)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -332,22 +329,22 @@ size_t ErrCtx::ByteSizeLong() const {
 }
 
 void ErrCtx::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.proto.ErrCtx)
+// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.ErrCtx)
   GOOGLE_DCHECK_NE(&from, this);
   const ErrCtx* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ErrCtx>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.ErrCtx)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.proto.ErrCtx)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.ErrCtx)
     MergeFrom(*source);
   }
 }
 
 void ErrCtx::MergeFrom(const ErrCtx& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.proto.ErrCtx)
+// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.ErrCtx)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -363,14 +360,14 @@ void ErrCtx::MergeFrom(const ErrCtx& from) {
 }
 
 void ErrCtx::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.proto.ErrCtx)
+// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.ErrCtx)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ErrCtx::CopyFrom(const ErrCtx& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.proto.ErrCtx)
+// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.ErrCtx)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -399,14 +396,13 @@ void ErrCtx::InternalSwap(ErrCtx* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::moon::demo::proto::ErrCtx* Arena::CreateMaybeMessage< ::com::moon::demo::proto::ErrCtx >(Arena* arena) {
-  return Arena::CreateInternal< ::com::moon::demo::proto::ErrCtx >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::moon::demo::ErrCtx* Arena::CreateMaybeMessage< ::com::moon::demo::ErrCtx >(Arena* arena) {
+  return Arena::CreateInternal< ::com::moon::demo::ErrCtx >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

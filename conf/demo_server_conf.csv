@@ -1,0 +1,7 @@
+type,name,xpath,group,virtual,with_default,default
+bool,test_mode,/conf/app/test_mode,0,1,1,0
+string,zk_host,/conf/app/zk/host,0,1,0,
+int,zk_timeout,/conf/app/zk/timeout,0,1,0,
+int,zk_log_level,/conf/app/zk/log_level,0,1,0,
+string,zk_log_file_path,/conf/app/zk/log_file_path,0,1,0,
+string,zk_user_pass,/conf/app/zk/user_pass,0,1,0,

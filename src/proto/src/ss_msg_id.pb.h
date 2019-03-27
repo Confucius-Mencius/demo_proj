@@ -47,17 +47,14 @@ void AddDescriptors();
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 namespace ss {
 }  // namespace ss
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
 namespace com {
 namespace moon {
 namespace demo {
-namespace proto {
 namespace ss {
 
 enum MsgID {
@@ -104,7 +101,6 @@ inline bool MsgID_Parse(
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace ss
-}  // namespace proto
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
@@ -112,10 +108,10 @@ inline bool MsgID_Parse(
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::com::moon::demo::proto::ss::MsgID> : ::std::true_type {};
+template <> struct is_proto_enum< ::com::moon::demo::ss::MsgID> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::com::moon::demo::proto::ss::MsgID>() {
-  return ::com::moon::demo::proto::ss::MsgID_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::com::moon::demo::ss::MsgID>() {
+  return ::com::moon::demo::ss::MsgID_descriptor();
 }
 
 }  // namespace protobuf
