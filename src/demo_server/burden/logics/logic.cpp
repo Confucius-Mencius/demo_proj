@@ -1,12 +1,8 @@
 #include "logic.h"
-#include "log_util.h"
-#include "proto_tcp_scheduler_interface.h"
 
-namespace tcp
+namespace burden
 {
-namespace proto
-{
-Logic::Logic()
+Logic::Logic() : msg_handler_mgr_()
 {
 }
 
@@ -36,20 +32,35 @@ int Logic::Initialize(const void* ctx)
         return -1;
     }
 
+    if (msg_handler_mgr_.Initialize(&logic_ctx_) != 0)
+    {
+        return -1;
+    }
+
     return 0;
 }
 
 void Logic::Finalize()
 {
+    msg_handler_mgr_.Finalize();
 }
 
 int Logic::Activate()
 {
+    msg_handler_mgr_.SetGlobalLogic((global::TheLogicInterface*) global_logic_);
+    msg_handler_mgr_.SetLogic(this);
+
+    if (msg_handler_mgr_.Activate() != 0)
+    {
+        return -1;
+    }
+
     return 0;
 }
 
 void Logic::Freeze()
 {
+    msg_handler_mgr_.Freeze();
 }
 
 void Logic::OnStop()
@@ -59,14 +70,5 @@ void Logic::OnStop()
 
 void Logic::OnReload()
 {
-}
-
-void Logic::OnClientConnected(const ConnGUID* conn_guid)
-{
-}
-
-void Logic::OnClientClosed(const ConnGUID* conn_guid)
-{
-}
 }
 }

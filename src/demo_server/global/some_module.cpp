@@ -4,7 +4,7 @@ namespace global
 {
 SomeModule::SomeModule() : mutex_()
 {
-    logic_ctx_ = NULL;
+    logic_ctx_ = nullptr;
 }
 
 SomeModule::~SomeModule()
@@ -34,8 +34,6 @@ void SomeModule::Freeze()
 
 int SomeModule::Func(const char* arg)
 {
-    (void) arg;
-
     AUTO_THREAD_MUTEX(mutex_);
 
     // ...

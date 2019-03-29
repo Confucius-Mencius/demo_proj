@@ -5,7 +5,7 @@
 
 inline int ParseProtobufMsg(google::protobuf::Message* protobuf_msg, const void* msg, size_t len)
 {
-    if (NULL == protobuf_msg || NULL == msg || 0 == len)
+    if (nullptr == protobuf_msg || nullptr == msg || 0 == len)
     {
         return -1;
     }
@@ -16,14 +16,14 @@ inline int ParseProtobufMsg(google::protobuf::Message* protobuf_msg, const void*
 // 返回的msg指针需要调用FreeProtobufMsgBuf释放
 inline int SerializeProtobufMsg(char** msg, size_t& len, const google::protobuf::Message* protobuf_msg)
 {
-    if (NULL == protobuf_msg)
+    if (nullptr == protobuf_msg)
     {
         return 0;
     }
 
     len = protobuf_msg->ByteSize();
     char* buf = new char[len];
-    if (NULL == buf)
+    if (nullptr == buf)
     {
         return -1;
     }
@@ -40,10 +40,10 @@ inline int SerializeProtobufMsg(char** msg, size_t& len, const google::protobuf:
 
 inline void FreeProtobufMsgBuf(char** msg)
 {
-    if (*msg != NULL)
+    if (*msg != nullptr)
     {
         delete[] (*msg);
-        *msg = NULL;
+        *msg = nullptr;
     }
 }
 

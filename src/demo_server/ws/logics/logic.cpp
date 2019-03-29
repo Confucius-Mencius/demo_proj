@@ -61,26 +61,17 @@ void Logic::OnReload()
 
 void Logic::OnClientConnected(const ConnGUID* conn_guid)
 {
-    (void) conn_guid;
 }
 
 void Logic::OnClientClosed(const ConnGUID* conn_guid)
 {
-    (void) conn_guid;
 }
 
 void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
-    (void) conn_guid;
-    (void) data;
-    (void) len;
 }
 
 void Logic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
 {
-    (void) conn_guid;
-    (void) source_thread;
-    (void) data;
-    (void) len;
 }
 }

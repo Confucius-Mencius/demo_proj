@@ -75,7 +75,7 @@ private:
 
     int LoadZKHost()
     {
-        char* zk_host = NULL;
+        char* zk_host = nullptr;
         if (conf_center_->GetConf(&zk_host, ZK_HOST_XPATH, false) != 0)
         {
             LOG_ERROR("failed to get " << ZK_HOST_XPATH << ": " << conf_center_->GetLastErrMsg());
@@ -109,7 +109,7 @@ private:
 
     int LoadZKLogFilePath()
     {
-        char* zk_log_file_path = NULL;
+        char* zk_log_file_path = nullptr;
         if (conf_center_->GetConf(&zk_log_file_path, ZK_LOG_FILE_PATH_XPATH, false) != 0)
         {
             LOG_ERROR("failed to get " << ZK_LOG_FILE_PATH_XPATH << ": " << conf_center_->GetLastErrMsg());
@@ -123,7 +123,7 @@ private:
 
     int LoadZKUserPass()
     {
-        char* zk_user_pass = NULL;
+        char* zk_user_pass = nullptr;
         if (conf_center_->GetConf(&zk_user_pass, ZK_USER_PASS_XPATH, false) != 0)
         {
             LOG_ERROR("failed to get " << ZK_USER_PASS_XPATH << ": " << conf_center_->GetLastErrMsg());

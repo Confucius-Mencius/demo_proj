@@ -4,7 +4,7 @@ namespace global
 {
 MsgHandler::MsgHandler()
 {
-    global_logic_ = NULL;
+    global_logic_ = nullptr;
 }
 
 MsgHandler::~MsgHandler()

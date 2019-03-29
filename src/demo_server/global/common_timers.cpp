@@ -17,7 +17,7 @@ enum
 
 CommonTimers::CommonTimers()
 {
-    logic_ctx_ = NULL;
+    logic_ctx_ = nullptr;
 }
 
 CommonTimers::~CommonTimers()
@@ -63,7 +63,7 @@ void CommonTimers::OnTimer(TimerID timer_id, void* data, size_t len, int times)
     global_req.set_a(1);
     global_req.set_b(2);
 
-    char* msg_body = NULL;
+    char* msg_body = nullptr;
     size_t msg_body_len = 0;
 
     if (SerializeProtobufMsg(&msg_body, msg_body_len, &global_req) != 0)
