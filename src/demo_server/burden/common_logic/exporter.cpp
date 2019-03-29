@@ -1,4 +1,4 @@
 #include "exporter.h"
-#include "local_logic.h"
+#include "common_logic.h"
 
-MODULE_EXPORTER_IMPL(burden::LocalLogic);
+MODULE_EXPORTER_IMPL(burden::CommonLogic);

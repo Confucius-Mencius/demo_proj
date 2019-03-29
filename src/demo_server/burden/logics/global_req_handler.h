@@ -13,7 +13,7 @@ public:
 
     ///////////////////////// MsgHandlerInterface /////////////////////////
     MsgId GetMsgId() override;
-    void OnMsg(const ConnGuid* conn_guid, const MsgHead& msg_head, const void* msg_body,
+    void OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body,
                size_t msg_body_len) override;
 };
 }

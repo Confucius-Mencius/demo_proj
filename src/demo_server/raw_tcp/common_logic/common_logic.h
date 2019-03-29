@@ -22,7 +22,7 @@ public:
     int Activate() override;
     void Freeze() override;
 
-    ///////////////////////// tcp::LogicInterface /////////////////////////
+    ///////////////////////// LogicInterface /////////////////////////
     void OnStop() override;
     void OnReload() override;
     void OnClientConnected(const ConnGUID* conn_guid) override;

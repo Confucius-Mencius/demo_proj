@@ -1,7 +1,7 @@
 #ifndef DEMO_SERVER_BURDEN_LOGICS_MSG_HANDLER_MGR_H_
 #define DEMO_SERVER_BURDEN_LOGICS_MSG_HANDLER_MGR_H_
 
-#include "msg_handler_mgr_template.h"
+#include "proto_msg_handler_mgr_template.h"
 #include "demo_1_req_handler.h"
 #include "demo_2_req_handler.h"
 #include "demo_3_req_handler.h"
@@ -13,7 +13,7 @@ namespace burden
 {
 class Logic;
 
-class MsgHandlerMgr : public base::MsgHandlerMgrTemplate<MsgHandler>
+class MsgHandlerMgr : public ::proto::MsgHandlerMgrTemplate<MsgHandler>
 {
 public:
     MsgHandlerMgr();

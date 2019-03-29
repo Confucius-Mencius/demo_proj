@@ -1,11 +1,9 @@
-#ifndef DEMO_SERVER_PROTO_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
-#define DEMO_SERVER_PROTO_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
+#ifndef DEMO_SERVER_BURDEN_COMMON_LOGIC_COMMON_LOGIC_H_
+#define DEMO_SERVER_BURDEN_COMMON_LOGIC_COMMON_LOGIC_H_
 
-#include "proto_tcp_common_logic_interface.h"
+#include "burden_common_logic_interface.h"
 
-namespace tcp
-{
-namespace proto
+namespace burden
 {
 class CommonLogic : public TheCommonLogicInterface
 {
@@ -24,14 +22,11 @@ public:
 
     ///////////////////////// LogicInterface /////////////////////////
     void OnStop() override;
-    void OnReload() override;
-    void OnClientConnected(const ConnGUID* conn_guid) override;
-    void OnClientClosed(const ConnGUID* conn_guid) override;
+
+    ///////////////////////// CommonLogicInterface /////////////////////////
 
     ///////////////////////// TheCommonLogicInterface /////////////////////////
-
 };
 }
-}
 
-#endif // DEMO_SERVER_PROTO_TCP_COMMON_LOGIC_COMMON_LOGIC_H_
+#endif // DEMO_SERVER_BURDEN_COMMON_LOGIC_COMMON_LOGIC_H_

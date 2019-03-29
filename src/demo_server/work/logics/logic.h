@@ -26,7 +26,7 @@ public:
     void OnReload() override;
 
 private:
-    work::MsgHandlerMgr msg_handler_mgr_;
+    MsgHandlerMgr msg_handler_mgr_;
 };
 }
 

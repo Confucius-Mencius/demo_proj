@@ -2,6 +2,7 @@
 #include "cs_msg.pb.h"
 #include "cs_msg_id.pb.h"
 #include "err_code.h"
+#include "global_scheduler_interface.h"
 #include "log_util.h"
 #include "protobuf_util.h"
 
@@ -24,7 +25,8 @@ Demo6ReqHandler::~Demo6ReqHandler()
     return cs::MSG_ID_DEMO_6_REQ;
 }
 
-void Demo6ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo6ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("global::Demo6ReqHandler::OnMsg, " << conn_guid << ", " << msg_head << ", msg body len: " << msg_body_len);
 

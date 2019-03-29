@@ -23,7 +23,7 @@ MsgId GlobalReqHandler::GetMsgId()
     return proto::ss::MSG_ID_GLOBAL_REQ;
 }
 
-void GlobalReqHandler::OnMsg(const ConnGuid* conn_guid, const MsgHead& msg_head, const void* msg_body,
+void GlobalReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body,
                              size_t msg_body_len)
 {
     LOG_TRACE(

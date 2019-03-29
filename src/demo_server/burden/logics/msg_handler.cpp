@@ -5,7 +5,7 @@ namespace burden
 MsgHandler::MsgHandler()
 {
     global_logic_ = nullptr;
-    local_logic_ = nullptr;
+    common_logic_ = nullptr;
     logic_ = nullptr;
 }
 
@@ -20,7 +20,7 @@ int MsgHandler::Initialize(const void* ctx)
         return -1;
     }
 
-    local_logic_ = (TheLocalLogicInterface*) logic_ctx_->local_logic;
+    common_logic_ = (TheCommonLogicInterface*) logic_ctx_->common_logic;
     return 0;
 }
 }

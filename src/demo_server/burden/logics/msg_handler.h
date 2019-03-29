@@ -4,9 +4,8 @@
 // 一般做一个MsgHandler的基类，放消息处理器公用的一些函数
 
 #include "burden_msg_handler_interface.h"
-#include "burden_scheduler_interface.h"
 #include "the_global_logic_interface.h"
-#include "burden_local_logic_interface.h"
+#include "burden_common_logic_interface.h"
 
 namespace burden
 {
@@ -33,7 +32,7 @@ public:
 
 protected:
     global::TheLogicInterface* global_logic_;
-    TheLocalLogicInterface* local_logic_;
+    TheCommonLogicInterface* common_logic_;
     Logic* logic_;
 };
 }

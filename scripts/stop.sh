@@ -16,27 +16,32 @@ function MySleep()
     done
 }
 
-for i in ${STOP_SERVER_LIST[@]}; do
-    SERVER=$i
-    cd ${BIN_DIR}/${SERVER}
+read -p "are you sure to stop? [y/n]" input
+echo $input
 
-    if [ ! -f "./${SERVER}.pid" ]; then
-        continue
-    fi
+if [ $input = "y" ]; then
+    for i in ${STOP_SERVER_LIST[@]}; do
+        SERVER=$i
+        cd ${BIN_DIR}/${SERVER}
 
-    PID=`cat ./${SERVER}.pid`
-    n=`ps --no-heading ${PID} | wc -l`
+        if [ ! -f "./${SERVER}.pid" ]; then
+            continue
+        fi
 
-    if [ $n == 0 ]; then
-        continue
-    fi
-
-    kill -3 ${PID}
-
-    while [ $n != 0 ]; do
-        MySleep 100
+        PID=`cat ./${SERVER}.pid`
         n=`ps --no-heading ${PID} | wc -l`
-    done
 
-    echo "${SERVER} exit ok"
-done
+        if [ $n == 0 ]; then
+            continue
+        fi
+
+        kill -3 ${PID}
+
+        while [ $n != 0 ]; do
+            MySleep 100
+            n=`ps --no-heading ${PID} | wc -l`
+        done
+
+        echo "${SERVER} exit ok"
+    done
+fi
