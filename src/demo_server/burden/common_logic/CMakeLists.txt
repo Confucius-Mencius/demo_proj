@@ -2,7 +2,7 @@
 # author: BrentHuang (guang11cheng@qq.com)
 ###############################################################################
 
-set(LIB_NAME burden_local_logic)
+set(LIB_NAME burden_common_logic)
 
 ###############################################################################
 # lib version

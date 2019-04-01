@@ -2,7 +2,7 @@
 # author: BrentHuang (guang11cheng@qq.com)
 ###############################################################################
 
-set(LIB_NAME work_local_logic)
+set(LIB_NAME work_common_logic)
 
 ###############################################################################
 # lib version

@@ -65,7 +65,7 @@ void Logic::Finalize()
 
 int Logic::Activate()
 {
-    msg_handler_mgr_.SetGlobalLogic((TheLogicInterface*) this);
+    msg_handler_mgr_.SetGlobalLogic(static_cast<TheLogicInterface*>(this));
 
     if (msg_handler_mgr_.Activate() != 0)
     {

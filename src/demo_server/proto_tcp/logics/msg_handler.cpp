@@ -22,7 +22,7 @@ int MsgHandler::Initialize(const void* ctx)
         return -1;
     }
 
-    common_logic_ = (TheCommonLogicInterface*) logic_ctx_->common_logic;
+    common_logic_ = const_cast<TheCommonLogicInterface*>(static_cast<const TheCommonLogicInterface*>(logic_ctx_->common_logic));
     return 0;
 }
 }
