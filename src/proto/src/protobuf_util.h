@@ -2,6 +2,7 @@
 #define PROTO_SRC_PROTOBUF_UTIL_H_
 
 #include <google/protobuf/message.h>
+#include "log_util.h"
 
 inline int ParseProtobufMsg(google::protobuf::Message* protobuf_msg, const void* msg, size_t len)
 {
@@ -10,7 +11,13 @@ inline int ParseProtobufMsg(google::protobuf::Message* protobuf_msg, const void*
         return -1;
     }
 
-    return protobuf_msg->ParseFromArray(msg, len) ? 0 : -1;
+    if (!protobuf_msg->ParseFromArray(msg, len))
+    {
+        LOG_ERROR("failed to parse msg, len: " << len);
+        return -1;
+    }
+
+    return 0;
 }
 
 // 返回的msg指针需要调用FreeProtobufMsgBuf释放
@@ -25,11 +32,13 @@ inline int SerializeProtobufMsg(char** msg, size_t& len, const google::protobuf:
     char* buf = new char[len];
     if (nullptr == buf)
     {
+        LOG_ERROR("failed to alloc memory");
         return -1;
     }
 
     if (!protobuf_msg->SerializeToArray(buf, len))
     {
+        LOG_ERROR("failed to serial msg");
         delete[] buf;
         return -1;
     }

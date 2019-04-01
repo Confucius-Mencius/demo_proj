@@ -1,10 +1,7 @@
 #include "common_timers.h"
-#include "global_scheduler_interface.h"
-#include "log_util.h"
-#include "proto_msg.h"
-#include "protobuf_util.h"
 #include "ss_msg.pb.h"
 #include "ss_msg_id.pb.h"
+#include "global_protobuf_util.h"
 
 using namespace com::moon::demo;
 
@@ -63,16 +60,6 @@ void CommonTimers::OnTimer(TimerID timer_id, void* data, size_t len, int times)
     global_req.set_a(1);
     global_req.set_b(2);
 
-    char* msg_body = nullptr;
-    size_t msg_body_len = 0;
-
-    if (SerializeProtobufMsg(&msg_body, msg_body_len, &global_req) != 0)
-    {
-        LOG_ERROR("failed to serial msg");
-        return;
-    }
-
-    logic_ctx_->scheduler->SendToWorkThread(NULL, msg_head, msg_body, msg_body_len, -1);
-    FreeProtobufMsgBuf(&msg_body);
+    SendToWorkThread(logic_ctx_->scheduler, nullptr, msg_head, &global_req, -1);
 }
 }

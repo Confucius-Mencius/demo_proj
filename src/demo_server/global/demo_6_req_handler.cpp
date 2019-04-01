@@ -2,9 +2,7 @@
 #include "cs_msg.pb.h"
 #include "cs_msg_id.pb.h"
 #include "err_code.h"
-#include "global_scheduler_interface.h"
-#include "log_util.h"
-#include "protobuf_util.h"
+#include "global_protobuf_util.h"
 
 using namespace com::moon::demo;
 
@@ -33,20 +31,19 @@ void Demo6ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
     cs::Demo6Req demo_6_req;
     if (ParseProtobufMsg(&demo_6_req, msg_body, msg_body_len) != 0)
     {
-        LOG_ERROR("failed to parse msg, msg id: " << msg_head.msg_id << ", msg body len: " << msg_body_len);
         return;
     }
 
-    LOG_TRACE("a: " << demo_6_req.a());
+    LOG_DEBUG("a: " << demo_6_req.a());
 
-    if (demo_6_req.http())
-    {
-        // 回复http线程
-        ::proto::MsgHead rsp_msg_head = msg_head;
-        rsp_msg_head.msg_id = cs::MSG_ID_DEMO_6_RSP;
+//    if (demo_6_req.http())
+//    {
+//        // 回复http线程
+//        ::proto::MsgHead rsp_msg_head = msg_head;
+//        rsp_msg_head.msg_id = cs::MSG_ID_DEMO_6_RSP;
 
-        cs::Demo6Rsp demo_6_rsp;
-        demo_6_rsp.mutable_err_ctx()->set_err_code(ERR_OK);
-    }
+//        cs::Demo6Rsp demo_6_rsp;
+//        demo_6_rsp.mutable_err_ctx()->set_err_code(ERR_OK);
+//    }
 }
 }

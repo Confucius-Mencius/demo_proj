@@ -1,6 +1,8 @@
 #include "msg_handler.h"
 
-namespace work
+namespace tcp
+{
+namespace proto
 {
 MsgHandler::MsgHandler()
 {
@@ -22,5 +24,6 @@ int MsgHandler::Initialize(const void* ctx)
 
     common_logic_ = (TheCommonLogicInterface*) logic_ctx_->common_logic;
     return 0;
+}
 }
 }

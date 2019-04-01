@@ -11,7 +11,7 @@ CreateVersionFile(${CMAKE_CURRENT_SOURCE_DIR} ${PROJ_NAME} ${LIB_NAME})
 
 ###############################################################################
 # include/link dir
-include_directories(${PROTOBUF_INC_DIR})
+include_directories(${COMMON_COMPONENT_INC_DIR} ${PROTOBUF_INC_DIR})
 link_directories(${PROTOBUF_LIB_DIR} ${GPERFTOOLS_LIB_DIR})
 
 ###############################################################################

@@ -1,18 +1,22 @@
 #include "global_req_handler.h"
 #include "ss_msg.pb.h"
 #include "ss_msg_id.pb.h"
-#include "work_protobuf_util.h"
+#include "proto_tcp_protobuf_util.h"
 
 using namespace com::moon::demo;
 
-namespace work
+namespace tcp
+{
+namespace proto
 {
 GlobalReqHandler::GlobalReqHandler()
 {
+
 }
 
 GlobalReqHandler::~GlobalReqHandler()
 {
+
 }
 
 ::proto::MsgID GlobalReqHandler::GetMsgID()
@@ -23,7 +27,7 @@ GlobalReqHandler::~GlobalReqHandler()
 void GlobalReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
                              const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("work::GlobalReqHandler::OnMsg, " << conn_guid << ", " << msg_head << ", msg body len: " << msg_body_len);
+    LOG_TRACE("tcp::proto::GlobalReqHandler::OnMsg, " << conn_guid << ", " << msg_head << ", msg body len: " << msg_body_len);
 
     ss::GlobalReq global_req;
     if (ParseProtobufMsg(&global_req, msg_body, msg_body_len) != 0)
@@ -31,6 +35,7 @@ void GlobalReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& 
         return;
     }
 
-    LOG_TRACE(global_req.a() << ", " << global_req.b());
+    LOG_DEBUG(global_req.a() << ", " << global_req.b());
+}
 }
 }

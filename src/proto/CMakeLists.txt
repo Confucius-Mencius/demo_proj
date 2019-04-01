@@ -15,6 +15,7 @@ set(CXX_LANGUAGE on CACHE INTERNAL "this is a cxx language project")
 # third party
 set(THIRD_PARTY_DIR ${PROJECT_SOURCE_DIR}/../third_party)
 include(${THIRD_PARTY_DIR}/cmake/third_party.cmake)
+include(${THIRD_PARTY_DIR}/cmake/common_component.cmake)
 
 ###############################################################################
 # 启用-Werror
@@ -36,7 +37,7 @@ set(CPP_OUTPUT_TMP_DIR ${PROJECT_SOURCE_DIR}/tmp)
 set(PY_OUTPUT_DIR ${PROJECT_SOURCE_DIR}/py)
 set(JAVA_OUTPUT_DIR ${PROJECT_SOURCE_DIR}/java)
 
-set(PROTO_DIR com/moon/demo/proto)
+set(PROTO_DIR com/moon/demo)
 set(PROTO_FILE_LIST common.proto cs_msg_id.proto cs_msg.proto ss_msg_id.proto ss_msg.proto)
 
 file(REMOVE_RECURSE ${CPP_OUTPUT_TMP_DIR})

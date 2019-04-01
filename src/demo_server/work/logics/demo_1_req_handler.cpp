@@ -2,9 +2,7 @@
 #include "cs_msg.pb.h"
 #include "cs_msg_id.pb.h"
 #include "err_code.h"
-#include "log_util.h"
-#include "protobuf_util.h"
-#include "work_scheduler_interface.h"
+#include "work_protobuf_util.h"
 
 using namespace com::moon::demo;
 
@@ -20,7 +18,7 @@ Demo1ReqHandler::~Demo1ReqHandler()
 
 }
 
-MsgId Demo1ReqHandler::GetMsgId()
+::proto::MsgID Demo1ReqHandler::GetMsgID()
 {
     return cs::MSG_ID_DEMO_1_REQ;
 }
@@ -32,7 +30,6 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
     cs::Demo1Req demo_1_req;
     if (ParseProtobufMsg(&demo_1_req, msg_body, msg_body_len) != 0)
     {
-        LOG_ERROR("failed to parse msg, msg id: " << msg_head.msg_id << ", msg body len: " << msg_body_len);
         SendErrRsp(conn_guid, msg_head, ERR_INVALID_PARAM);
         return;
     }
@@ -47,7 +44,7 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
     cs::Demo1Rsp demo_1_rsp;
     demo_1_rsp.mutable_err_ctx()->set_err_code(ERR_OK);
 
-    SendToClient(conn_guid, rsp_msg_head, &demo_1_rsp);
+    SendToClient(logic_ctx_->scheduler, conn_guid, rsp_msg_head, &demo_1_rsp);
 
     ////////////////////////////////////////////////////////////////////////////////
     // 生成一个新任务，内部调度给其它work线程处理
@@ -62,10 +59,10 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         demo_2_req.set_udp(true);
     }
 
-    SendToWorkThread(conn_guid, demo_2_msg_head, &demo_2_req, -1);
+    SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo_2_msg_head, &demo_2_req, -1);
 }
 
-void Demo1ReqHandler::SendErrRsp(const ConnGuid* conn_guid, const MsgHead& req_msg_head, int err_code) const
+void Demo1ReqHandler::SendErrRsp(const ConnGUID* conn_guid, const ::proto::MsgHead& req_msg_head, int err_code) const
 {
     ::proto::MsgHead rsp_msg_head = req_msg_head;
     rsp_msg_head.msg_id = cs::MSG_ID_DEMO_1_RSP;
@@ -73,6 +70,6 @@ void Demo1ReqHandler::SendErrRsp(const ConnGuid* conn_guid, const MsgHead& req_m
     cs::Demo1Rsp demo_1_rsp;
     demo_1_rsp.mutable_err_ctx()->set_err_code(err_code);
 
-    SendToClient(conn_guid, rsp_msg_head, &demo_1_rsp);
+    SendToClient(logic_ctx_->scheduler, conn_guid, rsp_msg_head, &demo_1_rsp);
 }
 }
