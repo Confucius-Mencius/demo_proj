@@ -11,7 +11,6 @@ sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__fil
 # print(sys.path)
 
 from util.proto_tcp_client import *
-
 from test_action.proto_tcp.demo100_req import *
 
 

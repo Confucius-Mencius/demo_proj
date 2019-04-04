@@ -6,8 +6,8 @@
 
 import socket
 import struct
-from log_util import *
-import msg_codec
+from util.log_util import *
+from util.proto_msg_codec import *
 
 
 class Client(object):
@@ -72,7 +72,7 @@ class Client(object):
             # start_time = datetime.datetime.now()
             # LogInfo('send begin time: %s' % start_time)
 
-            data = msg_codec.encode(msg_head, msg_body, msg_body_len, do_checksum)
+            data = encode(msg_head, msg_body, msg_body_len, do_checksum)
             if not data:
                 LOG_ERROR('no data')
                 return -1
@@ -99,8 +99,8 @@ class Client(object):
             msg_len_data_list = []
             read_len = 0
 
-            while read_len < msg_codec.TOTAL_MSG_LEN_FIELD_LEN:
-                data = self.sock.recv(msg_codec.TOTAL_MSG_LEN_FIELD_LEN - read_len)
+            while read_len < TOTAL_MSG_LEN_FIELD_LEN:
+                data = self.sock.recv(TOTAL_MSG_LEN_FIELD_LEN - read_len)
                 data_len = len(data)
 
                 if 0 == data_len:
@@ -110,7 +110,7 @@ class Client(object):
                 read_len += data_len
                 msg_len_data_list.append(data)
 
-            if read_len < msg_codec.TOTAL_MSG_LEN_FIELD_LEN:
+            if read_len < TOTAL_MSG_LEN_FIELD_LEN:
                 LOG_ERROR('read len: %d' % read_len)
                 return None, 0
 
@@ -154,7 +154,7 @@ class Client(object):
                 LOG_ERROR('total msg len: %d' % total_msg_len)
                 return -1, None, None
 
-            return msg_codec.decode(total_msg_buf, total_msg_len, do_checksum)
+            return decode(total_msg_buf, total_msg_len, do_checksum)
         except Exception as e:
             LOG_ERROR('exception: %s' % e)
             return -1, None, None

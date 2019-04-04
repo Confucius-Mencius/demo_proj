@@ -1,6 +1,7 @@
 #ifndef DEMO_SERVER_PROTO_TCP_LOGICS_LOGIC_H_
 #define DEMO_SERVER_PROTO_TCP_LOGICS_LOGIC_H_
 
+#include "msg_handler_mgr.h"
 #include "proto_tcp_logic_interface.h"
 
 namespace tcp
@@ -27,6 +28,9 @@ public:
     void OnReload() override;
     void OnClientConnected(const ConnGUID* conn_guid) override;
     void OnClientClosed(const ConnGUID* conn_guid) override;
+
+private:
+    MsgHandlerMgr msg_handler_mgr_;
 };
 }
 }

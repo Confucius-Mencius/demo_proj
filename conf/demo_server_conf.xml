@@ -89,7 +89,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <!-- 框架自定义协议的tcp -->
         <proto>
             <!-- =1：对消息做checksum校验，=0：不做。不配置则默认为1 -->
-            <do_checksum>1</do_checksum>
+            <do_checksum>0</do_checksum>
 
             <!-- 消息体的最大长度，单位：字节。不配置则使用默认值1048576（1M） -->
             <max_msg_body_len>1048576</max_msg_body_len>
