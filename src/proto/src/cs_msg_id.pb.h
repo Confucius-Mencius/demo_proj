@@ -59,24 +59,18 @@ namespace cs {
 
 enum MsgID {
   PLACE_HOLDER = 0,
-  MSG_ID_DEMO_1_REQ = 1000,
-  MSG_ID_DEMO_1_RSP = 1001,
-  MSG_ID_DEMO_2_REQ = 1002,
-  MSG_ID_DEMO_2_RSP = 1003,
-  MSG_ID_DEMO_3_REQ = 1004,
-  MSG_ID_DEMO_3_RSP = 1005,
-  MSG_ID_DEMO_4_REQ = 1006,
-  MSG_ID_DEMO_4_RSP = 1007,
-  MSG_ID_DEMO_5_REQ = 1008,
-  MSG_ID_DEMO_5_RSP = 1009,
-  MSG_ID_DEMO_6_REQ = 1010,
-  MSG_ID_DEMO_6_RSP = 1011,
+  MSG_ID_DEMO1_REQ = 1000,
+  MSG_ID_DEMO1_RSP = 1001,
+  MSG_ID_DEMO1_NFY = 1002,
+  MSG_ID_DEMO3_NFY = 1003,
+  MSG_ID_DEMO100_REQ = 1004,
+  MSG_ID_DEMO100_RSP = 1005,
   MsgID_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   MsgID_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool MsgID_IsValid(int value);
 const MsgID MsgID_MIN = PLACE_HOLDER;
-const MsgID MsgID_MAX = MSG_ID_DEMO_6_RSP;
+const MsgID MsgID_MAX = MSG_ID_DEMO100_RSP;
 const int MsgID_ARRAYSIZE = MsgID_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MsgID_descriptor();

@@ -14,1154 +14,145 @@ public final class SsMsg {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface GlobalReqOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.GlobalReq)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 a = 1;</code>
-     */
-    int getA();
-
-    /**
-     * <code>int32 b = 2;</code>
-     */
-    int getB();
-  }
   /**
-   * Protobuf type {@code com.moon.demo.ss.GlobalReq}
+   * Protobuf enum {@code com.moon.demo.ss.Demo4Flag}
    */
-  public  static final class GlobalReq extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.GlobalReq)
-      GlobalReqOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GlobalReq.newBuilder() to construct.
-    private GlobalReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GlobalReq() {
-      a_ = 0;
-      b_ = 0;
-    }
+  public enum Demo4Flag
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DEMO_4_FLAG_MIN = 0;</code>
+     */
+    DEMO_4_FLAG_MIN(0, 0),
+    /**
+     * <code>DEMO_4_FLAG_WORK_TO_WORK = 1;</code>
+     */
+    DEMO_4_FLAG_WORK_TO_WORK(2, 1),
+    /**
+     * <code>DEMO_4_FLAG_WORK_TO_BURDEN = 2;</code>
+     */
+    DEMO_4_FLAG_WORK_TO_BURDEN(3, 2),
+    /**
+     * <code>DEMO_4_FLAG_BURDEN_TO_BURDEN = 3;</code>
+     */
+    DEMO_4_FLAG_BURDEN_TO_BURDEN(4, 3),
+    /**
+     * <code>DEMO_4_FLAG_MAX = 4;</code>
+     */
+    DEMO_4_FLAG_MAX(5, 4),
+    UNRECOGNIZED(-1, -1),
+    ;
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GlobalReq(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+    /**
+     * <code>DEMO_4_FLAG_IO_TO_WORK = 0;</code>
+     */
+    public static final Demo4Flag DEMO_4_FLAG_IO_TO_WORK = DEMO_4_FLAG_MIN;
+    /**
+     * <code>DEMO_4_FLAG_MIN = 0;</code>
+     */
+    public static final int DEMO_4_FLAG_MIN_VALUE = 0;
+    /**
+     * <code>DEMO_4_FLAG_IO_TO_WORK = 0;</code>
+     */
+    public static final int DEMO_4_FLAG_IO_TO_WORK_VALUE = 0;
+    /**
+     * <code>DEMO_4_FLAG_WORK_TO_WORK = 1;</code>
+     */
+    public static final int DEMO_4_FLAG_WORK_TO_WORK_VALUE = 1;
+    /**
+     * <code>DEMO_4_FLAG_WORK_TO_BURDEN = 2;</code>
+     */
+    public static final int DEMO_4_FLAG_WORK_TO_BURDEN_VALUE = 2;
+    /**
+     * <code>DEMO_4_FLAG_BURDEN_TO_BURDEN = 3;</code>
+     */
+    public static final int DEMO_4_FLAG_BURDEN_TO_BURDEN_VALUE = 3;
+    /**
+     * <code>DEMO_4_FLAG_MAX = 4;</code>
+     */
+    public static final int DEMO_4_FLAG_MAX_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (index == -1) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
       }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
+      return value;
+    }
 
-              a_ = input.readInt32();
-              break;
-            }
-            case 16: {
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Demo4Flag valueOf(int value) {
+      return forNumber(value);
+    }
 
-              b_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
+    public static Demo4Flag forNumber(int value) {
+      switch (value) {
+        case 0: return DEMO_4_FLAG_MIN;
+        case 1: return DEMO_4_FLAG_WORK_TO_WORK;
+        case 2: return DEMO_4_FLAG_WORK_TO_BURDEN;
+        case 3: return DEMO_4_FLAG_BURDEN_TO_BURDEN;
+        case 4: return DEMO_4_FLAG_MAX;
+        default: return null;
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Demo4Flag>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Demo4Flag> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Demo4Flag>() {
+            public Demo4Flag findValueByNumber(int number) {
+              return Demo4Flag.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalReq_descriptor;
+      return com.moon.demo.ss.SsMsg.getDescriptor().getEnumTypes().get(0);
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalReq_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.moon.demo.ss.SsMsg.GlobalReq.class, com.moon.demo.ss.SsMsg.GlobalReq.Builder.class);
-    }
-
-    public static final int A_FIELD_NUMBER = 1;
-    private int a_;
-    /**
-     * <code>int32 a = 1;</code>
-     */
-    public int getA() {
-      return a_;
-    }
-
-    public static final int B_FIELD_NUMBER = 2;
-    private int b_;
-    /**
-     * <code>int32 b = 2;</code>
-     */
-    public int getB() {
-      return b_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (a_ != 0) {
-        output.writeInt32(1, a_);
-      }
-      if (b_ != 0) {
-        output.writeInt32(2, b_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (a_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, a_);
-      }
-      if (b_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, b_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.moon.demo.ss.SsMsg.GlobalReq)) {
-        return super.equals(obj);
-      }
-      com.moon.demo.ss.SsMsg.GlobalReq other = (com.moon.demo.ss.SsMsg.GlobalReq) obj;
-
-      boolean result = true;
-      result = result && (getA()
-          == other.getA());
-      result = result && (getB()
-          == other.getB());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + A_FIELD_NUMBER;
-      hash = (53 * hash) + getA();
-      hash = (37 * hash) + B_FIELD_NUMBER;
-      hash = (53 * hash) + getB();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalReq parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.moon.demo.ss.SsMsg.GlobalReq prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.moon.demo.ss.GlobalReq}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.GlobalReq)
-        com.moon.demo.ss.SsMsg.GlobalReqOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalReq_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalReq_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.moon.demo.ss.SsMsg.GlobalReq.class, com.moon.demo.ss.SsMsg.GlobalReq.Builder.class);
-      }
-
-      // Construct using com.moon.demo.ss.SsMsg.GlobalReq.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        a_ = 0;
-
-        b_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalReq_descriptor;
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.GlobalReq getDefaultInstanceForType() {
-        return com.moon.demo.ss.SsMsg.GlobalReq.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.GlobalReq build() {
-        com.moon.demo.ss.SsMsg.GlobalReq result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.GlobalReq buildPartial() {
-        com.moon.demo.ss.SsMsg.GlobalReq result = new com.moon.demo.ss.SsMsg.GlobalReq(this);
-        result.a_ = a_;
-        result.b_ = b_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.moon.demo.ss.SsMsg.GlobalReq) {
-          return mergeFrom((com.moon.demo.ss.SsMsg.GlobalReq)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.moon.demo.ss.SsMsg.GlobalReq other) {
-        if (other == com.moon.demo.ss.SsMsg.GlobalReq.getDefaultInstance()) return this;
-        if (other.getA() != 0) {
-          setA(other.getA());
-        }
-        if (other.getB() != 0) {
-          setB(other.getB());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.moon.demo.ss.SsMsg.GlobalReq parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.moon.demo.ss.SsMsg.GlobalReq) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int a_ ;
-      /**
-       * <code>int32 a = 1;</code>
-       */
-      public int getA() {
-        return a_;
-      }
-      /**
-       * <code>int32 a = 1;</code>
-       */
-      public Builder setA(int value) {
-        
-        a_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 a = 1;</code>
-       */
-      public Builder clearA() {
-        
-        a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int b_ ;
-      /**
-       * <code>int32 b = 2;</code>
-       */
-      public int getB() {
-        return b_;
-      }
-      /**
-       * <code>int32 b = 2;</code>
-       */
-      public Builder setB(int value) {
-        
-        b_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 b = 2;</code>
-       */
-      public Builder clearB() {
-        
-        b_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.GlobalReq)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.GlobalReq)
-    private static final com.moon.demo.ss.SsMsg.GlobalReq DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.GlobalReq();
-    }
-
-    public static com.moon.demo.ss.SsMsg.GlobalReq getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GlobalReq>
-        PARSER = new com.google.protobuf.AbstractParser<GlobalReq>() {
-      @java.lang.Override
-      public GlobalReq parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GlobalReq(input, extensionRegistry);
-      }
+    private static final Demo4Flag[] VALUES = {
+      DEMO_4_FLAG_MIN, DEMO_4_FLAG_IO_TO_WORK, DEMO_4_FLAG_WORK_TO_WORK, DEMO_4_FLAG_WORK_TO_BURDEN, DEMO_4_FLAG_BURDEN_TO_BURDEN, DEMO_4_FLAG_MAX, 
     };
 
-    public static com.google.protobuf.Parser<GlobalReq> parser() {
-      return PARSER;
+    public static Demo4Flag valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
     }
 
-    @java.lang.Override
-    public com.google.protobuf.Parser<GlobalReq> getParserForType() {
-      return PARSER;
+    private final int index;
+    private final int value;
+
+    private Demo4Flag(int index, int value) {
+      this.index = index;
+      this.value = value;
     }
 
-    @java.lang.Override
-    public com.moon.demo.ss.SsMsg.GlobalReq getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
+    // @@protoc_insertion_point(enum_scope:com.moon.demo.ss.Demo4Flag)
   }
 
-  public interface GlobalRspOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.GlobalRsp)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-     */
-    boolean hasErrCtx();
-    /**
-     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-     */
-    com.moon.demo.Common.ErrCtx getErrCtx();
-    /**
-     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-     */
-    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
-  }
-  /**
-   * Protobuf type {@code com.moon.demo.ss.GlobalRsp}
-   */
-  public  static final class GlobalRsp extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.GlobalRsp)
-      GlobalRspOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GlobalRsp.newBuilder() to construct.
-    private GlobalRsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GlobalRsp() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GlobalRsp(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
-              if (errCtx_ != null) {
-                subBuilder = errCtx_.toBuilder();
-              }
-              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(errCtx_);
-                errCtx_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalRsp_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalRsp_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.moon.demo.ss.SsMsg.GlobalRsp.class, com.moon.demo.ss.SsMsg.GlobalRsp.Builder.class);
-    }
-
-    public static final int ERR_CTX_FIELD_NUMBER = 1;
-    private com.moon.demo.Common.ErrCtx errCtx_;
-    /**
-     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-     */
-    public boolean hasErrCtx() {
-      return errCtx_ != null;
-    }
-    /**
-     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-     */
-    public com.moon.demo.Common.ErrCtx getErrCtx() {
-      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
-    }
-    /**
-     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-     */
-    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
-      return getErrCtx();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (errCtx_ != null) {
-        output.writeMessage(1, getErrCtx());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (errCtx_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getErrCtx());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.moon.demo.ss.SsMsg.GlobalRsp)) {
-        return super.equals(obj);
-      }
-      com.moon.demo.ss.SsMsg.GlobalRsp other = (com.moon.demo.ss.SsMsg.GlobalRsp) obj;
-
-      boolean result = true;
-      result = result && (hasErrCtx() == other.hasErrCtx());
-      if (hasErrCtx()) {
-        result = result && getErrCtx()
-            .equals(other.getErrCtx());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasErrCtx()) {
-        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
-        hash = (53 * hash) + getErrCtx().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.GlobalRsp parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.moon.demo.ss.SsMsg.GlobalRsp prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.moon.demo.ss.GlobalRsp}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.GlobalRsp)
-        com.moon.demo.ss.SsMsg.GlobalRspOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalRsp_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalRsp_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.moon.demo.ss.SsMsg.GlobalRsp.class, com.moon.demo.ss.SsMsg.GlobalRsp.Builder.class);
-      }
-
-      // Construct using com.moon.demo.ss.SsMsg.GlobalRsp.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (errCtxBuilder_ == null) {
-          errCtx_ = null;
-        } else {
-          errCtx_ = null;
-          errCtxBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_GlobalRsp_descriptor;
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.GlobalRsp getDefaultInstanceForType() {
-        return com.moon.demo.ss.SsMsg.GlobalRsp.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.GlobalRsp build() {
-        com.moon.demo.ss.SsMsg.GlobalRsp result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.GlobalRsp buildPartial() {
-        com.moon.demo.ss.SsMsg.GlobalRsp result = new com.moon.demo.ss.SsMsg.GlobalRsp(this);
-        if (errCtxBuilder_ == null) {
-          result.errCtx_ = errCtx_;
-        } else {
-          result.errCtx_ = errCtxBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.moon.demo.ss.SsMsg.GlobalRsp) {
-          return mergeFrom((com.moon.demo.ss.SsMsg.GlobalRsp)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.moon.demo.ss.SsMsg.GlobalRsp other) {
-        if (other == com.moon.demo.ss.SsMsg.GlobalRsp.getDefaultInstance()) return this;
-        if (other.hasErrCtx()) {
-          mergeErrCtx(other.getErrCtx());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.moon.demo.ss.SsMsg.GlobalRsp parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.moon.demo.ss.SsMsg.GlobalRsp) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.moon.demo.Common.ErrCtx errCtx_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      public boolean hasErrCtx() {
-        return errCtxBuilder_ != null || errCtx_ != null;
-      }
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      public com.moon.demo.Common.ErrCtx getErrCtx() {
-        if (errCtxBuilder_ == null) {
-          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
-        } else {
-          return errCtxBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
-        if (errCtxBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          errCtx_ = value;
-          onChanged();
-        } else {
-          errCtxBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      public Builder setErrCtx(
-          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
-        if (errCtxBuilder_ == null) {
-          errCtx_ = builderForValue.build();
-          onChanged();
-        } else {
-          errCtxBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
-        if (errCtxBuilder_ == null) {
-          if (errCtx_ != null) {
-            errCtx_ =
-              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
-          } else {
-            errCtx_ = value;
-          }
-          onChanged();
-        } else {
-          errCtxBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      public Builder clearErrCtx() {
-        if (errCtxBuilder_ == null) {
-          errCtx_ = null;
-          onChanged();
-        } else {
-          errCtx_ = null;
-          errCtxBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
-        
-        onChanged();
-        return getErrCtxFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
-        if (errCtxBuilder_ != null) {
-          return errCtxBuilder_.getMessageOrBuilder();
-        } else {
-          return errCtx_ == null ?
-              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
-        }
-      }
-      /**
-       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
-          getErrCtxFieldBuilder() {
-        if (errCtxBuilder_ == null) {
-          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
-                  getErrCtx(),
-                  getParentForChildren(),
-                  isClean());
-          errCtx_ = null;
-        }
-        return errCtxBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.GlobalRsp)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.GlobalRsp)
-    private static final com.moon.demo.ss.SsMsg.GlobalRsp DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.GlobalRsp();
-    }
-
-    public static com.moon.demo.ss.SsMsg.GlobalRsp getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GlobalRsp>
-        PARSER = new com.google.protobuf.AbstractParser<GlobalRsp>() {
-      @java.lang.Override
-      public GlobalRsp parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GlobalRsp(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<GlobalRsp> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GlobalRsp> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.moon.demo.ss.SsMsg.GlobalRsp getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface Demo1ReqOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo1Req)
+  public interface Demo2ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo2Req)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1175,18 +166,18 @@ public final class SsMsg {
     boolean getUdp();
   }
   /**
-   * Protobuf type {@code com.moon.demo.ss.Demo1Req}
+   * Protobuf type {@code com.moon.demo.ss.Demo2Req}
    */
-  public  static final class Demo1Req extends
+  public  static final class Demo2Req extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo1Req)
-      Demo1ReqOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo2Req)
+      Demo2ReqOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Demo1Req.newBuilder() to construct.
-    private Demo1Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Demo2Req.newBuilder() to construct.
+    private Demo2Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Demo1Req() {
+    private Demo2Req() {
       a_ = 0;
       udp_ = false;
     }
@@ -1196,7 +187,7 @@ public final class SsMsg {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Demo1Req(
+    private Demo2Req(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1246,15 +237,15 @@ public final class SsMsg {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Req_descriptor;
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Req_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Req_fieldAccessorTable
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Req_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.moon.demo.ss.SsMsg.Demo1Req.class, com.moon.demo.ss.SsMsg.Demo1Req.Builder.class);
+              com.moon.demo.ss.SsMsg.Demo2Req.class, com.moon.demo.ss.SsMsg.Demo2Req.Builder.class);
     }
 
     public static final int A_FIELD_NUMBER = 1;
@@ -1322,10 +313,10 @@ public final class SsMsg {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo1Req)) {
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo2Req)) {
         return super.equals(obj);
       }
-      com.moon.demo.ss.SsMsg.Demo1Req other = (com.moon.demo.ss.SsMsg.Demo1Req) obj;
+      com.moon.demo.ss.SsMsg.Demo2Req other = (com.moon.demo.ss.SsMsg.Demo2Req) obj;
 
       boolean result = true;
       result = result && (getA()
@@ -1353,69 +344,69 @@ public final class SsMsg {
       return hash;
     }
 
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(byte[] data)
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(java.io.InputStream input)
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseDelimitedFrom(java.io.InputStream input)
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseDelimitedFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Req parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Req parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1428,7 +419,7 @@ public final class SsMsg {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo1Req prototype) {
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo2Req prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1444,26 +435,26 @@ public final class SsMsg {
       return builder;
     }
     /**
-     * Protobuf type {@code com.moon.demo.ss.Demo1Req}
+     * Protobuf type {@code com.moon.demo.ss.Demo2Req}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo1Req)
-        com.moon.demo.ss.SsMsg.Demo1ReqOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo2Req)
+        com.moon.demo.ss.SsMsg.Demo2ReqOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Req_descriptor;
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Req_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Req_fieldAccessorTable
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Req_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.moon.demo.ss.SsMsg.Demo1Req.class, com.moon.demo.ss.SsMsg.Demo1Req.Builder.class);
+                com.moon.demo.ss.SsMsg.Demo2Req.class, com.moon.demo.ss.SsMsg.Demo2Req.Builder.class);
       }
 
-      // Construct using com.moon.demo.ss.SsMsg.Demo1Req.newBuilder()
+      // Construct using com.moon.demo.ss.SsMsg.Demo2Req.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1491,17 +482,17 @@ public final class SsMsg {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Req_descriptor;
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Req_descriptor;
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Req getDefaultInstanceForType() {
-        return com.moon.demo.ss.SsMsg.Demo1Req.getDefaultInstance();
+      public com.moon.demo.ss.SsMsg.Demo2Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo2Req.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Req build() {
-        com.moon.demo.ss.SsMsg.Demo1Req result = buildPartial();
+      public com.moon.demo.ss.SsMsg.Demo2Req build() {
+        com.moon.demo.ss.SsMsg.Demo2Req result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1509,8 +500,8 @@ public final class SsMsg {
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Req buildPartial() {
-        com.moon.demo.ss.SsMsg.Demo1Req result = new com.moon.demo.ss.SsMsg.Demo1Req(this);
+      public com.moon.demo.ss.SsMsg.Demo2Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo2Req result = new com.moon.demo.ss.SsMsg.Demo2Req(this);
         result.a_ = a_;
         result.udp_ = udp_;
         onBuilt();
@@ -1551,16 +542,16 @@ public final class SsMsg {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.moon.demo.ss.SsMsg.Demo1Req) {
-          return mergeFrom((com.moon.demo.ss.SsMsg.Demo1Req)other);
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo2Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo2Req)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo1Req other) {
-        if (other == com.moon.demo.ss.SsMsg.Demo1Req.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo2Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo2Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
         }
@@ -1582,11 +573,11 @@ public final class SsMsg {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.moon.demo.ss.SsMsg.Demo1Req parsedMessage = null;
+        com.moon.demo.ss.SsMsg.Demo2Req parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.moon.demo.ss.SsMsg.Demo1Req) e.getUnfinishedMessage();
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo2Req) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1660,48 +651,48 @@ public final class SsMsg {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo1Req)
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo2Req)
     }
 
-    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Req)
-    private static final com.moon.demo.ss.SsMsg.Demo1Req DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo2Req)
+    private static final com.moon.demo.ss.SsMsg.Demo2Req DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo1Req();
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo2Req();
     }
 
-    public static com.moon.demo.ss.SsMsg.Demo1Req getDefaultInstance() {
+    public static com.moon.demo.ss.SsMsg.Demo2Req getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Demo1Req>
-        PARSER = new com.google.protobuf.AbstractParser<Demo1Req>() {
+    private static final com.google.protobuf.Parser<Demo2Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo2Req>() {
       @java.lang.Override
-      public Demo1Req parsePartialFrom(
+      public Demo2Req parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Demo1Req(input, extensionRegistry);
+        return new Demo2Req(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Demo1Req> parser() {
+    public static com.google.protobuf.Parser<Demo2Req> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Demo1Req> getParserForType() {
+    public com.google.protobuf.Parser<Demo2Req> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.moon.demo.ss.SsMsg.Demo1Req getDefaultInstanceForType() {
+    public com.moon.demo.ss.SsMsg.Demo2Req getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface Demo1RspOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo1Rsp)
+  public interface Demo2RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo2Rsp)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1718,18 +709,18 @@ public final class SsMsg {
     com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
   }
   /**
-   * Protobuf type {@code com.moon.demo.ss.Demo1Rsp}
+   * Protobuf type {@code com.moon.demo.ss.Demo2Rsp}
    */
-  public  static final class Demo1Rsp extends
+  public  static final class Demo2Rsp extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo1Rsp)
-      Demo1RspOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo2Rsp)
+      Demo2RspOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Demo1Rsp.newBuilder() to construct.
-    private Demo1Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Demo2Rsp.newBuilder() to construct.
+    private Demo2Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Demo1Rsp() {
+    private Demo2Rsp() {
     }
 
     @java.lang.Override
@@ -1737,7 +728,7 @@ public final class SsMsg {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Demo1Rsp(
+    private Demo2Rsp(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1790,15 +781,15 @@ public final class SsMsg {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Rsp_descriptor;
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Rsp_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Rsp_fieldAccessorTable
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Rsp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.moon.demo.ss.SsMsg.Demo1Rsp.class, com.moon.demo.ss.SsMsg.Demo1Rsp.Builder.class);
+              com.moon.demo.ss.SsMsg.Demo2Rsp.class, com.moon.demo.ss.SsMsg.Demo2Rsp.Builder.class);
     }
 
     public static final int ERR_CTX_FIELD_NUMBER = 1;
@@ -1862,10 +853,10 @@ public final class SsMsg {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo1Rsp)) {
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo2Rsp)) {
         return super.equals(obj);
       }
-      com.moon.demo.ss.SsMsg.Demo1Rsp other = (com.moon.demo.ss.SsMsg.Demo1Rsp) obj;
+      com.moon.demo.ss.SsMsg.Demo2Rsp other = (com.moon.demo.ss.SsMsg.Demo2Rsp) obj;
 
       boolean result = true;
       result = result && (hasErrCtx() == other.hasErrCtx());
@@ -1893,69 +884,69 @@ public final class SsMsg {
       return hash;
     }
 
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(byte[] data)
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(java.io.InputStream input)
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseDelimitedFrom(java.io.InputStream input)
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseDelimitedFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1968,7 +959,7 @@ public final class SsMsg {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo1Rsp prototype) {
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo2Rsp prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1984,26 +975,26 @@ public final class SsMsg {
       return builder;
     }
     /**
-     * Protobuf type {@code com.moon.demo.ss.Demo1Rsp}
+     * Protobuf type {@code com.moon.demo.ss.Demo2Rsp}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo1Rsp)
-        com.moon.demo.ss.SsMsg.Demo1RspOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo2Rsp)
+        com.moon.demo.ss.SsMsg.Demo2RspOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Rsp_descriptor;
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Rsp_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Rsp_fieldAccessorTable
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Rsp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.moon.demo.ss.SsMsg.Demo1Rsp.class, com.moon.demo.ss.SsMsg.Demo1Rsp.Builder.class);
+                com.moon.demo.ss.SsMsg.Demo2Rsp.class, com.moon.demo.ss.SsMsg.Demo2Rsp.Builder.class);
       }
 
-      // Construct using com.moon.demo.ss.SsMsg.Demo1Rsp.newBuilder()
+      // Construct using com.moon.demo.ss.SsMsg.Demo2Rsp.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2033,17 +1024,17 @@ public final class SsMsg {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Rsp_descriptor;
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Rsp_descriptor;
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Rsp getDefaultInstanceForType() {
-        return com.moon.demo.ss.SsMsg.Demo1Rsp.getDefaultInstance();
+      public com.moon.demo.ss.SsMsg.Demo2Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo2Rsp.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Rsp build() {
-        com.moon.demo.ss.SsMsg.Demo1Rsp result = buildPartial();
+      public com.moon.demo.ss.SsMsg.Demo2Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo2Rsp result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2051,8 +1042,8 @@ public final class SsMsg {
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Rsp buildPartial() {
-        com.moon.demo.ss.SsMsg.Demo1Rsp result = new com.moon.demo.ss.SsMsg.Demo1Rsp(this);
+      public com.moon.demo.ss.SsMsg.Demo2Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo2Rsp result = new com.moon.demo.ss.SsMsg.Demo2Rsp(this);
         if (errCtxBuilder_ == null) {
           result.errCtx_ = errCtx_;
         } else {
@@ -2096,16 +1087,16 @@ public final class SsMsg {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.moon.demo.ss.SsMsg.Demo1Rsp) {
-          return mergeFrom((com.moon.demo.ss.SsMsg.Demo1Rsp)other);
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo2Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo2Rsp)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo1Rsp other) {
-        if (other == com.moon.demo.ss.SsMsg.Demo1Rsp.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo2Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo2Rsp.getDefaultInstance()) return this;
         if (other.hasErrCtx()) {
           mergeErrCtx(other.getErrCtx());
         }
@@ -2124,11 +1115,11 @@ public final class SsMsg {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.moon.demo.ss.SsMsg.Demo1Rsp parsedMessage = null;
+        com.moon.demo.ss.SsMsg.Demo2Rsp parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.moon.demo.ss.SsMsg.Demo1Rsp) e.getUnfinishedMessage();
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo2Rsp) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2267,48 +1258,12982 @@ public final class SsMsg {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo1Rsp)
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo2Rsp)
     }
 
-    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Rsp)
-    private static final com.moon.demo.ss.SsMsg.Demo1Rsp DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo2Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo2Rsp DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo1Rsp();
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo2Rsp();
     }
 
-    public static com.moon.demo.ss.SsMsg.Demo1Rsp getDefaultInstance() {
+    public static com.moon.demo.ss.SsMsg.Demo2Rsp getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Demo1Rsp>
-        PARSER = new com.google.protobuf.AbstractParser<Demo1Rsp>() {
+    private static final com.google.protobuf.Parser<Demo2Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo2Rsp>() {
       @java.lang.Override
-      public Demo1Rsp parsePartialFrom(
+      public Demo2Rsp parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Demo1Rsp(input, extensionRegistry);
+        return new Demo2Rsp(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Demo1Rsp> parser() {
+    public static com.google.protobuf.Parser<Demo2Rsp> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Demo1Rsp> getParserForType() {
+    public com.google.protobuf.Parser<Demo2Rsp> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.moon.demo.ss.SsMsg.Demo1Rsp getDefaultInstanceForType() {
+    public com.moon.demo.ss.SsMsg.Demo2Rsp getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface Demo1NfyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo1Nfy)
+  public interface Demo3ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo3Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo3Req}
+   */
+  public  static final class Demo3Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo3Req)
+      Demo3ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo3Req.newBuilder() to construct.
+    private Demo3Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo3Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo3Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo3Req.class, com.moon.demo.ss.SsMsg.Demo3Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo3Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo3Req other = (com.moon.demo.ss.SsMsg.Demo3Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo3Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo3Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo3Req)
+        com.moon.demo.ss.SsMsg.Demo3ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo3Req.class, com.moon.demo.ss.SsMsg.Demo3Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo3Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo3Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo3Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo3Req build() {
+        com.moon.demo.ss.SsMsg.Demo3Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo3Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo3Req result = new com.moon.demo.ss.SsMsg.Demo3Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo3Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo3Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo3Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo3Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo3Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo3Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo3Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo3Req)
+    private static final com.moon.demo.ss.SsMsg.Demo3Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo3Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo3Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo3Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo3Req>() {
+      @java.lang.Override
+      public Demo3Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo3Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo3Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo3Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo3Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo3RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo3Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo3Rsp}
+   */
+  public  static final class Demo3Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo3Rsp)
+      Demo3RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo3Rsp.newBuilder() to construct.
+    private Demo3Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo3Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo3Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo3Rsp.class, com.moon.demo.ss.SsMsg.Demo3Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo3Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo3Rsp other = (com.moon.demo.ss.SsMsg.Demo3Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo3Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo3Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo3Rsp)
+        com.moon.demo.ss.SsMsg.Demo3RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo3Rsp.class, com.moon.demo.ss.SsMsg.Demo3Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo3Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo3Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo3Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo3Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo3Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo3Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo3Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo3Rsp result = new com.moon.demo.ss.SsMsg.Demo3Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo3Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo3Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo3Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo3Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo3Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo3Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo3Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo3Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo3Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo3Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo3Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo3Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo3Rsp>() {
+      @java.lang.Override
+      public Demo3Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo3Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo3Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo3Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo3Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo4ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo4Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>int64 b = 2;</code>
+     */
+    long getB();
+
+    /**
+     * <code>string c = 3;</code>
+     */
+    java.lang.String getC();
+    /**
+     * <code>string c = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getCBytes();
+
+    /**
+     * <pre>
+     * post body
+     * </pre>
+     *
+     * <code>bytes d = 4;</code>
+     */
+    com.google.protobuf.ByteString getD();
+
+    /**
+     * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+     */
+    int getFlagValue();
+    /**
+     * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+     */
+    com.moon.demo.ss.SsMsg.Demo4Flag getFlag();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo4Req}
+   */
+  public  static final class Demo4Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo4Req)
+      Demo4ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo4Req.newBuilder() to construct.
+    private Demo4Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo4Req() {
+      a_ = 0;
+      b_ = 0L;
+      c_ = "";
+      d_ = com.google.protobuf.ByteString.EMPTY;
+      flag_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo4Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              b_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              c_ = s;
+              break;
+            }
+            case 34: {
+
+              d_ = input.readBytes();
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              flag_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo4Req.class, com.moon.demo.ss.SsMsg.Demo4Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int B_FIELD_NUMBER = 2;
+    private long b_;
+    /**
+     * <code>int64 b = 2;</code>
+     */
+    public long getB() {
+      return b_;
+    }
+
+    public static final int C_FIELD_NUMBER = 3;
+    private volatile java.lang.Object c_;
+    /**
+     * <code>string c = 3;</code>
+     */
+    public java.lang.String getC() {
+      java.lang.Object ref = c_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        c_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string c = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCBytes() {
+      java.lang.Object ref = c_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        c_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int D_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString d_;
+    /**
+     * <pre>
+     * post body
+     * </pre>
+     *
+     * <code>bytes d = 4;</code>
+     */
+    public com.google.protobuf.ByteString getD() {
+      return d_;
+    }
+
+    public static final int FLAG_FIELD_NUMBER = 5;
+    private int flag_;
+    /**
+     * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+     */
+    public int getFlagValue() {
+      return flag_;
+    }
+    /**
+     * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+     */
+    public com.moon.demo.ss.SsMsg.Demo4Flag getFlag() {
+      @SuppressWarnings("deprecation")
+      com.moon.demo.ss.SsMsg.Demo4Flag result = com.moon.demo.ss.SsMsg.Demo4Flag.valueOf(flag_);
+      return result == null ? com.moon.demo.ss.SsMsg.Demo4Flag.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (b_ != 0L) {
+        output.writeInt64(2, b_);
+      }
+      if (!getCBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, c_);
+      }
+      if (!d_.isEmpty()) {
+        output.writeBytes(4, d_);
+      }
+      if (flag_ != com.moon.demo.ss.SsMsg.Demo4Flag.DEMO_4_FLAG_MIN.getNumber()) {
+        output.writeEnum(5, flag_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (b_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, b_);
+      }
+      if (!getCBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, c_);
+      }
+      if (!d_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, d_);
+      }
+      if (flag_ != com.moon.demo.ss.SsMsg.Demo4Flag.DEMO_4_FLAG_MIN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, flag_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo4Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo4Req other = (com.moon.demo.ss.SsMsg.Demo4Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getB()
+          == other.getB());
+      result = result && getC()
+          .equals(other.getC());
+      result = result && getD()
+          .equals(other.getD());
+      result = result && flag_ == other.flag_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + B_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getB());
+      hash = (37 * hash) + C_FIELD_NUMBER;
+      hash = (53 * hash) + getC().hashCode();
+      hash = (37 * hash) + D_FIELD_NUMBER;
+      hash = (53 * hash) + getD().hashCode();
+      hash = (37 * hash) + FLAG_FIELD_NUMBER;
+      hash = (53 * hash) + flag_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo4Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo4Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo4Req)
+        com.moon.demo.ss.SsMsg.Demo4ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo4Req.class, com.moon.demo.ss.SsMsg.Demo4Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo4Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        b_ = 0L;
+
+        c_ = "";
+
+        d_ = com.google.protobuf.ByteString.EMPTY;
+
+        flag_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo4Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Req build() {
+        com.moon.demo.ss.SsMsg.Demo4Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo4Req result = new com.moon.demo.ss.SsMsg.Demo4Req(this);
+        result.a_ = a_;
+        result.b_ = b_;
+        result.c_ = c_;
+        result.d_ = d_;
+        result.flag_ = flag_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo4Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo4Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo4Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo4Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getB() != 0L) {
+          setB(other.getB());
+        }
+        if (!other.getC().isEmpty()) {
+          c_ = other.c_;
+          onChanged();
+        }
+        if (other.getD() != com.google.protobuf.ByteString.EMPTY) {
+          setD(other.getD());
+        }
+        if (other.flag_ != 0) {
+          setFlagValue(other.getFlagValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo4Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo4Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long b_ ;
+      /**
+       * <code>int64 b = 2;</code>
+       */
+      public long getB() {
+        return b_;
+      }
+      /**
+       * <code>int64 b = 2;</code>
+       */
+      public Builder setB(long value) {
+        
+        b_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 b = 2;</code>
+       */
+      public Builder clearB() {
+        
+        b_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object c_ = "";
+      /**
+       * <code>string c = 3;</code>
+       */
+      public java.lang.String getC() {
+        java.lang.Object ref = c_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          c_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string c = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCBytes() {
+        java.lang.Object ref = c_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          c_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string c = 3;</code>
+       */
+      public Builder setC(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        c_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string c = 3;</code>
+       */
+      public Builder clearC() {
+        
+        c_ = getDefaultInstance().getC();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string c = 3;</code>
+       */
+      public Builder setCBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        c_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString d_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * post body
+       * </pre>
+       *
+       * <code>bytes d = 4;</code>
+       */
+      public com.google.protobuf.ByteString getD() {
+        return d_;
+      }
+      /**
+       * <pre>
+       * post body
+       * </pre>
+       *
+       * <code>bytes d = 4;</code>
+       */
+      public Builder setD(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        d_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * post body
+       * </pre>
+       *
+       * <code>bytes d = 4;</code>
+       */
+      public Builder clearD() {
+        
+        d_ = getDefaultInstance().getD();
+        onChanged();
+        return this;
+      }
+
+      private int flag_ = 0;
+      /**
+       * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+       */
+      public int getFlagValue() {
+        return flag_;
+      }
+      /**
+       * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+       */
+      public Builder setFlagValue(int value) {
+        flag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+       */
+      public com.moon.demo.ss.SsMsg.Demo4Flag getFlag() {
+        @SuppressWarnings("deprecation")
+        com.moon.demo.ss.SsMsg.Demo4Flag result = com.moon.demo.ss.SsMsg.Demo4Flag.valueOf(flag_);
+        return result == null ? com.moon.demo.ss.SsMsg.Demo4Flag.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+       */
+      public Builder setFlag(com.moon.demo.ss.SsMsg.Demo4Flag value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        flag_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ss.Demo4Flag flag = 5;</code>
+       */
+      public Builder clearFlag() {
+        
+        flag_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo4Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo4Req)
+    private static final com.moon.demo.ss.SsMsg.Demo4Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo4Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo4Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo4Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo4Req>() {
+      @java.lang.Override
+      public Demo4Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo4Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo4Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo4Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo4Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo4RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo4Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo4Rsp}
+   */
+  public  static final class Demo4Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo4Rsp)
+      Demo4RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo4Rsp.newBuilder() to construct.
+    private Demo4Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo4Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo4Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo4Rsp.class, com.moon.demo.ss.SsMsg.Demo4Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo4Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo4Rsp other = (com.moon.demo.ss.SsMsg.Demo4Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo4Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo4Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo4Rsp)
+        com.moon.demo.ss.SsMsg.Demo4RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo4Rsp.class, com.moon.demo.ss.SsMsg.Demo4Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo4Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo4Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo4Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo4Rsp result = new com.moon.demo.ss.SsMsg.Demo4Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo4Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo4Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo4Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo4Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo4Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo4Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo4Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo4Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo4Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo4Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo4Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo4Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo4Rsp>() {
+      @java.lang.Override
+      public Demo4Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo4Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo4Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo4Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo4Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo5ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo5Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo5Req}
+   */
+  public  static final class Demo5Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo5Req)
+      Demo5ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo5Req.newBuilder() to construct.
+    private Demo5Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo5Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo5Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo5Req.class, com.moon.demo.ss.SsMsg.Demo5Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo5Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo5Req other = (com.moon.demo.ss.SsMsg.Demo5Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo5Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo5Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo5Req)
+        com.moon.demo.ss.SsMsg.Demo5ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo5Req.class, com.moon.demo.ss.SsMsg.Demo5Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo5Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo5Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Req build() {
+        com.moon.demo.ss.SsMsg.Demo5Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo5Req result = new com.moon.demo.ss.SsMsg.Demo5Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo5Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo5Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo5Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo5Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo5Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo5Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo5Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo5Req)
+    private static final com.moon.demo.ss.SsMsg.Demo5Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo5Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo5Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo5Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo5Req>() {
+      @java.lang.Override
+      public Demo5Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo5Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo5Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo5Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo5Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo5RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo5Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo5Rsp}
+   */
+  public  static final class Demo5Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo5Rsp)
+      Demo5RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo5Rsp.newBuilder() to construct.
+    private Demo5Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo5Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo5Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo5Rsp.class, com.moon.demo.ss.SsMsg.Demo5Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo5Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo5Rsp other = (com.moon.demo.ss.SsMsg.Demo5Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo5Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo5Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo5Rsp)
+        com.moon.demo.ss.SsMsg.Demo5RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo5Rsp.class, com.moon.demo.ss.SsMsg.Demo5Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo5Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo5Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo5Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo5Rsp result = new com.moon.demo.ss.SsMsg.Demo5Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo5Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo5Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo5Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo5Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo5Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo5Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo5Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo5Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo5Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo5Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo5Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo5Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo5Rsp>() {
+      @java.lang.Override
+      public Demo5Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo5Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo5Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo5Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo5Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo6ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo6Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo6Req}
+   */
+  public  static final class Demo6Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo6Req)
+      Demo6ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo6Req.newBuilder() to construct.
+    private Demo6Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo6Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo6Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo6Req.class, com.moon.demo.ss.SsMsg.Demo6Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo6Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo6Req other = (com.moon.demo.ss.SsMsg.Demo6Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo6Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo6Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo6Req)
+        com.moon.demo.ss.SsMsg.Demo6ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo6Req.class, com.moon.demo.ss.SsMsg.Demo6Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo6Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo6Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo6Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo6Req build() {
+        com.moon.demo.ss.SsMsg.Demo6Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo6Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo6Req result = new com.moon.demo.ss.SsMsg.Demo6Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo6Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo6Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo6Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo6Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo6Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo6Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo6Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo6Req)
+    private static final com.moon.demo.ss.SsMsg.Demo6Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo6Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo6Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo6Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo6Req>() {
+      @java.lang.Override
+      public Demo6Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo6Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo6Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo6Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo6Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo6RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo6Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo6Rsp}
+   */
+  public  static final class Demo6Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo6Rsp)
+      Demo6RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo6Rsp.newBuilder() to construct.
+    private Demo6Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo6Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo6Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo6Rsp.class, com.moon.demo.ss.SsMsg.Demo6Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo6Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo6Rsp other = (com.moon.demo.ss.SsMsg.Demo6Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo6Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo6Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo6Rsp)
+        com.moon.demo.ss.SsMsg.Demo6RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo6Rsp.class, com.moon.demo.ss.SsMsg.Demo6Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo6Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo6Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo6Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo6Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo6Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo6Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo6Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo6Rsp result = new com.moon.demo.ss.SsMsg.Demo6Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo6Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo6Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo6Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo6Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo6Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo6Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo6Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo6Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo6Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo6Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo6Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo6Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo6Rsp>() {
+      @java.lang.Override
+      public Demo6Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo6Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo6Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo6Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo6Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo7ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo7Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo7Req}
+   */
+  public  static final class Demo7Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo7Req)
+      Demo7ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo7Req.newBuilder() to construct.
+    private Demo7Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo7Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo7Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo7Req.class, com.moon.demo.ss.SsMsg.Demo7Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo7Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo7Req other = (com.moon.demo.ss.SsMsg.Demo7Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo7Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo7Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo7Req)
+        com.moon.demo.ss.SsMsg.Demo7ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo7Req.class, com.moon.demo.ss.SsMsg.Demo7Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo7Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo7Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo7Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo7Req build() {
+        com.moon.demo.ss.SsMsg.Demo7Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo7Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo7Req result = new com.moon.demo.ss.SsMsg.Demo7Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo7Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo7Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo7Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo7Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo7Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo7Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo7Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo7Req)
+    private static final com.moon.demo.ss.SsMsg.Demo7Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo7Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo7Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo7Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo7Req>() {
+      @java.lang.Override
+      public Demo7Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo7Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo7Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo7Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo7Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo7RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo7Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo7Rsp}
+   */
+  public  static final class Demo7Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo7Rsp)
+      Demo7RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo7Rsp.newBuilder() to construct.
+    private Demo7Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo7Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo7Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo7Rsp.class, com.moon.demo.ss.SsMsg.Demo7Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo7Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo7Rsp other = (com.moon.demo.ss.SsMsg.Demo7Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo7Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo7Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo7Rsp)
+        com.moon.demo.ss.SsMsg.Demo7RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo7Rsp.class, com.moon.demo.ss.SsMsg.Demo7Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo7Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo7Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo7Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo7Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo7Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo7Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo7Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo7Rsp result = new com.moon.demo.ss.SsMsg.Demo7Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo7Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo7Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo7Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo7Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo7Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo7Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo7Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo7Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo7Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo7Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo7Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo7Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo7Rsp>() {
+      @java.lang.Override
+      public Demo7Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo7Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo7Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo7Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo7Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo8ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo8Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo8Req}
+   */
+  public  static final class Demo8Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo8Req)
+      Demo8ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo8Req.newBuilder() to construct.
+    private Demo8Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo8Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo8Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo8Req.class, com.moon.demo.ss.SsMsg.Demo8Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo8Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo8Req other = (com.moon.demo.ss.SsMsg.Demo8Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo8Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo8Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo8Req)
+        com.moon.demo.ss.SsMsg.Demo8ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo8Req.class, com.moon.demo.ss.SsMsg.Demo8Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo8Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo8Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo8Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo8Req build() {
+        com.moon.demo.ss.SsMsg.Demo8Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo8Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo8Req result = new com.moon.demo.ss.SsMsg.Demo8Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo8Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo8Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo8Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo8Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo8Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo8Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo8Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo8Req)
+    private static final com.moon.demo.ss.SsMsg.Demo8Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo8Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo8Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo8Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo8Req>() {
+      @java.lang.Override
+      public Demo8Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo8Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo8Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo8Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo8Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo8RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo8Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo8Rsp}
+   */
+  public  static final class Demo8Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo8Rsp)
+      Demo8RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo8Rsp.newBuilder() to construct.
+    private Demo8Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo8Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo8Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo8Rsp.class, com.moon.demo.ss.SsMsg.Demo8Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo8Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo8Rsp other = (com.moon.demo.ss.SsMsg.Demo8Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo8Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo8Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo8Rsp)
+        com.moon.demo.ss.SsMsg.Demo8RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo8Rsp.class, com.moon.demo.ss.SsMsg.Demo8Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo8Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo8Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo8Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo8Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo8Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo8Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo8Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo8Rsp result = new com.moon.demo.ss.SsMsg.Demo8Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo8Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo8Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo8Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo8Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo8Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo8Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo8Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo8Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo8Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo8Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo8Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo8Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo8Rsp>() {
+      @java.lang.Override
+      public Demo8Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo8Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo8Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo8Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo8Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo9ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo9Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo9Req}
+   */
+  public  static final class Demo9Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo9Req)
+      Demo9ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo9Req.newBuilder() to construct.
+    private Demo9Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo9Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo9Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo9Req.class, com.moon.demo.ss.SsMsg.Demo9Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo9Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo9Req other = (com.moon.demo.ss.SsMsg.Demo9Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo9Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo9Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo9Req)
+        com.moon.demo.ss.SsMsg.Demo9ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo9Req.class, com.moon.demo.ss.SsMsg.Demo9Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo9Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo9Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Req build() {
+        com.moon.demo.ss.SsMsg.Demo9Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo9Req result = new com.moon.demo.ss.SsMsg.Demo9Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo9Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo9Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo9Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo9Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo9Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo9Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo9Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo9Req)
+    private static final com.moon.demo.ss.SsMsg.Demo9Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo9Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo9Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo9Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo9Req>() {
+      @java.lang.Override
+      public Demo9Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo9Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo9Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo9Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo9Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo9RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo9Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo9Rsp}
+   */
+  public  static final class Demo9Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo9Rsp)
+      Demo9RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo9Rsp.newBuilder() to construct.
+    private Demo9Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo9Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo9Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo9Rsp.class, com.moon.demo.ss.SsMsg.Demo9Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo9Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo9Rsp other = (com.moon.demo.ss.SsMsg.Demo9Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo9Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo9Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo9Rsp)
+        com.moon.demo.ss.SsMsg.Demo9RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo9Rsp.class, com.moon.demo.ss.SsMsg.Demo9Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo9Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo9Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo9Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo9Rsp result = new com.moon.demo.ss.SsMsg.Demo9Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo9Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo9Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo9Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo9Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo9Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo9Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo9Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo9Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo9Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo9Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo9Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo9Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo9Rsp>() {
+      @java.lang.Override
+      public Demo9Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo9Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo9Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo9Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo9Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo10ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo10Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo10Req}
+   */
+  public  static final class Demo10Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo10Req)
+      Demo10ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo10Req.newBuilder() to construct.
+    private Demo10Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo10Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo10Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo10Req.class, com.moon.demo.ss.SsMsg.Demo10Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo10Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo10Req other = (com.moon.demo.ss.SsMsg.Demo10Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo10Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo10Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo10Req)
+        com.moon.demo.ss.SsMsg.Demo10ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo10Req.class, com.moon.demo.ss.SsMsg.Demo10Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo10Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo10Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo10Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo10Req build() {
+        com.moon.demo.ss.SsMsg.Demo10Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo10Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo10Req result = new com.moon.demo.ss.SsMsg.Demo10Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo10Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo10Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo10Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo10Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo10Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo10Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo10Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo10Req)
+    private static final com.moon.demo.ss.SsMsg.Demo10Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo10Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo10Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo10Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo10Req>() {
+      @java.lang.Override
+      public Demo10Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo10Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo10Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo10Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo10Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo10RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo10Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo10Rsp}
+   */
+  public  static final class Demo10Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo10Rsp)
+      Demo10RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo10Rsp.newBuilder() to construct.
+    private Demo10Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo10Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo10Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo10Rsp.class, com.moon.demo.ss.SsMsg.Demo10Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo10Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo10Rsp other = (com.moon.demo.ss.SsMsg.Demo10Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo10Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo10Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo10Rsp)
+        com.moon.demo.ss.SsMsg.Demo10RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo10Rsp.class, com.moon.demo.ss.SsMsg.Demo10Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo10Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo10Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo10Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo10Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo10Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo10Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo10Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo10Rsp result = new com.moon.demo.ss.SsMsg.Demo10Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo10Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo10Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo10Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo10Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo10Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo10Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo10Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo10Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo10Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo10Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo10Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo10Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo10Rsp>() {
+      @java.lang.Override
+      public Demo10Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo10Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo10Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo10Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo10Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo20ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo20Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo20Req}
+   */
+  public  static final class Demo20Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo20Req)
+      Demo20ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo20Req.newBuilder() to construct.
+    private Demo20Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo20Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo20Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo20Req.class, com.moon.demo.ss.SsMsg.Demo20Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo20Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo20Req other = (com.moon.demo.ss.SsMsg.Demo20Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo20Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo20Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo20Req)
+        com.moon.demo.ss.SsMsg.Demo20ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo20Req.class, com.moon.demo.ss.SsMsg.Demo20Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo20Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo20Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo20Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo20Req build() {
+        com.moon.demo.ss.SsMsg.Demo20Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo20Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo20Req result = new com.moon.demo.ss.SsMsg.Demo20Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo20Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo20Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo20Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo20Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo20Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo20Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo20Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo20Req)
+    private static final com.moon.demo.ss.SsMsg.Demo20Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo20Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo20Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo20Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo20Req>() {
+      @java.lang.Override
+      public Demo20Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo20Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo20Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo20Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo20Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo20RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo20Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo20Rsp}
+   */
+  public  static final class Demo20Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo20Rsp)
+      Demo20RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo20Rsp.newBuilder() to construct.
+    private Demo20Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo20Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo20Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo20Rsp.class, com.moon.demo.ss.SsMsg.Demo20Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo20Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo20Rsp other = (com.moon.demo.ss.SsMsg.Demo20Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo20Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo20Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo20Rsp)
+        com.moon.demo.ss.SsMsg.Demo20RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo20Rsp.class, com.moon.demo.ss.SsMsg.Demo20Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo20Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo20Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo20Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo20Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo20Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo20Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo20Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo20Rsp result = new com.moon.demo.ss.SsMsg.Demo20Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo20Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo20Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo20Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo20Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo20Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo20Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo20Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo20Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo20Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo20Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo20Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo20Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo20Rsp>() {
+      @java.lang.Override
+      public Demo20Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo20Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo20Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo20Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo20Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo50ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo50Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo50Req}
+   */
+  public  static final class Demo50Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo50Req)
+      Demo50ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo50Req.newBuilder() to construct.
+    private Demo50Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo50Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo50Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo50Req.class, com.moon.demo.ss.SsMsg.Demo50Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo50Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo50Req other = (com.moon.demo.ss.SsMsg.Demo50Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo50Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo50Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo50Req)
+        com.moon.demo.ss.SsMsg.Demo50ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo50Req.class, com.moon.demo.ss.SsMsg.Demo50Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo50Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo50Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo50Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo50Req build() {
+        com.moon.demo.ss.SsMsg.Demo50Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo50Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo50Req result = new com.moon.demo.ss.SsMsg.Demo50Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo50Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo50Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo50Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo50Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo50Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo50Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo50Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo50Req)
+    private static final com.moon.demo.ss.SsMsg.Demo50Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo50Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo50Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo50Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo50Req>() {
+      @java.lang.Override
+      public Demo50Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo50Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo50Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo50Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo50Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo50RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo50Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo50Rsp}
+   */
+  public  static final class Demo50Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo50Rsp)
+      Demo50RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo50Rsp.newBuilder() to construct.
+    private Demo50Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo50Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo50Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo50Rsp.class, com.moon.demo.ss.SsMsg.Demo50Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo50Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo50Rsp other = (com.moon.demo.ss.SsMsg.Demo50Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo50Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo50Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo50Rsp)
+        com.moon.demo.ss.SsMsg.Demo50RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo50Rsp.class, com.moon.demo.ss.SsMsg.Demo50Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo50Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo50Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo50Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo50Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo50Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo50Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo50Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo50Rsp result = new com.moon.demo.ss.SsMsg.Demo50Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo50Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo50Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo50Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo50Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo50Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo50Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo50Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo50Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo50Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo50Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo50Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo50Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo50Rsp>() {
+      @java.lang.Override
+      public Demo50Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo50Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo50Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo50Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo50Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo90ReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo90Req)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    boolean getUdp();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo90Req}
+   */
+  public  static final class Demo90Req extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo90Req)
+      Demo90ReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo90Req.newBuilder() to construct.
+    private Demo90Req(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo90Req() {
+      a_ = 0;
+      udp_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo90Req(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              udp_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Req_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Req_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo90Req.class, com.moon.demo.ss.SsMsg.Demo90Req.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    public static final int UDP_FIELD_NUMBER = 2;
+    private boolean udp_;
+    /**
+     * <code>bool udp = 2;</code>
+     */
+    public boolean getUdp() {
+      return udp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      if (udp_ != false) {
+        output.writeBool(2, udp_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      if (udp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, udp_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo90Req)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo90Req other = (com.moon.demo.ss.SsMsg.Demo90Req) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && (getUdp()
+          == other.getUdp());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (37 * hash) + UDP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUdp());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Req parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo90Req prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo90Req}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo90Req)
+        com.moon.demo.ss.SsMsg.Demo90ReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Req_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Req_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo90Req.class, com.moon.demo.ss.SsMsg.Demo90Req.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo90Req.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        udp_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Req_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo90Req getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo90Req.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo90Req build() {
+        com.moon.demo.ss.SsMsg.Demo90Req result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo90Req buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo90Req result = new com.moon.demo.ss.SsMsg.Demo90Req(this);
+        result.a_ = a_;
+        result.udp_ = udp_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo90Req) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo90Req)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo90Req other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo90Req.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        if (other.getUdp() != false) {
+          setUdp(other.getUdp());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo90Req parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo90Req) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean udp_ ;
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public boolean getUdp() {
+        return udp_;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder setUdp(boolean value) {
+        
+        udp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool udp = 2;</code>
+       */
+      public Builder clearUdp() {
+        
+        udp_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo90Req)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo90Req)
+    private static final com.moon.demo.ss.SsMsg.Demo90Req DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo90Req();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo90Req getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo90Req>
+        PARSER = new com.google.protobuf.AbstractParser<Demo90Req>() {
+      @java.lang.Override
+      public Demo90Req parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo90Req(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo90Req> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo90Req> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo90Req getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo90RspOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo90Rsp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    boolean hasErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtx getErrCtx();
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo90Rsp}
+   */
+  public  static final class Demo90Rsp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo90Rsp)
+      Demo90RspOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo90Rsp.newBuilder() to construct.
+    private Demo90Rsp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo90Rsp() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo90Rsp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.moon.demo.Common.ErrCtx.Builder subBuilder = null;
+              if (errCtx_ != null) {
+                subBuilder = errCtx_.toBuilder();
+              }
+              errCtx_ = input.readMessage(com.moon.demo.Common.ErrCtx.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(errCtx_);
+                errCtx_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Rsp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Rsp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo90Rsp.class, com.moon.demo.ss.SsMsg.Demo90Rsp.Builder.class);
+    }
+
+    public static final int ERR_CTX_FIELD_NUMBER = 1;
+    private com.moon.demo.Common.ErrCtx errCtx_;
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public boolean hasErrCtx() {
+      return errCtx_ != null;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtx getErrCtx() {
+      return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+    }
+    /**
+     * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+     */
+    public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+      return getErrCtx();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (errCtx_ != null) {
+        output.writeMessage(1, getErrCtx());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (errCtx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getErrCtx());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo90Rsp)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo90Rsp other = (com.moon.demo.ss.SsMsg.Demo90Rsp) obj;
+
+      boolean result = true;
+      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx()) {
+        result = result && getErrCtx()
+            .equals(other.getErrCtx());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasErrCtx()) {
+        hash = (37 * hash) + ERR_CTX_FIELD_NUMBER;
+        hash = (53 * hash) + getErrCtx().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo90Rsp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo90Rsp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo90Rsp)
+        com.moon.demo.ss.SsMsg.Demo90RspOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Rsp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo90Rsp.class, com.moon.demo.ss.SsMsg.Demo90Rsp.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo90Rsp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo90Rsp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo90Rsp getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo90Rsp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo90Rsp build() {
+        com.moon.demo.ss.SsMsg.Demo90Rsp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo90Rsp buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo90Rsp result = new com.moon.demo.ss.SsMsg.Demo90Rsp(this);
+        if (errCtxBuilder_ == null) {
+          result.errCtx_ = errCtx_;
+        } else {
+          result.errCtx_ = errCtxBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo90Rsp) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo90Rsp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo90Rsp other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo90Rsp.getDefaultInstance()) return this;
+        if (other.hasErrCtx()) {
+          mergeErrCtx(other.getErrCtx());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo90Rsp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo90Rsp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public boolean hasErrCtx() {
+        return errCtxBuilder_ != null || errCtx_ != null;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx getErrCtx() {
+        if (errCtxBuilder_ == null) {
+          return errCtx_ == null ? com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        } else {
+          return errCtxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errCtx_ = value;
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder setErrCtx(
+          com.moon.demo.Common.ErrCtx.Builder builderForValue) {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = builderForValue.build();
+          onChanged();
+        } else {
+          errCtxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder mergeErrCtx(com.moon.demo.Common.ErrCtx value) {
+        if (errCtxBuilder_ == null) {
+          if (errCtx_ != null) {
+            errCtx_ =
+              com.moon.demo.Common.ErrCtx.newBuilder(errCtx_).mergeFrom(value).buildPartial();
+          } else {
+            errCtx_ = value;
+          }
+          onChanged();
+        } else {
+          errCtxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public Builder clearErrCtx() {
+        if (errCtxBuilder_ == null) {
+          errCtx_ = null;
+          onChanged();
+        } else {
+          errCtx_ = null;
+          errCtxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtx.Builder getErrCtxBuilder() {
+        
+        onChanged();
+        return getErrCtxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      public com.moon.demo.Common.ErrCtxOrBuilder getErrCtxOrBuilder() {
+        if (errCtxBuilder_ != null) {
+          return errCtxBuilder_.getMessageOrBuilder();
+        } else {
+          return errCtx_ == null ?
+              com.moon.demo.Common.ErrCtx.getDefaultInstance() : errCtx_;
+        }
+      }
+      /**
+       * <code>.com.moon.demo.ErrCtx err_ctx = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> 
+          getErrCtxFieldBuilder() {
+        if (errCtxBuilder_ == null) {
+          errCtxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder>(
+                  getErrCtx(),
+                  getParentForChildren(),
+                  isClean());
+          errCtx_ = null;
+        }
+        return errCtxBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo90Rsp)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo90Rsp)
+    private static final com.moon.demo.ss.SsMsg.Demo90Rsp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo90Rsp();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo90Rsp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo90Rsp>
+        PARSER = new com.google.protobuf.AbstractParser<Demo90Rsp>() {
+      @java.lang.Override
+      public Demo90Rsp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo90Rsp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo90Rsp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo90Rsp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo90Rsp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo2NfyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo2Nfy)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2317,18 +14242,18 @@ public final class SsMsg {
     int getA();
   }
   /**
-   * Protobuf type {@code com.moon.demo.ss.Demo1Nfy}
+   * Protobuf type {@code com.moon.demo.ss.Demo2Nfy}
    */
-  public  static final class Demo1Nfy extends
+  public  static final class Demo2Nfy extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo1Nfy)
-      Demo1NfyOrBuilder {
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo2Nfy)
+      Demo2NfyOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Demo1Nfy.newBuilder() to construct.
-    private Demo1Nfy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use Demo2Nfy.newBuilder() to construct.
+    private Demo2Nfy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Demo1Nfy() {
+    private Demo2Nfy() {
       a_ = 0;
     }
 
@@ -2337,7 +14262,7 @@ public final class SsMsg {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Demo1Nfy(
+    private Demo2Nfy(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2382,15 +14307,15 @@ public final class SsMsg {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Nfy_descriptor;
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Nfy_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Nfy_fieldAccessorTable
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Nfy_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.moon.demo.ss.SsMsg.Demo1Nfy.class, com.moon.demo.ss.SsMsg.Demo1Nfy.Builder.class);
+              com.moon.demo.ss.SsMsg.Demo2Nfy.class, com.moon.demo.ss.SsMsg.Demo2Nfy.Builder.class);
     }
 
     public static final int A_FIELD_NUMBER = 1;
@@ -2442,10 +14367,10 @@ public final class SsMsg {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo1Nfy)) {
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo2Nfy)) {
         return super.equals(obj);
       }
-      com.moon.demo.ss.SsMsg.Demo1Nfy other = (com.moon.demo.ss.SsMsg.Demo1Nfy) obj;
+      com.moon.demo.ss.SsMsg.Demo2Nfy other = (com.moon.demo.ss.SsMsg.Demo2Nfy) obj;
 
       boolean result = true;
       result = result && (getA()
@@ -2468,69 +14393,69 @@ public final class SsMsg {
       return hash;
     }
 
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(byte[] data)
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(java.io.InputStream input)
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseDelimitedFrom(java.io.InputStream input)
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseDelimitedFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy parseFrom(
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2543,7 +14468,7 @@ public final class SsMsg {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo1Nfy prototype) {
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo2Nfy prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2559,26 +14484,26 @@ public final class SsMsg {
       return builder;
     }
     /**
-     * Protobuf type {@code com.moon.demo.ss.Demo1Nfy}
+     * Protobuf type {@code com.moon.demo.ss.Demo2Nfy}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo1Nfy)
-        com.moon.demo.ss.SsMsg.Demo1NfyOrBuilder {
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo2Nfy)
+        com.moon.demo.ss.SsMsg.Demo2NfyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Nfy_descriptor;
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Nfy_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Nfy_fieldAccessorTable
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Nfy_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.moon.demo.ss.SsMsg.Demo1Nfy.class, com.moon.demo.ss.SsMsg.Demo1Nfy.Builder.class);
+                com.moon.demo.ss.SsMsg.Demo2Nfy.class, com.moon.demo.ss.SsMsg.Demo2Nfy.Builder.class);
       }
 
-      // Construct using com.moon.demo.ss.SsMsg.Demo1Nfy.newBuilder()
+      // Construct using com.moon.demo.ss.SsMsg.Demo2Nfy.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2604,17 +14529,17 @@ public final class SsMsg {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo1Nfy_descriptor;
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo2Nfy_descriptor;
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Nfy getDefaultInstanceForType() {
-        return com.moon.demo.ss.SsMsg.Demo1Nfy.getDefaultInstance();
+      public com.moon.demo.ss.SsMsg.Demo2Nfy getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo2Nfy.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Nfy build() {
-        com.moon.demo.ss.SsMsg.Demo1Nfy result = buildPartial();
+      public com.moon.demo.ss.SsMsg.Demo2Nfy build() {
+        com.moon.demo.ss.SsMsg.Demo2Nfy result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2622,8 +14547,8 @@ public final class SsMsg {
       }
 
       @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo1Nfy buildPartial() {
-        com.moon.demo.ss.SsMsg.Demo1Nfy result = new com.moon.demo.ss.SsMsg.Demo1Nfy(this);
+      public com.moon.demo.ss.SsMsg.Demo2Nfy buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo2Nfy result = new com.moon.demo.ss.SsMsg.Demo2Nfy(this);
         result.a_ = a_;
         onBuilt();
         return result;
@@ -2663,16 +14588,16 @@ public final class SsMsg {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.moon.demo.ss.SsMsg.Demo1Nfy) {
-          return mergeFrom((com.moon.demo.ss.SsMsg.Demo1Nfy)other);
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo2Nfy) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo2Nfy)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo1Nfy other) {
-        if (other == com.moon.demo.ss.SsMsg.Demo1Nfy.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo2Nfy other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo2Nfy.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
         }
@@ -2691,11 +14616,11 @@ public final class SsMsg {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.moon.demo.ss.SsMsg.Demo1Nfy parsedMessage = null;
+        com.moon.demo.ss.SsMsg.Demo2Nfy parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.moon.demo.ss.SsMsg.Demo1Nfy) e.getUnfinishedMessage();
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo2Nfy) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2743,71 +14668,1133 @@ public final class SsMsg {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo1Nfy)
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo2Nfy)
     }
 
-    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Nfy)
-    private static final com.moon.demo.ss.SsMsg.Demo1Nfy DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo2Nfy)
+    private static final com.moon.demo.ss.SsMsg.Demo2Nfy DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo1Nfy();
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo2Nfy();
     }
 
-    public static com.moon.demo.ss.SsMsg.Demo1Nfy getDefaultInstance() {
+    public static com.moon.demo.ss.SsMsg.Demo2Nfy getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Demo1Nfy>
-        PARSER = new com.google.protobuf.AbstractParser<Demo1Nfy>() {
+    private static final com.google.protobuf.Parser<Demo2Nfy>
+        PARSER = new com.google.protobuf.AbstractParser<Demo2Nfy>() {
       @java.lang.Override
-      public Demo1Nfy parsePartialFrom(
+      public Demo2Nfy parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Demo1Nfy(input, extensionRegistry);
+        return new Demo2Nfy(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Demo1Nfy> parser() {
+    public static com.google.protobuf.Parser<Demo2Nfy> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Demo1Nfy> getParserForType() {
+    public com.google.protobuf.Parser<Demo2Nfy> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.moon.demo.ss.SsMsg.Demo1Nfy getDefaultInstanceForType() {
+    public com.moon.demo.ss.SsMsg.Demo2Nfy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo4NfyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo4Nfy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo4Nfy}
+   */
+  public  static final class Demo4Nfy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo4Nfy)
+      Demo4NfyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo4Nfy.newBuilder() to construct.
+    private Demo4Nfy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo4Nfy() {
+      a_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo4Nfy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo4Nfy.class, com.moon.demo.ss.SsMsg.Demo4Nfy.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo4Nfy)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo4Nfy other = (com.moon.demo.ss.SsMsg.Demo4Nfy) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo4Nfy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo4Nfy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo4Nfy)
+        com.moon.demo.ss.SsMsg.Demo4NfyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo4Nfy.class, com.moon.demo.ss.SsMsg.Demo4Nfy.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo4Nfy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Nfy getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo4Nfy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Nfy build() {
+        com.moon.demo.ss.SsMsg.Demo4Nfy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo4Nfy buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo4Nfy result = new com.moon.demo.ss.SsMsg.Demo4Nfy(this);
+        result.a_ = a_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo4Nfy) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo4Nfy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo4Nfy other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo4Nfy.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo4Nfy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo4Nfy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo4Nfy)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo4Nfy)
+    private static final com.moon.demo.ss.SsMsg.Demo4Nfy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo4Nfy();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo4Nfy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo4Nfy>
+        PARSER = new com.google.protobuf.AbstractParser<Demo4Nfy>() {
+      @java.lang.Override
+      public Demo4Nfy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo4Nfy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo4Nfy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo4Nfy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo4Nfy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Demo5NfyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo5Nfy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo5Nfy}
+   */
+  public  static final class Demo5Nfy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo5Nfy)
+      Demo5NfyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo5Nfy.newBuilder() to construct.
+    private Demo5Nfy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo5Nfy() {
+      a_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo5Nfy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Nfy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Nfy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo5Nfy.class, com.moon.demo.ss.SsMsg.Demo5Nfy.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo5Nfy)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo5Nfy other = (com.moon.demo.ss.SsMsg.Demo5Nfy) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo5Nfy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo5Nfy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo5Nfy)
+        com.moon.demo.ss.SsMsg.Demo5NfyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Nfy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Nfy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo5Nfy.class, com.moon.demo.ss.SsMsg.Demo5Nfy.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo5Nfy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo5Nfy_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Nfy getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo5Nfy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Nfy build() {
+        com.moon.demo.ss.SsMsg.Demo5Nfy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo5Nfy buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo5Nfy result = new com.moon.demo.ss.SsMsg.Demo5Nfy(this);
+        result.a_ = a_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo5Nfy) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo5Nfy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo5Nfy other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo5Nfy.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo5Nfy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo5Nfy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo5Nfy)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo5Nfy)
+    private static final com.moon.demo.ss.SsMsg.Demo5Nfy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo5Nfy();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo5Nfy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo5Nfy>
+        PARSER = new com.google.protobuf.AbstractParser<Demo5Nfy>() {
+      @java.lang.Override
+      public Demo5Nfy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo5Nfy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo5Nfy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo5Nfy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo5Nfy getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_moon_demo_ss_GlobalReq_descriptor;
+    internal_static_com_moon_demo_ss_Demo2Req_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_moon_demo_ss_GlobalReq_fieldAccessorTable;
+      internal_static_com_moon_demo_ss_Demo2Req_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_moon_demo_ss_GlobalRsp_descriptor;
+    internal_static_com_moon_demo_ss_Demo2Rsp_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_moon_demo_ss_GlobalRsp_fieldAccessorTable;
+      internal_static_com_moon_demo_ss_Demo2Rsp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_moon_demo_ss_Demo1Req_descriptor;
+    internal_static_com_moon_demo_ss_Demo3Req_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_moon_demo_ss_Demo1Req_fieldAccessorTable;
+      internal_static_com_moon_demo_ss_Demo3Req_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_moon_demo_ss_Demo1Rsp_descriptor;
+    internal_static_com_moon_demo_ss_Demo3Rsp_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_moon_demo_ss_Demo1Rsp_fieldAccessorTable;
+      internal_static_com_moon_demo_ss_Demo3Rsp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_moon_demo_ss_Demo1Nfy_descriptor;
+    internal_static_com_moon_demo_ss_Demo4Req_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_moon_demo_ss_Demo1Nfy_fieldAccessorTable;
+      internal_static_com_moon_demo_ss_Demo4Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo4Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo4Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo5Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo5Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo5Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo5Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo6Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo6Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo6Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo6Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo7Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo7Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo7Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo7Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo8Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo8Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo8Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo8Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo9Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo9Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo9Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo9Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo10Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo10Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo10Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo10Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo20Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo20Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo20Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo20Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo50Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo50Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo50Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo50Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo90Req_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo90Req_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo90Rsp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo90Rsp_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo2Nfy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo2Nfy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo4Nfy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo4Nfy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo5Nfy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo5Nfy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2818,12 +15805,41 @@ public final class SsMsg {
   static {
     java.lang.String[] descriptorData = {
       "\n\014ss_msg.proto\022\020com.moon.demo.ss\032\014common" +
-      ".proto\"!\n\tGlobalReq\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(" +
-      "\005\"3\n\tGlobalRsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.mo" +
-      "on.demo.ErrCtx\"\"\n\010Demo1Req\022\t\n\001a\030\001 \001(\005\022\013\n" +
-      "\003udp\030\002 \001(\010\"2\n\010Demo1Rsp\022&\n\007err_ctx\030\001 \001(\0132" +
-      "\025.com.moon.demo.ErrCtx\"\025\n\010Demo1Nfy\022\t\n\001a\030" +
-      "\001 \001(\005b\006proto3"
+      ".proto\"\"\n\010Demo2Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001" +
+      "(\010\"2\n\010Demo2Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.mo" +
+      "on.demo.ErrCtx\"\"\n\010Demo3Req\022\t\n\001a\030\001 \001(\005\022\013\n" +
+      "\003udp\030\002 \001(\010\"2\n\010Demo3Rsp\022&\n\007err_ctx\030\001 \001(\0132" +
+      "\025.com.moon.demo.ErrCtx\"a\n\010Demo4Req\022\t\n\001a\030" +
+      "\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)" +
+      "\n\004flag\030\005 \001(\0162\033.com.moon.demo.ss.Demo4Fla" +
+      "g\"2\n\010Demo4Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo" +
+      "n.demo.ErrCtx\"\"\n\010Demo5Req\022\t\n\001a\030\001 \001(\005\022\013\n\003" +
+      "udp\030\002 \001(\010\"2\n\010Demo5Rsp\022&\n\007err_ctx\030\001 \001(\0132\025" +
+      ".com.moon.demo.ErrCtx\"\"\n\010Demo6Req\022\t\n\001a\030\001" +
+      " \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo6Rsp\022&\n\007err_ctx" +
+      "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo7Re" +
+      "q\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo7Rsp\022&\n" +
+      "\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n" +
+      "\010Demo8Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Dem" +
+      "o8Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.E" +
+      "rrCtx\"\"\n\010Demo9Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(" +
+      "\010\"2\n\010Demo9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo" +
+      "n.demo.ErrCtx\"#\n\tDemo10Req\022\t\n\001a\030\001 \001(\005\022\013\n" +
+      "\003udp\030\002 \001(\010\"3\n\tDemo10Rsp\022&\n\007err_ctx\030\001 \001(\013" +
+      "2\025.com.moon.demo.ErrCtx\"#\n\tDemo20Req\022\t\n\001" +
+      "a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo20Rsp\022&\n\007err" +
+      "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"#\n\tDem" +
+      "o50Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo50" +
+      "Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Err" +
+      "Ctx\"#\n\tDemo90Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010" +
+      "\"3\n\tDemo90Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo" +
+      "n.demo.ErrCtx\"\025\n\010Demo2Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010" +
+      "Demo4Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030\001 \001" +
+      "(\005*\265\001\n\tDemo4Flag\022\023\n\017DEMO_4_FLAG_MIN\020\000\022\032\n" +
+      "\026DEMO_4_FLAG_IO_TO_WORK\020\000\022\034\n\030DEMO_4_FLAG" +
+      "_WORK_TO_WORK\020\001\022\036\n\032DEMO_4_FLAG_WORK_TO_B" +
+      "URDEN\020\002\022 \n\034DEMO_4_FLAG_BURDEN_TO_BURDEN\020" +
+      "\003\022\023\n\017DEMO_4_FLAG_MAX\020\004\032\002\020\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2838,35 +15854,167 @@ public final class SsMsg {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.moon.demo.Common.getDescriptor(),
         }, assigner);
-    internal_static_com_moon_demo_ss_GlobalReq_descriptor =
+    internal_static_com_moon_demo_ss_Demo2Req_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_com_moon_demo_ss_GlobalReq_fieldAccessorTable = new
+    internal_static_com_moon_demo_ss_Demo2Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_moon_demo_ss_GlobalReq_descriptor,
-        new java.lang.String[] { "A", "B", });
-    internal_static_com_moon_demo_ss_GlobalRsp_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_com_moon_demo_ss_GlobalRsp_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_moon_demo_ss_GlobalRsp_descriptor,
-        new java.lang.String[] { "ErrCtx", });
-    internal_static_com_moon_demo_ss_Demo1Req_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_com_moon_demo_ss_Demo1Req_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_moon_demo_ss_Demo1Req_descriptor,
+        internal_static_com_moon_demo_ss_Demo2Req_descriptor,
         new java.lang.String[] { "A", "Udp", });
-    internal_static_com_moon_demo_ss_Demo1Rsp_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_com_moon_demo_ss_Demo1Rsp_fieldAccessorTable = new
+    internal_static_com_moon_demo_ss_Demo2Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_moon_demo_ss_Demo2Rsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_moon_demo_ss_Demo1Rsp_descriptor,
+        internal_static_com_moon_demo_ss_Demo2Rsp_descriptor,
         new java.lang.String[] { "ErrCtx", });
-    internal_static_com_moon_demo_ss_Demo1Nfy_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_com_moon_demo_ss_Demo1Nfy_fieldAccessorTable = new
+    internal_static_com_moon_demo_ss_Demo3Req_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_moon_demo_ss_Demo3Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_moon_demo_ss_Demo1Nfy_descriptor,
+        internal_static_com_moon_demo_ss_Demo3Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo3Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_moon_demo_ss_Demo3Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo3Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo4Req_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_moon_demo_ss_Demo4Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo4Req_descriptor,
+        new java.lang.String[] { "A", "B", "C", "D", "Flag", });
+    internal_static_com_moon_demo_ss_Demo4Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_moon_demo_ss_Demo4Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo4Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo5Req_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_moon_demo_ss_Demo5Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo5Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo5Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_com_moon_demo_ss_Demo5Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo5Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo6Req_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_com_moon_demo_ss_Demo6Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo6Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo6Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_com_moon_demo_ss_Demo6Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo6Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo7Req_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_com_moon_demo_ss_Demo7Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo7Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo7Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_com_moon_demo_ss_Demo7Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo7Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo8Req_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_com_moon_demo_ss_Demo8Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo8Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo8Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_com_moon_demo_ss_Demo8Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo8Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo9Req_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_com_moon_demo_ss_Demo9Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo9Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo9Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_com_moon_demo_ss_Demo9Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo9Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo10Req_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_com_moon_demo_ss_Demo10Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo10Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo10Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_com_moon_demo_ss_Demo10Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo10Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo20Req_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_com_moon_demo_ss_Demo20Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo20Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo20Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_com_moon_demo_ss_Demo20Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo20Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo50Req_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_com_moon_demo_ss_Demo50Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo50Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo50Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_com_moon_demo_ss_Demo50Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo50Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo90Req_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_com_moon_demo_ss_Demo90Req_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo90Req_descriptor,
+        new java.lang.String[] { "A", "Udp", });
+    internal_static_com_moon_demo_ss_Demo90Rsp_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_com_moon_demo_ss_Demo90Rsp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo90Rsp_descriptor,
+        new java.lang.String[] { "ErrCtx", });
+    internal_static_com_moon_demo_ss_Demo2Nfy_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_com_moon_demo_ss_Demo2Nfy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo2Nfy_descriptor,
+        new java.lang.String[] { "A", });
+    internal_static_com_moon_demo_ss_Demo4Nfy_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_com_moon_demo_ss_Demo4Nfy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo4Nfy_descriptor,
+        new java.lang.String[] { "A", });
+    internal_static_com_moon_demo_ss_Demo5Nfy_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_com_moon_demo_ss_Demo5Nfy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo5Nfy_descriptor,
         new java.lang.String[] { "A", });
     com.moon.demo.Common.getDescriptor();
   }

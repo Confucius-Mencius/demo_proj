@@ -2,6 +2,6 @@ syntax = "proto3";
 package com.moon.demo;
 
 message ErrCtx {
-    int32 err_code = 1; // 错误码，=0表示成功，>0时客户端根据错误码进行提示
-    string err_msg = 2; // 如果错误码为-1，则提示这个自定义的字符串
+    int32 err_code = 1; // 错误码，=0表示成功，>0时客户端根据错误码找相应的描述进行提示
+    string err_msg = 2; // 如果错误码为-1，则使用这个字符串进行提示
 }

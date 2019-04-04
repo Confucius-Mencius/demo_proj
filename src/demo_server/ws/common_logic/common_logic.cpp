@@ -17,12 +17,12 @@ CommonLogic::~CommonLogic()
 
 const char* CommonLogic::GetVersion() const
 {
-    return NULL;
+    return nullptr;
 }
 
 const char* CommonLogic::GetLastErrMsg() const
 {
-    return NULL;
+    return nullptr;
 }
 
 void CommonLogic::Release()

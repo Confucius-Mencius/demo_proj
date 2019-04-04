@@ -20,4 +20,5 @@ demo_server_wss_port = 10443
 
 demo_server_udp_port = 7777
 
-max_tcp_msg_len = 1024
+proto_tcp_max_msg_len = 1024
+proto_tcp_do_checksum = False

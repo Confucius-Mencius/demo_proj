@@ -20,7 +20,7 @@ public final class Common {
 
     /**
      * <pre>
-     * 错误码，=0表示成功，&gt;0时客户端根据错误码进行提示
+     * 错误码，=0表示成功，&gt;0时客户端根据错误码找相应的描述进行提示
      * </pre>
      *
      * <code>int32 err_code = 1;</code>
@@ -29,7 +29,7 @@ public final class Common {
 
     /**
      * <pre>
-     * 如果错误码为-1，则提示这个自定义的字符串
+     * 如果错误码为-1，则使用这个字符串进行提示
      * </pre>
      *
      * <code>string err_msg = 2;</code>
@@ -37,7 +37,7 @@ public final class Common {
     java.lang.String getErrMsg();
     /**
      * <pre>
-     * 如果错误码为-1，则提示这个自定义的字符串
+     * 如果错误码为-1，则使用这个字符串进行提示
      * </pre>
      *
      * <code>string err_msg = 2;</code>
@@ -133,7 +133,7 @@ public final class Common {
     private int errCode_;
     /**
      * <pre>
-     * 错误码，=0表示成功，&gt;0时客户端根据错误码进行提示
+     * 错误码，=0表示成功，&gt;0时客户端根据错误码找相应的描述进行提示
      * </pre>
      *
      * <code>int32 err_code = 1;</code>
@@ -146,7 +146,7 @@ public final class Common {
     private volatile java.lang.Object errMsg_;
     /**
      * <pre>
-     * 如果错误码为-1，则提示这个自定义的字符串
+     * 如果错误码为-1，则使用这个字符串进行提示
      * </pre>
      *
      * <code>string err_msg = 2;</code>
@@ -165,7 +165,7 @@ public final class Common {
     }
     /**
      * <pre>
-     * 如果错误码为-1，则提示这个自定义的字符串
+     * 如果错误码为-1，则使用这个字符串进行提示
      * </pre>
      *
      * <code>string err_msg = 2;</code>
@@ -507,7 +507,7 @@ public final class Common {
       private int errCode_ ;
       /**
        * <pre>
-       * 错误码，=0表示成功，&gt;0时客户端根据错误码进行提示
+       * 错误码，=0表示成功，&gt;0时客户端根据错误码找相应的描述进行提示
        * </pre>
        *
        * <code>int32 err_code = 1;</code>
@@ -517,7 +517,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * 错误码，=0表示成功，&gt;0时客户端根据错误码进行提示
+       * 错误码，=0表示成功，&gt;0时客户端根据错误码找相应的描述进行提示
        * </pre>
        *
        * <code>int32 err_code = 1;</code>
@@ -530,7 +530,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * 错误码，=0表示成功，&gt;0时客户端根据错误码进行提示
+       * 错误码，=0表示成功，&gt;0时客户端根据错误码找相应的描述进行提示
        * </pre>
        *
        * <code>int32 err_code = 1;</code>
@@ -545,7 +545,7 @@ public final class Common {
       private java.lang.Object errMsg_ = "";
       /**
        * <pre>
-       * 如果错误码为-1，则提示这个自定义的字符串
+       * 如果错误码为-1，则使用这个字符串进行提示
        * </pre>
        *
        * <code>string err_msg = 2;</code>
@@ -564,7 +564,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * 如果错误码为-1，则提示这个自定义的字符串
+       * 如果错误码为-1，则使用这个字符串进行提示
        * </pre>
        *
        * <code>string err_msg = 2;</code>
@@ -584,7 +584,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * 如果错误码为-1，则提示这个自定义的字符串
+       * 如果错误码为-1，则使用这个字符串进行提示
        * </pre>
        *
        * <code>string err_msg = 2;</code>
@@ -601,7 +601,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * 如果错误码为-1，则提示这个自定义的字符串
+       * 如果错误码为-1，则使用这个字符串进行提示
        * </pre>
        *
        * <code>string err_msg = 2;</code>
@@ -614,7 +614,7 @@ public final class Common {
       }
       /**
        * <pre>
-       * 如果错误码为-1，则提示这个自定义的字符串
+       * 如果错误码为-1，则使用这个字符串进行提示
        * </pre>
        *
        * <code>string err_msg = 2;</code>

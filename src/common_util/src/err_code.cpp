@@ -35,7 +35,7 @@ public:
             return it->second;
         }
 
-        return std::pair<const char*, const char*>(NULL, NULL);
+        return std::pair<const char*, const char*>(nullptr, nullptr);
     }
 
 private:

@@ -1,15 +1,15 @@
-#ifndef DEMO_SERVER_WORK_LOGICS_GLOBAL_REQ_HANDLER_H_
-#define DEMO_SERVER_WORK_LOGICS_GLOBAL_REQ_HANDLER_H_
+#ifndef DEMO_SERVER_GLOBAL_LOGICS_DEMO5_REQ_HANDLER_H_
+#define DEMO_SERVER_GLOBAL_LOGICS_DEMO5_REQ_HANDLER_H_
 
 #include "msg_handler.h"
 
-namespace work
+namespace global
 {
-class GlobalReqHandler : public MsgHandler
+class Demo5ReqHandler : public MsgHandler
 {
 public:
-    GlobalReqHandler();
-    virtual ~GlobalReqHandler();
+    Demo5ReqHandler();
+    virtual ~Demo5ReqHandler();
 
     ///////////////////////// MsgHandlerInterface /////////////////////////
     ::proto::MsgID GetMsgID() override;
@@ -18,4 +18,4 @@ public:
 };
 }
 
-#endif // DEMO_SERVER_WORK_LOGICS_GLOBAL_REQ_HANDLER_H_
+#endif // DEMO_SERVER_GLOBAL_LOGICS_DEMO5_REQ_HANDLER_H_

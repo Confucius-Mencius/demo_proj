@@ -25,7 +25,7 @@ def send_to_server1():
 
         sock.send(struct.pack('!iIii', 1, 2, 3, 4))
 
-        rsp = sock.recv(conf.max_tcp_msg_len)
+        rsp = sock.recv(conf.proto_tcp_max_msg_len)
         assert len(rsp) == 16
 
         (a, b, c, d) = struct.unpack('!iIii', rsp)

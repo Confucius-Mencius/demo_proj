@@ -1,5 +1,5 @@
-#ifndef DEMO_SERVER_PROTO_TCP_LOGICS_DEMO_1_REQ_HANDLER_H_
-#define DEMO_SERVER_PROTO_TCP_LOGICS_DEMO_1_REQ_HANDLER_H_
+#ifndef DEMO_SERVER_PROTO_TCP_LOGICS_DEMO100_REQ_HANDLER_H_
+#define DEMO_SERVER_PROTO_TCP_LOGICS_DEMO100_REQ_HANDLER_H_
 
 #include "msg_handler.h"
 
@@ -7,11 +7,11 @@ namespace tcp
 {
 namespace proto
 {
-class Demo1ReqHandler : public MsgHandler
+class Demo100ReqHandler : public MsgHandler
 {
 public:
-    Demo1ReqHandler();
-    virtual ~Demo1ReqHandler();
+    Demo100ReqHandler();
+    virtual ~Demo100ReqHandler();
 
     ///////////////////////// MsgHandlerInterface /////////////////////////
     ::proto::MsgID GetMsgID() override;
@@ -24,4 +24,4 @@ private:
 }
 }
 
-#endif // DEMO_SERVER_PROTO_TCP_LOGICS_DEMO_1_REQ_HANDLER_H_
+#endif // DEMO_SERVER_PROTO_TCP_LOGICS_DEMO100_REQ_HANDLER_H_

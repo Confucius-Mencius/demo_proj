@@ -56,14 +56,27 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\017ss_msg_id.proto\022\020com.moon.demo.ss*\221\001\n\005"
-      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_GLOBAL"
-      "_REQ\020\320\017\022\026\n\021MSG_ID_GLOBAL_RSP\020\321\017\022\026\n\021MSG_I"
-      "D_DEMO_1_REQ\020\322\017\022\026\n\021MSG_ID_DEMO_1_RSP\020\323\017\022"
-      "\026\n\021MSG_ID_DEMO_1_NFY\020\324\017b\006proto3"
+      "\n\017ss_msg_id.proto\022\020com.moon.demo.ss*\216\005\n\005"
+      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\025\n\020MSG_ID_DEMO2_"
+      "REQ\020\320\017\022\025\n\020MSG_ID_DEMO2_RSP\020\321\017\022\025\n\020MSG_ID_"
+      "DEMO3_REQ\020\322\017\022\025\n\020MSG_ID_DEMO3_RSP\020\323\017\022\025\n\020M"
+      "SG_ID_DEMO4_REQ\020\324\017\022\025\n\020MSG_ID_DEMO4_RSP\020\325"
+      "\017\022\025\n\020MSG_ID_DEMO5_REQ\020\326\017\022\025\n\020MSG_ID_DEMO5"
+      "_RSP\020\327\017\022\025\n\020MSG_ID_DEMO6_REQ\020\330\017\022\025\n\020MSG_ID"
+      "_DEMO6_RSP\020\331\017\022\025\n\020MSG_ID_DEMO7_REQ\020\332\017\022\025\n\020"
+      "MSG_ID_DEMO7_RSP\020\333\017\022\025\n\020MSG_ID_DEMO8_REQ\020"
+      "\334\017\022\025\n\020MSG_ID_DEMO8_RSP\020\335\017\022\025\n\020MSG_ID_DEMO"
+      "9_REQ\020\336\017\022\025\n\020MSG_ID_DEMO9_RSP\020\337\017\022\026\n\021MSG_I"
+      "D_DEMO10_REQ\020\340\017\022\026\n\021MSG_ID_DEMO10_RSP\020\341\017\022"
+      "\026\n\021MSG_ID_DEMO20_REQ\020\342\017\022\026\n\021MSG_ID_DEMO20"
+      "_RSP\020\343\017\022\026\n\021MSG_ID_DEMO50_REQ\020\344\017\022\026\n\021MSG_I"
+      "D_DEMO50_RSP\020\345\017\022\026\n\021MSG_ID_DEMO90_REQ\020\346\017\022"
+      "\026\n\021MSG_ID_DEMO90_RSP\020\347\017\022\025\n\020MSG_ID_DEMO2_"
+      "NFY\020\350\017\022\025\n\020MSG_ID_DEMO4_NFY\020\351\017\022\025\n\020MSG_ID_"
+      "DEMO5_NFY\020\352\017b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 191);
+      descriptor, 700);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ss_msg_id.proto", &protobuf_RegisterTypes);
 }
@@ -95,6 +108,28 @@ bool MsgID_IsValid(int value) {
     case 2002:
     case 2003:
     case 2004:
+    case 2005:
+    case 2006:
+    case 2007:
+    case 2008:
+    case 2009:
+    case 2010:
+    case 2011:
+    case 2012:
+    case 2013:
+    case 2014:
+    case 2015:
+    case 2016:
+    case 2017:
+    case 2018:
+    case 2019:
+    case 2020:
+    case 2021:
+    case 2022:
+    case 2023:
+    case 2024:
+    case 2025:
+    case 2026:
       return true;
     default:
       return false;

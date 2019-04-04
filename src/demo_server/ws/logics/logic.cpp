@@ -14,12 +14,12 @@ Logic::~Logic()
 
 const char* Logic::GetVersion() const
 {
-    return NULL;
+    return nullptr;
 }
 
 const char* Logic::GetLastErrMsg() const
 {
-    return NULL;
+    return nullptr;
 }
 
 void Logic::Release()

@@ -50,8 +50,10 @@ void MsgHandlerMgr::SetLogic(Logic* logic)
 
 int MsgHandlerMgr::InitializeMsgHandlerVec()
 {
-    msg_handler_vec_.push_back(&demo_1_req_handler_);
-    msg_handler_vec_.push_back(&global_req_handler_);
+    msg_handler_vec_.push_back(&demo5_nfy_handler_);
+    msg_handler_vec_.push_back(&demo7_req_handler_);
+    msg_handler_vec_.push_back(&demo10_req_handler_);
+    msg_handler_vec_.push_back(&demo90_req_handler_);
 
     return 0;
 }

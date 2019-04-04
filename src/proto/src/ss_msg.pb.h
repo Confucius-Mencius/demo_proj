@@ -29,6 +29,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 #include "common.pb.h"
 // @@protoc_insertion_point(includes)
@@ -39,7 +40,7 @@ namespace protobuf_ss_5fmsg_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[5];
+  static const ::google::protobuf::internal::ParseTable schema[27];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -50,32 +51,120 @@ namespace com {
 namespace moon {
 namespace demo {
 namespace ss {
-class Demo1Nfy;
-class Demo1NfyDefaultTypeInternal;
-extern Demo1NfyDefaultTypeInternal _Demo1Nfy_default_instance_;
-class Demo1Req;
-class Demo1ReqDefaultTypeInternal;
-extern Demo1ReqDefaultTypeInternal _Demo1Req_default_instance_;
-class Demo1Rsp;
-class Demo1RspDefaultTypeInternal;
-extern Demo1RspDefaultTypeInternal _Demo1Rsp_default_instance_;
-class GlobalReq;
-class GlobalReqDefaultTypeInternal;
-extern GlobalReqDefaultTypeInternal _GlobalReq_default_instance_;
-class GlobalRsp;
-class GlobalRspDefaultTypeInternal;
-extern GlobalRspDefaultTypeInternal _GlobalRsp_default_instance_;
+class Demo10Req;
+class Demo10ReqDefaultTypeInternal;
+extern Demo10ReqDefaultTypeInternal _Demo10Req_default_instance_;
+class Demo10Rsp;
+class Demo10RspDefaultTypeInternal;
+extern Demo10RspDefaultTypeInternal _Demo10Rsp_default_instance_;
+class Demo20Req;
+class Demo20ReqDefaultTypeInternal;
+extern Demo20ReqDefaultTypeInternal _Demo20Req_default_instance_;
+class Demo20Rsp;
+class Demo20RspDefaultTypeInternal;
+extern Demo20RspDefaultTypeInternal _Demo20Rsp_default_instance_;
+class Demo2Nfy;
+class Demo2NfyDefaultTypeInternal;
+extern Demo2NfyDefaultTypeInternal _Demo2Nfy_default_instance_;
+class Demo2Req;
+class Demo2ReqDefaultTypeInternal;
+extern Demo2ReqDefaultTypeInternal _Demo2Req_default_instance_;
+class Demo2Rsp;
+class Demo2RspDefaultTypeInternal;
+extern Demo2RspDefaultTypeInternal _Demo2Rsp_default_instance_;
+class Demo3Req;
+class Demo3ReqDefaultTypeInternal;
+extern Demo3ReqDefaultTypeInternal _Demo3Req_default_instance_;
+class Demo3Rsp;
+class Demo3RspDefaultTypeInternal;
+extern Demo3RspDefaultTypeInternal _Demo3Rsp_default_instance_;
+class Demo4Nfy;
+class Demo4NfyDefaultTypeInternal;
+extern Demo4NfyDefaultTypeInternal _Demo4Nfy_default_instance_;
+class Demo4Req;
+class Demo4ReqDefaultTypeInternal;
+extern Demo4ReqDefaultTypeInternal _Demo4Req_default_instance_;
+class Demo4Rsp;
+class Demo4RspDefaultTypeInternal;
+extern Demo4RspDefaultTypeInternal _Demo4Rsp_default_instance_;
+class Demo50Req;
+class Demo50ReqDefaultTypeInternal;
+extern Demo50ReqDefaultTypeInternal _Demo50Req_default_instance_;
+class Demo50Rsp;
+class Demo50RspDefaultTypeInternal;
+extern Demo50RspDefaultTypeInternal _Demo50Rsp_default_instance_;
+class Demo5Nfy;
+class Demo5NfyDefaultTypeInternal;
+extern Demo5NfyDefaultTypeInternal _Demo5Nfy_default_instance_;
+class Demo5Req;
+class Demo5ReqDefaultTypeInternal;
+extern Demo5ReqDefaultTypeInternal _Demo5Req_default_instance_;
+class Demo5Rsp;
+class Demo5RspDefaultTypeInternal;
+extern Demo5RspDefaultTypeInternal _Demo5Rsp_default_instance_;
+class Demo6Req;
+class Demo6ReqDefaultTypeInternal;
+extern Demo6ReqDefaultTypeInternal _Demo6Req_default_instance_;
+class Demo6Rsp;
+class Demo6RspDefaultTypeInternal;
+extern Demo6RspDefaultTypeInternal _Demo6Rsp_default_instance_;
+class Demo7Req;
+class Demo7ReqDefaultTypeInternal;
+extern Demo7ReqDefaultTypeInternal _Demo7Req_default_instance_;
+class Demo7Rsp;
+class Demo7RspDefaultTypeInternal;
+extern Demo7RspDefaultTypeInternal _Demo7Rsp_default_instance_;
+class Demo8Req;
+class Demo8ReqDefaultTypeInternal;
+extern Demo8ReqDefaultTypeInternal _Demo8Req_default_instance_;
+class Demo8Rsp;
+class Demo8RspDefaultTypeInternal;
+extern Demo8RspDefaultTypeInternal _Demo8Rsp_default_instance_;
+class Demo90Req;
+class Demo90ReqDefaultTypeInternal;
+extern Demo90ReqDefaultTypeInternal _Demo90Req_default_instance_;
+class Demo90Rsp;
+class Demo90RspDefaultTypeInternal;
+extern Demo90RspDefaultTypeInternal _Demo90Rsp_default_instance_;
+class Demo9Req;
+class Demo9ReqDefaultTypeInternal;
+extern Demo9ReqDefaultTypeInternal _Demo9Req_default_instance_;
+class Demo9Rsp;
+class Demo9RspDefaultTypeInternal;
+extern Demo9RspDefaultTypeInternal _Demo9Rsp_default_instance_;
 }  // namespace ss
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
 namespace google {
 namespace protobuf {
-template<> ::com::moon::demo::ss::Demo1Nfy* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo1Nfy>(Arena*);
-template<> ::com::moon::demo::ss::Demo1Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo1Req>(Arena*);
-template<> ::com::moon::demo::ss::Demo1Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo1Rsp>(Arena*);
-template<> ::com::moon::demo::ss::GlobalReq* Arena::CreateMaybeMessage<::com::moon::demo::ss::GlobalReq>(Arena*);
-template<> ::com::moon::demo::ss::GlobalRsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::GlobalRsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo10Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo10Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo10Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo10Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo20Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo20Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo20Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo20Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo2Nfy* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo2Nfy>(Arena*);
+template<> ::com::moon::demo::ss::Demo2Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo2Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo2Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo2Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo3Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo3Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo4Nfy* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo4Nfy>(Arena*);
+template<> ::com::moon::demo::ss::Demo4Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo4Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo4Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo4Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo50Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo50Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo50Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo50Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo5Nfy* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo5Nfy>(Arena*);
+template<> ::com::moon::demo::ss::Demo5Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo5Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo5Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo5Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo6Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo6Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo6Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo6Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo7Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo7Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo7Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo7Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo8Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo8Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo8Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo8Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo90Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo90Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo90Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo90Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo9Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo9Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo9Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo9Rsp>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 namespace com {
@@ -83,26 +172,51 @@ namespace moon {
 namespace demo {
 namespace ss {
 
+enum Demo4Flag {
+  DEMO_4_FLAG_MIN = 0,
+  DEMO_4_FLAG_IO_TO_WORK = 0,
+  DEMO_4_FLAG_WORK_TO_WORK = 1,
+  DEMO_4_FLAG_WORK_TO_BURDEN = 2,
+  DEMO_4_FLAG_BURDEN_TO_BURDEN = 3,
+  DEMO_4_FLAG_MAX = 4,
+  Demo4Flag_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  Demo4Flag_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool Demo4Flag_IsValid(int value);
+const Demo4Flag Demo4Flag_MIN = DEMO_4_FLAG_MIN;
+const Demo4Flag Demo4Flag_MAX = DEMO_4_FLAG_MAX;
+const int Demo4Flag_ARRAYSIZE = Demo4Flag_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* Demo4Flag_descriptor();
+inline const ::std::string& Demo4Flag_Name(Demo4Flag value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    Demo4Flag_descriptor(), value);
+}
+inline bool Demo4Flag_Parse(
+    const ::std::string& name, Demo4Flag* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<Demo4Flag>(
+    Demo4Flag_descriptor(), name, value);
+}
 // ===================================================================
 
-class GlobalReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.GlobalReq) */ {
+class Demo2Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo2Req) */ {
  public:
-  GlobalReq();
-  virtual ~GlobalReq();
+  Demo2Req();
+  virtual ~Demo2Req();
 
-  GlobalReq(const GlobalReq& from);
+  Demo2Req(const Demo2Req& from);
 
-  inline GlobalReq& operator=(const GlobalReq& from) {
+  inline Demo2Req& operator=(const Demo2Req& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  GlobalReq(GlobalReq&& from) noexcept
-    : GlobalReq() {
+  Demo2Req(Demo2Req&& from) noexcept
+    : Demo2Req() {
     *this = ::std::move(from);
   }
 
-  inline GlobalReq& operator=(GlobalReq&& from) noexcept {
+  inline Demo2Req& operator=(Demo2Req&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -112,34 +226,34 @@ class GlobalReq : public ::google::protobuf::Message /* @@protoc_insertion_point
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const GlobalReq& default_instance();
+  static const Demo2Req& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const GlobalReq* internal_default_instance() {
-    return reinterpret_cast<const GlobalReq*>(
-               &_GlobalReq_default_instance_);
+  static inline const Demo2Req* internal_default_instance() {
+    return reinterpret_cast<const Demo2Req*>(
+               &_Demo2Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  void Swap(GlobalReq* other);
-  friend void swap(GlobalReq& a, GlobalReq& b) {
+  void Swap(Demo2Req* other);
+  friend void swap(Demo2Req& a, Demo2Req& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline GlobalReq* New() const final {
-    return CreateMaybeMessage<GlobalReq>(NULL);
+  inline Demo2Req* New() const final {
+    return CreateMaybeMessage<Demo2Req>(NULL);
   }
 
-  GlobalReq* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<GlobalReq>(arena);
+  Demo2Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo2Req>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const GlobalReq& from);
-  void MergeFrom(const GlobalReq& from);
+  void CopyFrom(const Demo2Req& from);
+  void MergeFrom(const Demo2Req& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -156,226 +270,7 @@ class GlobalReq : public ::google::protobuf::Message /* @@protoc_insertion_point
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GlobalReq* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // int32 a = 1;
-  void clear_a();
-  static const int kAFieldNumber = 1;
-  ::google::protobuf::int32 a() const;
-  void set_a(::google::protobuf::int32 value);
-
-  // int32 b = 2;
-  void clear_b();
-  static const int kBFieldNumber = 2;
-  ::google::protobuf::int32 b() const;
-  void set_b(::google::protobuf::int32 value);
-
-  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.GlobalReq)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::int32 a_;
-  ::google::protobuf::int32 b_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class GlobalRsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.GlobalRsp) */ {
- public:
-  GlobalRsp();
-  virtual ~GlobalRsp();
-
-  GlobalRsp(const GlobalRsp& from);
-
-  inline GlobalRsp& operator=(const GlobalRsp& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  GlobalRsp(GlobalRsp&& from) noexcept
-    : GlobalRsp() {
-    *this = ::std::move(from);
-  }
-
-  inline GlobalRsp& operator=(GlobalRsp&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const GlobalRsp& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const GlobalRsp* internal_default_instance() {
-    return reinterpret_cast<const GlobalRsp*>(
-               &_GlobalRsp_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    1;
-
-  void Swap(GlobalRsp* other);
-  friend void swap(GlobalRsp& a, GlobalRsp& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline GlobalRsp* New() const final {
-    return CreateMaybeMessage<GlobalRsp>(NULL);
-  }
-
-  GlobalRsp* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<GlobalRsp>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const GlobalRsp& from);
-  void MergeFrom(const GlobalRsp& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(GlobalRsp* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // .com.moon.demo.ErrCtx err_ctx = 1;
-  bool has_err_ctx() const;
-  void clear_err_ctx();
-  static const int kErrCtxFieldNumber = 1;
-  private:
-  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
-  public:
-  const ::com::moon::demo::ErrCtx& err_ctx() const;
-  ::com::moon::demo::ErrCtx* release_err_ctx();
-  ::com::moon::demo::ErrCtx* mutable_err_ctx();
-  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
-
-  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.GlobalRsp)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::com::moon::demo::ErrCtx* err_ctx_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class Demo1Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo1Req) */ {
- public:
-  Demo1Req();
-  virtual ~Demo1Req();
-
-  Demo1Req(const Demo1Req& from);
-
-  inline Demo1Req& operator=(const Demo1Req& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  Demo1Req(Demo1Req&& from) noexcept
-    : Demo1Req() {
-    *this = ::std::move(from);
-  }
-
-  inline Demo1Req& operator=(Demo1Req&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const Demo1Req& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Demo1Req* internal_default_instance() {
-    return reinterpret_cast<const Demo1Req*>(
-               &_Demo1Req_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    2;
-
-  void Swap(Demo1Req* other);
-  friend void swap(Demo1Req& a, Demo1Req& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Demo1Req* New() const final {
-    return CreateMaybeMessage<Demo1Req>(NULL);
-  }
-
-  Demo1Req* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<Demo1Req>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const Demo1Req& from);
-  void MergeFrom(const Demo1Req& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Demo1Req* other);
+  void InternalSwap(Demo2Req* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -403,7 +298,7 @@ class Demo1Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   bool udp() const;
   void set_udp(bool value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Req)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo2Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -414,24 +309,24 @@ class Demo1Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class Demo1Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo1Rsp) */ {
+class Demo2Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo2Rsp) */ {
  public:
-  Demo1Rsp();
-  virtual ~Demo1Rsp();
+  Demo2Rsp();
+  virtual ~Demo2Rsp();
 
-  Demo1Rsp(const Demo1Rsp& from);
+  Demo2Rsp(const Demo2Rsp& from);
 
-  inline Demo1Rsp& operator=(const Demo1Rsp& from) {
+  inline Demo2Rsp& operator=(const Demo2Rsp& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  Demo1Rsp(Demo1Rsp&& from) noexcept
-    : Demo1Rsp() {
+  Demo2Rsp(Demo2Rsp&& from) noexcept
+    : Demo2Rsp() {
     *this = ::std::move(from);
   }
 
-  inline Demo1Rsp& operator=(Demo1Rsp&& from) noexcept {
+  inline Demo2Rsp& operator=(Demo2Rsp&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -441,34 +336,34 @@ class Demo1Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const Demo1Rsp& default_instance();
+  static const Demo2Rsp& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Demo1Rsp* internal_default_instance() {
-    return reinterpret_cast<const Demo1Rsp*>(
-               &_Demo1Rsp_default_instance_);
+  static inline const Demo2Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo2Rsp*>(
+               &_Demo2Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    1;
 
-  void Swap(Demo1Rsp* other);
-  friend void swap(Demo1Rsp& a, Demo1Rsp& b) {
+  void Swap(Demo2Rsp* other);
+  friend void swap(Demo2Rsp& a, Demo2Rsp& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline Demo1Rsp* New() const final {
-    return CreateMaybeMessage<Demo1Rsp>(NULL);
+  inline Demo2Rsp* New() const final {
+    return CreateMaybeMessage<Demo2Rsp>(NULL);
   }
 
-  Demo1Rsp* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<Demo1Rsp>(arena);
+  Demo2Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo2Rsp>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const Demo1Rsp& from);
-  void MergeFrom(const Demo1Rsp& from);
+  void CopyFrom(const Demo2Rsp& from);
+  void MergeFrom(const Demo2Rsp& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -485,7 +380,7 @@ class Demo1Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Demo1Rsp* other);
+  void InternalSwap(Demo2Rsp* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -513,7 +408,7 @@ class Demo1Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::com::moon::demo::ErrCtx* mutable_err_ctx();
   void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Rsp)
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo2Rsp)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -523,24 +418,24 @@ class Demo1Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class Demo1Nfy : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo1Nfy) */ {
+class Demo3Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo3Req) */ {
  public:
-  Demo1Nfy();
-  virtual ~Demo1Nfy();
+  Demo3Req();
+  virtual ~Demo3Req();
 
-  Demo1Nfy(const Demo1Nfy& from);
+  Demo3Req(const Demo3Req& from);
 
-  inline Demo1Nfy& operator=(const Demo1Nfy& from) {
+  inline Demo3Req& operator=(const Demo3Req& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  Demo1Nfy(Demo1Nfy&& from) noexcept
-    : Demo1Nfy() {
+  Demo3Req(Demo3Req&& from) noexcept
+    : Demo3Req() {
     *this = ::std::move(from);
   }
 
-  inline Demo1Nfy& operator=(Demo1Nfy&& from) noexcept {
+  inline Demo3Req& operator=(Demo3Req&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -550,34 +445,34 @@ class Demo1Nfy : public ::google::protobuf::Message /* @@protoc_insertion_point(
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const Demo1Nfy& default_instance();
+  static const Demo3Req& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Demo1Nfy* internal_default_instance() {
-    return reinterpret_cast<const Demo1Nfy*>(
-               &_Demo1Nfy_default_instance_);
+  static inline const Demo3Req* internal_default_instance() {
+    return reinterpret_cast<const Demo3Req*>(
+               &_Demo3Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    2;
 
-  void Swap(Demo1Nfy* other);
-  friend void swap(Demo1Nfy& a, Demo1Nfy& b) {
+  void Swap(Demo3Req* other);
+  friend void swap(Demo3Req& a, Demo3Req& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline Demo1Nfy* New() const final {
-    return CreateMaybeMessage<Demo1Nfy>(NULL);
+  inline Demo3Req* New() const final {
+    return CreateMaybeMessage<Demo3Req>(NULL);
   }
 
-  Demo1Nfy* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<Demo1Nfy>(arena);
+  Demo3Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo3Req>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const Demo1Nfy& from);
-  void MergeFrom(const Demo1Nfy& from);
+  void CopyFrom(const Demo3Req& from);
+  void MergeFrom(const Demo3Req& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -594,7 +489,7 @@ class Demo1Nfy : public ::google::protobuf::Message /* @@protoc_insertion_point(
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Demo1Nfy* other);
+  void InternalSwap(Demo3Req* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -616,7 +511,2659 @@ class Demo1Nfy : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1Nfy)
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo3Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo3Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo3Rsp) */ {
+ public:
+  Demo3Rsp();
+  virtual ~Demo3Rsp();
+
+  Demo3Rsp(const Demo3Rsp& from);
+
+  inline Demo3Rsp& operator=(const Demo3Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo3Rsp(Demo3Rsp&& from) noexcept
+    : Demo3Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo3Rsp& operator=(Demo3Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo3Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo3Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo3Rsp*>(
+               &_Demo3Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(Demo3Rsp* other);
+  friend void swap(Demo3Rsp& a, Demo3Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo3Rsp* New() const final {
+    return CreateMaybeMessage<Demo3Rsp>(NULL);
+  }
+
+  Demo3Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo3Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo3Rsp& from);
+  void MergeFrom(const Demo3Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo3Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo3Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo4Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo4Req) */ {
+ public:
+  Demo4Req();
+  virtual ~Demo4Req();
+
+  Demo4Req(const Demo4Req& from);
+
+  inline Demo4Req& operator=(const Demo4Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo4Req(Demo4Req&& from) noexcept
+    : Demo4Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo4Req& operator=(Demo4Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo4Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo4Req* internal_default_instance() {
+    return reinterpret_cast<const Demo4Req*>(
+               &_Demo4Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  void Swap(Demo4Req* other);
+  friend void swap(Demo4Req& a, Demo4Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo4Req* New() const final {
+    return CreateMaybeMessage<Demo4Req>(NULL);
+  }
+
+  Demo4Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo4Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo4Req& from);
+  void MergeFrom(const Demo4Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo4Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string c = 3;
+  void clear_c();
+  static const int kCFieldNumber = 3;
+  const ::std::string& c() const;
+  void set_c(const ::std::string& value);
+  #if LANG_CXX11
+  void set_c(::std::string&& value);
+  #endif
+  void set_c(const char* value);
+  void set_c(const char* value, size_t size);
+  ::std::string* mutable_c();
+  ::std::string* release_c();
+  void set_allocated_c(::std::string* c);
+
+  // bytes d = 4;
+  void clear_d();
+  static const int kDFieldNumber = 4;
+  const ::std::string& d() const;
+  void set_d(const ::std::string& value);
+  #if LANG_CXX11
+  void set_d(::std::string&& value);
+  #endif
+  void set_d(const char* value);
+  void set_d(const void* value, size_t size);
+  ::std::string* mutable_d();
+  ::std::string* release_d();
+  void set_allocated_d(::std::string* d);
+
+  // int64 b = 2;
+  void clear_b();
+  static const int kBFieldNumber = 2;
+  ::google::protobuf::int64 b() const;
+  void set_b(::google::protobuf::int64 value);
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // .com.moon.demo.ss.Demo4Flag flag = 5;
+  void clear_flag();
+  static const int kFlagFieldNumber = 5;
+  ::com::moon::demo::ss::Demo4Flag flag() const;
+  void set_flag(::com::moon::demo::ss::Demo4Flag value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo4Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr c_;
+  ::google::protobuf::internal::ArenaStringPtr d_;
+  ::google::protobuf::int64 b_;
+  ::google::protobuf::int32 a_;
+  int flag_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo4Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo4Rsp) */ {
+ public:
+  Demo4Rsp();
+  virtual ~Demo4Rsp();
+
+  Demo4Rsp(const Demo4Rsp& from);
+
+  inline Demo4Rsp& operator=(const Demo4Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo4Rsp(Demo4Rsp&& from) noexcept
+    : Demo4Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo4Rsp& operator=(Demo4Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo4Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo4Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo4Rsp*>(
+               &_Demo4Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  void Swap(Demo4Rsp* other);
+  friend void swap(Demo4Rsp& a, Demo4Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo4Rsp* New() const final {
+    return CreateMaybeMessage<Demo4Rsp>(NULL);
+  }
+
+  Demo4Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo4Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo4Rsp& from);
+  void MergeFrom(const Demo4Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo4Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo4Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo5Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo5Req) */ {
+ public:
+  Demo5Req();
+  virtual ~Demo5Req();
+
+  Demo5Req(const Demo5Req& from);
+
+  inline Demo5Req& operator=(const Demo5Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo5Req(Demo5Req&& from) noexcept
+    : Demo5Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo5Req& operator=(Demo5Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo5Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo5Req* internal_default_instance() {
+    return reinterpret_cast<const Demo5Req*>(
+               &_Demo5Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  void Swap(Demo5Req* other);
+  friend void swap(Demo5Req& a, Demo5Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo5Req* New() const final {
+    return CreateMaybeMessage<Demo5Req>(NULL);
+  }
+
+  Demo5Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo5Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo5Req& from);
+  void MergeFrom(const Demo5Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo5Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo5Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo5Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo5Rsp) */ {
+ public:
+  Demo5Rsp();
+  virtual ~Demo5Rsp();
+
+  Demo5Rsp(const Demo5Rsp& from);
+
+  inline Demo5Rsp& operator=(const Demo5Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo5Rsp(Demo5Rsp&& from) noexcept
+    : Demo5Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo5Rsp& operator=(Demo5Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo5Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo5Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo5Rsp*>(
+               &_Demo5Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  void Swap(Demo5Rsp* other);
+  friend void swap(Demo5Rsp& a, Demo5Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo5Rsp* New() const final {
+    return CreateMaybeMessage<Demo5Rsp>(NULL);
+  }
+
+  Demo5Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo5Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo5Rsp& from);
+  void MergeFrom(const Demo5Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo5Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo5Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo6Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo6Req) */ {
+ public:
+  Demo6Req();
+  virtual ~Demo6Req();
+
+  Demo6Req(const Demo6Req& from);
+
+  inline Demo6Req& operator=(const Demo6Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo6Req(Demo6Req&& from) noexcept
+    : Demo6Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo6Req& operator=(Demo6Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo6Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo6Req* internal_default_instance() {
+    return reinterpret_cast<const Demo6Req*>(
+               &_Demo6Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  void Swap(Demo6Req* other);
+  friend void swap(Demo6Req& a, Demo6Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo6Req* New() const final {
+    return CreateMaybeMessage<Demo6Req>(NULL);
+  }
+
+  Demo6Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo6Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo6Req& from);
+  void MergeFrom(const Demo6Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo6Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo6Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo6Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo6Rsp) */ {
+ public:
+  Demo6Rsp();
+  virtual ~Demo6Rsp();
+
+  Demo6Rsp(const Demo6Rsp& from);
+
+  inline Demo6Rsp& operator=(const Demo6Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo6Rsp(Demo6Rsp&& from) noexcept
+    : Demo6Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo6Rsp& operator=(Demo6Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo6Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo6Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo6Rsp*>(
+               &_Demo6Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  void Swap(Demo6Rsp* other);
+  friend void swap(Demo6Rsp& a, Demo6Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo6Rsp* New() const final {
+    return CreateMaybeMessage<Demo6Rsp>(NULL);
+  }
+
+  Demo6Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo6Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo6Rsp& from);
+  void MergeFrom(const Demo6Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo6Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo6Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo7Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo7Req) */ {
+ public:
+  Demo7Req();
+  virtual ~Demo7Req();
+
+  Demo7Req(const Demo7Req& from);
+
+  inline Demo7Req& operator=(const Demo7Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo7Req(Demo7Req&& from) noexcept
+    : Demo7Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo7Req& operator=(Demo7Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo7Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo7Req* internal_default_instance() {
+    return reinterpret_cast<const Demo7Req*>(
+               &_Demo7Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  void Swap(Demo7Req* other);
+  friend void swap(Demo7Req& a, Demo7Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo7Req* New() const final {
+    return CreateMaybeMessage<Demo7Req>(NULL);
+  }
+
+  Demo7Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo7Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo7Req& from);
+  void MergeFrom(const Demo7Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo7Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo7Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo7Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo7Rsp) */ {
+ public:
+  Demo7Rsp();
+  virtual ~Demo7Rsp();
+
+  Demo7Rsp(const Demo7Rsp& from);
+
+  inline Demo7Rsp& operator=(const Demo7Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo7Rsp(Demo7Rsp&& from) noexcept
+    : Demo7Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo7Rsp& operator=(Demo7Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo7Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo7Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo7Rsp*>(
+               &_Demo7Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  void Swap(Demo7Rsp* other);
+  friend void swap(Demo7Rsp& a, Demo7Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo7Rsp* New() const final {
+    return CreateMaybeMessage<Demo7Rsp>(NULL);
+  }
+
+  Demo7Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo7Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo7Rsp& from);
+  void MergeFrom(const Demo7Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo7Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo7Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo8Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo8Req) */ {
+ public:
+  Demo8Req();
+  virtual ~Demo8Req();
+
+  Demo8Req(const Demo8Req& from);
+
+  inline Demo8Req& operator=(const Demo8Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo8Req(Demo8Req&& from) noexcept
+    : Demo8Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo8Req& operator=(Demo8Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo8Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo8Req* internal_default_instance() {
+    return reinterpret_cast<const Demo8Req*>(
+               &_Demo8Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  void Swap(Demo8Req* other);
+  friend void swap(Demo8Req& a, Demo8Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo8Req* New() const final {
+    return CreateMaybeMessage<Demo8Req>(NULL);
+  }
+
+  Demo8Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo8Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo8Req& from);
+  void MergeFrom(const Demo8Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo8Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo8Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo8Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo8Rsp) */ {
+ public:
+  Demo8Rsp();
+  virtual ~Demo8Rsp();
+
+  Demo8Rsp(const Demo8Rsp& from);
+
+  inline Demo8Rsp& operator=(const Demo8Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo8Rsp(Demo8Rsp&& from) noexcept
+    : Demo8Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo8Rsp& operator=(Demo8Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo8Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo8Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo8Rsp*>(
+               &_Demo8Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  void Swap(Demo8Rsp* other);
+  friend void swap(Demo8Rsp& a, Demo8Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo8Rsp* New() const final {
+    return CreateMaybeMessage<Demo8Rsp>(NULL);
+  }
+
+  Demo8Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo8Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo8Rsp& from);
+  void MergeFrom(const Demo8Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo8Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo8Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo9Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo9Req) */ {
+ public:
+  Demo9Req();
+  virtual ~Demo9Req();
+
+  Demo9Req(const Demo9Req& from);
+
+  inline Demo9Req& operator=(const Demo9Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo9Req(Demo9Req&& from) noexcept
+    : Demo9Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo9Req& operator=(Demo9Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo9Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo9Req* internal_default_instance() {
+    return reinterpret_cast<const Demo9Req*>(
+               &_Demo9Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    14;
+
+  void Swap(Demo9Req* other);
+  friend void swap(Demo9Req& a, Demo9Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo9Req* New() const final {
+    return CreateMaybeMessage<Demo9Req>(NULL);
+  }
+
+  Demo9Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo9Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo9Req& from);
+  void MergeFrom(const Demo9Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo9Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo9Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo9Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo9Rsp) */ {
+ public:
+  Demo9Rsp();
+  virtual ~Demo9Rsp();
+
+  Demo9Rsp(const Demo9Rsp& from);
+
+  inline Demo9Rsp& operator=(const Demo9Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo9Rsp(Demo9Rsp&& from) noexcept
+    : Demo9Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo9Rsp& operator=(Demo9Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo9Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo9Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo9Rsp*>(
+               &_Demo9Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  void Swap(Demo9Rsp* other);
+  friend void swap(Demo9Rsp& a, Demo9Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo9Rsp* New() const final {
+    return CreateMaybeMessage<Demo9Rsp>(NULL);
+  }
+
+  Demo9Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo9Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo9Rsp& from);
+  void MergeFrom(const Demo9Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo9Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo9Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo10Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo10Req) */ {
+ public:
+  Demo10Req();
+  virtual ~Demo10Req();
+
+  Demo10Req(const Demo10Req& from);
+
+  inline Demo10Req& operator=(const Demo10Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo10Req(Demo10Req&& from) noexcept
+    : Demo10Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo10Req& operator=(Demo10Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo10Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo10Req* internal_default_instance() {
+    return reinterpret_cast<const Demo10Req*>(
+               &_Demo10Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  void Swap(Demo10Req* other);
+  friend void swap(Demo10Req& a, Demo10Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo10Req* New() const final {
+    return CreateMaybeMessage<Demo10Req>(NULL);
+  }
+
+  Demo10Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo10Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo10Req& from);
+  void MergeFrom(const Demo10Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo10Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo10Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo10Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo10Rsp) */ {
+ public:
+  Demo10Rsp();
+  virtual ~Demo10Rsp();
+
+  Demo10Rsp(const Demo10Rsp& from);
+
+  inline Demo10Rsp& operator=(const Demo10Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo10Rsp(Demo10Rsp&& from) noexcept
+    : Demo10Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo10Rsp& operator=(Demo10Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo10Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo10Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo10Rsp*>(
+               &_Demo10Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  void Swap(Demo10Rsp* other);
+  friend void swap(Demo10Rsp& a, Demo10Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo10Rsp* New() const final {
+    return CreateMaybeMessage<Demo10Rsp>(NULL);
+  }
+
+  Demo10Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo10Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo10Rsp& from);
+  void MergeFrom(const Demo10Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo10Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo10Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo20Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo20Req) */ {
+ public:
+  Demo20Req();
+  virtual ~Demo20Req();
+
+  Demo20Req(const Demo20Req& from);
+
+  inline Demo20Req& operator=(const Demo20Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo20Req(Demo20Req&& from) noexcept
+    : Demo20Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo20Req& operator=(Demo20Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo20Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo20Req* internal_default_instance() {
+    return reinterpret_cast<const Demo20Req*>(
+               &_Demo20Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    18;
+
+  void Swap(Demo20Req* other);
+  friend void swap(Demo20Req& a, Demo20Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo20Req* New() const final {
+    return CreateMaybeMessage<Demo20Req>(NULL);
+  }
+
+  Demo20Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo20Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo20Req& from);
+  void MergeFrom(const Demo20Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo20Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo20Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo20Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo20Rsp) */ {
+ public:
+  Demo20Rsp();
+  virtual ~Demo20Rsp();
+
+  Demo20Rsp(const Demo20Rsp& from);
+
+  inline Demo20Rsp& operator=(const Demo20Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo20Rsp(Demo20Rsp&& from) noexcept
+    : Demo20Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo20Rsp& operator=(Demo20Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo20Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo20Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo20Rsp*>(
+               &_Demo20Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    19;
+
+  void Swap(Demo20Rsp* other);
+  friend void swap(Demo20Rsp& a, Demo20Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo20Rsp* New() const final {
+    return CreateMaybeMessage<Demo20Rsp>(NULL);
+  }
+
+  Demo20Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo20Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo20Rsp& from);
+  void MergeFrom(const Demo20Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo20Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo20Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo50Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo50Req) */ {
+ public:
+  Demo50Req();
+  virtual ~Demo50Req();
+
+  Demo50Req(const Demo50Req& from);
+
+  inline Demo50Req& operator=(const Demo50Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo50Req(Demo50Req&& from) noexcept
+    : Demo50Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo50Req& operator=(Demo50Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo50Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo50Req* internal_default_instance() {
+    return reinterpret_cast<const Demo50Req*>(
+               &_Demo50Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    20;
+
+  void Swap(Demo50Req* other);
+  friend void swap(Demo50Req& a, Demo50Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo50Req* New() const final {
+    return CreateMaybeMessage<Demo50Req>(NULL);
+  }
+
+  Demo50Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo50Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo50Req& from);
+  void MergeFrom(const Demo50Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo50Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo50Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo50Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo50Rsp) */ {
+ public:
+  Demo50Rsp();
+  virtual ~Demo50Rsp();
+
+  Demo50Rsp(const Demo50Rsp& from);
+
+  inline Demo50Rsp& operator=(const Demo50Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo50Rsp(Demo50Rsp&& from) noexcept
+    : Demo50Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo50Rsp& operator=(Demo50Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo50Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo50Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo50Rsp*>(
+               &_Demo50Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    21;
+
+  void Swap(Demo50Rsp* other);
+  friend void swap(Demo50Rsp& a, Demo50Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo50Rsp* New() const final {
+    return CreateMaybeMessage<Demo50Rsp>(NULL);
+  }
+
+  Demo50Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo50Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo50Rsp& from);
+  void MergeFrom(const Demo50Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo50Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo50Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo90Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo90Req) */ {
+ public:
+  Demo90Req();
+  virtual ~Demo90Req();
+
+  Demo90Req(const Demo90Req& from);
+
+  inline Demo90Req& operator=(const Demo90Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo90Req(Demo90Req&& from) noexcept
+    : Demo90Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo90Req& operator=(Demo90Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo90Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo90Req* internal_default_instance() {
+    return reinterpret_cast<const Demo90Req*>(
+               &_Demo90Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    22;
+
+  void Swap(Demo90Req* other);
+  friend void swap(Demo90Req& a, Demo90Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo90Req* New() const final {
+    return CreateMaybeMessage<Demo90Req>(NULL);
+  }
+
+  Demo90Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo90Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo90Req& from);
+  void MergeFrom(const Demo90Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo90Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // bool udp = 2;
+  void clear_udp();
+  static const int kUdpFieldNumber = 2;
+  bool udp() const;
+  void set_udp(bool value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo90Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  bool udp_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo90Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo90Rsp) */ {
+ public:
+  Demo90Rsp();
+  virtual ~Demo90Rsp();
+
+  Demo90Rsp(const Demo90Rsp& from);
+
+  inline Demo90Rsp& operator=(const Demo90Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo90Rsp(Demo90Rsp&& from) noexcept
+    : Demo90Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo90Rsp& operator=(Demo90Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo90Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo90Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo90Rsp*>(
+               &_Demo90Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  void Swap(Demo90Rsp* other);
+  friend void swap(Demo90Rsp& a, Demo90Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo90Rsp* New() const final {
+    return CreateMaybeMessage<Demo90Rsp>(NULL);
+  }
+
+  Demo90Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo90Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo90Rsp& from);
+  void MergeFrom(const Demo90Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo90Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo90Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo2Nfy : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo2Nfy) */ {
+ public:
+  Demo2Nfy();
+  virtual ~Demo2Nfy();
+
+  Demo2Nfy(const Demo2Nfy& from);
+
+  inline Demo2Nfy& operator=(const Demo2Nfy& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo2Nfy(Demo2Nfy&& from) noexcept
+    : Demo2Nfy() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo2Nfy& operator=(Demo2Nfy&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo2Nfy& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo2Nfy* internal_default_instance() {
+    return reinterpret_cast<const Demo2Nfy*>(
+               &_Demo2Nfy_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    24;
+
+  void Swap(Demo2Nfy* other);
+  friend void swap(Demo2Nfy& a, Demo2Nfy& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo2Nfy* New() const final {
+    return CreateMaybeMessage<Demo2Nfy>(NULL);
+  }
+
+  Demo2Nfy* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo2Nfy>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo2Nfy& from);
+  void MergeFrom(const Demo2Nfy& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo2Nfy* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo2Nfy)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo4Nfy : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo4Nfy) */ {
+ public:
+  Demo4Nfy();
+  virtual ~Demo4Nfy();
+
+  Demo4Nfy(const Demo4Nfy& from);
+
+  inline Demo4Nfy& operator=(const Demo4Nfy& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo4Nfy(Demo4Nfy&& from) noexcept
+    : Demo4Nfy() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo4Nfy& operator=(Demo4Nfy&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo4Nfy& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo4Nfy* internal_default_instance() {
+    return reinterpret_cast<const Demo4Nfy*>(
+               &_Demo4Nfy_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    25;
+
+  void Swap(Demo4Nfy* other);
+  friend void swap(Demo4Nfy& a, Demo4Nfy& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo4Nfy* New() const final {
+    return CreateMaybeMessage<Demo4Nfy>(NULL);
+  }
+
+  Demo4Nfy* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo4Nfy>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo4Nfy& from);
+  void MergeFrom(const Demo4Nfy& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo4Nfy* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo4Nfy)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo5Nfy : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo5Nfy) */ {
+ public:
+  Demo5Nfy();
+  virtual ~Demo5Nfy();
+
+  Demo5Nfy(const Demo5Nfy& from);
+
+  inline Demo5Nfy& operator=(const Demo5Nfy& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo5Nfy(Demo5Nfy&& from) noexcept
+    : Demo5Nfy() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo5Nfy& operator=(Demo5Nfy&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo5Nfy& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo5Nfy* internal_default_instance() {
+    return reinterpret_cast<const Demo5Nfy*>(
+               &_Demo5Nfy_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    26;
+
+  void Swap(Demo5Nfy* other);
+  friend void swap(Demo5Nfy& a, Demo5Nfy& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo5Nfy* New() const final {
+    return CreateMaybeMessage<Demo5Nfy>(NULL);
+  }
+
+  Demo5Nfy* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo5Nfy>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo5Nfy& from);
+  void MergeFrom(const Demo5Nfy& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo5Nfy* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo5Nfy)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -633,154 +3180,70 @@ class Demo1Nfy : public ::google::protobuf::Message /* @@protoc_insertion_point(
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// GlobalReq
+// Demo2Req
 
 // int32 a = 1;
-inline void GlobalReq::clear_a() {
+inline void Demo2Req::clear_a() {
   a_ = 0;
 }
-inline ::google::protobuf::int32 GlobalReq::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.GlobalReq.a)
+inline ::google::protobuf::int32 Demo2Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo2Req.a)
   return a_;
 }
-inline void GlobalReq::set_a(::google::protobuf::int32 value) {
+inline void Demo2Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.GlobalReq.a)
-}
-
-// int32 b = 2;
-inline void GlobalReq::clear_b() {
-  b_ = 0;
-}
-inline ::google::protobuf::int32 GlobalReq::b() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.GlobalReq.b)
-  return b_;
-}
-inline void GlobalReq::set_b(::google::protobuf::int32 value) {
-  
-  b_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.GlobalReq.b)
-}
-
-// -------------------------------------------------------------------
-
-// GlobalRsp
-
-// .com.moon.demo.ErrCtx err_ctx = 1;
-inline bool GlobalRsp::has_err_ctx() const {
-  return this != internal_default_instance() && err_ctx_ != NULL;
-}
-inline const ::com::moon::demo::ErrCtx& GlobalRsp::_internal_err_ctx() const {
-  return *err_ctx_;
-}
-inline const ::com::moon::demo::ErrCtx& GlobalRsp::err_ctx() const {
-  const ::com::moon::demo::ErrCtx* p = err_ctx_;
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.GlobalRsp.err_ctx)
-  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
-      &::com::moon::demo::_ErrCtx_default_instance_);
-}
-inline ::com::moon::demo::ErrCtx* GlobalRsp::release_err_ctx() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.ss.GlobalRsp.err_ctx)
-  
-  ::com::moon::demo::ErrCtx* temp = err_ctx_;
-  err_ctx_ = NULL;
-  return temp;
-}
-inline ::com::moon::demo::ErrCtx* GlobalRsp::mutable_err_ctx() {
-  
-  if (err_ctx_ == NULL) {
-    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
-    err_ctx_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.GlobalRsp.err_ctx)
-  return err_ctx_;
-}
-inline void GlobalRsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
-  }
-  if (err_ctx) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, err_ctx, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  err_ctx_ = err_ctx;
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.GlobalRsp.err_ctx)
-}
-
-// -------------------------------------------------------------------
-
-// Demo1Req
-
-// int32 a = 1;
-inline void Demo1Req::clear_a() {
-  a_ = 0;
-}
-inline ::google::protobuf::int32 Demo1Req::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo1Req.a)
-  return a_;
-}
-inline void Demo1Req::set_a(::google::protobuf::int32 value) {
-  
-  a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo1Req.a)
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo2Req.a)
 }
 
 // bool udp = 2;
-inline void Demo1Req::clear_udp() {
+inline void Demo2Req::clear_udp() {
   udp_ = false;
 }
-inline bool Demo1Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo1Req.udp)
+inline bool Demo2Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo2Req.udp)
   return udp_;
 }
-inline void Demo1Req::set_udp(bool value) {
+inline void Demo2Req::set_udp(bool value) {
   
   udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo1Req.udp)
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo2Req.udp)
 }
 
 // -------------------------------------------------------------------
 
-// Demo1Rsp
+// Demo2Rsp
 
 // .com.moon.demo.ErrCtx err_ctx = 1;
-inline bool Demo1Rsp::has_err_ctx() const {
+inline bool Demo2Rsp::has_err_ctx() const {
   return this != internal_default_instance() && err_ctx_ != NULL;
 }
-inline const ::com::moon::demo::ErrCtx& Demo1Rsp::_internal_err_ctx() const {
+inline const ::com::moon::demo::ErrCtx& Demo2Rsp::_internal_err_ctx() const {
   return *err_ctx_;
 }
-inline const ::com::moon::demo::ErrCtx& Demo1Rsp::err_ctx() const {
+inline const ::com::moon::demo::ErrCtx& Demo2Rsp::err_ctx() const {
   const ::com::moon::demo::ErrCtx* p = err_ctx_;
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo1Rsp.err_ctx)
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo2Rsp.err_ctx)
   return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
       &::com::moon::demo::_ErrCtx_default_instance_);
 }
-inline ::com::moon::demo::ErrCtx* Demo1Rsp::release_err_ctx() {
-  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo1Rsp.err_ctx)
+inline ::com::moon::demo::ErrCtx* Demo2Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo2Rsp.err_ctx)
   
   ::com::moon::demo::ErrCtx* temp = err_ctx_;
   err_ctx_ = NULL;
   return temp;
 }
-inline ::com::moon::demo::ErrCtx* Demo1Rsp::mutable_err_ctx() {
+inline ::com::moon::demo::ErrCtx* Demo2Rsp::mutable_err_ctx() {
   
   if (err_ctx_ == NULL) {
     auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
     err_ctx_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo1Rsp.err_ctx)
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo2Rsp.err_ctx)
   return err_ctx_;
 }
-inline void Demo1Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+inline void Demo2Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
@@ -796,30 +3259,1154 @@ inline void Demo1Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) 
     
   }
   err_ctx_ = err_ctx;
-  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo1Rsp.err_ctx)
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo2Rsp.err_ctx)
 }
 
 // -------------------------------------------------------------------
 
-// Demo1Nfy
+// Demo3Req
 
 // int32 a = 1;
-inline void Demo1Nfy::clear_a() {
+inline void Demo3Req::clear_a() {
   a_ = 0;
 }
-inline ::google::protobuf::int32 Demo1Nfy::a() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo1Nfy.a)
+inline ::google::protobuf::int32 Demo3Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo3Req.a)
   return a_;
 }
-inline void Demo1Nfy::set_a(::google::protobuf::int32 value) {
+inline void Demo3Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo1Nfy.a)
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo3Req.a)
+}
+
+// bool udp = 2;
+inline void Demo3Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo3Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo3Req.udp)
+  return udp_;
+}
+inline void Demo3Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo3Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo3Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo3Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo3Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo3Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo3Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo3Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo3Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo3Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo3Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo3Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo3Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo4Req
+
+// int32 a = 1;
+inline void Demo4Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo4Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo4Req.a)
+  return a_;
+}
+inline void Demo4Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo4Req.a)
+}
+
+// int64 b = 2;
+inline void Demo4Req::clear_b() {
+  b_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 Demo4Req::b() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo4Req.b)
+  return b_;
+}
+inline void Demo4Req::set_b(::google::protobuf::int64 value) {
+  
+  b_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo4Req.b)
+}
+
+// string c = 3;
+inline void Demo4Req::clear_c() {
+  c_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Demo4Req::c() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo4Req.c)
+  return c_.GetNoArena();
+}
+inline void Demo4Req::set_c(const ::std::string& value) {
+  
+  c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo4Req.c)
+}
+#if LANG_CXX11
+inline void Demo4Req::set_c(::std::string&& value) {
+  
+  c_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.ss.Demo4Req.c)
+}
+#endif
+inline void Demo4Req::set_c(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:com.moon.demo.ss.Demo4Req.c)
+}
+inline void Demo4Req::set_c(const char* value, size_t size) {
+  
+  c_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.ss.Demo4Req.c)
+}
+inline ::std::string* Demo4Req::mutable_c() {
+  
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo4Req.c)
+  return c_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Demo4Req::release_c() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo4Req.c)
+  
+  return c_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Demo4Req::set_allocated_c(::std::string* c) {
+  if (c != NULL) {
+    
+  } else {
+    
+  }
+  c_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), c);
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo4Req.c)
+}
+
+// bytes d = 4;
+inline void Demo4Req::clear_d() {
+  d_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Demo4Req::d() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo4Req.d)
+  return d_.GetNoArena();
+}
+inline void Demo4Req::set_d(const ::std::string& value) {
+  
+  d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo4Req.d)
+}
+#if LANG_CXX11
+inline void Demo4Req::set_d(::std::string&& value) {
+  
+  d_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:com.moon.demo.ss.Demo4Req.d)
+}
+#endif
+inline void Demo4Req::set_d(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:com.moon.demo.ss.Demo4Req.d)
+}
+inline void Demo4Req::set_d(const void* value, size_t size) {
+  
+  d_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:com.moon.demo.ss.Demo4Req.d)
+}
+inline ::std::string* Demo4Req::mutable_d() {
+  
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo4Req.d)
+  return d_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Demo4Req::release_d() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo4Req.d)
+  
+  return d_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Demo4Req::set_allocated_d(::std::string* d) {
+  if (d != NULL) {
+    
+  } else {
+    
+  }
+  d_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), d);
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo4Req.d)
+}
+
+// .com.moon.demo.ss.Demo4Flag flag = 5;
+inline void Demo4Req::clear_flag() {
+  flag_ = 0;
+}
+inline ::com::moon::demo::ss::Demo4Flag Demo4Req::flag() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo4Req.flag)
+  return static_cast< ::com::moon::demo::ss::Demo4Flag >(flag_);
+}
+inline void Demo4Req::set_flag(::com::moon::demo::ss::Demo4Flag value) {
+  
+  flag_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo4Req.flag)
+}
+
+// -------------------------------------------------------------------
+
+// Demo4Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo4Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo4Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo4Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo4Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo4Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo4Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo4Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo4Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo4Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo4Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo5Req
+
+// int32 a = 1;
+inline void Demo5Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo5Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo5Req.a)
+  return a_;
+}
+inline void Demo5Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo5Req.a)
+}
+
+// bool udp = 2;
+inline void Demo5Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo5Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo5Req.udp)
+  return udp_;
+}
+inline void Demo5Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo5Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo5Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo5Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo5Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo5Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo5Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo5Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo5Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo5Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo5Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo5Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo5Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo6Req
+
+// int32 a = 1;
+inline void Demo6Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo6Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo6Req.a)
+  return a_;
+}
+inline void Demo6Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo6Req.a)
+}
+
+// bool udp = 2;
+inline void Demo6Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo6Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo6Req.udp)
+  return udp_;
+}
+inline void Demo6Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo6Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo6Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo6Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo6Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo6Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo6Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo6Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo6Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo6Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo6Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo6Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo6Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo7Req
+
+// int32 a = 1;
+inline void Demo7Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo7Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo7Req.a)
+  return a_;
+}
+inline void Demo7Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo7Req.a)
+}
+
+// bool udp = 2;
+inline void Demo7Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo7Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo7Req.udp)
+  return udp_;
+}
+inline void Demo7Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo7Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo7Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo7Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo7Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo7Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo7Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo7Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo7Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo7Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo7Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo7Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo7Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo8Req
+
+// int32 a = 1;
+inline void Demo8Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo8Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo8Req.a)
+  return a_;
+}
+inline void Demo8Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo8Req.a)
+}
+
+// bool udp = 2;
+inline void Demo8Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo8Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo8Req.udp)
+  return udp_;
+}
+inline void Demo8Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo8Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo8Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo8Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo8Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo8Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo8Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo8Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo8Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo8Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo8Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo8Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo8Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo9Req
+
+// int32 a = 1;
+inline void Demo9Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo9Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo9Req.a)
+  return a_;
+}
+inline void Demo9Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo9Req.a)
+}
+
+// bool udp = 2;
+inline void Demo9Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo9Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo9Req.udp)
+  return udp_;
+}
+inline void Demo9Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo9Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo9Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo9Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo9Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo9Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo9Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo9Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo9Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo9Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo9Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo9Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo9Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo10Req
+
+// int32 a = 1;
+inline void Demo10Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo10Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo10Req.a)
+  return a_;
+}
+inline void Demo10Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo10Req.a)
+}
+
+// bool udp = 2;
+inline void Demo10Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo10Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo10Req.udp)
+  return udp_;
+}
+inline void Demo10Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo10Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo10Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo10Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo10Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo10Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo10Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo10Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo10Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo10Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo10Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo10Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo10Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo20Req
+
+// int32 a = 1;
+inline void Demo20Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo20Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo20Req.a)
+  return a_;
+}
+inline void Demo20Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo20Req.a)
+}
+
+// bool udp = 2;
+inline void Demo20Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo20Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo20Req.udp)
+  return udp_;
+}
+inline void Demo20Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo20Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo20Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo20Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo20Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo20Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo20Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo20Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo20Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo20Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo20Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo20Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo20Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo50Req
+
+// int32 a = 1;
+inline void Demo50Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo50Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo50Req.a)
+  return a_;
+}
+inline void Demo50Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo50Req.a)
+}
+
+// bool udp = 2;
+inline void Demo50Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo50Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo50Req.udp)
+  return udp_;
+}
+inline void Demo50Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo50Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo50Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo50Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo50Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo50Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo50Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo50Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo50Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo50Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo50Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo50Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo50Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo90Req
+
+// int32 a = 1;
+inline void Demo90Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo90Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo90Req.a)
+  return a_;
+}
+inline void Demo90Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo90Req.a)
+}
+
+// bool udp = 2;
+inline void Demo90Req::clear_udp() {
+  udp_ = false;
+}
+inline bool Demo90Req::udp() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo90Req.udp)
+  return udp_;
+}
+inline void Demo90Req::set_udp(bool value) {
+  
+  udp_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo90Req.udp)
+}
+
+// -------------------------------------------------------------------
+
+// Demo90Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo90Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo90Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo90Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo90Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo90Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo90Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo90Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo90Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo90Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo90Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo2Nfy
+
+// int32 a = 1;
+inline void Demo2Nfy::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo2Nfy::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo2Nfy.a)
+  return a_;
+}
+inline void Demo2Nfy::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo2Nfy.a)
+}
+
+// -------------------------------------------------------------------
+
+// Demo4Nfy
+
+// int32 a = 1;
+inline void Demo4Nfy::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo4Nfy::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo4Nfy.a)
+  return a_;
+}
+inline void Demo4Nfy::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo4Nfy.a)
+}
+
+// -------------------------------------------------------------------
+
+// Demo5Nfy
+
+// int32 a = 1;
+inline void Demo5Nfy::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo5Nfy::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo5Nfy.a)
+  return a_;
+}
+inline void Demo5Nfy::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo5Nfy.a)
 }
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -835,6 +4422,18 @@ inline void Demo1Nfy::set_a(::google::protobuf::int32 value) {
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
+
+namespace google {
+namespace protobuf {
+
+template <> struct is_proto_enum< ::com::moon::demo::ss::Demo4Flag> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::com::moon::demo::ss::Demo4Flag>() {
+  return ::com::moon::demo::ss::Demo4Flag_descriptor();
+}
+
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 

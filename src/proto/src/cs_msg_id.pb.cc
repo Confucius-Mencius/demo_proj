@@ -56,18 +56,15 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\271\002\n\005"
-      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_DEMO_1"
-      "_REQ\020\350\007\022\026\n\021MSG_ID_DEMO_1_RSP\020\351\007\022\026\n\021MSG_I"
-      "D_DEMO_2_REQ\020\352\007\022\026\n\021MSG_ID_DEMO_2_RSP\020\353\007\022"
-      "\026\n\021MSG_ID_DEMO_3_REQ\020\354\007\022\026\n\021MSG_ID_DEMO_3"
-      "_RSP\020\355\007\022\026\n\021MSG_ID_DEMO_4_REQ\020\356\007\022\026\n\021MSG_I"
-      "D_DEMO_4_RSP\020\357\007\022\026\n\021MSG_ID_DEMO_5_REQ\020\360\007\022"
-      "\026\n\021MSG_ID_DEMO_5_RSP\020\361\007\022\026\n\021MSG_ID_DEMO_6"
-      "_REQ\020\362\007\022\026\n\021MSG_ID_DEMO_6_RSP\020\363\007b\006proto3"
+      "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\247\001\n\005"
+      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\025\n\020MSG_ID_DEMO1_"
+      "REQ\020\350\007\022\025\n\020MSG_ID_DEMO1_RSP\020\351\007\022\025\n\020MSG_ID_"
+      "DEMO1_NFY\020\352\007\022\025\n\020MSG_ID_DEMO3_NFY\020\353\007\022\027\n\022M"
+      "SG_ID_DEMO100_REQ\020\354\007\022\027\n\022MSG_ID_DEMO100_R"
+      "SP\020\355\007b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 359);
+      descriptor, 213);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "cs_msg_id.proto", &protobuf_RegisterTypes);
 }
@@ -100,12 +97,6 @@ bool MsgID_IsValid(int value) {
     case 1003:
     case 1004:
     case 1005:
-    case 1006:
-    case 1007:
-    case 1008:
-    case 1009:
-    case 1010:
-    case 1011:
       return true;
     default:
       return false;

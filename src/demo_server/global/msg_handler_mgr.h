@@ -1,8 +1,10 @@
 #ifndef DEMO_SERVER_GLOBAL_MSG_HANDLER_MGR_H_
 #define DEMO_SERVER_GLOBAL_MSG_HANDLER_MGR_H_
 
-#include "demo_6_req_handler.h"
 #include "proto_msg_handler_mgr_template.h"
+#include "demo2_req_handler.h"
+#include "demo5_req_handler.h"
+#include "demo9_req_handler.h"
 
 namespace global
 {
@@ -24,7 +26,9 @@ private:
     void FinalizeMsgHandlerVec() override;
 
 private:
-    Demo6ReqHandler demo_6_req_handler_;
+    Demo2ReqHandler demo2_req_handler_;
+    Demo5ReqHandler demo5_req_handler_;
+    Demo9ReqHandler demo9_req_handler_;
 };
 }
 

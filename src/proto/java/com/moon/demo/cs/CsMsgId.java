@@ -24,53 +24,29 @@ public final class CsMsgId {
      */
     PLACE_HOLDER(0),
     /**
-     * <code>MSG_ID_DEMO_1_REQ = 1000;</code>
+     * <code>MSG_ID_DEMO1_REQ = 1000;</code>
      */
-    MSG_ID_DEMO_1_REQ(1000),
+    MSG_ID_DEMO1_REQ(1000),
     /**
-     * <code>MSG_ID_DEMO_1_RSP = 1001;</code>
+     * <code>MSG_ID_DEMO1_RSP = 1001;</code>
      */
-    MSG_ID_DEMO_1_RSP(1001),
+    MSG_ID_DEMO1_RSP(1001),
     /**
-     * <code>MSG_ID_DEMO_2_REQ = 1002;</code>
+     * <code>MSG_ID_DEMO1_NFY = 1002;</code>
      */
-    MSG_ID_DEMO_2_REQ(1002),
+    MSG_ID_DEMO1_NFY(1002),
     /**
-     * <code>MSG_ID_DEMO_2_RSP = 1003;</code>
+     * <code>MSG_ID_DEMO3_NFY = 1003;</code>
      */
-    MSG_ID_DEMO_2_RSP(1003),
+    MSG_ID_DEMO3_NFY(1003),
     /**
-     * <code>MSG_ID_DEMO_3_REQ = 1004;</code>
+     * <code>MSG_ID_DEMO100_REQ = 1004;</code>
      */
-    MSG_ID_DEMO_3_REQ(1004),
+    MSG_ID_DEMO100_REQ(1004),
     /**
-     * <code>MSG_ID_DEMO_3_RSP = 1005;</code>
+     * <code>MSG_ID_DEMO100_RSP = 1005;</code>
      */
-    MSG_ID_DEMO_3_RSP(1005),
-    /**
-     * <code>MSG_ID_DEMO_4_REQ = 1006;</code>
-     */
-    MSG_ID_DEMO_4_REQ(1006),
-    /**
-     * <code>MSG_ID_DEMO_4_RSP = 1007;</code>
-     */
-    MSG_ID_DEMO_4_RSP(1007),
-    /**
-     * <code>MSG_ID_DEMO_5_REQ = 1008;</code>
-     */
-    MSG_ID_DEMO_5_REQ(1008),
-    /**
-     * <code>MSG_ID_DEMO_5_RSP = 1009;</code>
-     */
-    MSG_ID_DEMO_5_RSP(1009),
-    /**
-     * <code>MSG_ID_DEMO_6_REQ = 1010;</code>
-     */
-    MSG_ID_DEMO_6_REQ(1010),
-    /**
-     * <code>MSG_ID_DEMO_6_RSP = 1011;</code>
-     */
-    MSG_ID_DEMO_6_RSP(1011),
+    MSG_ID_DEMO100_RSP(1005),
     UNRECOGNIZED(-1),
     ;
 
@@ -79,53 +55,29 @@ public final class CsMsgId {
      */
     public static final int PLACE_HOLDER_VALUE = 0;
     /**
-     * <code>MSG_ID_DEMO_1_REQ = 1000;</code>
+     * <code>MSG_ID_DEMO1_REQ = 1000;</code>
      */
-    public static final int MSG_ID_DEMO_1_REQ_VALUE = 1000;
+    public static final int MSG_ID_DEMO1_REQ_VALUE = 1000;
     /**
-     * <code>MSG_ID_DEMO_1_RSP = 1001;</code>
+     * <code>MSG_ID_DEMO1_RSP = 1001;</code>
      */
-    public static final int MSG_ID_DEMO_1_RSP_VALUE = 1001;
+    public static final int MSG_ID_DEMO1_RSP_VALUE = 1001;
     /**
-     * <code>MSG_ID_DEMO_2_REQ = 1002;</code>
+     * <code>MSG_ID_DEMO1_NFY = 1002;</code>
      */
-    public static final int MSG_ID_DEMO_2_REQ_VALUE = 1002;
+    public static final int MSG_ID_DEMO1_NFY_VALUE = 1002;
     /**
-     * <code>MSG_ID_DEMO_2_RSP = 1003;</code>
+     * <code>MSG_ID_DEMO3_NFY = 1003;</code>
      */
-    public static final int MSG_ID_DEMO_2_RSP_VALUE = 1003;
+    public static final int MSG_ID_DEMO3_NFY_VALUE = 1003;
     /**
-     * <code>MSG_ID_DEMO_3_REQ = 1004;</code>
+     * <code>MSG_ID_DEMO100_REQ = 1004;</code>
      */
-    public static final int MSG_ID_DEMO_3_REQ_VALUE = 1004;
+    public static final int MSG_ID_DEMO100_REQ_VALUE = 1004;
     /**
-     * <code>MSG_ID_DEMO_3_RSP = 1005;</code>
+     * <code>MSG_ID_DEMO100_RSP = 1005;</code>
      */
-    public static final int MSG_ID_DEMO_3_RSP_VALUE = 1005;
-    /**
-     * <code>MSG_ID_DEMO_4_REQ = 1006;</code>
-     */
-    public static final int MSG_ID_DEMO_4_REQ_VALUE = 1006;
-    /**
-     * <code>MSG_ID_DEMO_4_RSP = 1007;</code>
-     */
-    public static final int MSG_ID_DEMO_4_RSP_VALUE = 1007;
-    /**
-     * <code>MSG_ID_DEMO_5_REQ = 1008;</code>
-     */
-    public static final int MSG_ID_DEMO_5_REQ_VALUE = 1008;
-    /**
-     * <code>MSG_ID_DEMO_5_RSP = 1009;</code>
-     */
-    public static final int MSG_ID_DEMO_5_RSP_VALUE = 1009;
-    /**
-     * <code>MSG_ID_DEMO_6_REQ = 1010;</code>
-     */
-    public static final int MSG_ID_DEMO_6_REQ_VALUE = 1010;
-    /**
-     * <code>MSG_ID_DEMO_6_RSP = 1011;</code>
-     */
-    public static final int MSG_ID_DEMO_6_RSP_VALUE = 1011;
+    public static final int MSG_ID_DEMO100_RSP_VALUE = 1005;
 
 
     public final int getNumber() {
@@ -147,18 +99,12 @@ public final class CsMsgId {
     public static MsgID forNumber(int value) {
       switch (value) {
         case 0: return PLACE_HOLDER;
-        case 1000: return MSG_ID_DEMO_1_REQ;
-        case 1001: return MSG_ID_DEMO_1_RSP;
-        case 1002: return MSG_ID_DEMO_2_REQ;
-        case 1003: return MSG_ID_DEMO_2_RSP;
-        case 1004: return MSG_ID_DEMO_3_REQ;
-        case 1005: return MSG_ID_DEMO_3_RSP;
-        case 1006: return MSG_ID_DEMO_4_REQ;
-        case 1007: return MSG_ID_DEMO_4_RSP;
-        case 1008: return MSG_ID_DEMO_5_REQ;
-        case 1009: return MSG_ID_DEMO_5_RSP;
-        case 1010: return MSG_ID_DEMO_6_REQ;
-        case 1011: return MSG_ID_DEMO_6_RSP;
+        case 1000: return MSG_ID_DEMO1_REQ;
+        case 1001: return MSG_ID_DEMO1_RSP;
+        case 1002: return MSG_ID_DEMO1_NFY;
+        case 1003: return MSG_ID_DEMO3_NFY;
+        case 1004: return MSG_ID_DEMO100_REQ;
+        case 1005: return MSG_ID_DEMO100_RSP;
         default: return null;
       }
     }
@@ -220,15 +166,12 @@ public final class CsMsgId {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\271\002\n\005" +
-      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\026\n\021MSG_ID_DEMO_1" +
-      "_REQ\020\350\007\022\026\n\021MSG_ID_DEMO_1_RSP\020\351\007\022\026\n\021MSG_I" +
-      "D_DEMO_2_REQ\020\352\007\022\026\n\021MSG_ID_DEMO_2_RSP\020\353\007\022" +
-      "\026\n\021MSG_ID_DEMO_3_REQ\020\354\007\022\026\n\021MSG_ID_DEMO_3" +
-      "_RSP\020\355\007\022\026\n\021MSG_ID_DEMO_4_REQ\020\356\007\022\026\n\021MSG_I" +
-      "D_DEMO_4_RSP\020\357\007\022\026\n\021MSG_ID_DEMO_5_REQ\020\360\007\022" +
-      "\026\n\021MSG_ID_DEMO_5_RSP\020\361\007\022\026\n\021MSG_ID_DEMO_6" +
-      "_REQ\020\362\007\022\026\n\021MSG_ID_DEMO_6_RSP\020\363\007b\006proto3"
+      "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\247\001\n\005" +
+      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\025\n\020MSG_ID_DEMO1_" +
+      "REQ\020\350\007\022\025\n\020MSG_ID_DEMO1_RSP\020\351\007\022\025\n\020MSG_ID_" +
+      "DEMO1_NFY\020\352\007\022\025\n\020MSG_ID_DEMO3_NFY\020\353\007\022\027\n\022M" +
+      "SG_ID_DEMO100_REQ\020\354\007\022\027\n\022MSG_ID_DEMO100_R" +
+      "SP\020\355\007b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

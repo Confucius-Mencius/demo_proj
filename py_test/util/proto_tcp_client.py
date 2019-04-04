@@ -10,7 +10,7 @@ from log_util import *
 import msg_codec
 
 
-class TCPClient(object):
+class Client(object):
     def __init__(self, server_addr, server_port, timeout=None, linger=False):
         """
         创建tcp socket并连接指定服务器。
@@ -104,14 +104,14 @@ class TCPClient(object):
                 data_len = len(data)
 
                 if 0 == data_len:
-                    print('read len: %d, data len: %d, data: "%s"' % (read_len, data_len, data))
+                    LOG_DEBUG('read len: %d, data len: %d, data: "%s"' % (read_len, data_len, data))
                     break
 
                 read_len += data_len
                 msg_len_data_list.append(data)
 
             if read_len < msg_codec.TOTAL_MSG_LEN_FIELD_LEN:
-                print('read len: %d' % read_len)
+                LOG_ERROR('read len: %d' % read_len)
                 return None, 0
 
             msg_len_field_buf = ''.join(msg_len_data_list)
@@ -125,17 +125,17 @@ class TCPClient(object):
                 data_len = len(data)
 
                 if 0 == data_len:
-                    print('read len: %d, data len: %d, data: "%s"' % (read_len, data_len, data))
+                    LOG_DEBUG('read len: %d, data len: %d, data: "%s"' % (read_len, data_len, data))
                     break
 
                 read_len += data_len
                 total_msg_data_list.append(data)
         except Exception as e:
-            print('exception: %s' % e)
+            LOG_ERROR('exception: %s' % e)
             return None, 0
 
         if read_len < total_msg_len:
-            print('read len: %d, total msg len: %d' % (read_len, total_msg_len))
+            LOG_ERROR('read len: %d, total msg len: %d' % (read_len, total_msg_len))
             return None, 0
 
         total_msg_buf = ''.join(total_msg_data_list)
@@ -151,10 +151,10 @@ class TCPClient(object):
         try:
             total_msg_buf, total_msg_len = self.__recv_a_complete_msg()
             if 0 == total_msg_len or total_msg_len != len(total_msg_buf):
-                print('total msg len: %d' % total_msg_len)
+                LOG_ERROR('total msg len: %d' % total_msg_len)
                 return -1, None, None
 
             return msg_codec.decode(total_msg_buf, total_msg_len, do_checksum)
         except Exception as e:
-            print('exception: %s' % e)
+            LOG_ERROR('exception: %s' % e)
             return -1, None, None

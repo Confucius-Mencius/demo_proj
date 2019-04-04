@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='com.moon.demo.ss',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0fss_msg_id.proto\x12\x10\x63om.moon.demo.ss*\x91\x01\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x16\n\x11MSG_ID_GLOBAL_REQ\x10\xd0\x0f\x12\x16\n\x11MSG_ID_GLOBAL_RSP\x10\xd1\x0f\x12\x16\n\x11MSG_ID_DEMO_1_REQ\x10\xd2\x0f\x12\x16\n\x11MSG_ID_DEMO_1_RSP\x10\xd3\x0f\x12\x16\n\x11MSG_ID_DEMO_1_NFY\x10\xd4\x0f\x62\x06proto3')
+  serialized_pb=_b('\n\x0fss_msg_id.proto\x12\x10\x63om.moon.demo.ss*\x8e\x05\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x15\n\x10MSG_ID_DEMO2_REQ\x10\xd0\x0f\x12\x15\n\x10MSG_ID_DEMO2_RSP\x10\xd1\x0f\x12\x15\n\x10MSG_ID_DEMO3_REQ\x10\xd2\x0f\x12\x15\n\x10MSG_ID_DEMO3_RSP\x10\xd3\x0f\x12\x15\n\x10MSG_ID_DEMO4_REQ\x10\xd4\x0f\x12\x15\n\x10MSG_ID_DEMO4_RSP\x10\xd5\x0f\x12\x15\n\x10MSG_ID_DEMO5_REQ\x10\xd6\x0f\x12\x15\n\x10MSG_ID_DEMO5_RSP\x10\xd7\x0f\x12\x15\n\x10MSG_ID_DEMO6_REQ\x10\xd8\x0f\x12\x15\n\x10MSG_ID_DEMO6_RSP\x10\xd9\x0f\x12\x15\n\x10MSG_ID_DEMO7_REQ\x10\xda\x0f\x12\x15\n\x10MSG_ID_DEMO7_RSP\x10\xdb\x0f\x12\x15\n\x10MSG_ID_DEMO8_REQ\x10\xdc\x0f\x12\x15\n\x10MSG_ID_DEMO8_RSP\x10\xdd\x0f\x12\x15\n\x10MSG_ID_DEMO9_REQ\x10\xde\x0f\x12\x15\n\x10MSG_ID_DEMO9_RSP\x10\xdf\x0f\x12\x16\n\x11MSG_ID_DEMO10_REQ\x10\xe0\x0f\x12\x16\n\x11MSG_ID_DEMO10_RSP\x10\xe1\x0f\x12\x16\n\x11MSG_ID_DEMO20_REQ\x10\xe2\x0f\x12\x16\n\x11MSG_ID_DEMO20_RSP\x10\xe3\x0f\x12\x16\n\x11MSG_ID_DEMO50_REQ\x10\xe4\x0f\x12\x16\n\x11MSG_ID_DEMO50_RSP\x10\xe5\x0f\x12\x16\n\x11MSG_ID_DEMO90_REQ\x10\xe6\x0f\x12\x16\n\x11MSG_ID_DEMO90_RSP\x10\xe7\x0f\x12\x15\n\x10MSG_ID_DEMO2_NFY\x10\xe8\x0f\x12\x15\n\x10MSG_ID_DEMO4_NFY\x10\xe9\x0f\x12\x15\n\x10MSG_ID_DEMO5_NFY\x10\xea\x0f\x62\x06proto3')
 )
 
 _MSGID = _descriptor.EnumDescriptor(
@@ -34,40 +34,150 @@ _MSGID = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_GLOBAL_REQ', index=1, number=2000,
+      name='MSG_ID_DEMO2_REQ', index=1, number=2000,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_GLOBAL_RSP', index=2, number=2001,
+      name='MSG_ID_DEMO2_RSP', index=2, number=2001,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_DEMO_1_REQ', index=3, number=2002,
+      name='MSG_ID_DEMO3_REQ', index=3, number=2002,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_DEMO_1_RSP', index=4, number=2003,
+      name='MSG_ID_DEMO3_RSP', index=4, number=2003,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_DEMO_1_NFY', index=5, number=2004,
+      name='MSG_ID_DEMO4_REQ', index=5, number=2004,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO4_RSP', index=6, number=2005,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO5_REQ', index=7, number=2006,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO5_RSP', index=8, number=2007,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO6_REQ', index=9, number=2008,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO6_RSP', index=10, number=2009,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO7_REQ', index=11, number=2010,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO7_RSP', index=12, number=2011,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO8_REQ', index=13, number=2012,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO8_RSP', index=14, number=2013,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO9_REQ', index=15, number=2014,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO9_RSP', index=16, number=2015,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO10_REQ', index=17, number=2016,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO10_RSP', index=18, number=2017,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO20_REQ', index=19, number=2018,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO20_RSP', index=20, number=2019,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO50_REQ', index=21, number=2020,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO50_RSP', index=22, number=2021,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO90_REQ', index=23, number=2022,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO90_RSP', index=24, number=2023,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO2_NFY', index=25, number=2024,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO4_NFY', index=26, number=2025,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO5_NFY', index=27, number=2026,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=38,
-  serialized_end=183,
+  serialized_end=692,
 )
 _sym_db.RegisterEnumDescriptor(_MSGID)
 
 MsgID = enum_type_wrapper.EnumTypeWrapper(_MSGID)
 PLACE_HOLDER = 0
-MSG_ID_GLOBAL_REQ = 2000
-MSG_ID_GLOBAL_RSP = 2001
-MSG_ID_DEMO_1_REQ = 2002
-MSG_ID_DEMO_1_RSP = 2003
-MSG_ID_DEMO_1_NFY = 2004
+MSG_ID_DEMO2_REQ = 2000
+MSG_ID_DEMO2_RSP = 2001
+MSG_ID_DEMO3_REQ = 2002
+MSG_ID_DEMO3_RSP = 2003
+MSG_ID_DEMO4_REQ = 2004
+MSG_ID_DEMO4_RSP = 2005
+MSG_ID_DEMO5_REQ = 2006
+MSG_ID_DEMO5_RSP = 2007
+MSG_ID_DEMO6_REQ = 2008
+MSG_ID_DEMO6_RSP = 2009
+MSG_ID_DEMO7_REQ = 2010
+MSG_ID_DEMO7_RSP = 2011
+MSG_ID_DEMO8_REQ = 2012
+MSG_ID_DEMO8_RSP = 2013
+MSG_ID_DEMO9_REQ = 2014
+MSG_ID_DEMO9_RSP = 2015
+MSG_ID_DEMO10_REQ = 2016
+MSG_ID_DEMO10_RSP = 2017
+MSG_ID_DEMO20_REQ = 2018
+MSG_ID_DEMO20_RSP = 2019
+MSG_ID_DEMO50_REQ = 2020
+MSG_ID_DEMO50_RSP = 2021
+MSG_ID_DEMO90_REQ = 2022
+MSG_ID_DEMO90_RSP = 2023
+MSG_ID_DEMO2_NFY = 2024
+MSG_ID_DEMO4_NFY = 2025
+MSG_ID_DEMO5_NFY = 2026
 
 
 DESCRIPTOR.enum_types_by_name['MsgID'] = _MSGID

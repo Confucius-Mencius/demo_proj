@@ -6,9 +6,6 @@
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
-# 编译完成后打包，是否打包配置文件。注意：打包配置文件将会覆盖bin目录下你修改过的配置文件！
-PACK_CONF=1
-
 function Usage()
 {
     echo "Usage: $1
@@ -29,6 +26,10 @@ fi
 . ${SCRIPT_PATH}/../../../sh_tools/base/pack_util.sh
 . ${SCRIPT_PATH}/pack.sh
 
+# 编译完成后打包，是否打包配置文件。注意：打包配置文件将会覆盖bin目录下你修改过的配置文件！
+PACK_CONF=1
+
+# 编译的时候是否执行单元测试用例
 RUN_TEST=1
 
 while getopts "b:c:r:p:h" opt; do

@@ -2,8 +2,10 @@
 #define DEMO_SERVER_BURDEN_LOGICS_MSG_HANDLER_MGR_H_
 
 #include "proto_msg_handler_mgr_template.h"
-#include "demo_1_req_handler.h"
-#include "global_req_handler.h"
+#include "demo5_nfy_handler.h"
+#include "demo7_req_handler.h"
+#include "demo10_req_handler.h"
+#include "demo90_req_handler.h"
 
 namespace burden
 {
@@ -28,8 +30,10 @@ private:
     void FinalizeMsgHandlerVec() override;
 
 private:
-    Demo1ReqHandler demo_1_req_handler_;
-    GlobalReqHandler global_req_handler_;
+    Demo5NfyHandler demo5_nfy_handler_;
+    Demo7ReqHandler demo7_req_handler_;
+    Demo10ReqHandler demo10_req_handler_;
+    Demo90ReqHandler demo90_req_handler_;
 };
 }
 
