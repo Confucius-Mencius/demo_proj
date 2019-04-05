@@ -56,19 +56,8 @@ class Demo100Req(object):
         rsp_msg_head = MsgHead()
 
         ret, rsp_msg_head, rsp_msg_body = self.client.recv(conf.proto_tcp_do_checksum)
-        if ret != 0:
+        if ret != -1:
             LOG_ERROR('ret: %d' % ret)
             return -1
-
-        if rsp_msg_head.msg_id != cs_msg_id_pb2.MSG_ID_DEMO100_RSP:
-            LOG_ERROR('error rsp msg id: %d' % rsp_msg_head.msg_id)
-            return -1
-
-        demo100_rsp = self.__make_demo100_rsp(rsp_msg_body)
-
-        err_code = demo100_rsp.err_ctx.err_code
-        if err_code != 0:
-            LOG_ERROR('demo100_rsp failed err code: %d' % err_code)
-            return err_code
 
         return 0

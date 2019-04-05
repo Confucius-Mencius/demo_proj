@@ -23,7 +23,7 @@ Demo5ReqHandler::~Demo5ReqHandler()
 
 void Demo5ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo5ReqHandler::OnMsg");
+    LOG_TRACE("global::Demo5ReqHandler::OnMsg");
 
     ss::Demo5Req demo5_req;
     if (ParseProtobufMsg(&demo5_req, msg_body, msg_body_len) != 0)
@@ -32,6 +32,30 @@ void Demo5ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    // TODO
+    LOG_TRACE(demo5_req.a());
+
+    ////////////////////////////////////////////////////////////////////////////////
+    ::proto::MsgHead demo50_req_msg_head = { 0, ss::MSG_ID_DEMO50_REQ };
+
+    ss::Demo50Req demo50_req;
+    demo50_req.set_a(50);
+
+    if (SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo50_req_msg_head, &demo50_req, conn_guid->io_thread_idx) != 0)
+    {
+        LOG_ERROR("failed to send to proto tcp thread, msg id: " << demo50_req_msg_head.msg_id);
+        return;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    ::proto::MsgHead demo5_nfy_msg_head = { NFY_PASSBACK, ss::MSG_ID_DEMO5_NFY };
+
+    ss::Demo5Nfy demo5_nfy;
+    demo5_nfy.set_a(5);
+
+    if (SendToProtoTCPThread(logic_ctx_->scheduler, conn_guid, demo5_nfy_msg_head, &demo5_nfy, -1) != 0) // 广播
+    {
+        LOG_ERROR("failed to broadcast to proto tcp threads, msg id: " << demo5_nfy_msg_head.msg_id);
+        return;
+    }
 }
 }

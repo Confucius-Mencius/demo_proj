@@ -25,7 +25,7 @@ Demo100ReqHandler::~Demo100ReqHandler()
 
 void Demo100ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo100ReqHandler::OnMsg");
+    LOG_TRACE("tcp::proto::Demo100ReqHandler::OnMsg");
 
     cs::Demo100Req demo100_req;
     if (ParseProtobufMsg(&demo100_req, msg_body, msg_body_len) != 0)

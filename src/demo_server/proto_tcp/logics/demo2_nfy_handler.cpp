@@ -25,7 +25,7 @@ Demo2NfyHandler::~Demo2NfyHandler()
 
 void Demo2NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo2NfyHandler::OnMsg");
+    LOG_TRACE("tcp::proto::Demo2NfyHandler::OnMsg");
 
     ss::Demo2Nfy demo2_nfy;
     if (ParseProtobufMsg(&demo2_nfy, msg_body, msg_body_len) != 0)
@@ -34,7 +34,7 @@ void Demo2NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    // TODO
+    LOG_TRACE(demo2_nfy.a());
 }
 }
 }

@@ -1,6 +1,7 @@
 #ifndef PROTO_SRC_PROTO_TCP_PROTOBUF_UTIL_H_
 #define PROTO_SRC_PROTO_TCP_PROTOBUF_UTIL_H_
 
+#include "conn.h"
 #include "proto_msg.h"
 #include "protobuf_util.h"
 #include "proto_tcp_scheduler_interface.h"

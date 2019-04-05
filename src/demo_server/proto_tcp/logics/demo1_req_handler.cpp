@@ -27,7 +27,7 @@ Demo1ReqHandler::~Demo1ReqHandler()
 
 void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo1ReqHandler::OnMsg");
+    LOG_TRACE("tcp::proto::Demo1ReqHandler::OnMsg");
 
     cs::Demo1Req demo1_req;
     if (ParseProtobufMsg(&demo1_req, msg_body, msg_body_len) != 0)
@@ -36,6 +36,8 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         SendErrRsp(conn_guid, msg_head, ERR_INVALID_PARAM);
         return;
     }
+
+    LOG_TRACE(demo1_req.a());
 
     ////////////////////////////////////////////////////////////////////////////////
     ::proto::MsgHead demo1_rsp_msg_head = msg_head;
@@ -46,7 +48,7 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToClient(logic_ctx_->scheduler, conn_guid, demo1_rsp_msg_head, &demo1_rsp) != 0)
     {
-        LOG_ERROR("failed to send to " << conn_guid << ", msg id: " << demo1_rsp_msg_head.msg_id);
+        LOG_ERROR("failed to send to client, " << conn_guid << ", msg id: " << demo1_rsp_msg_head.msg_id);
         return;
     }
 
@@ -54,11 +56,11 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
     ::proto::MsgHead demo1_nfy_msg_head = { NFY_PASSBACK, cs::MSG_ID_DEMO1_NFY };
 
     cs::Demo1Nfy demo1_nfy;
-    demo1_nfy.set_a(100);
+    demo1_nfy.set_a(1);
 
     if (SendToClient(logic_ctx_->scheduler, conn_guid, demo1_nfy_msg_head, &demo1_nfy) != 0)
     {
-        LOG_ERROR("failed to send to " << conn_guid << ", msg id: " << demo1_nfy_msg_head.msg_id);
+        LOG_ERROR("failed to send to client, " << conn_guid << ", msg id: " << demo1_nfy_msg_head.msg_id);
         return;
     }
 
@@ -66,11 +68,36 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
     ::proto::MsgHead demo2_req_msg_head = { 0, ss::MSG_ID_DEMO2_REQ };
 
     ss::Demo2Req demo2_req;
-    demo2_req.set_a(200);
+    demo2_req.set_a(2);
+    demo2_req.set_proto_tcp_thread_idx(logic_ctx_->thread_idx);
 
-    if (SendToClient(logic_ctx_->scheduler, conn_guid, demo2_req_msg_head, &demo2_req) != 0)
+    if (SendToGlobalThread(logic_ctx_->scheduler, conn_guid, demo2_req_msg_head, &demo2_req) != 0)
     {
-        LOG_ERROR("failed to send to " << conn_guid << ", msg id: " << demo2_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to global thread, " << conn_guid << ", msg id: " << demo2_req_msg_head.msg_id);
+        return;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    ::proto::MsgHead demo3_req_msg_head = { 0, ss::MSG_ID_DEMO3_REQ };
+
+    ss::Demo3Req demo3_req;
+    demo3_req.set_a(3);
+
+    if (SendToTCPThread(logic_ctx_->scheduler, conn_guid, demo3_req_msg_head, &demo3_req, -1) != 0)
+    {
+        LOG_ERROR("failed to send to tcp thread, " << conn_guid << ", msg id: " << demo3_req_msg_head.msg_id);
+        return;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    ::proto::MsgHead demo4_req_msg_head = { 0, ss::MSG_ID_DEMO4_REQ };
+
+    ss::Demo4Req demo4_req;
+    demo4_req.set_a(4);
+
+    if (SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo4_req_msg_head, &demo4_req, -1) != 0)
+    {
+        LOG_ERROR("failed to send to work thread, " << conn_guid << ", msg id: " << demo4_req_msg_head.msg_id);
         return;
     }
 }

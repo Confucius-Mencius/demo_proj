@@ -1,6 +1,7 @@
 #ifndef PROTO_SRC_WORK_PROTOBUF_UTIL_H_
 #define PROTO_SRC_WORK_PROTOBUF_UTIL_H_
 
+#include "conn.h"
 #include "proto_msg.h"
 #include "protobuf_util.h"
 #include "work_scheduler_interface.h"

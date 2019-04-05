@@ -25,7 +25,7 @@ Demo8ReqHandler::~Demo8ReqHandler()
 
 void Demo8ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo8ReqHandler::OnMsg");
+    LOG_TRACE("tcp::proto::Demo8ReqHandler::OnMsg");
 
     ss::Demo8Req demo8_req;
     if (ParseProtobufMsg(&demo8_req, msg_body, msg_body_len) != 0)
@@ -34,7 +34,7 @@ void Demo8ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    // TODO
+    LOG_TRACE(demo8_req.a());
 }
 }
 }

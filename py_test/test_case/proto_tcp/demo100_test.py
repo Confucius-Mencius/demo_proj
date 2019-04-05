@@ -18,7 +18,7 @@ def test_001():
     client = Client(conf.demo_server_addr, conf.demo_server_proto_tcp_port)
     demo100_req = Demo100Req(client)
     ret = demo100_req.demo100()
-    assert ret == -1
+    assert ret == 0
 
 
 if __name__ == '__main__':

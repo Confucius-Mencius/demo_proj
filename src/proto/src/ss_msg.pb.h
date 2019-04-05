@@ -292,18 +292,18 @@ class Demo2Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // bool udp = 2;
-  void clear_udp();
-  static const int kUdpFieldNumber = 2;
-  bool udp() const;
-  void set_udp(bool value);
+  // int32 proto_tcp_thread_idx = 2;
+  void clear_proto_tcp_thread_idx();
+  static const int kProtoTcpThreadIdxFieldNumber = 2;
+  ::google::protobuf::int32 proto_tcp_thread_idx() const;
+  void set_proto_tcp_thread_idx(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo2Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::int32 a_;
-  bool udp_;
+  ::google::protobuf::int32 proto_tcp_thread_idx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
 };
@@ -986,18 +986,18 @@ class Demo5Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // bool udp = 2;
-  void clear_udp();
-  static const int kUdpFieldNumber = 2;
-  bool udp() const;
-  void set_udp(bool value);
+  // int32 work_thread_idx = 2;
+  void clear_work_thread_idx();
+  static const int kWorkThreadIdxFieldNumber = 2;
+  ::google::protobuf::int32 work_thread_idx() const;
+  void set_work_thread_idx(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo5Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::int32 a_;
-  bool udp_;
+  ::google::protobuf::int32 work_thread_idx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
 };
@@ -1862,18 +1862,18 @@ class Demo9Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // bool udp = 2;
-  void clear_udp();
-  static const int kUdpFieldNumber = 2;
-  bool udp() const;
-  void set_udp(bool value);
+  // int32 burden_thread_idx = 2;
+  void clear_burden_thread_idx();
+  static const int kBurdenThreadIdxFieldNumber = 2;
+  ::google::protobuf::int32 burden_thread_idx() const;
+  void set_burden_thread_idx(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo9Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::int32 a_;
-  bool udp_;
+  ::google::protobuf::int32 burden_thread_idx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_ss_5fmsg_2eproto::TableStruct;
 };
@@ -3196,18 +3196,18 @@ inline void Demo2Req::set_a(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo2Req.a)
 }
 
-// bool udp = 2;
-inline void Demo2Req::clear_udp() {
-  udp_ = false;
+// int32 proto_tcp_thread_idx = 2;
+inline void Demo2Req::clear_proto_tcp_thread_idx() {
+  proto_tcp_thread_idx_ = 0;
 }
-inline bool Demo2Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo2Req.udp)
-  return udp_;
+inline ::google::protobuf::int32 Demo2Req::proto_tcp_thread_idx() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo2Req.proto_tcp_thread_idx)
+  return proto_tcp_thread_idx_;
 }
-inline void Demo2Req::set_udp(bool value) {
+inline void Demo2Req::set_proto_tcp_thread_idx(::google::protobuf::int32 value) {
   
-  udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo2Req.udp)
+  proto_tcp_thread_idx_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo2Req.proto_tcp_thread_idx)
 }
 
 // -------------------------------------------------------------------
@@ -3568,18 +3568,18 @@ inline void Demo5Req::set_a(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo5Req.a)
 }
 
-// bool udp = 2;
-inline void Demo5Req::clear_udp() {
-  udp_ = false;
+// int32 work_thread_idx = 2;
+inline void Demo5Req::clear_work_thread_idx() {
+  work_thread_idx_ = 0;
 }
-inline bool Demo5Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo5Req.udp)
-  return udp_;
+inline ::google::protobuf::int32 Demo5Req::work_thread_idx() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo5Req.work_thread_idx)
+  return work_thread_idx_;
 }
-inline void Demo5Req::set_udp(bool value) {
+inline void Demo5Req::set_work_thread_idx(::google::protobuf::int32 value) {
   
-  udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo5Req.udp)
+  work_thread_idx_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo5Req.work_thread_idx)
 }
 
 // -------------------------------------------------------------------
@@ -3904,18 +3904,18 @@ inline void Demo9Req::set_a(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo9Req.a)
 }
 
-// bool udp = 2;
-inline void Demo9Req::clear_udp() {
-  udp_ = false;
+// int32 burden_thread_idx = 2;
+inline void Demo9Req::clear_burden_thread_idx() {
+  burden_thread_idx_ = 0;
 }
-inline bool Demo9Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo9Req.udp)
-  return udp_;
+inline ::google::protobuf::int32 Demo9Req::burden_thread_idx() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo9Req.burden_thread_idx)
+  return burden_thread_idx_;
 }
-inline void Demo9Req::set_udp(bool value) {
+inline void Demo9Req::set_burden_thread_idx(::google::protobuf::int32 value) {
   
-  udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo9Req.udp)
+  burden_thread_idx_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo9Req.burden_thread_idx)
 }
 
 // -------------------------------------------------------------------

@@ -161,9 +161,9 @@ public final class SsMsg {
     int getA();
 
     /**
-     * <code>bool udp = 2;</code>
+     * <code>int32 proto_tcp_thread_idx = 2;</code>
      */
-    boolean getUdp();
+    int getProtoTcpThreadIdx();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo2Req}
@@ -179,7 +179,7 @@ public final class SsMsg {
     }
     private Demo2Req() {
       a_ = 0;
-      udp_ = false;
+      protoTcpThreadIdx_ = 0;
     }
 
     @java.lang.Override
@@ -213,7 +213,7 @@ public final class SsMsg {
             }
             case 16: {
 
-              udp_ = input.readBool();
+              protoTcpThreadIdx_ = input.readInt32();
               break;
             }
             default: {
@@ -257,13 +257,13 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
+    public static final int PROTO_TCP_THREAD_IDX_FIELD_NUMBER = 2;
+    private int protoTcpThreadIdx_;
     /**
-     * <code>bool udp = 2;</code>
+     * <code>int32 proto_tcp_thread_idx = 2;</code>
      */
-    public boolean getUdp() {
-      return udp_;
+    public int getProtoTcpThreadIdx() {
+      return protoTcpThreadIdx_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -283,8 +283,8 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
+      if (protoTcpThreadIdx_ != 0) {
+        output.writeInt32(2, protoTcpThreadIdx_);
       }
       unknownFields.writeTo(output);
     }
@@ -299,9 +299,9 @@ public final class SsMsg {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
       }
-      if (udp_ != false) {
+      if (protoTcpThreadIdx_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
+          .computeInt32Size(2, protoTcpThreadIdx_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -321,8 +321,8 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
+      result = result && (getProtoTcpThreadIdx()
+          == other.getProtoTcpThreadIdx());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -336,9 +336,8 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
+      hash = (37 * hash) + PROTO_TCP_THREAD_IDX_FIELD_NUMBER;
+      hash = (53 * hash) + getProtoTcpThreadIdx();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -474,7 +473,7 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
+        protoTcpThreadIdx_ = 0;
 
         return this;
       }
@@ -503,7 +502,7 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo2Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo2Req result = new com.moon.demo.ss.SsMsg.Demo2Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
+        result.protoTcpThreadIdx_ = protoTcpThreadIdx_;
         onBuilt();
         return result;
       }
@@ -555,8 +554,8 @@ public final class SsMsg {
         if (other.getA() != 0) {
           setA(other.getA());
         }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
+        if (other.getProtoTcpThreadIdx() != 0) {
+          setProtoTcpThreadIdx(other.getProtoTcpThreadIdx());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -613,28 +612,28 @@ public final class SsMsg {
         return this;
       }
 
-      private boolean udp_ ;
+      private int protoTcpThreadIdx_ ;
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 proto_tcp_thread_idx = 2;</code>
        */
-      public boolean getUdp() {
-        return udp_;
+      public int getProtoTcpThreadIdx() {
+        return protoTcpThreadIdx_;
       }
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 proto_tcp_thread_idx = 2;</code>
        */
-      public Builder setUdp(boolean value) {
+      public Builder setProtoTcpThreadIdx(int value) {
         
-        udp_ = value;
+        protoTcpThreadIdx_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 proto_tcp_thread_idx = 2;</code>
        */
-      public Builder clearUdp() {
+      public Builder clearProtoTcpThreadIdx() {
         
-        udp_ = false;
+        protoTcpThreadIdx_ = 0;
         onChanged();
         return this;
       }
@@ -3919,9 +3918,9 @@ public final class SsMsg {
     int getA();
 
     /**
-     * <code>bool udp = 2;</code>
+     * <code>int32 work_thread_idx = 2;</code>
      */
-    boolean getUdp();
+    int getWorkThreadIdx();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo5Req}
@@ -3937,7 +3936,7 @@ public final class SsMsg {
     }
     private Demo5Req() {
       a_ = 0;
-      udp_ = false;
+      workThreadIdx_ = 0;
     }
 
     @java.lang.Override
@@ -3971,7 +3970,7 @@ public final class SsMsg {
             }
             case 16: {
 
-              udp_ = input.readBool();
+              workThreadIdx_ = input.readInt32();
               break;
             }
             default: {
@@ -4015,13 +4014,13 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
+    public static final int WORK_THREAD_IDX_FIELD_NUMBER = 2;
+    private int workThreadIdx_;
     /**
-     * <code>bool udp = 2;</code>
+     * <code>int32 work_thread_idx = 2;</code>
      */
-    public boolean getUdp() {
-      return udp_;
+    public int getWorkThreadIdx() {
+      return workThreadIdx_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4041,8 +4040,8 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
+      if (workThreadIdx_ != 0) {
+        output.writeInt32(2, workThreadIdx_);
       }
       unknownFields.writeTo(output);
     }
@@ -4057,9 +4056,9 @@ public final class SsMsg {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
       }
-      if (udp_ != false) {
+      if (workThreadIdx_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
+          .computeInt32Size(2, workThreadIdx_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4079,8 +4078,8 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
+      result = result && (getWorkThreadIdx()
+          == other.getWorkThreadIdx());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4094,9 +4093,8 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
+      hash = (37 * hash) + WORK_THREAD_IDX_FIELD_NUMBER;
+      hash = (53 * hash) + getWorkThreadIdx();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4232,7 +4230,7 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
+        workThreadIdx_ = 0;
 
         return this;
       }
@@ -4261,7 +4259,7 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo5Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo5Req result = new com.moon.demo.ss.SsMsg.Demo5Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
+        result.workThreadIdx_ = workThreadIdx_;
         onBuilt();
         return result;
       }
@@ -4313,8 +4311,8 @@ public final class SsMsg {
         if (other.getA() != 0) {
           setA(other.getA());
         }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
+        if (other.getWorkThreadIdx() != 0) {
+          setWorkThreadIdx(other.getWorkThreadIdx());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4371,28 +4369,28 @@ public final class SsMsg {
         return this;
       }
 
-      private boolean udp_ ;
+      private int workThreadIdx_ ;
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 work_thread_idx = 2;</code>
        */
-      public boolean getUdp() {
-        return udp_;
+      public int getWorkThreadIdx() {
+        return workThreadIdx_;
       }
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 work_thread_idx = 2;</code>
        */
-      public Builder setUdp(boolean value) {
+      public Builder setWorkThreadIdx(int value) {
         
-        udp_ = value;
+        workThreadIdx_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 work_thread_idx = 2;</code>
        */
-      public Builder clearUdp() {
+      public Builder clearWorkThreadIdx() {
         
-        udp_ = false;
+        workThreadIdx_ = 0;
         onChanged();
         return this;
       }
@@ -8507,9 +8505,9 @@ public final class SsMsg {
     int getA();
 
     /**
-     * <code>bool udp = 2;</code>
+     * <code>int32 burden_thread_idx = 2;</code>
      */
-    boolean getUdp();
+    int getBurdenThreadIdx();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo9Req}
@@ -8525,7 +8523,7 @@ public final class SsMsg {
     }
     private Demo9Req() {
       a_ = 0;
-      udp_ = false;
+      burdenThreadIdx_ = 0;
     }
 
     @java.lang.Override
@@ -8559,7 +8557,7 @@ public final class SsMsg {
             }
             case 16: {
 
-              udp_ = input.readBool();
+              burdenThreadIdx_ = input.readInt32();
               break;
             }
             default: {
@@ -8603,13 +8601,13 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
+    public static final int BURDEN_THREAD_IDX_FIELD_NUMBER = 2;
+    private int burdenThreadIdx_;
     /**
-     * <code>bool udp = 2;</code>
+     * <code>int32 burden_thread_idx = 2;</code>
      */
-    public boolean getUdp() {
-      return udp_;
+    public int getBurdenThreadIdx() {
+      return burdenThreadIdx_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8629,8 +8627,8 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
+      if (burdenThreadIdx_ != 0) {
+        output.writeInt32(2, burdenThreadIdx_);
       }
       unknownFields.writeTo(output);
     }
@@ -8645,9 +8643,9 @@ public final class SsMsg {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
       }
-      if (udp_ != false) {
+      if (burdenThreadIdx_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
+          .computeInt32Size(2, burdenThreadIdx_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8667,8 +8665,8 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
+      result = result && (getBurdenThreadIdx()
+          == other.getBurdenThreadIdx());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8682,9 +8680,8 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
+      hash = (37 * hash) + BURDEN_THREAD_IDX_FIELD_NUMBER;
+      hash = (53 * hash) + getBurdenThreadIdx();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8820,7 +8817,7 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
+        burdenThreadIdx_ = 0;
 
         return this;
       }
@@ -8849,7 +8846,7 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo9Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo9Req result = new com.moon.demo.ss.SsMsg.Demo9Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
+        result.burdenThreadIdx_ = burdenThreadIdx_;
         onBuilt();
         return result;
       }
@@ -8901,8 +8898,8 @@ public final class SsMsg {
         if (other.getA() != 0) {
           setA(other.getA());
         }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
+        if (other.getBurdenThreadIdx() != 0) {
+          setBurdenThreadIdx(other.getBurdenThreadIdx());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8959,28 +8956,28 @@ public final class SsMsg {
         return this;
       }
 
-      private boolean udp_ ;
+      private int burdenThreadIdx_ ;
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 burden_thread_idx = 2;</code>
        */
-      public boolean getUdp() {
-        return udp_;
+      public int getBurdenThreadIdx() {
+        return burdenThreadIdx_;
       }
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 burden_thread_idx = 2;</code>
        */
-      public Builder setUdp(boolean value) {
+      public Builder setBurdenThreadIdx(int value) {
         
-        udp_ = value;
+        burdenThreadIdx_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool udp = 2;</code>
+       * <code>int32 burden_thread_idx = 2;</code>
        */
-      public Builder clearUdp() {
+      public Builder clearBurdenThreadIdx() {
         
-        udp_ = false;
+        burdenThreadIdx_ = 0;
         onChanged();
         return this;
       }
@@ -15805,41 +15802,42 @@ public final class SsMsg {
   static {
     java.lang.String[] descriptorData = {
       "\n\014ss_msg.proto\022\020com.moon.demo.ss\032\014common" +
-      ".proto\"\"\n\010Demo2Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001" +
-      "(\010\"2\n\010Demo2Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.mo" +
-      "on.demo.ErrCtx\"\"\n\010Demo3Req\022\t\n\001a\030\001 \001(\005\022\013\n" +
-      "\003udp\030\002 \001(\010\"2\n\010Demo3Rsp\022&\n\007err_ctx\030\001 \001(\0132" +
-      "\025.com.moon.demo.ErrCtx\"a\n\010Demo4Req\022\t\n\001a\030" +
-      "\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)" +
-      "\n\004flag\030\005 \001(\0162\033.com.moon.demo.ss.Demo4Fla" +
-      "g\"2\n\010Demo4Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo" +
-      "n.demo.ErrCtx\"\"\n\010Demo5Req\022\t\n\001a\030\001 \001(\005\022\013\n\003" +
-      "udp\030\002 \001(\010\"2\n\010Demo5Rsp\022&\n\007err_ctx\030\001 \001(\0132\025" +
-      ".com.moon.demo.ErrCtx\"\"\n\010Demo6Req\022\t\n\001a\030\001" +
-      " \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo6Rsp\022&\n\007err_ctx" +
-      "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo7Re" +
-      "q\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo7Rsp\022&\n" +
-      "\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n" +
-      "\010Demo8Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Dem" +
-      "o8Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.E" +
-      "rrCtx\"\"\n\010Demo9Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(" +
-      "\010\"2\n\010Demo9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo" +
-      "n.demo.ErrCtx\"#\n\tDemo10Req\022\t\n\001a\030\001 \001(\005\022\013\n" +
-      "\003udp\030\002 \001(\010\"3\n\tDemo10Rsp\022&\n\007err_ctx\030\001 \001(\013" +
-      "2\025.com.moon.demo.ErrCtx\"#\n\tDemo20Req\022\t\n\001" +
-      "a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo20Rsp\022&\n\007err" +
-      "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"#\n\tDem" +
-      "o50Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo50" +
-      "Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Err" +
-      "Ctx\"#\n\tDemo90Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010" +
-      "\"3\n\tDemo90Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo" +
-      "n.demo.ErrCtx\"\025\n\010Demo2Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010" +
-      "Demo4Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030\001 \001" +
-      "(\005*\265\001\n\tDemo4Flag\022\023\n\017DEMO_4_FLAG_MIN\020\000\022\032\n" +
-      "\026DEMO_4_FLAG_IO_TO_WORK\020\000\022\034\n\030DEMO_4_FLAG" +
-      "_WORK_TO_WORK\020\001\022\036\n\032DEMO_4_FLAG_WORK_TO_B" +
-      "URDEN\020\002\022 \n\034DEMO_4_FLAG_BURDEN_TO_BURDEN\020" +
-      "\003\022\023\n\017DEMO_4_FLAG_MAX\020\004\032\002\020\001b\006proto3"
+      ".proto\"3\n\010Demo2Req\022\t\n\001a\030\001 \001(\005\022\034\n\024proto_t" +
+      "cp_thread_idx\030\002 \001(\005\"2\n\010Demo2Rsp\022&\n\007err_c" +
+      "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo3" +
+      "Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo3Rsp\022" +
+      "&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"" +
+      "a\n\010Demo4Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003" +
+      " \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon" +
+      ".demo.ss.Demo4Flag\"2\n\010Demo4Rsp\022&\n\007err_ct" +
+      "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\".\n\010Demo5R" +
+      "eq\022\t\n\001a\030\001 \001(\005\022\027\n\017work_thread_idx\030\002 \001(\005\"2" +
+      "\n\010Demo5Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d" +
+      "emo.ErrCtx\"\"\n\010Demo6Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp" +
+      "\030\002 \001(\010\"2\n\010Demo6Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.co" +
+      "m.moon.demo.ErrCtx\"\"\n\010Demo7Req\022\t\n\001a\030\001 \001(" +
+      "\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo7Rsp\022&\n\007err_ctx\030\001 " +
+      "\001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo8Req\022\t" +
+      "\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo8Rsp\022&\n\007er" +
+      "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"0\n\010De" +
+      "mo9Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread_idx\030\002" +
+      " \001(\005\"2\n\010Demo9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com." +
+      "moon.demo.ErrCtx\"#\n\tDemo10Req\022\t\n\001a\030\001 \001(\005" +
+      "\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo10Rsp\022&\n\007err_ctx\030\001 " +
+      "\001(\0132\025.com.moon.demo.ErrCtx\"#\n\tDemo20Req\022" +
+      "\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo20Rsp\022&\n\007" +
+      "err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"#\n\t" +
+      "Demo50Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDem" +
+      "o50Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo." +
+      "ErrCtx\"#\n\tDemo90Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 " +
+      "\001(\010\"3\n\tDemo90Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com." +
+      "moon.demo.ErrCtx\"\025\n\010Demo2Nfy\022\t\n\001a\030\001 \001(\005\"" +
+      "\025\n\010Demo4Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030" +
+      "\001 \001(\005*\265\001\n\tDemo4Flag\022\023\n\017DEMO_4_FLAG_MIN\020\000" +
+      "\022\032\n\026DEMO_4_FLAG_IO_TO_WORK\020\000\022\034\n\030DEMO_4_F" +
+      "LAG_WORK_TO_WORK\020\001\022\036\n\032DEMO_4_FLAG_WORK_T" +
+      "O_BURDEN\020\002\022 \n\034DEMO_4_FLAG_BURDEN_TO_BURD" +
+      "EN\020\003\022\023\n\017DEMO_4_FLAG_MAX\020\004\032\002\020\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15859,7 +15857,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo2Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo2Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", "ProtoTcpThreadIdx", });
     internal_static_com_moon_demo_ss_Demo2Rsp_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_moon_demo_ss_Demo2Rsp_fieldAccessorTable = new
@@ -15895,7 +15893,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo5Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo5Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", "WorkThreadIdx", });
     internal_static_com_moon_demo_ss_Demo5Rsp_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_com_moon_demo_ss_Demo5Rsp_fieldAccessorTable = new
@@ -15943,7 +15941,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo9Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo9Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", "BurdenThreadIdx", });
     internal_static_com_moon_demo_ss_Demo9Rsp_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_com_moon_demo_ss_Demo9Rsp_fieldAccessorTable = new

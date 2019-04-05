@@ -25,7 +25,7 @@ Demo20ReqHandler::~Demo20ReqHandler()
 
 void Demo20ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo20ReqHandler::OnMsg");
+    LOG_TRACE("tcp::proto::Demo20ReqHandler::OnMsg");
 
     ss::Demo20Req demo20_req;
     if (ParseProtobufMsg(&demo20_req, msg_body, msg_body_len) != 0)
@@ -34,7 +34,7 @@ void Demo20ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& 
         return;
     }
 
-    // TODO
+    LOG_TRACE(demo20_req.a());
 }
 }
 }

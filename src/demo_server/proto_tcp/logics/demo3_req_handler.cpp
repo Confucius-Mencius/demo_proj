@@ -25,7 +25,7 @@ Demo3ReqHandler::~Demo3ReqHandler()
 
 void Demo3ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo3ReqHandler::OnMsg");
+    LOG_TRACE("tcp::proto::Demo3ReqHandler::OnMsg");
 
     ss::Demo3Req demo3_req;
     if (ParseProtobufMsg(&demo3_req, msg_body, msg_body_len) != 0)
@@ -34,7 +34,7 @@ void Demo3ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    // TODO
+    LOG_TRACE(demo3_req.a());
 }
 }
 }

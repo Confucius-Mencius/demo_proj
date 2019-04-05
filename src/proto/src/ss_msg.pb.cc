@@ -596,7 +596,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo2Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo2Req, udp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo2Req, proto_tcp_thread_idx_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo2Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -638,7 +638,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo5Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo5Req, udp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo5Req, work_thread_idx_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo5Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -690,7 +690,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo9Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo9Req, udp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo9Req, burden_thread_idx_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo9Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -850,44 +850,45 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\014ss_msg.proto\022\020com.moon.demo.ss\032\014common"
-      ".proto\"\"\n\010Demo2Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001"
-      "(\010\"2\n\010Demo2Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.mo"
-      "on.demo.ErrCtx\"\"\n\010Demo3Req\022\t\n\001a\030\001 \001(\005\022\013\n"
-      "\003udp\030\002 \001(\010\"2\n\010Demo3Rsp\022&\n\007err_ctx\030\001 \001(\0132"
-      "\025.com.moon.demo.ErrCtx\"a\n\010Demo4Req\022\t\n\001a\030"
-      "\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)"
-      "\n\004flag\030\005 \001(\0162\033.com.moon.demo.ss.Demo4Fla"
-      "g\"2\n\010Demo4Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo"
-      "n.demo.ErrCtx\"\"\n\010Demo5Req\022\t\n\001a\030\001 \001(\005\022\013\n\003"
-      "udp\030\002 \001(\010\"2\n\010Demo5Rsp\022&\n\007err_ctx\030\001 \001(\0132\025"
-      ".com.moon.demo.ErrCtx\"\"\n\010Demo6Req\022\t\n\001a\030\001"
-      " \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo6Rsp\022&\n\007err_ctx"
-      "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo7Re"
-      "q\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo7Rsp\022&\n"
-      "\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n"
-      "\010Demo8Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Dem"
-      "o8Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.E"
-      "rrCtx\"\"\n\010Demo9Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001("
-      "\010\"2\n\010Demo9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo"
-      "n.demo.ErrCtx\"#\n\tDemo10Req\022\t\n\001a\030\001 \001(\005\022\013\n"
-      "\003udp\030\002 \001(\010\"3\n\tDemo10Rsp\022&\n\007err_ctx\030\001 \001(\013"
-      "2\025.com.moon.demo.ErrCtx\"#\n\tDemo20Req\022\t\n\001"
-      "a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo20Rsp\022&\n\007err"
-      "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"#\n\tDem"
-      "o50Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo50"
-      "Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Err"
-      "Ctx\"#\n\tDemo90Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010"
-      "\"3\n\tDemo90Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo"
-      "n.demo.ErrCtx\"\025\n\010Demo2Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010"
-      "Demo4Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030\001 \001"
-      "(\005*\265\001\n\tDemo4Flag\022\023\n\017DEMO_4_FLAG_MIN\020\000\022\032\n"
-      "\026DEMO_4_FLAG_IO_TO_WORK\020\000\022\034\n\030DEMO_4_FLAG"
-      "_WORK_TO_WORK\020\001\022\036\n\032DEMO_4_FLAG_WORK_TO_B"
-      "URDEN\020\002\022 \n\034DEMO_4_FLAG_BURDEN_TO_BURDEN\020"
-      "\003\022\023\n\017DEMO_4_FLAG_MAX\020\004\032\002\020\001b\006proto3"
+      ".proto\"3\n\010Demo2Req\022\t\n\001a\030\001 \001(\005\022\034\n\024proto_t"
+      "cp_thread_idx\030\002 \001(\005\"2\n\010Demo2Rsp\022&\n\007err_c"
+      "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo3"
+      "Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo3Rsp\022"
+      "&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\""
+      "a\n\010Demo4Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003"
+      " \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon"
+      ".demo.ss.Demo4Flag\"2\n\010Demo4Rsp\022&\n\007err_ct"
+      "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\".\n\010Demo5R"
+      "eq\022\t\n\001a\030\001 \001(\005\022\027\n\017work_thread_idx\030\002 \001(\005\"2"
+      "\n\010Demo5Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
+      "emo.ErrCtx\"\"\n\010Demo6Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp"
+      "\030\002 \001(\010\"2\n\010Demo6Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.co"
+      "m.moon.demo.ErrCtx\"\"\n\010Demo7Req\022\t\n\001a\030\001 \001("
+      "\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo7Rsp\022&\n\007err_ctx\030\001 "
+      "\001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo8Req\022\t"
+      "\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo8Rsp\022&\n\007er"
+      "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"0\n\010De"
+      "mo9Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread_idx\030\002"
+      " \001(\005\"2\n\010Demo9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com."
+      "moon.demo.ErrCtx\"#\n\tDemo10Req\022\t\n\001a\030\001 \001(\005"
+      "\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo10Rsp\022&\n\007err_ctx\030\001 "
+      "\001(\0132\025.com.moon.demo.ErrCtx\"#\n\tDemo20Req\022"
+      "\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo20Rsp\022&\n\007"
+      "err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"#\n\t"
+      "Demo50Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDem"
+      "o50Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo."
+      "ErrCtx\"#\n\tDemo90Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 "
+      "\001(\010\"3\n\tDemo90Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com."
+      "moon.demo.ErrCtx\"\025\n\010Demo2Nfy\022\t\n\001a\030\001 \001(\005\""
+      "\025\n\010Demo4Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030"
+      "\001 \001(\005*\265\001\n\tDemo4Flag\022\023\n\017DEMO_4_FLAG_MIN\020\000"
+      "\022\032\n\026DEMO_4_FLAG_IO_TO_WORK\020\000\022\034\n\030DEMO_4_F"
+      "LAG_WORK_TO_WORK\020\001\022\036\n\032DEMO_4_FLAG_WORK_T"
+      "O_BURDEN\020\002\022 \n\034DEMO_4_FLAG_BURDEN_TO_BURD"
+      "EN\020\003\022\023\n\017DEMO_4_FLAG_MAX\020\004\032\002\020\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1434);
+      descriptor, 1477);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ss_msg.proto", &protobuf_RegisterTypes);
   ::protobuf_common_2eproto::AddDescriptors();
@@ -932,7 +933,7 @@ void Demo2Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo2Req::kAFieldNumber;
-const int Demo2Req::kUdpFieldNumber;
+const int Demo2Req::kProtoTcpThreadIdxFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo2Req::Demo2Req()
@@ -947,15 +948,15 @@ Demo2Req::Demo2Req(const Demo2Req& from)
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+    static_cast<size_t>(reinterpret_cast<char*>(&proto_tcp_thread_idx_) -
+    reinterpret_cast<char*>(&a_)) + sizeof(proto_tcp_thread_idx_));
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo2Req)
 }
 
 void Demo2Req::SharedCtor() {
   ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+      reinterpret_cast<char*>(&proto_tcp_thread_idx_) -
+      reinterpret_cast<char*>(&a_)) + sizeof(proto_tcp_thread_idx_));
 }
 
 Demo2Req::~Demo2Req() {
@@ -987,8 +988,8 @@ void Demo2Req::Clear() {
   (void) cached_has_bits;
 
   ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+      reinterpret_cast<char*>(&proto_tcp_thread_idx_) -
+      reinterpret_cast<char*>(&a_)) + sizeof(proto_tcp_thread_idx_));
   _internal_metadata_.Clear();
 }
 
@@ -1016,14 +1017,14 @@ bool Demo2Req::MergePartialFromCodedStream(
         break;
       }
 
-      // bool udp = 2;
+      // int32 proto_tcp_thread_idx = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &proto_tcp_thread_idx_)));
         } else {
           goto handle_unusual;
         }
@@ -1061,9 +1062,9 @@ void Demo2Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
+  // int32 proto_tcp_thread_idx = 2;
+  if (this->proto_tcp_thread_idx() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->proto_tcp_thread_idx(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1085,9 +1086,9 @@ void Demo2Req::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
+  // int32 proto_tcp_thread_idx = 2;
+  if (this->proto_tcp_thread_idx() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->proto_tcp_thread_idx(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1114,9 +1115,11 @@ size_t Demo2Req::ByteSizeLong() const {
         this->a());
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
+  // int32 proto_tcp_thread_idx = 2;
+  if (this->proto_tcp_thread_idx() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->proto_tcp_thread_idx());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -1149,8 +1152,8 @@ void Demo2Req::MergeFrom(const Demo2Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
+  if (from.proto_tcp_thread_idx() != 0) {
+    set_proto_tcp_thread_idx(from.proto_tcp_thread_idx());
   }
 }
 
@@ -1179,7 +1182,7 @@ void Demo2Req::Swap(Demo2Req* other) {
 void Demo2Req::InternalSwap(Demo2Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
+  swap(proto_tcp_thread_idx_, other->proto_tcp_thread_idx_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -2585,7 +2588,7 @@ void Demo5Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo5Req::kAFieldNumber;
-const int Demo5Req::kUdpFieldNumber;
+const int Demo5Req::kWorkThreadIdxFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo5Req::Demo5Req()
@@ -2600,15 +2603,15 @@ Demo5Req::Demo5Req(const Demo5Req& from)
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+    static_cast<size_t>(reinterpret_cast<char*>(&work_thread_idx_) -
+    reinterpret_cast<char*>(&a_)) + sizeof(work_thread_idx_));
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo5Req)
 }
 
 void Demo5Req::SharedCtor() {
   ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+      reinterpret_cast<char*>(&work_thread_idx_) -
+      reinterpret_cast<char*>(&a_)) + sizeof(work_thread_idx_));
 }
 
 Demo5Req::~Demo5Req() {
@@ -2640,8 +2643,8 @@ void Demo5Req::Clear() {
   (void) cached_has_bits;
 
   ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+      reinterpret_cast<char*>(&work_thread_idx_) -
+      reinterpret_cast<char*>(&a_)) + sizeof(work_thread_idx_));
   _internal_metadata_.Clear();
 }
 
@@ -2669,14 +2672,14 @@ bool Demo5Req::MergePartialFromCodedStream(
         break;
       }
 
-      // bool udp = 2;
+      // int32 work_thread_idx = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &work_thread_idx_)));
         } else {
           goto handle_unusual;
         }
@@ -2714,9 +2717,9 @@ void Demo5Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
+  // int32 work_thread_idx = 2;
+  if (this->work_thread_idx() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->work_thread_idx(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2738,9 +2741,9 @@ void Demo5Req::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
+  // int32 work_thread_idx = 2;
+  if (this->work_thread_idx() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->work_thread_idx(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2767,9 +2770,11 @@ size_t Demo5Req::ByteSizeLong() const {
         this->a());
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
+  // int32 work_thread_idx = 2;
+  if (this->work_thread_idx() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->work_thread_idx());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -2802,8 +2807,8 @@ void Demo5Req::MergeFrom(const Demo5Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
+  if (from.work_thread_idx() != 0) {
+    set_work_thread_idx(from.work_thread_idx());
   }
 }
 
@@ -2832,7 +2837,7 @@ void Demo5Req::Swap(Demo5Req* other) {
 void Demo5Req::InternalSwap(Demo5Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
+  swap(work_thread_idx_, other->work_thread_idx_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -4597,7 +4602,7 @@ void Demo9Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo9Req::kAFieldNumber;
-const int Demo9Req::kUdpFieldNumber;
+const int Demo9Req::kBurdenThreadIdxFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo9Req::Demo9Req()
@@ -4612,15 +4617,15 @@ Demo9Req::Demo9Req(const Demo9Req& from)
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+    static_cast<size_t>(reinterpret_cast<char*>(&burden_thread_idx_) -
+    reinterpret_cast<char*>(&a_)) + sizeof(burden_thread_idx_));
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo9Req)
 }
 
 void Demo9Req::SharedCtor() {
   ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+      reinterpret_cast<char*>(&burden_thread_idx_) -
+      reinterpret_cast<char*>(&a_)) + sizeof(burden_thread_idx_));
 }
 
 Demo9Req::~Demo9Req() {
@@ -4652,8 +4657,8 @@ void Demo9Req::Clear() {
   (void) cached_has_bits;
 
   ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+      reinterpret_cast<char*>(&burden_thread_idx_) -
+      reinterpret_cast<char*>(&a_)) + sizeof(burden_thread_idx_));
   _internal_metadata_.Clear();
 }
 
@@ -4681,14 +4686,14 @@ bool Demo9Req::MergePartialFromCodedStream(
         break;
       }
 
-      // bool udp = 2;
+      // int32 burden_thread_idx = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &burden_thread_idx_)));
         } else {
           goto handle_unusual;
         }
@@ -4726,9 +4731,9 @@ void Demo9Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
+  // int32 burden_thread_idx = 2;
+  if (this->burden_thread_idx() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->burden_thread_idx(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4750,9 +4755,9 @@ void Demo9Req::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
+  // int32 burden_thread_idx = 2;
+  if (this->burden_thread_idx() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->burden_thread_idx(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4779,9 +4784,11 @@ size_t Demo9Req::ByteSizeLong() const {
         this->a());
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
+  // int32 burden_thread_idx = 2;
+  if (this->burden_thread_idx() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->burden_thread_idx());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -4814,8 +4821,8 @@ void Demo9Req::MergeFrom(const Demo9Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
+  if (from.burden_thread_idx() != 0) {
+    set_burden_thread_idx(from.burden_thread_idx());
   }
 }
 
@@ -4844,7 +4851,7 @@ void Demo9Req::Swap(Demo9Req* other) {
 void Demo9Req::InternalSwap(Demo9Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
+  swap(burden_thread_idx_, other->burden_thread_idx_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 

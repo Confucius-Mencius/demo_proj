@@ -5,7 +5,7 @@ import "common.proto";
 
 message Demo2Req {
     int32 a = 1;
-    bool udp = 2;
+    int32 proto_tcp_thread_idx = 2;
 }
 
 message Demo2Rsp {
@@ -45,7 +45,7 @@ message Demo4Rsp {
 
 message Demo5Req {
     int32 a = 1;
-    bool udp = 2;
+    int32 work_thread_idx = 2;
 }
 
 message Demo5Rsp {
@@ -82,7 +82,7 @@ message Demo8Rsp {
 
 message Demo9Req {
     int32 a = 1;
-    bool udp = 2;
+    int32 burden_thread_idx = 2;
 }
 
 message Demo9Rsp {

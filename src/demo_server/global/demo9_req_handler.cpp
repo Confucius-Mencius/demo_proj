@@ -23,7 +23,7 @@ Demo9ReqHandler::~Demo9ReqHandler()
 
 void Demo9ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo9ReqHandler::OnMsg");
+    LOG_TRACE("global::Demo9ReqHandler::OnMsg");
 
     ss::Demo9Req demo9_req;
     if (ParseProtobufMsg(&demo9_req, msg_body, msg_body_len) != 0)
