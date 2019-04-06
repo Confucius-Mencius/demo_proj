@@ -39,7 +39,7 @@ namespace protobuf_cs_5fmsg_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[6];
+  static const ::google::protobuf::internal::ParseTable schema[8];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -65,6 +65,12 @@ extern Demo1ReqDefaultTypeInternal _Demo1Req_default_instance_;
 class Demo1Rsp;
 class Demo1RspDefaultTypeInternal;
 extern Demo1RspDefaultTypeInternal _Demo1Rsp_default_instance_;
+class Demo200Req;
+class Demo200ReqDefaultTypeInternal;
+extern Demo200ReqDefaultTypeInternal _Demo200Req_default_instance_;
+class Demo200Rsp;
+class Demo200RspDefaultTypeInternal;
+extern Demo200RspDefaultTypeInternal _Demo200Rsp_default_instance_;
 class Demo3Nfy;
 class Demo3NfyDefaultTypeInternal;
 extern Demo3NfyDefaultTypeInternal _Demo3Nfy_default_instance_;
@@ -79,6 +85,8 @@ template<> ::com::moon::demo::cs::Demo100Rsp* Arena::CreateMaybeMessage<::com::m
 template<> ::com::moon::demo::cs::Demo1Nfy* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo1Nfy>(Arena*);
 template<> ::com::moon::demo::cs::Demo1Req* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo1Req>(Arena*);
 template<> ::com::moon::demo::cs::Demo1Rsp* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo1Rsp>(Arena*);
+template<> ::com::moon::demo::cs::Demo200Req* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo200Req>(Arena*);
+template<> ::com::moon::demo::cs::Demo200Rsp* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo200Rsp>(Arena*);
 template<> ::com::moon::demo::cs::Demo3Nfy* Arena::CreateMaybeMessage<::com::moon::demo::cs::Demo3Nfy>(Arena*);
 }  // namespace protobuf
 }  // namespace google
@@ -182,18 +190,11 @@ class Demo1Req : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // bool udp = 2;
-  void clear_udp();
-  static const int kUdpFieldNumber = 2;
-  bool udp() const;
-  void set_udp(bool value);
-
   // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo1Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::int32 a_;
-  bool udp_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
@@ -607,18 +608,11 @@ class Demo100Req : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // bool udp = 2;
-  void clear_udp();
-  static const int kUdpFieldNumber = 2;
-  bool udp() const;
-  void set_udp(bool value);
-
   // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo100Req)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::int32 a_;
-  bool udp_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
@@ -731,6 +725,218 @@ class Demo100Rsp : public ::google::protobuf::Message /* @@protoc_insertion_poin
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
 };
+// -------------------------------------------------------------------
+
+class Demo200Req : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo200Req) */ {
+ public:
+  Demo200Req();
+  virtual ~Demo200Req();
+
+  Demo200Req(const Demo200Req& from);
+
+  inline Demo200Req& operator=(const Demo200Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo200Req(Demo200Req&& from) noexcept
+    : Demo200Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo200Req& operator=(Demo200Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo200Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo200Req* internal_default_instance() {
+    return reinterpret_cast<const Demo200Req*>(
+               &_Demo200Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  void Swap(Demo200Req* other);
+  friend void swap(Demo200Req& a, Demo200Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo200Req* New() const final {
+    return CreateMaybeMessage<Demo200Req>(NULL);
+  }
+
+  Demo200Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo200Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo200Req& from);
+  void MergeFrom(const Demo200Req& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo200Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo200Req)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Demo200Rsp : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.cs.Demo200Rsp) */ {
+ public:
+  Demo200Rsp();
+  virtual ~Demo200Rsp();
+
+  Demo200Rsp(const Demo200Rsp& from);
+
+  inline Demo200Rsp& operator=(const Demo200Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo200Rsp(Demo200Rsp&& from) noexcept
+    : Demo200Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo200Rsp& operator=(Demo200Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Demo200Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo200Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo200Rsp*>(
+               &_Demo200Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  void Swap(Demo200Rsp* other);
+  friend void swap(Demo200Rsp& a, Demo200Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo200Rsp* New() const final {
+    return CreateMaybeMessage<Demo200Rsp>(NULL);
+  }
+
+  Demo200Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo200Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo200Rsp& from);
+  void MergeFrom(const Demo200Rsp& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo200Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  private:
+  const ::com::moon::demo::ErrCtx& _internal_err_ctx() const;
+  public:
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo200Rsp)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_cs_5fmsg_2eproto::TableStruct;
+};
 // ===================================================================
 
 
@@ -754,20 +960,6 @@ inline void Demo1Req::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
   // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo1Req.a)
-}
-
-// bool udp = 2;
-inline void Demo1Req::clear_udp() {
-  udp_ = false;
-}
-inline bool Demo1Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo1Req.udp)
-  return udp_;
-}
-inline void Demo1Req::set_udp(bool value) {
-  
-  udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo1Req.udp)
 }
 
 // -------------------------------------------------------------------
@@ -876,20 +1068,6 @@ inline void Demo100Req::set_a(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo100Req.a)
 }
 
-// bool udp = 2;
-inline void Demo100Req::clear_udp() {
-  udp_ = false;
-}
-inline bool Demo100Req::udp() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo100Req.udp)
-  return udp_;
-}
-inline void Demo100Req::set_udp(bool value) {
-  
-  udp_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo100Req.udp)
-}
-
 // -------------------------------------------------------------------
 
 // Demo100Rsp
@@ -942,9 +1120,83 @@ inline void Demo100Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx
   // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo100Rsp.err_ctx)
 }
 
+// -------------------------------------------------------------------
+
+// Demo200Req
+
+// int32 a = 1;
+inline void Demo200Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo200Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo200Req.a)
+  return a_;
+}
+inline void Demo200Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.cs.Demo200Req.a)
+}
+
+// -------------------------------------------------------------------
+
+// Demo200Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo200Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != NULL;
+}
+inline const ::com::moon::demo::ErrCtx& Demo200Rsp::_internal_err_ctx() const {
+  return *err_ctx_;
+}
+inline const ::com::moon::demo::ErrCtx& Demo200Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.cs.Demo200Rsp.err_ctx)
+  return p != NULL ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo200Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.cs.Demo200Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = NULL;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo200Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == NULL) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.cs.Demo200Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo200Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.cs.Demo200Rsp.err_ctx)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

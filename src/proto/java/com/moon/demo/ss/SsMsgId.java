@@ -124,13 +124,13 @@ public final class SsMsgId {
      */
     MSG_ID_DEMO2_NFY(2024),
     /**
-     * <code>MSG_ID_DEMO4_NFY = 2025;</code>
+     * <code>MSG_ID_DEMO5_NFY = 2025;</code>
      */
-    MSG_ID_DEMO4_NFY(2025),
+    MSG_ID_DEMO5_NFY(2025),
     /**
-     * <code>MSG_ID_DEMO5_NFY = 2026;</code>
+     * <code>MSG_ID_DEMO9_NFY = 2026;</code>
      */
-    MSG_ID_DEMO5_NFY(2026),
+    MSG_ID_DEMO9_NFY(2026),
     UNRECOGNIZED(-1),
     ;
 
@@ -239,13 +239,13 @@ public final class SsMsgId {
      */
     public static final int MSG_ID_DEMO2_NFY_VALUE = 2024;
     /**
-     * <code>MSG_ID_DEMO4_NFY = 2025;</code>
+     * <code>MSG_ID_DEMO5_NFY = 2025;</code>
      */
-    public static final int MSG_ID_DEMO4_NFY_VALUE = 2025;
+    public static final int MSG_ID_DEMO5_NFY_VALUE = 2025;
     /**
-     * <code>MSG_ID_DEMO5_NFY = 2026;</code>
+     * <code>MSG_ID_DEMO9_NFY = 2026;</code>
      */
-    public static final int MSG_ID_DEMO5_NFY_VALUE = 2026;
+    public static final int MSG_ID_DEMO9_NFY_VALUE = 2026;
 
 
     public final int getNumber() {
@@ -292,8 +292,8 @@ public final class SsMsgId {
         case 2022: return MSG_ID_DEMO90_REQ;
         case 2023: return MSG_ID_DEMO90_RSP;
         case 2024: return MSG_ID_DEMO2_NFY;
-        case 2025: return MSG_ID_DEMO4_NFY;
-        case 2026: return MSG_ID_DEMO5_NFY;
+        case 2025: return MSG_ID_DEMO5_NFY;
+        case 2026: return MSG_ID_DEMO9_NFY;
         default: return null;
       }
     }
@@ -371,8 +371,8 @@ public final class SsMsgId {
       "_RSP\020\343\017\022\026\n\021MSG_ID_DEMO50_REQ\020\344\017\022\026\n\021MSG_I" +
       "D_DEMO50_RSP\020\345\017\022\026\n\021MSG_ID_DEMO90_REQ\020\346\017\022" +
       "\026\n\021MSG_ID_DEMO90_RSP\020\347\017\022\025\n\020MSG_ID_DEMO2_" +
-      "NFY\020\350\017\022\025\n\020MSG_ID_DEMO4_NFY\020\351\017\022\025\n\020MSG_ID_" +
-      "DEMO5_NFY\020\352\017b\006proto3"
+      "NFY\020\350\017\022\025\n\020MSG_ID_DEMO5_NFY\020\351\017\022\025\n\020MSG_ID_" +
+      "DEMO9_NFY\020\352\017b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

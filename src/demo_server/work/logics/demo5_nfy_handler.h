@@ -1,15 +1,15 @@
-#ifndef DEMO_SERVER_WORK_LOGICS_DEMO4_NFY_HANDLER_H_
-#define DEMO_SERVER_WORK_LOGICS_DEMO4_NFY_HANDLER_H_
+#ifndef DEMO_SERVER_WORK_LOGICS_DEMO5_NFY_HANDLER_H_
+#define DEMO_SERVER_WORK_LOGICS_DEMO5_NFY_HANDLER_H_
 
 #include "msg_handler.h"
 
 namespace work
 {
-class Demo4NfyHandler : public MsgHandler
+class Demo5NfyHandler : public MsgHandler
 {
 public:
-    Demo4NfyHandler();
-    virtual ~Demo4NfyHandler();
+    Demo5NfyHandler();
+    virtual ~Demo5NfyHandler();
 
     ///////////////////////// MsgHandlerInterface /////////////////////////
     ::proto::MsgID GetMsgID() override;
@@ -18,4 +18,4 @@ public:
 };
 }
 
-#endif // DEMO_SERVER_WORK_LOGICS_DEMO4_NFY_HANDLER_H_
+#endif // DEMO_SERVER_WORK_LOGICS_DEMO5_NFY_HANDLER_H_

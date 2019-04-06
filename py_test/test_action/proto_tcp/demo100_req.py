@@ -22,10 +22,6 @@ class Demo100Req(object):
     def __init__(self, client):
         self.client = client
 
-    # TODO
-    def set_xx(self, xx):
-        self.xx = xx
-
     def __make_demo100_req(self):
         demo100_req = cs_msg_pb2.Demo100Req()
         demo100_req.a = 100
@@ -43,19 +39,19 @@ class Demo100Req(object):
     def demo100(self):
         LOG_DEBUG('----- demo100_req -----')
 
-        msg_head = MsgHead()
-        msg_head.msg_id = cs_msg_id_pb2.MSG_ID_DEMO100_REQ
+        demo100_req_msg_head = MsgHead()
+        demo100_req_msg_head.msg_id = cs_msg_id_pb2.MSG_ID_DEMO100_REQ
 
         demo100_req = self.__make_demo100_req()
 
-        ret = self.client.send(msg_head, demo100_req.SerializeToString(), demo100_req.ByteSize(), conf.proto_tcp_do_checksum)
+        ret = self.client.send(demo100_req_msg_head, demo100_req.SerializeToString(), demo100_req.ByteSize(), conf.proto_tcp_do_checksum)
         if ret != 0:
             LOG_ERROR('failed to send to server %s' % self.client.server())
             return -1
 
-        rsp_msg_head = MsgHead()
+        demo100_rsp_msg_head = MsgHead()
 
-        ret, rsp_msg_head, rsp_msg_body = self.client.recv(conf.proto_tcp_do_checksum)
+        ret, demo100_rsp_msg_head, demo100_rsp_msg_body = self.client.recv(conf.proto_tcp_do_checksum)
         if ret != -1:
             LOG_ERROR('ret: %d' % ret)
             return -1

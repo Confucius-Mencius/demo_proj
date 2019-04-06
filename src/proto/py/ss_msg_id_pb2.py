@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='com.moon.demo.ss',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0fss_msg_id.proto\x12\x10\x63om.moon.demo.ss*\x8e\x05\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x15\n\x10MSG_ID_DEMO2_REQ\x10\xd0\x0f\x12\x15\n\x10MSG_ID_DEMO2_RSP\x10\xd1\x0f\x12\x15\n\x10MSG_ID_DEMO3_REQ\x10\xd2\x0f\x12\x15\n\x10MSG_ID_DEMO3_RSP\x10\xd3\x0f\x12\x15\n\x10MSG_ID_DEMO4_REQ\x10\xd4\x0f\x12\x15\n\x10MSG_ID_DEMO4_RSP\x10\xd5\x0f\x12\x15\n\x10MSG_ID_DEMO5_REQ\x10\xd6\x0f\x12\x15\n\x10MSG_ID_DEMO5_RSP\x10\xd7\x0f\x12\x15\n\x10MSG_ID_DEMO6_REQ\x10\xd8\x0f\x12\x15\n\x10MSG_ID_DEMO6_RSP\x10\xd9\x0f\x12\x15\n\x10MSG_ID_DEMO7_REQ\x10\xda\x0f\x12\x15\n\x10MSG_ID_DEMO7_RSP\x10\xdb\x0f\x12\x15\n\x10MSG_ID_DEMO8_REQ\x10\xdc\x0f\x12\x15\n\x10MSG_ID_DEMO8_RSP\x10\xdd\x0f\x12\x15\n\x10MSG_ID_DEMO9_REQ\x10\xde\x0f\x12\x15\n\x10MSG_ID_DEMO9_RSP\x10\xdf\x0f\x12\x16\n\x11MSG_ID_DEMO10_REQ\x10\xe0\x0f\x12\x16\n\x11MSG_ID_DEMO10_RSP\x10\xe1\x0f\x12\x16\n\x11MSG_ID_DEMO20_REQ\x10\xe2\x0f\x12\x16\n\x11MSG_ID_DEMO20_RSP\x10\xe3\x0f\x12\x16\n\x11MSG_ID_DEMO50_REQ\x10\xe4\x0f\x12\x16\n\x11MSG_ID_DEMO50_RSP\x10\xe5\x0f\x12\x16\n\x11MSG_ID_DEMO90_REQ\x10\xe6\x0f\x12\x16\n\x11MSG_ID_DEMO90_RSP\x10\xe7\x0f\x12\x15\n\x10MSG_ID_DEMO2_NFY\x10\xe8\x0f\x12\x15\n\x10MSG_ID_DEMO4_NFY\x10\xe9\x0f\x12\x15\n\x10MSG_ID_DEMO5_NFY\x10\xea\x0f\x62\x06proto3')
+  serialized_pb=_b('\n\x0fss_msg_id.proto\x12\x10\x63om.moon.demo.ss*\x8e\x05\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x15\n\x10MSG_ID_DEMO2_REQ\x10\xd0\x0f\x12\x15\n\x10MSG_ID_DEMO2_RSP\x10\xd1\x0f\x12\x15\n\x10MSG_ID_DEMO3_REQ\x10\xd2\x0f\x12\x15\n\x10MSG_ID_DEMO3_RSP\x10\xd3\x0f\x12\x15\n\x10MSG_ID_DEMO4_REQ\x10\xd4\x0f\x12\x15\n\x10MSG_ID_DEMO4_RSP\x10\xd5\x0f\x12\x15\n\x10MSG_ID_DEMO5_REQ\x10\xd6\x0f\x12\x15\n\x10MSG_ID_DEMO5_RSP\x10\xd7\x0f\x12\x15\n\x10MSG_ID_DEMO6_REQ\x10\xd8\x0f\x12\x15\n\x10MSG_ID_DEMO6_RSP\x10\xd9\x0f\x12\x15\n\x10MSG_ID_DEMO7_REQ\x10\xda\x0f\x12\x15\n\x10MSG_ID_DEMO7_RSP\x10\xdb\x0f\x12\x15\n\x10MSG_ID_DEMO8_REQ\x10\xdc\x0f\x12\x15\n\x10MSG_ID_DEMO8_RSP\x10\xdd\x0f\x12\x15\n\x10MSG_ID_DEMO9_REQ\x10\xde\x0f\x12\x15\n\x10MSG_ID_DEMO9_RSP\x10\xdf\x0f\x12\x16\n\x11MSG_ID_DEMO10_REQ\x10\xe0\x0f\x12\x16\n\x11MSG_ID_DEMO10_RSP\x10\xe1\x0f\x12\x16\n\x11MSG_ID_DEMO20_REQ\x10\xe2\x0f\x12\x16\n\x11MSG_ID_DEMO20_RSP\x10\xe3\x0f\x12\x16\n\x11MSG_ID_DEMO50_REQ\x10\xe4\x0f\x12\x16\n\x11MSG_ID_DEMO50_RSP\x10\xe5\x0f\x12\x16\n\x11MSG_ID_DEMO90_REQ\x10\xe6\x0f\x12\x16\n\x11MSG_ID_DEMO90_RSP\x10\xe7\x0f\x12\x15\n\x10MSG_ID_DEMO2_NFY\x10\xe8\x0f\x12\x15\n\x10MSG_ID_DEMO5_NFY\x10\xe9\x0f\x12\x15\n\x10MSG_ID_DEMO9_NFY\x10\xea\x0f\x62\x06proto3')
 )
 
 _MSGID = _descriptor.EnumDescriptor(
@@ -134,11 +134,11 @@ _MSGID = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_DEMO4_NFY', index=26, number=2025,
+      name='MSG_ID_DEMO5_NFY', index=26, number=2025,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MSG_ID_DEMO5_NFY', index=27, number=2026,
+      name='MSG_ID_DEMO9_NFY', index=27, number=2026,
       serialized_options=None,
       type=None),
   ],
@@ -176,8 +176,8 @@ MSG_ID_DEMO50_RSP = 2021
 MSG_ID_DEMO90_REQ = 2022
 MSG_ID_DEMO90_RSP = 2023
 MSG_ID_DEMO2_NFY = 2024
-MSG_ID_DEMO4_NFY = 2025
-MSG_ID_DEMO5_NFY = 2026
+MSG_ID_DEMO5_NFY = 2025
+MSG_ID_DEMO9_NFY = 2026
 
 
 DESCRIPTOR.enum_types_by_name['MsgID'] = _MSGID

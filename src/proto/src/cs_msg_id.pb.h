@@ -65,12 +65,14 @@ enum MsgID {
   MSG_ID_DEMO3_NFY = 1003,
   MSG_ID_DEMO100_REQ = 1004,
   MSG_ID_DEMO100_RSP = 1005,
+  MSG_ID_DEMO200_REQ = 1006,
+  MSG_ID_DEMO200_RSP = 1007,
   MsgID_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   MsgID_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool MsgID_IsValid(int value);
 const MsgID MsgID_MIN = PLACE_HOLDER;
-const MsgID MsgID_MAX = MSG_ID_DEMO100_RSP;
+const MsgID MsgID_MAX = MSG_ID_DEMO200_RSP;
 const int MsgID_ARRAYSIZE = MsgID_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MsgID_descriptor();

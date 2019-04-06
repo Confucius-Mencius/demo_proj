@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='com.moon.demo.ss',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0css_msg.proto\x12\x10\x63om.moon.demo.ss\x1a\x0c\x63ommon.proto\"3\n\x08\x44\x65mo2Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x1c\n\x14proto_tcp_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo2Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\"\n\x08\x44\x65mo3Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"2\n\x08\x44\x65mo3Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"a\n\x08\x44\x65mo4Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"2\n\x08\x44\x65mo4Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\".\n\x08\x44\x65mo5Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo5Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\"\n\x08\x44\x65mo6Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"2\n\x08\x44\x65mo6Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\"\n\x08\x44\x65mo7Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"2\n\x08\x44\x65mo7Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\"\n\x08\x44\x65mo8Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"2\n\x08\x44\x65mo8Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"0\n\x08\x44\x65mo9Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo9Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"#\n\tDemo10Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"3\n\tDemo10Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"#\n\tDemo20Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"3\n\tDemo20Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"#\n\tDemo50Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"3\n\tDemo50Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"#\n\tDemo90Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x0b\n\x03udp\x18\x02 \x01(\x08\"3\n\tDemo90Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo2Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo4Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo5Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05*\xb5\x01\n\tDemo4Flag\x12\x13\n\x0f\x44\x45MO_4_FLAG_MIN\x10\x00\x12\x1a\n\x16\x44\x45MO_4_FLAG_IO_TO_WORK\x10\x00\x12\x1c\n\x18\x44\x45MO_4_FLAG_WORK_TO_WORK\x10\x01\x12\x1e\n\x1a\x44\x45MO_4_FLAG_WORK_TO_BURDEN\x10\x02\x12 \n\x1c\x44\x45MO_4_FLAG_BURDEN_TO_BURDEN\x10\x03\x12\x13\n\x0f\x44\x45MO_4_FLAG_MAX\x10\x04\x1a\x02\x10\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x0css_msg.proto\x12\x10\x63om.moon.demo.ss\x1a\x0c\x63ommon.proto\"3\n\x08\x44\x65mo2Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x1c\n\x14proto_tcp_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo2Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo3Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo3Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"a\n\x08\x44\x65mo4Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"2\n\x08\x44\x65mo4Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\".\n\x08\x44\x65mo5Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo5Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo6Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo6Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo7Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo7Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo8Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo8Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"0\n\x08\x44\x65mo9Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo9Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo10Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo10Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo20Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo20Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo50Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo50Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo90Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo90Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo2Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo5Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo9Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05*a\n\tDemo4Flag\x12\x13\n\x0f\x44\x45MO_4_FLAG_MIN\x10\x00\x12\x12\n\x0e\x44\x45MO_4_FLAG_XX\x10\x00\x12\x12\n\x0e\x44\x45MO_4_FLAG_YY\x10\x01\x12\x13\n\x0f\x44\x45MO_4_FLAG_MAX\x10\x02\x1a\x02\x10\x01\x62\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
@@ -36,40 +36,30 @@ _DEMO4FLAG = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DEMO_4_FLAG_IO_TO_WORK', index=1, number=0,
+      name='DEMO_4_FLAG_XX', index=1, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DEMO_4_FLAG_WORK_TO_WORK', index=2, number=1,
+      name='DEMO_4_FLAG_YY', index=2, number=1,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DEMO_4_FLAG_WORK_TO_BURDEN', index=3, number=2,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DEMO_4_FLAG_BURDEN_TO_BURDEN', index=4, number=3,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DEMO_4_FLAG_MAX', index=5, number=4,
+      name='DEMO_4_FLAG_MAX', index=3, number=2,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=_b('\020\001'),
-  serialized_start=1288,
-  serialized_end=1469,
+  serialized_start=1183,
+  serialized_end=1280,
 )
 _sym_db.RegisterEnumDescriptor(_DEMO4FLAG)
 
 Demo4Flag = enum_type_wrapper.EnumTypeWrapper(_DEMO4FLAG)
 DEMO_4_FLAG_MIN = 0
-DEMO_4_FLAG_IO_TO_WORK = 0
-DEMO_4_FLAG_WORK_TO_WORK = 1
-DEMO_4_FLAG_WORK_TO_BURDEN = 2
-DEMO_4_FLAG_BURDEN_TO_BURDEN = 3
-DEMO_4_FLAG_MAX = 4
+DEMO_4_FLAG_XX = 0
+DEMO_4_FLAG_YY = 1
+DEMO_4_FLAG_MAX = 2
 
 
 
@@ -156,13 +146,6 @@ _DEMO3REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.ss.Demo3Req.udp', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -176,7 +159,7 @@ _DEMO3REQ = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=153,
-  serialized_end=187,
+  serialized_end=174,
 )
 
 
@@ -206,8 +189,8 @@ _DEMO3RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=189,
-  serialized_end=239,
+  serialized_start=176,
+  serialized_end=226,
 )
 
 
@@ -265,8 +248,8 @@ _DEMO4REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=241,
-  serialized_end=338,
+  serialized_start=228,
+  serialized_end=325,
 )
 
 
@@ -296,8 +279,8 @@ _DEMO4RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=340,
-  serialized_end=390,
+  serialized_start=327,
+  serialized_end=377,
 )
 
 
@@ -334,8 +317,8 @@ _DEMO5REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=392,
-  serialized_end=438,
+  serialized_start=379,
+  serialized_end=425,
 )
 
 
@@ -365,8 +348,8 @@ _DEMO5RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=440,
-  serialized_end=490,
+  serialized_start=427,
+  serialized_end=477,
 )
 
 
@@ -384,13 +367,6 @@ _DEMO6REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.ss.Demo6Req.udp', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -403,8 +379,8 @@ _DEMO6REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=492,
-  serialized_end=526,
+  serialized_start=479,
+  serialized_end=500,
 )
 
 
@@ -434,8 +410,8 @@ _DEMO6RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=528,
-  serialized_end=578,
+  serialized_start=502,
+  serialized_end=552,
 )
 
 
@@ -453,13 +429,6 @@ _DEMO7REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.ss.Demo7Req.udp', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -472,8 +441,8 @@ _DEMO7REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=580,
-  serialized_end=614,
+  serialized_start=554,
+  serialized_end=575,
 )
 
 
@@ -503,8 +472,8 @@ _DEMO7RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=616,
-  serialized_end=666,
+  serialized_start=577,
+  serialized_end=627,
 )
 
 
@@ -522,13 +491,6 @@ _DEMO8REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.ss.Demo8Req.udp', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -541,8 +503,8 @@ _DEMO8REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=668,
-  serialized_end=702,
+  serialized_start=629,
+  serialized_end=650,
 )
 
 
@@ -572,8 +534,8 @@ _DEMO8RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=704,
-  serialized_end=754,
+  serialized_start=652,
+  serialized_end=702,
 )
 
 
@@ -610,8 +572,8 @@ _DEMO9REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=756,
-  serialized_end=804,
+  serialized_start=704,
+  serialized_end=752,
 )
 
 
@@ -641,8 +603,8 @@ _DEMO9RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=806,
-  serialized_end=856,
+  serialized_start=754,
+  serialized_end=804,
 )
 
 
@@ -660,13 +622,6 @@ _DEMO10REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.ss.Demo10Req.udp', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -679,8 +634,8 @@ _DEMO10REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=858,
-  serialized_end=893,
+  serialized_start=806,
+  serialized_end=828,
 )
 
 
@@ -710,8 +665,8 @@ _DEMO10RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=895,
-  serialized_end=946,
+  serialized_start=830,
+  serialized_end=881,
 )
 
 
@@ -729,13 +684,6 @@ _DEMO20REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.ss.Demo20Req.udp', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -748,8 +696,8 @@ _DEMO20REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=948,
-  serialized_end=983,
+  serialized_start=883,
+  serialized_end=905,
 )
 
 
@@ -779,8 +727,8 @@ _DEMO20RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=985,
-  serialized_end=1036,
+  serialized_start=907,
+  serialized_end=958,
 )
 
 
@@ -798,13 +746,6 @@ _DEMO50REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.ss.Demo50Req.udp', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -817,8 +758,8 @@ _DEMO50REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1038,
-  serialized_end=1073,
+  serialized_start=960,
+  serialized_end=982,
 )
 
 
@@ -848,8 +789,8 @@ _DEMO50RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1075,
-  serialized_end=1126,
+  serialized_start=984,
+  serialized_end=1035,
 )
 
 
@@ -867,13 +808,6 @@ _DEMO90REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='udp', full_name='com.moon.demo.ss.Demo90Req.udp', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -886,8 +820,8 @@ _DEMO90REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1128,
-  serialized_end=1163,
+  serialized_start=1037,
+  serialized_end=1059,
 )
 
 
@@ -917,8 +851,8 @@ _DEMO90RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1165,
-  serialized_end=1216,
+  serialized_start=1061,
+  serialized_end=1112,
 )
 
 
@@ -948,39 +882,8 @@ _DEMO2NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1218,
-  serialized_end=1239,
-)
-
-
-_DEMO4NFY = _descriptor.Descriptor(
-  name='Demo4Nfy',
-  full_name='com.moon.demo.ss.Demo4Nfy',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='a', full_name='com.moon.demo.ss.Demo4Nfy.a', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1241,
-  serialized_end=1262,
+  serialized_start=1114,
+  serialized_end=1135,
 )
 
 
@@ -1010,8 +913,39 @@ _DEMO5NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1264,
-  serialized_end=1285,
+  serialized_start=1137,
+  serialized_end=1158,
+)
+
+
+_DEMO9NFY = _descriptor.Descriptor(
+  name='Demo9Nfy',
+  full_name='com.moon.demo.ss.Demo9Nfy',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='a', full_name='com.moon.demo.ss.Demo9Nfy.a', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1160,
+  serialized_end=1181,
 )
 
 _DEMO2RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
@@ -1052,8 +986,8 @@ DESCRIPTOR.message_types_by_name['Demo50Rsp'] = _DEMO50RSP
 DESCRIPTOR.message_types_by_name['Demo90Req'] = _DEMO90REQ
 DESCRIPTOR.message_types_by_name['Demo90Rsp'] = _DEMO90RSP
 DESCRIPTOR.message_types_by_name['Demo2Nfy'] = _DEMO2NFY
-DESCRIPTOR.message_types_by_name['Demo4Nfy'] = _DEMO4NFY
 DESCRIPTOR.message_types_by_name['Demo5Nfy'] = _DEMO5NFY
+DESCRIPTOR.message_types_by_name['Demo9Nfy'] = _DEMO9NFY
 DESCRIPTOR.enum_types_by_name['Demo4Flag'] = _DEMO4FLAG
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1232,19 +1166,19 @@ Demo2Nfy = _reflection.GeneratedProtocolMessageType('Demo2Nfy', (_message.Messag
   ))
 _sym_db.RegisterMessage(Demo2Nfy)
 
-Demo4Nfy = _reflection.GeneratedProtocolMessageType('Demo4Nfy', (_message.Message,), dict(
-  DESCRIPTOR = _DEMO4NFY,
-  __module__ = 'ss_msg_pb2'
-  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo4Nfy)
-  ))
-_sym_db.RegisterMessage(Demo4Nfy)
-
 Demo5Nfy = _reflection.GeneratedProtocolMessageType('Demo5Nfy', (_message.Message,), dict(
   DESCRIPTOR = _DEMO5NFY,
   __module__ = 'ss_msg_pb2'
   # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo5Nfy)
   ))
 _sym_db.RegisterMessage(Demo5Nfy)
+
+Demo9Nfy = _reflection.GeneratedProtocolMessageType('Demo9Nfy', (_message.Message,), dict(
+  DESCRIPTOR = _DEMO9NFY,
+  __module__ = 'ss_msg_pb2'
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo9Nfy)
+  ))
+_sym_db.RegisterMessage(Demo9Nfy)
 
 
 _DEMO4FLAG._options = None

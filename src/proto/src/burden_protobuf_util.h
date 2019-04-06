@@ -6,4 +6,39 @@
 #include "protobuf_util.h"
 #include "burden_scheduler_interface.h"
 
+inline int SendToGlobalThread(burden::SchedulerInterface* scheduler, const ConnGUID* conn_guid,
+                              const ::proto::MsgHead& msg_head, const google::protobuf::Message* protobuf_msg)
+{
+    char* msg_body = nullptr;
+    size_t msg_body_len = 0;
+
+    if (SerializeProtobufMsg(&msg_body, msg_body_len, protobuf_msg) != 0)
+    {
+        LOG_ERROR("failed to serial msg, msg id: " << msg_head.msg_id);
+        return -1;
+    }
+
+    int ret = scheduler->SendToGlobalThread(conn_guid, msg_head, msg_body, msg_body_len);
+    FreeProtobufMsgBuf(&msg_body);
+    return ret;
+}
+
+inline int SendToBurdenThread(burden::SchedulerInterface* scheduler, const ConnGUID* conn_guid,
+                              const ::proto::MsgHead& msg_head, const google::protobuf::Message* protobuf_msg,
+                              int burden_thread_idx)
+{
+    char* msg_body = nullptr;
+    size_t msg_body_len = 0;
+
+    if (SerializeProtobufMsg(&msg_body, msg_body_len, protobuf_msg) != 0)
+    {
+        LOG_ERROR("failed to serial msg, msg id: " << msg_head.msg_id);
+        return -1;
+    }
+
+    int ret = scheduler->SendToBurdenThread(conn_guid, msg_head, msg_body, msg_body_len, burden_thread_idx);
+    FreeProtobufMsgBuf(&msg_body);
+    return ret;
+}
+
 #endif // PROTO_SRC_BURDEN_PROTOBUF_UTIL_H_

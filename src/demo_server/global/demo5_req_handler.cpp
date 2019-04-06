@@ -40,9 +40,10 @@ void Demo5ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
     ss::Demo50Req demo50_req;
     demo50_req.set_a(50);
 
-    if (SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo50_req_msg_head, &demo50_req, conn_guid->io_thread_idx) != 0)
+    if (SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo50_req_msg_head, &demo50_req,
+                         demo5_req.work_thread_idx()) != 0)
     {
-        LOG_ERROR("failed to send to proto tcp thread, msg id: " << demo50_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to work thread, msg id: " << demo50_req_msg_head.msg_id);
         return;
     }
 
@@ -52,9 +53,9 @@ void Demo5ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
     ss::Demo5Nfy demo5_nfy;
     demo5_nfy.set_a(5);
 
-    if (SendToProtoTCPThread(logic_ctx_->scheduler, conn_guid, demo5_nfy_msg_head, &demo5_nfy, -1) != 0) // 广播
+    if (SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo5_nfy_msg_head, &demo5_nfy, -1) != 0) // 广播
     {
-        LOG_ERROR("failed to broadcast to proto tcp threads, msg id: " << demo5_nfy_msg_head.msg_id);
+        LOG_ERROR("failed to broadcast to work threads, msg id: " << demo5_nfy_msg_head.msg_id);
         return;
     }
 }

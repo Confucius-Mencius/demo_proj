@@ -151,16 +151,16 @@ class Demo2NfyDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<Demo2Nfy>
       _instance;
 } _Demo2Nfy_default_instance_;
-class Demo4NfyDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Demo4Nfy>
-      _instance;
-} _Demo4Nfy_default_instance_;
 class Demo5NfyDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Demo5Nfy>
       _instance;
 } _Demo5Nfy_default_instance_;
+class Demo9NfyDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Demo9Nfy>
+      _instance;
+} _Demo9Nfy_default_instance_;
 }  // namespace ss
 }  // namespace demo
 }  // namespace moon
@@ -528,20 +528,6 @@ static void InitDefaultsDemo2Nfy() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_Demo2Nfy =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDemo2Nfy}, {}};
 
-static void InitDefaultsDemo4Nfy() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::com::moon::demo::ss::_Demo4Nfy_default_instance_;
-    new (ptr) ::com::moon::demo::ss::Demo4Nfy();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::com::moon::demo::ss::Demo4Nfy::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_Demo4Nfy =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDemo4Nfy}, {}};
-
 static void InitDefaultsDemo5Nfy() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -555,6 +541,20 @@ static void InitDefaultsDemo5Nfy() {
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_Demo5Nfy =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDemo5Nfy}, {}};
+
+static void InitDefaultsDemo9Nfy() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::moon::demo::ss::_Demo9Nfy_default_instance_;
+    new (ptr) ::com::moon::demo::ss::Demo9Nfy();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::com::moon::demo::ss::Demo9Nfy::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Demo9Nfy =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDemo9Nfy}, {}};
 
 void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_Demo2Req.base);
@@ -582,8 +582,8 @@ void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_Demo90Req.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Demo90Rsp.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Demo2Nfy.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Demo4Nfy.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Demo5Nfy.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Demo9Nfy.base);
 }
 
 ::google::protobuf::Metadata file_level_metadata[27];
@@ -609,7 +609,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo3Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo3Req, udp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo3Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -651,7 +650,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo6Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo6Req, udp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo6Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -664,7 +662,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo7Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo7Req, udp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo7Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -677,7 +674,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo8Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo8Req, udp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo8Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -703,7 +699,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo10Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo10Req, udp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo10Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -716,7 +711,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo20Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo20Req, udp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo20Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -729,7 +723,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo50Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo50Req, udp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo50Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -742,7 +735,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo90Req, a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo90Req, udp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo90Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -756,46 +748,46 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo2Nfy, a_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo4Nfy, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo4Nfy, a_),
-  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo5Nfy, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo5Nfy, a_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo9Nfy, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::com::moon::demo::ss::Demo9Nfy, a_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::com::moon::demo::ss::Demo2Req)},
   { 7, -1, sizeof(::com::moon::demo::ss::Demo2Rsp)},
   { 13, -1, sizeof(::com::moon::demo::ss::Demo3Req)},
-  { 20, -1, sizeof(::com::moon::demo::ss::Demo3Rsp)},
-  { 26, -1, sizeof(::com::moon::demo::ss::Demo4Req)},
-  { 36, -1, sizeof(::com::moon::demo::ss::Demo4Rsp)},
-  { 42, -1, sizeof(::com::moon::demo::ss::Demo5Req)},
-  { 49, -1, sizeof(::com::moon::demo::ss::Demo5Rsp)},
-  { 55, -1, sizeof(::com::moon::demo::ss::Demo6Req)},
-  { 62, -1, sizeof(::com::moon::demo::ss::Demo6Rsp)},
-  { 68, -1, sizeof(::com::moon::demo::ss::Demo7Req)},
-  { 75, -1, sizeof(::com::moon::demo::ss::Demo7Rsp)},
-  { 81, -1, sizeof(::com::moon::demo::ss::Demo8Req)},
-  { 88, -1, sizeof(::com::moon::demo::ss::Demo8Rsp)},
-  { 94, -1, sizeof(::com::moon::demo::ss::Demo9Req)},
-  { 101, -1, sizeof(::com::moon::demo::ss::Demo9Rsp)},
-  { 107, -1, sizeof(::com::moon::demo::ss::Demo10Req)},
-  { 114, -1, sizeof(::com::moon::demo::ss::Demo10Rsp)},
-  { 120, -1, sizeof(::com::moon::demo::ss::Demo20Req)},
-  { 127, -1, sizeof(::com::moon::demo::ss::Demo20Rsp)},
-  { 133, -1, sizeof(::com::moon::demo::ss::Demo50Req)},
-  { 140, -1, sizeof(::com::moon::demo::ss::Demo50Rsp)},
-  { 146, -1, sizeof(::com::moon::demo::ss::Demo90Req)},
-  { 153, -1, sizeof(::com::moon::demo::ss::Demo90Rsp)},
-  { 159, -1, sizeof(::com::moon::demo::ss::Demo2Nfy)},
-  { 165, -1, sizeof(::com::moon::demo::ss::Demo4Nfy)},
-  { 171, -1, sizeof(::com::moon::demo::ss::Demo5Nfy)},
+  { 19, -1, sizeof(::com::moon::demo::ss::Demo3Rsp)},
+  { 25, -1, sizeof(::com::moon::demo::ss::Demo4Req)},
+  { 35, -1, sizeof(::com::moon::demo::ss::Demo4Rsp)},
+  { 41, -1, sizeof(::com::moon::demo::ss::Demo5Req)},
+  { 48, -1, sizeof(::com::moon::demo::ss::Demo5Rsp)},
+  { 54, -1, sizeof(::com::moon::demo::ss::Demo6Req)},
+  { 60, -1, sizeof(::com::moon::demo::ss::Demo6Rsp)},
+  { 66, -1, sizeof(::com::moon::demo::ss::Demo7Req)},
+  { 72, -1, sizeof(::com::moon::demo::ss::Demo7Rsp)},
+  { 78, -1, sizeof(::com::moon::demo::ss::Demo8Req)},
+  { 84, -1, sizeof(::com::moon::demo::ss::Demo8Rsp)},
+  { 90, -1, sizeof(::com::moon::demo::ss::Demo9Req)},
+  { 97, -1, sizeof(::com::moon::demo::ss::Demo9Rsp)},
+  { 103, -1, sizeof(::com::moon::demo::ss::Demo10Req)},
+  { 109, -1, sizeof(::com::moon::demo::ss::Demo10Rsp)},
+  { 115, -1, sizeof(::com::moon::demo::ss::Demo20Req)},
+  { 121, -1, sizeof(::com::moon::demo::ss::Demo20Rsp)},
+  { 127, -1, sizeof(::com::moon::demo::ss::Demo50Req)},
+  { 133, -1, sizeof(::com::moon::demo::ss::Demo50Rsp)},
+  { 139, -1, sizeof(::com::moon::demo::ss::Demo90Req)},
+  { 145, -1, sizeof(::com::moon::demo::ss::Demo90Rsp)},
+  { 151, -1, sizeof(::com::moon::demo::ss::Demo2Nfy)},
+  { 157, -1, sizeof(::com::moon::demo::ss::Demo5Nfy)},
+  { 163, -1, sizeof(::com::moon::demo::ss::Demo9Nfy)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -824,8 +816,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo90Req_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo90Rsp_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo2Nfy_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo4Nfy_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo5Nfy_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo9Nfy_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -852,43 +844,39 @@ void AddDescriptorsImpl() {
       "\n\014ss_msg.proto\022\020com.moon.demo.ss\032\014common"
       ".proto\"3\n\010Demo2Req\022\t\n\001a\030\001 \001(\005\022\034\n\024proto_t"
       "cp_thread_idx\030\002 \001(\005\"2\n\010Demo2Rsp\022&\n\007err_c"
-      "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo3"
-      "Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo3Rsp\022"
-      "&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\""
-      "a\n\010Demo4Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003"
-      " \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon"
-      ".demo.ss.Demo4Flag\"2\n\010Demo4Rsp\022&\n\007err_ct"
-      "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\".\n\010Demo5R"
-      "eq\022\t\n\001a\030\001 \001(\005\022\027\n\017work_thread_idx\030\002 \001(\005\"2"
-      "\n\010Demo5Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
-      "emo.ErrCtx\"\"\n\010Demo6Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp"
-      "\030\002 \001(\010\"2\n\010Demo6Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.co"
-      "m.moon.demo.ErrCtx\"\"\n\010Demo7Req\022\t\n\001a\030\001 \001("
-      "\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo7Rsp\022&\n\007err_ctx\030\001 "
-      "\001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo8Req\022\t"
-      "\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo8Rsp\022&\n\007er"
-      "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"0\n\010De"
-      "mo9Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread_idx\030\002"
-      " \001(\005\"2\n\010Demo9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com."
-      "moon.demo.ErrCtx\"#\n\tDemo10Req\022\t\n\001a\030\001 \001(\005"
-      "\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo10Rsp\022&\n\007err_ctx\030\001 "
-      "\001(\0132\025.com.moon.demo.ErrCtx\"#\n\tDemo20Req\022"
-      "\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo20Rsp\022&\n\007"
-      "err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"#\n\t"
-      "Demo50Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDem"
-      "o50Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo."
-      "ErrCtx\"#\n\tDemo90Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 "
-      "\001(\010\"3\n\tDemo90Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com."
-      "moon.demo.ErrCtx\"\025\n\010Demo2Nfy\022\t\n\001a\030\001 \001(\005\""
-      "\025\n\010Demo4Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030"
-      "\001 \001(\005*\265\001\n\tDemo4Flag\022\023\n\017DEMO_4_FLAG_MIN\020\000"
-      "\022\032\n\026DEMO_4_FLAG_IO_TO_WORK\020\000\022\034\n\030DEMO_4_F"
-      "LAG_WORK_TO_WORK\020\001\022\036\n\032DEMO_4_FLAG_WORK_T"
-      "O_BURDEN\020\002\022 \n\034DEMO_4_FLAG_BURDEN_TO_BURD"
-      "EN\020\003\022\023\n\017DEMO_4_FLAG_MAX\020\004\032\002\020\001b\006proto3"
+      "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo3"
+      "Req\022\t\n\001a\030\001 \001(\005\"2\n\010Demo3Rsp\022&\n\007err_ctx\030\001 "
+      "\001(\0132\025.com.moon.demo.ErrCtx\"a\n\010Demo4Req\022\t"
+      "\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001"
+      "(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon.demo.ss.Demo"
+      "4Flag\"2\n\010Demo4Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com"
+      ".moon.demo.ErrCtx\".\n\010Demo5Req\022\t\n\001a\030\001 \001(\005"
+      "\022\027\n\017work_thread_idx\030\002 \001(\005\"2\n\010Demo5Rsp\022&\n"
+      "\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n"
+      "\010Demo6Req\022\t\n\001a\030\001 \001(\005\"2\n\010Demo6Rsp\022&\n\007err_"
+      "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo"
+      "7Req\022\t\n\001a\030\001 \001(\005\"2\n\010Demo7Rsp\022&\n\007err_ctx\030\001"
+      " \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo8Req\022"
+      "\t\n\001a\030\001 \001(\005\"2\n\010Demo8Rsp\022&\n\007err_ctx\030\001 \001(\0132"
+      "\025.com.moon.demo.ErrCtx\"0\n\010Demo9Req\022\t\n\001a\030"
+      "\001 \001(\005\022\031\n\021burden_thread_idx\030\002 \001(\005\"2\n\010Demo"
+      "9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Er"
+      "rCtx\"\026\n\tDemo10Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo10Rs"
+      "p\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCt"
+      "x\"\026\n\tDemo20Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo20Rsp\022&"
+      "\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\026"
+      "\n\tDemo50Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo50Rsp\022&\n\007e"
+      "rr_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\026\n\tD"
+      "emo90Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo90Rsp\022&\n\007err_"
+      "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo"
+      "2Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030\001 \001(\005\"\025"
+      "\n\010Demo9Nfy\022\t\n\001a\030\001 \001(\005*a\n\tDemo4Flag\022\023\n\017DE"
+      "MO_4_FLAG_MIN\020\000\022\022\n\016DEMO_4_FLAG_XX\020\000\022\022\n\016D"
+      "EMO_4_FLAG_YY\020\001\022\023\n\017DEMO_4_FLAG_MAX\020\002\032\002\020\001"
+      "b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1477);
+      descriptor, 1288);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ss_msg.proto", &protobuf_RegisterTypes);
   ::protobuf_common_2eproto::AddDescriptors();
@@ -918,8 +906,6 @@ bool Demo4Flag_IsValid(int value) {
     case 0:
     case 1:
     case 2:
-    case 3:
-    case 4:
       return true;
     default:
       return false;
@@ -1438,7 +1424,6 @@ void Demo3Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo3Req::kAFieldNumber;
-const int Demo3Req::kUdpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo3Req::Demo3Req()
@@ -1452,16 +1437,12 @@ Demo3Req::Demo3Req(const Demo3Req& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = from.a_;
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo3Req)
 }
 
 void Demo3Req::SharedCtor() {
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
 }
 
 Demo3Req::~Demo3Req() {
@@ -1492,9 +1473,7 @@ void Demo3Req::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -1516,20 +1495,6 @@ bool Demo3Req::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool udp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
         } else {
           goto handle_unusual;
         }
@@ -1567,11 +1532,6 @@ void Demo3Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -1589,11 +1549,6 @@ void Demo3Req::SerializeWithCachedSizes(
   // int32 a = 1;
   if (this->a() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1618,11 +1573,6 @@ size_t Demo3Req::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->a());
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -1655,9 +1605,6 @@ void Demo3Req::MergeFrom(const Demo3Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
-  }
 }
 
 void Demo3Req::CopyFrom(const ::google::protobuf::Message& from) {
@@ -1685,7 +1632,6 @@ void Demo3Req::Swap(Demo3Req* other) {
 void Demo3Req::InternalSwap(Demo3Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -3093,7 +3039,6 @@ void Demo6Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo6Req::kAFieldNumber;
-const int Demo6Req::kUdpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo6Req::Demo6Req()
@@ -3107,16 +3052,12 @@ Demo6Req::Demo6Req(const Demo6Req& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = from.a_;
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo6Req)
 }
 
 void Demo6Req::SharedCtor() {
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
 }
 
 Demo6Req::~Demo6Req() {
@@ -3147,9 +3088,7 @@ void Demo6Req::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -3171,20 +3110,6 @@ bool Demo6Req::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool udp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
         } else {
           goto handle_unusual;
         }
@@ -3222,11 +3147,6 @@ void Demo6Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -3244,11 +3164,6 @@ void Demo6Req::SerializeWithCachedSizes(
   // int32 a = 1;
   if (this->a() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3273,11 +3188,6 @@ size_t Demo6Req::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->a());
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -3310,9 +3220,6 @@ void Demo6Req::MergeFrom(const Demo6Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
-  }
 }
 
 void Demo6Req::CopyFrom(const ::google::protobuf::Message& from) {
@@ -3340,7 +3247,6 @@ void Demo6Req::Swap(Demo6Req* other) {
 void Demo6Req::InternalSwap(Demo6Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -3596,7 +3502,6 @@ void Demo7Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo7Req::kAFieldNumber;
-const int Demo7Req::kUdpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo7Req::Demo7Req()
@@ -3610,16 +3515,12 @@ Demo7Req::Demo7Req(const Demo7Req& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = from.a_;
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo7Req)
 }
 
 void Demo7Req::SharedCtor() {
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
 }
 
 Demo7Req::~Demo7Req() {
@@ -3650,9 +3551,7 @@ void Demo7Req::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -3674,20 +3573,6 @@ bool Demo7Req::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool udp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
         } else {
           goto handle_unusual;
         }
@@ -3725,11 +3610,6 @@ void Demo7Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -3747,11 +3627,6 @@ void Demo7Req::SerializeWithCachedSizes(
   // int32 a = 1;
   if (this->a() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3776,11 +3651,6 @@ size_t Demo7Req::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->a());
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -3813,9 +3683,6 @@ void Demo7Req::MergeFrom(const Demo7Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
-  }
 }
 
 void Demo7Req::CopyFrom(const ::google::protobuf::Message& from) {
@@ -3843,7 +3710,6 @@ void Demo7Req::Swap(Demo7Req* other) {
 void Demo7Req::InternalSwap(Demo7Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -4099,7 +3965,6 @@ void Demo8Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo8Req::kAFieldNumber;
-const int Demo8Req::kUdpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo8Req::Demo8Req()
@@ -4113,16 +3978,12 @@ Demo8Req::Demo8Req(const Demo8Req& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = from.a_;
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo8Req)
 }
 
 void Demo8Req::SharedCtor() {
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
 }
 
 Demo8Req::~Demo8Req() {
@@ -4153,9 +4014,7 @@ void Demo8Req::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -4177,20 +4036,6 @@ bool Demo8Req::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool udp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
         } else {
           goto handle_unusual;
         }
@@ -4228,11 +4073,6 @@ void Demo8Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -4250,11 +4090,6 @@ void Demo8Req::SerializeWithCachedSizes(
   // int32 a = 1;
   if (this->a() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4279,11 +4114,6 @@ size_t Demo8Req::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->a());
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -4316,9 +4146,6 @@ void Demo8Req::MergeFrom(const Demo8Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
-  }
 }
 
 void Demo8Req::CopyFrom(const ::google::protobuf::Message& from) {
@@ -4346,7 +4173,6 @@ void Demo8Req::Swap(Demo8Req* other) {
 void Demo8Req::InternalSwap(Demo8Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -5107,7 +4933,6 @@ void Demo10Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo10Req::kAFieldNumber;
-const int Demo10Req::kUdpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo10Req::Demo10Req()
@@ -5121,16 +4946,12 @@ Demo10Req::Demo10Req(const Demo10Req& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = from.a_;
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo10Req)
 }
 
 void Demo10Req::SharedCtor() {
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
 }
 
 Demo10Req::~Demo10Req() {
@@ -5161,9 +4982,7 @@ void Demo10Req::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -5185,20 +5004,6 @@ bool Demo10Req::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool udp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
         } else {
           goto handle_unusual;
         }
@@ -5236,11 +5041,6 @@ void Demo10Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -5258,11 +5058,6 @@ void Demo10Req::SerializeWithCachedSizes(
   // int32 a = 1;
   if (this->a() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5287,11 +5082,6 @@ size_t Demo10Req::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->a());
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -5324,9 +5114,6 @@ void Demo10Req::MergeFrom(const Demo10Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
-  }
 }
 
 void Demo10Req::CopyFrom(const ::google::protobuf::Message& from) {
@@ -5354,7 +5141,6 @@ void Demo10Req::Swap(Demo10Req* other) {
 void Demo10Req::InternalSwap(Demo10Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -5610,7 +5396,6 @@ void Demo20Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo20Req::kAFieldNumber;
-const int Demo20Req::kUdpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo20Req::Demo20Req()
@@ -5624,16 +5409,12 @@ Demo20Req::Demo20Req(const Demo20Req& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = from.a_;
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo20Req)
 }
 
 void Demo20Req::SharedCtor() {
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
 }
 
 Demo20Req::~Demo20Req() {
@@ -5664,9 +5445,7 @@ void Demo20Req::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -5688,20 +5467,6 @@ bool Demo20Req::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool udp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
         } else {
           goto handle_unusual;
         }
@@ -5739,11 +5504,6 @@ void Demo20Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -5761,11 +5521,6 @@ void Demo20Req::SerializeWithCachedSizes(
   // int32 a = 1;
   if (this->a() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5790,11 +5545,6 @@ size_t Demo20Req::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->a());
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -5827,9 +5577,6 @@ void Demo20Req::MergeFrom(const Demo20Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
-  }
 }
 
 void Demo20Req::CopyFrom(const ::google::protobuf::Message& from) {
@@ -5857,7 +5604,6 @@ void Demo20Req::Swap(Demo20Req* other) {
 void Demo20Req::InternalSwap(Demo20Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -6113,7 +5859,6 @@ void Demo50Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo50Req::kAFieldNumber;
-const int Demo50Req::kUdpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo50Req::Demo50Req()
@@ -6127,16 +5872,12 @@ Demo50Req::Demo50Req(const Demo50Req& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = from.a_;
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo50Req)
 }
 
 void Demo50Req::SharedCtor() {
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
 }
 
 Demo50Req::~Demo50Req() {
@@ -6167,9 +5908,7 @@ void Demo50Req::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -6191,20 +5930,6 @@ bool Demo50Req::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool udp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
         } else {
           goto handle_unusual;
         }
@@ -6242,11 +5967,6 @@ void Demo50Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -6264,11 +5984,6 @@ void Demo50Req::SerializeWithCachedSizes(
   // int32 a = 1;
   if (this->a() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6293,11 +6008,6 @@ size_t Demo50Req::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->a());
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -6330,9 +6040,6 @@ void Demo50Req::MergeFrom(const Demo50Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
-  }
 }
 
 void Demo50Req::CopyFrom(const ::google::protobuf::Message& from) {
@@ -6360,7 +6067,6 @@ void Demo50Req::Swap(Demo50Req* other) {
 void Demo50Req::InternalSwap(Demo50Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -6616,7 +6322,6 @@ void Demo90Req::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo90Req::kAFieldNumber;
-const int Demo90Req::kUdpFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo90Req::Demo90Req()
@@ -6630,16 +6335,12 @@ Demo90Req::Demo90Req(const Demo90Req& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&udp_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = from.a_;
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo90Req)
 }
 
 void Demo90Req::SharedCtor() {
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
 }
 
 Demo90Req::~Demo90Req() {
@@ -6670,9 +6371,7 @@ void Demo90Req::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&udp_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(udp_));
+  a_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -6694,20 +6393,6 @@ bool Demo90Req::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool udp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &udp_)));
         } else {
           goto handle_unusual;
         }
@@ -6745,11 +6430,6 @@ void Demo90Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->udp(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -6767,11 +6447,6 @@ void Demo90Req::SerializeWithCachedSizes(
   // int32 a = 1;
   if (this->a() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->udp(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6796,11 +6471,6 @@ size_t Demo90Req::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->a());
-  }
-
-  // bool udp = 2;
-  if (this->udp() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -6833,9 +6503,6 @@ void Demo90Req::MergeFrom(const Demo90Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.udp() != 0) {
-    set_udp(from.udp());
-  }
 }
 
 void Demo90Req::CopyFrom(const ::google::protobuf::Message& from) {
@@ -6863,7 +6530,6 @@ void Demo90Req::Swap(Demo90Req* other) {
 void Demo90Req::InternalSwap(Demo90Req* other) {
   using std::swap;
   swap(a_, other->a_);
-  swap(udp_, other->udp_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -7338,229 +7004,6 @@ void Demo2Nfy::InternalSwap(Demo2Nfy* other) {
 
 // ===================================================================
 
-void Demo4Nfy::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Demo4Nfy::kAFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Demo4Nfy::Demo4Nfy()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ss_5fmsg_2eproto::scc_info_Demo4Nfy.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:com.moon.demo.ss.Demo4Nfy)
-}
-Demo4Nfy::Demo4Nfy(const Demo4Nfy& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  a_ = from.a_;
-  // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo4Nfy)
-}
-
-void Demo4Nfy::SharedCtor() {
-  a_ = 0;
-}
-
-Demo4Nfy::~Demo4Nfy() {
-  // @@protoc_insertion_point(destructor:com.moon.demo.ss.Demo4Nfy)
-  SharedDtor();
-}
-
-void Demo4Nfy::SharedDtor() {
-}
-
-void Demo4Nfy::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* Demo4Nfy::descriptor() {
-  ::protobuf_ss_5fmsg_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ss_5fmsg_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const Demo4Nfy& Demo4Nfy::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ss_5fmsg_2eproto::scc_info_Demo4Nfy.base);
-  return *internal_default_instance();
-}
-
-
-void Demo4Nfy::Clear() {
-// @@protoc_insertion_point(message_clear_start:com.moon.demo.ss.Demo4Nfy)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  a_ = 0;
-  _internal_metadata_.Clear();
-}
-
-bool Demo4Nfy::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:com.moon.demo.ss.Demo4Nfy)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 a = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &a_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:com.moon.demo.ss.Demo4Nfy)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:com.moon.demo.ss.Demo4Nfy)
-  return false;
-#undef DO_
-}
-
-void Demo4Nfy::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:com.moon.demo.ss.Demo4Nfy)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 a = 1;
-  if (this->a() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:com.moon.demo.ss.Demo4Nfy)
-}
-
-::google::protobuf::uint8* Demo4Nfy::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.ss.Demo4Nfy)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // int32 a = 1;
-  if (this->a() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.ss.Demo4Nfy)
-  return target;
-}
-
-size_t Demo4Nfy::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.ss.Demo4Nfy)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // int32 a = 1;
-  if (this->a() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->a());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Demo4Nfy::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.ss.Demo4Nfy)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Demo4Nfy* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Demo4Nfy>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.ss.Demo4Nfy)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.ss.Demo4Nfy)
-    MergeFrom(*source);
-  }
-}
-
-void Demo4Nfy::MergeFrom(const Demo4Nfy& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.ss.Demo4Nfy)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.a() != 0) {
-    set_a(from.a());
-  }
-}
-
-void Demo4Nfy::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.ss.Demo4Nfy)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void Demo4Nfy::CopyFrom(const Demo4Nfy& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.ss.Demo4Nfy)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Demo4Nfy::IsInitialized() const {
-  return true;
-}
-
-void Demo4Nfy::Swap(Demo4Nfy* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void Demo4Nfy::InternalSwap(Demo4Nfy* other) {
-  using std::swap;
-  swap(a_, other->a_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata Demo4Nfy::GetMetadata() const {
-  protobuf_ss_5fmsg_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ss_5fmsg_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
 void Demo5Nfy::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -7782,6 +7225,229 @@ void Demo5Nfy::InternalSwap(Demo5Nfy* other) {
 }
 
 
+// ===================================================================
+
+void Demo9Nfy::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Demo9Nfy::kAFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Demo9Nfy::Demo9Nfy()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_ss_5fmsg_2eproto::scc_info_Demo9Nfy.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:com.moon.demo.ss.Demo9Nfy)
+}
+Demo9Nfy::Demo9Nfy(const Demo9Nfy& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  a_ = from.a_;
+  // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo9Nfy)
+}
+
+void Demo9Nfy::SharedCtor() {
+  a_ = 0;
+}
+
+Demo9Nfy::~Demo9Nfy() {
+  // @@protoc_insertion_point(destructor:com.moon.demo.ss.Demo9Nfy)
+  SharedDtor();
+}
+
+void Demo9Nfy::SharedDtor() {
+}
+
+void Demo9Nfy::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* Demo9Nfy::descriptor() {
+  ::protobuf_ss_5fmsg_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_ss_5fmsg_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Demo9Nfy& Demo9Nfy::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_ss_5fmsg_2eproto::scc_info_Demo9Nfy.base);
+  return *internal_default_instance();
+}
+
+
+void Demo9Nfy::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.moon.demo.ss.Demo9Nfy)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  a_ = 0;
+  _internal_metadata_.Clear();
+}
+
+bool Demo9Nfy::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:com.moon.demo.ss.Demo9Nfy)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 a = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &a_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:com.moon.demo.ss.Demo9Nfy)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:com.moon.demo.ss.Demo9Nfy)
+  return false;
+#undef DO_
+}
+
+void Demo9Nfy::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:com.moon.demo.ss.Demo9Nfy)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:com.moon.demo.ss.Demo9Nfy)
+}
+
+::google::protobuf::uint8* Demo9Nfy::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.ss.Demo9Nfy)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.ss.Demo9Nfy)
+  return target;
+}
+
+size_t Demo9Nfy::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.ss.Demo9Nfy)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // int32 a = 1;
+  if (this->a() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->a());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Demo9Nfy::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.ss.Demo9Nfy)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Demo9Nfy* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Demo9Nfy>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.ss.Demo9Nfy)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.ss.Demo9Nfy)
+    MergeFrom(*source);
+  }
+}
+
+void Demo9Nfy::MergeFrom(const Demo9Nfy& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.ss.Demo9Nfy)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.a() != 0) {
+    set_a(from.a());
+  }
+}
+
+void Demo9Nfy::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.ss.Demo9Nfy)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Demo9Nfy::CopyFrom(const Demo9Nfy& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.ss.Demo9Nfy)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Demo9Nfy::IsInitialized() const {
+  return true;
+}
+
+void Demo9Nfy::Swap(Demo9Nfy* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Demo9Nfy::InternalSwap(Demo9Nfy* other) {
+  using std::swap;
+  swap(a_, other->a_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata Demo9Nfy::GetMetadata() const {
+  protobuf_ss_5fmsg_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_ss_5fmsg_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace ss
 }  // namespace demo
@@ -7864,11 +7530,11 @@ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::moon::demo::ss::Demo90Rsp* 
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::moon::demo::ss::Demo2Nfy* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo2Nfy >(Arena* arena) {
   return Arena::CreateInternal< ::com::moon::demo::ss::Demo2Nfy >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::moon::demo::ss::Demo4Nfy* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo4Nfy >(Arena* arena) {
-  return Arena::CreateInternal< ::com::moon::demo::ss::Demo4Nfy >(arena);
-}
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::moon::demo::ss::Demo5Nfy* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo5Nfy >(Arena* arena) {
   return Arena::CreateInternal< ::com::moon::demo::ss::Demo5Nfy >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::com::moon::demo::ss::Demo9Nfy* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo9Nfy >(Arena* arena) {
+  return Arena::CreateInternal< ::com::moon::demo::ss::Demo9Nfy >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

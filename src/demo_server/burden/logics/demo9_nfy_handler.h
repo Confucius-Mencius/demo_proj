@@ -1,15 +1,15 @@
-#ifndef DEMO_SERVER_BURDEN_LOGICS_DEMO5_NFY_HANDLER_H_
-#define DEMO_SERVER_BURDEN_LOGICS_DEMO5_NFY_HANDLER_H_
+#ifndef DEMO_SERVER_BURDEN_LOGICS_DEMO9_NFY_HANDLER_H_
+#define DEMO_SERVER_BURDEN_LOGICS_DEMO9_NFY_HANDLER_H_
 
 #include "msg_handler.h"
 
 namespace burden
 {
-class Demo5NfyHandler : public MsgHandler
+class Demo9NfyHandler : public MsgHandler
 {
 public:
-    Demo5NfyHandler();
-    virtual ~Demo5NfyHandler();
+    Demo9NfyHandler();
+    virtual ~Demo9NfyHandler();
 
     ///////////////////////// MsgHandlerInterface /////////////////////////
     ::proto::MsgID GetMsgID() override;
@@ -18,4 +18,4 @@ public:
 };
 }
 
-#endif // DEMO_SERVER_BURDEN_LOGICS_DEMO5_NFY_HANDLER_H_
+#endif // DEMO_SERVER_BURDEN_LOGICS_DEMO9_NFY_HANDLER_H_

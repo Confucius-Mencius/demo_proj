@@ -23,7 +23,7 @@ Demo6ReqHandler::~Demo6ReqHandler()
 
 void Demo6ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
 {
-    LOG_TRACE("Demo6ReqHandler::OnMsg");
+    LOG_TRACE("work::Demo6ReqHandler::OnMsg");
 
     ss::Demo6Req demo6_req;
     if (ParseProtobufMsg(&demo6_req, msg_body, msg_body_len) != 0)
@@ -32,6 +32,6 @@ void Demo6ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    // TODO
+    LOG_TRACE(demo6_req.a());
 }
 }

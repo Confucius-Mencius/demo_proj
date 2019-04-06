@@ -84,14 +84,14 @@ enum MsgID {
   MSG_ID_DEMO90_REQ = 2022,
   MSG_ID_DEMO90_RSP = 2023,
   MSG_ID_DEMO2_NFY = 2024,
-  MSG_ID_DEMO4_NFY = 2025,
-  MSG_ID_DEMO5_NFY = 2026,
+  MSG_ID_DEMO5_NFY = 2025,
+  MSG_ID_DEMO9_NFY = 2026,
   MsgID_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   MsgID_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool MsgID_IsValid(int value);
 const MsgID MsgID_MIN = PLACE_HOLDER;
-const MsgID MsgID_MAX = MSG_ID_DEMO5_NFY;
+const MsgID MsgID_MAX = MSG_ID_DEMO9_NFY;
 const int MsgID_ARRAYSIZE = MsgID_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MsgID_descriptor();

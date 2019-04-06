@@ -24,52 +24,36 @@ public final class SsMsg {
      */
     DEMO_4_FLAG_MIN(0, 0),
     /**
-     * <code>DEMO_4_FLAG_WORK_TO_WORK = 1;</code>
+     * <code>DEMO_4_FLAG_YY = 1;</code>
      */
-    DEMO_4_FLAG_WORK_TO_WORK(2, 1),
+    DEMO_4_FLAG_YY(2, 1),
     /**
-     * <code>DEMO_4_FLAG_WORK_TO_BURDEN = 2;</code>
+     * <code>DEMO_4_FLAG_MAX = 2;</code>
      */
-    DEMO_4_FLAG_WORK_TO_BURDEN(3, 2),
-    /**
-     * <code>DEMO_4_FLAG_BURDEN_TO_BURDEN = 3;</code>
-     */
-    DEMO_4_FLAG_BURDEN_TO_BURDEN(4, 3),
-    /**
-     * <code>DEMO_4_FLAG_MAX = 4;</code>
-     */
-    DEMO_4_FLAG_MAX(5, 4),
+    DEMO_4_FLAG_MAX(3, 2),
     UNRECOGNIZED(-1, -1),
     ;
 
     /**
-     * <code>DEMO_4_FLAG_IO_TO_WORK = 0;</code>
+     * <code>DEMO_4_FLAG_XX = 0;</code>
      */
-    public static final Demo4Flag DEMO_4_FLAG_IO_TO_WORK = DEMO_4_FLAG_MIN;
+    public static final Demo4Flag DEMO_4_FLAG_XX = DEMO_4_FLAG_MIN;
     /**
      * <code>DEMO_4_FLAG_MIN = 0;</code>
      */
     public static final int DEMO_4_FLAG_MIN_VALUE = 0;
     /**
-     * <code>DEMO_4_FLAG_IO_TO_WORK = 0;</code>
+     * <code>DEMO_4_FLAG_XX = 0;</code>
      */
-    public static final int DEMO_4_FLAG_IO_TO_WORK_VALUE = 0;
+    public static final int DEMO_4_FLAG_XX_VALUE = 0;
     /**
-     * <code>DEMO_4_FLAG_WORK_TO_WORK = 1;</code>
+     * <code>DEMO_4_FLAG_YY = 1;</code>
      */
-    public static final int DEMO_4_FLAG_WORK_TO_WORK_VALUE = 1;
+    public static final int DEMO_4_FLAG_YY_VALUE = 1;
     /**
-     * <code>DEMO_4_FLAG_WORK_TO_BURDEN = 2;</code>
+     * <code>DEMO_4_FLAG_MAX = 2;</code>
      */
-    public static final int DEMO_4_FLAG_WORK_TO_BURDEN_VALUE = 2;
-    /**
-     * <code>DEMO_4_FLAG_BURDEN_TO_BURDEN = 3;</code>
-     */
-    public static final int DEMO_4_FLAG_BURDEN_TO_BURDEN_VALUE = 3;
-    /**
-     * <code>DEMO_4_FLAG_MAX = 4;</code>
-     */
-    public static final int DEMO_4_FLAG_MAX_VALUE = 4;
+    public static final int DEMO_4_FLAG_MAX_VALUE = 2;
 
 
     public final int getNumber() {
@@ -91,10 +75,8 @@ public final class SsMsg {
     public static Demo4Flag forNumber(int value) {
       switch (value) {
         case 0: return DEMO_4_FLAG_MIN;
-        case 1: return DEMO_4_FLAG_WORK_TO_WORK;
-        case 2: return DEMO_4_FLAG_WORK_TO_BURDEN;
-        case 3: return DEMO_4_FLAG_BURDEN_TO_BURDEN;
-        case 4: return DEMO_4_FLAG_MAX;
+        case 1: return DEMO_4_FLAG_YY;
+        case 2: return DEMO_4_FLAG_MAX;
         default: return null;
       }
     }
@@ -125,7 +107,7 @@ public final class SsMsg {
     }
 
     private static final Demo4Flag[] VALUES = {
-      DEMO_4_FLAG_MIN, DEMO_4_FLAG_IO_TO_WORK, DEMO_4_FLAG_WORK_TO_WORK, DEMO_4_FLAG_WORK_TO_BURDEN, DEMO_4_FLAG_BURDEN_TO_BURDEN, DEMO_4_FLAG_MAX, 
+      DEMO_4_FLAG_MIN, DEMO_4_FLAG_XX, DEMO_4_FLAG_YY, DEMO_4_FLAG_MAX, 
     };
 
     public static Demo4Flag valueOf(
@@ -1305,11 +1287,6 @@ public final class SsMsg {
      * <code>int32 a = 1;</code>
      */
     int getA();
-
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    boolean getUdp();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo3Req}
@@ -1325,7 +1302,6 @@ public final class SsMsg {
     }
     private Demo3Req() {
       a_ = 0;
-      udp_ = false;
     }
 
     @java.lang.Override
@@ -1355,11 +1331,6 @@ public final class SsMsg {
             case 8: {
 
               a_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              udp_ = input.readBool();
               break;
             }
             default: {
@@ -1403,15 +1374,6 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    public boolean getUdp() {
-      return udp_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1429,9 +1391,6 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -1444,10 +1403,6 @@ public final class SsMsg {
       if (a_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
-      }
-      if (udp_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1467,8 +1422,6 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1482,9 +1435,6 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1620,8 +1570,6 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
-
         return this;
       }
 
@@ -1649,7 +1597,6 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo3Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo3Req result = new com.moon.demo.ss.SsMsg.Demo3Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
         onBuilt();
         return result;
       }
@@ -1700,9 +1647,6 @@ public final class SsMsg {
         if (other == com.moon.demo.ss.SsMsg.Demo3Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
-        }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1755,32 +1699,6 @@ public final class SsMsg {
       public Builder clearA() {
         
         a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean udp_ ;
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public boolean getUdp() {
-        return udp_;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder setUdp(boolean value) {
-        
-        udp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder clearUdp() {
-        
-        udp_ = false;
         onChanged();
         return this;
       }
@@ -2469,10 +2387,6 @@ public final class SsMsg {
         getCBytes();
 
     /**
-     * <pre>
-     * post body
-     * </pre>
-     *
      * <code>bytes d = 4;</code>
      */
     com.google.protobuf.ByteString getD();
@@ -2644,10 +2558,6 @@ public final class SsMsg {
     public static final int D_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString d_;
     /**
-     * <pre>
-     * post body
-     * </pre>
-     *
      * <code>bytes d = 4;</code>
      */
     public com.google.protobuf.ByteString getD() {
@@ -3165,20 +3075,12 @@ public final class SsMsg {
 
       private com.google.protobuf.ByteString d_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <pre>
-       * post body
-       * </pre>
-       *
        * <code>bytes d = 4;</code>
        */
       public com.google.protobuf.ByteString getD() {
         return d_;
       }
       /**
-       * <pre>
-       * post body
-       * </pre>
-       *
        * <code>bytes d = 4;</code>
        */
       public Builder setD(com.google.protobuf.ByteString value) {
@@ -3191,10 +3093,6 @@ public final class SsMsg {
         return this;
       }
       /**
-       * <pre>
-       * post body
-       * </pre>
-       *
        * <code>bytes d = 4;</code>
        */
       public Builder clearD() {
@@ -5062,11 +4960,6 @@ public final class SsMsg {
      * <code>int32 a = 1;</code>
      */
     int getA();
-
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    boolean getUdp();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo6Req}
@@ -5082,7 +4975,6 @@ public final class SsMsg {
     }
     private Demo6Req() {
       a_ = 0;
-      udp_ = false;
     }
 
     @java.lang.Override
@@ -5112,11 +5004,6 @@ public final class SsMsg {
             case 8: {
 
               a_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              udp_ = input.readBool();
               break;
             }
             default: {
@@ -5160,15 +5047,6 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    public boolean getUdp() {
-      return udp_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5186,9 +5064,6 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -5201,10 +5076,6 @@ public final class SsMsg {
       if (a_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
-      }
-      if (udp_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5224,8 +5095,6 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5239,9 +5108,6 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5377,8 +5243,6 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
-
         return this;
       }
 
@@ -5406,7 +5270,6 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo6Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo6Req result = new com.moon.demo.ss.SsMsg.Demo6Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
         onBuilt();
         return result;
       }
@@ -5457,9 +5320,6 @@ public final class SsMsg {
         if (other == com.moon.demo.ss.SsMsg.Demo6Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
-        }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5512,32 +5372,6 @@ public final class SsMsg {
       public Builder clearA() {
         
         a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean udp_ ;
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public boolean getUdp() {
-        return udp_;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder setUdp(boolean value) {
-        
-        udp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder clearUdp() {
-        
-        udp_ = false;
         onChanged();
         return this;
       }
@@ -6209,11 +6043,6 @@ public final class SsMsg {
      * <code>int32 a = 1;</code>
      */
     int getA();
-
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    boolean getUdp();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo7Req}
@@ -6229,7 +6058,6 @@ public final class SsMsg {
     }
     private Demo7Req() {
       a_ = 0;
-      udp_ = false;
     }
 
     @java.lang.Override
@@ -6259,11 +6087,6 @@ public final class SsMsg {
             case 8: {
 
               a_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              udp_ = input.readBool();
               break;
             }
             default: {
@@ -6307,15 +6130,6 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    public boolean getUdp() {
-      return udp_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6333,9 +6147,6 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -6348,10 +6159,6 @@ public final class SsMsg {
       if (a_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
-      }
-      if (udp_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6371,8 +6178,6 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6386,9 +6191,6 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6524,8 +6326,6 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
-
         return this;
       }
 
@@ -6553,7 +6353,6 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo7Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo7Req result = new com.moon.demo.ss.SsMsg.Demo7Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
         onBuilt();
         return result;
       }
@@ -6604,9 +6403,6 @@ public final class SsMsg {
         if (other == com.moon.demo.ss.SsMsg.Demo7Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
-        }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6659,32 +6455,6 @@ public final class SsMsg {
       public Builder clearA() {
         
         a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean udp_ ;
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public boolean getUdp() {
-        return udp_;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder setUdp(boolean value) {
-        
-        udp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder clearUdp() {
-        
-        udp_ = false;
         onChanged();
         return this;
       }
@@ -7356,11 +7126,6 @@ public final class SsMsg {
      * <code>int32 a = 1;</code>
      */
     int getA();
-
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    boolean getUdp();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo8Req}
@@ -7376,7 +7141,6 @@ public final class SsMsg {
     }
     private Demo8Req() {
       a_ = 0;
-      udp_ = false;
     }
 
     @java.lang.Override
@@ -7406,11 +7170,6 @@ public final class SsMsg {
             case 8: {
 
               a_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              udp_ = input.readBool();
               break;
             }
             default: {
@@ -7454,15 +7213,6 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    public boolean getUdp() {
-      return udp_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7480,9 +7230,6 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -7495,10 +7242,6 @@ public final class SsMsg {
       if (a_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
-      }
-      if (udp_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7518,8 +7261,6 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7533,9 +7274,6 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7671,8 +7409,6 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
-
         return this;
       }
 
@@ -7700,7 +7436,6 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo8Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo8Req result = new com.moon.demo.ss.SsMsg.Demo8Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
         onBuilt();
         return result;
       }
@@ -7751,9 +7486,6 @@ public final class SsMsg {
         if (other == com.moon.demo.ss.SsMsg.Demo8Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
-        }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7806,32 +7538,6 @@ public final class SsMsg {
       public Builder clearA() {
         
         a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean udp_ ;
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public boolean getUdp() {
-        return udp_;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder setUdp(boolean value) {
-        
-        udp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder clearUdp() {
-        
-        udp_ = false;
         onChanged();
         return this;
       }
@@ -9649,11 +9355,6 @@ public final class SsMsg {
      * <code>int32 a = 1;</code>
      */
     int getA();
-
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    boolean getUdp();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo10Req}
@@ -9669,7 +9370,6 @@ public final class SsMsg {
     }
     private Demo10Req() {
       a_ = 0;
-      udp_ = false;
     }
 
     @java.lang.Override
@@ -9699,11 +9399,6 @@ public final class SsMsg {
             case 8: {
 
               a_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              udp_ = input.readBool();
               break;
             }
             default: {
@@ -9747,15 +9442,6 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    public boolean getUdp() {
-      return udp_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9773,9 +9459,6 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -9788,10 +9471,6 @@ public final class SsMsg {
       if (a_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
-      }
-      if (udp_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9811,8 +9490,6 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9826,9 +9503,6 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9964,8 +9638,6 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
-
         return this;
       }
 
@@ -9993,7 +9665,6 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo10Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo10Req result = new com.moon.demo.ss.SsMsg.Demo10Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
         onBuilt();
         return result;
       }
@@ -10044,9 +9715,6 @@ public final class SsMsg {
         if (other == com.moon.demo.ss.SsMsg.Demo10Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
-        }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10099,32 +9767,6 @@ public final class SsMsg {
       public Builder clearA() {
         
         a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean udp_ ;
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public boolean getUdp() {
-        return udp_;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder setUdp(boolean value) {
-        
-        udp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder clearUdp() {
-        
-        udp_ = false;
         onChanged();
         return this;
       }
@@ -10796,11 +10438,6 @@ public final class SsMsg {
      * <code>int32 a = 1;</code>
      */
     int getA();
-
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    boolean getUdp();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo20Req}
@@ -10816,7 +10453,6 @@ public final class SsMsg {
     }
     private Demo20Req() {
       a_ = 0;
-      udp_ = false;
     }
 
     @java.lang.Override
@@ -10846,11 +10482,6 @@ public final class SsMsg {
             case 8: {
 
               a_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              udp_ = input.readBool();
               break;
             }
             default: {
@@ -10894,15 +10525,6 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    public boolean getUdp() {
-      return udp_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10920,9 +10542,6 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -10935,10 +10554,6 @@ public final class SsMsg {
       if (a_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
-      }
-      if (udp_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10958,8 +10573,6 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10973,9 +10586,6 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11111,8 +10721,6 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
-
         return this;
       }
 
@@ -11140,7 +10748,6 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo20Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo20Req result = new com.moon.demo.ss.SsMsg.Demo20Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
         onBuilt();
         return result;
       }
@@ -11191,9 +10798,6 @@ public final class SsMsg {
         if (other == com.moon.demo.ss.SsMsg.Demo20Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
-        }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11246,32 +10850,6 @@ public final class SsMsg {
       public Builder clearA() {
         
         a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean udp_ ;
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public boolean getUdp() {
-        return udp_;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder setUdp(boolean value) {
-        
-        udp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder clearUdp() {
-        
-        udp_ = false;
         onChanged();
         return this;
       }
@@ -11943,11 +11521,6 @@ public final class SsMsg {
      * <code>int32 a = 1;</code>
      */
     int getA();
-
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    boolean getUdp();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo50Req}
@@ -11963,7 +11536,6 @@ public final class SsMsg {
     }
     private Demo50Req() {
       a_ = 0;
-      udp_ = false;
     }
 
     @java.lang.Override
@@ -11993,11 +11565,6 @@ public final class SsMsg {
             case 8: {
 
               a_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              udp_ = input.readBool();
               break;
             }
             default: {
@@ -12041,15 +11608,6 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    public boolean getUdp() {
-      return udp_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12067,9 +11625,6 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -12082,10 +11637,6 @@ public final class SsMsg {
       if (a_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
-      }
-      if (udp_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12105,8 +11656,6 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -12120,9 +11669,6 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12258,8 +11804,6 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
-
         return this;
       }
 
@@ -12287,7 +11831,6 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo50Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo50Req result = new com.moon.demo.ss.SsMsg.Demo50Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
         onBuilt();
         return result;
       }
@@ -12338,9 +11881,6 @@ public final class SsMsg {
         if (other == com.moon.demo.ss.SsMsg.Demo50Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
-        }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12393,32 +11933,6 @@ public final class SsMsg {
       public Builder clearA() {
         
         a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean udp_ ;
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public boolean getUdp() {
-        return udp_;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder setUdp(boolean value) {
-        
-        udp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder clearUdp() {
-        
-        udp_ = false;
         onChanged();
         return this;
       }
@@ -13090,11 +12604,6 @@ public final class SsMsg {
      * <code>int32 a = 1;</code>
      */
     int getA();
-
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    boolean getUdp();
   }
   /**
    * Protobuf type {@code com.moon.demo.ss.Demo90Req}
@@ -13110,7 +12619,6 @@ public final class SsMsg {
     }
     private Demo90Req() {
       a_ = 0;
-      udp_ = false;
     }
 
     @java.lang.Override
@@ -13140,11 +12648,6 @@ public final class SsMsg {
             case 8: {
 
               a_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              udp_ = input.readBool();
               break;
             }
             default: {
@@ -13188,15 +12691,6 @@ public final class SsMsg {
       return a_;
     }
 
-    public static final int UDP_FIELD_NUMBER = 2;
-    private boolean udp_;
-    /**
-     * <code>bool udp = 2;</code>
-     */
-    public boolean getUdp() {
-      return udp_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13214,9 +12708,6 @@ public final class SsMsg {
       if (a_ != 0) {
         output.writeInt32(1, a_);
       }
-      if (udp_ != false) {
-        output.writeBool(2, udp_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -13229,10 +12720,6 @@ public final class SsMsg {
       if (a_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, a_);
-      }
-      if (udp_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, udp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13252,8 +12739,6 @@ public final class SsMsg {
       boolean result = true;
       result = result && (getA()
           == other.getA());
-      result = result && (getUdp()
-          == other.getUdp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -13267,9 +12752,6 @@ public final class SsMsg {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + A_FIELD_NUMBER;
       hash = (53 * hash) + getA();
-      hash = (37 * hash) + UDP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUdp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13405,8 +12887,6 @@ public final class SsMsg {
         super.clear();
         a_ = 0;
 
-        udp_ = false;
-
         return this;
       }
 
@@ -13434,7 +12914,6 @@ public final class SsMsg {
       public com.moon.demo.ss.SsMsg.Demo90Req buildPartial() {
         com.moon.demo.ss.SsMsg.Demo90Req result = new com.moon.demo.ss.SsMsg.Demo90Req(this);
         result.a_ = a_;
-        result.udp_ = udp_;
         onBuilt();
         return result;
       }
@@ -13485,9 +12964,6 @@ public final class SsMsg {
         if (other == com.moon.demo.ss.SsMsg.Demo90Req.getDefaultInstance()) return this;
         if (other.getA() != 0) {
           setA(other.getA());
-        }
-        if (other.getUdp() != false) {
-          setUdp(other.getUdp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13540,32 +13016,6 @@ public final class SsMsg {
       public Builder clearA() {
         
         a_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean udp_ ;
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public boolean getUdp() {
-        return udp_;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder setUdp(boolean value) {
-        
-        udp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool udp = 2;</code>
-       */
-      public Builder clearUdp() {
-        
-        udp_ = false;
         onChanged();
         return this;
       }
@@ -14705,482 +14155,6 @@ public final class SsMsg {
 
   }
 
-  public interface Demo4NfyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo4Nfy)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 a = 1;</code>
-     */
-    int getA();
-  }
-  /**
-   * Protobuf type {@code com.moon.demo.ss.Demo4Nfy}
-   */
-  public  static final class Demo4Nfy extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo4Nfy)
-      Demo4NfyOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Demo4Nfy.newBuilder() to construct.
-    private Demo4Nfy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Demo4Nfy() {
-      a_ = 0;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Demo4Nfy(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              a_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.moon.demo.ss.SsMsg.Demo4Nfy.class, com.moon.demo.ss.SsMsg.Demo4Nfy.Builder.class);
-    }
-
-    public static final int A_FIELD_NUMBER = 1;
-    private int a_;
-    /**
-     * <code>int32 a = 1;</code>
-     */
-    public int getA() {
-      return a_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (a_ != 0) {
-        output.writeInt32(1, a_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (a_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, a_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo4Nfy)) {
-        return super.equals(obj);
-      }
-      com.moon.demo.ss.SsMsg.Demo4Nfy other = (com.moon.demo.ss.SsMsg.Demo4Nfy) obj;
-
-      boolean result = true;
-      result = result && (getA()
-          == other.getA());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + A_FIELD_NUMBER;
-      hash = (53 * hash) + getA();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo4Nfy prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.moon.demo.ss.Demo4Nfy}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo4Nfy)
-        com.moon.demo.ss.SsMsg.Demo4NfyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.moon.demo.ss.SsMsg.Demo4Nfy.class, com.moon.demo.ss.SsMsg.Demo4Nfy.Builder.class);
-      }
-
-      // Construct using com.moon.demo.ss.SsMsg.Demo4Nfy.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        a_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo4Nfy_descriptor;
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo4Nfy getDefaultInstanceForType() {
-        return com.moon.demo.ss.SsMsg.Demo4Nfy.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo4Nfy build() {
-        com.moon.demo.ss.SsMsg.Demo4Nfy result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.moon.demo.ss.SsMsg.Demo4Nfy buildPartial() {
-        com.moon.demo.ss.SsMsg.Demo4Nfy result = new com.moon.demo.ss.SsMsg.Demo4Nfy(this);
-        result.a_ = a_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.moon.demo.ss.SsMsg.Demo4Nfy) {
-          return mergeFrom((com.moon.demo.ss.SsMsg.Demo4Nfy)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo4Nfy other) {
-        if (other == com.moon.demo.ss.SsMsg.Demo4Nfy.getDefaultInstance()) return this;
-        if (other.getA() != 0) {
-          setA(other.getA());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.moon.demo.ss.SsMsg.Demo4Nfy parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.moon.demo.ss.SsMsg.Demo4Nfy) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int a_ ;
-      /**
-       * <code>int32 a = 1;</code>
-       */
-      public int getA() {
-        return a_;
-      }
-      /**
-       * <code>int32 a = 1;</code>
-       */
-      public Builder setA(int value) {
-        
-        a_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 a = 1;</code>
-       */
-      public Builder clearA() {
-        
-        a_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo4Nfy)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo4Nfy)
-    private static final com.moon.demo.ss.SsMsg.Demo4Nfy DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo4Nfy();
-    }
-
-    public static com.moon.demo.ss.SsMsg.Demo4Nfy getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Demo4Nfy>
-        PARSER = new com.google.protobuf.AbstractParser<Demo4Nfy>() {
-      @java.lang.Override
-      public Demo4Nfy parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Demo4Nfy(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Demo4Nfy> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Demo4Nfy> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.moon.demo.ss.SsMsg.Demo4Nfy getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface Demo5NfyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo5Nfy)
       com.google.protobuf.MessageOrBuilder {
@@ -15657,6 +14631,482 @@ public final class SsMsg {
 
   }
 
+  public interface Demo9NfyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.moon.demo.ss.Demo9Nfy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    int getA();
+  }
+  /**
+   * Protobuf type {@code com.moon.demo.ss.Demo9Nfy}
+   */
+  public  static final class Demo9Nfy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.moon.demo.ss.Demo9Nfy)
+      Demo9NfyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Demo9Nfy.newBuilder() to construct.
+    private Demo9Nfy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Demo9Nfy() {
+      a_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Demo9Nfy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              a_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Nfy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Nfy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.moon.demo.ss.SsMsg.Demo9Nfy.class, com.moon.demo.ss.SsMsg.Demo9Nfy.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    private int a_;
+    /**
+     * <code>int32 a = 1;</code>
+     */
+    public int getA() {
+      return a_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (a_ != 0) {
+        output.writeInt32(1, a_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (a_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, a_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.moon.demo.ss.SsMsg.Demo9Nfy)) {
+        return super.equals(obj);
+      }
+      com.moon.demo.ss.SsMsg.Demo9Nfy other = (com.moon.demo.ss.SsMsg.Demo9Nfy) obj;
+
+      boolean result = true;
+      result = result && (getA()
+          == other.getA());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.moon.demo.ss.SsMsg.Demo9Nfy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.moon.demo.ss.Demo9Nfy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.moon.demo.ss.Demo9Nfy)
+        com.moon.demo.ss.SsMsg.Demo9NfyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Nfy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Nfy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.moon.demo.ss.SsMsg.Demo9Nfy.class, com.moon.demo.ss.SsMsg.Demo9Nfy.Builder.class);
+      }
+
+      // Construct using com.moon.demo.ss.SsMsg.Demo9Nfy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        a_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.moon.demo.ss.SsMsg.internal_static_com_moon_demo_ss_Demo9Nfy_descriptor;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Nfy getDefaultInstanceForType() {
+        return com.moon.demo.ss.SsMsg.Demo9Nfy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Nfy build() {
+        com.moon.demo.ss.SsMsg.Demo9Nfy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.moon.demo.ss.SsMsg.Demo9Nfy buildPartial() {
+        com.moon.demo.ss.SsMsg.Demo9Nfy result = new com.moon.demo.ss.SsMsg.Demo9Nfy(this);
+        result.a_ = a_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.moon.demo.ss.SsMsg.Demo9Nfy) {
+          return mergeFrom((com.moon.demo.ss.SsMsg.Demo9Nfy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.moon.demo.ss.SsMsg.Demo9Nfy other) {
+        if (other == com.moon.demo.ss.SsMsg.Demo9Nfy.getDefaultInstance()) return this;
+        if (other.getA() != 0) {
+          setA(other.getA());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.moon.demo.ss.SsMsg.Demo9Nfy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.moon.demo.ss.SsMsg.Demo9Nfy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int a_ ;
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public int getA() {
+        return a_;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder setA(int value) {
+        
+        a_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 a = 1;</code>
+       */
+      public Builder clearA() {
+        
+        a_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.moon.demo.ss.Demo9Nfy)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo9Nfy)
+    private static final com.moon.demo.ss.SsMsg.Demo9Nfy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.moon.demo.ss.SsMsg.Demo9Nfy();
+    }
+
+    public static com.moon.demo.ss.SsMsg.Demo9Nfy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Demo9Nfy>
+        PARSER = new com.google.protobuf.AbstractParser<Demo9Nfy>() {
+      @java.lang.Override
+      public Demo9Nfy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Demo9Nfy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Demo9Nfy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Demo9Nfy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.moon.demo.ss.SsMsg.Demo9Nfy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_moon_demo_ss_Demo2Req_descriptor;
   private static final 
@@ -15783,15 +15233,15 @@ public final class SsMsg {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_moon_demo_ss_Demo2Nfy_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_moon_demo_ss_Demo4Nfy_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_moon_demo_ss_Demo4Nfy_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_moon_demo_ss_Demo5Nfy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_moon_demo_ss_Demo5Nfy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_moon_demo_ss_Demo9Nfy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_moon_demo_ss_Demo9Nfy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -15804,40 +15254,36 @@ public final class SsMsg {
       "\n\014ss_msg.proto\022\020com.moon.demo.ss\032\014common" +
       ".proto\"3\n\010Demo2Req\022\t\n\001a\030\001 \001(\005\022\034\n\024proto_t" +
       "cp_thread_idx\030\002 \001(\005\"2\n\010Demo2Rsp\022&\n\007err_c" +
-      "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo3" +
-      "Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo3Rsp\022" +
-      "&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"" +
-      "a\n\010Demo4Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003" +
-      " \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon" +
-      ".demo.ss.Demo4Flag\"2\n\010Demo4Rsp\022&\n\007err_ct" +
-      "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\".\n\010Demo5R" +
-      "eq\022\t\n\001a\030\001 \001(\005\022\027\n\017work_thread_idx\030\002 \001(\005\"2" +
-      "\n\010Demo5Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d" +
-      "emo.ErrCtx\"\"\n\010Demo6Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp" +
-      "\030\002 \001(\010\"2\n\010Demo6Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.co" +
-      "m.moon.demo.ErrCtx\"\"\n\010Demo7Req\022\t\n\001a\030\001 \001(" +
-      "\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo7Rsp\022&\n\007err_ctx\030\001 " +
-      "\001(\0132\025.com.moon.demo.ErrCtx\"\"\n\010Demo8Req\022\t" +
-      "\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"2\n\010Demo8Rsp\022&\n\007er" +
-      "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"0\n\010De" +
-      "mo9Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread_idx\030\002" +
-      " \001(\005\"2\n\010Demo9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com." +
-      "moon.demo.ErrCtx\"#\n\tDemo10Req\022\t\n\001a\030\001 \001(\005" +
-      "\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo10Rsp\022&\n\007err_ctx\030\001 " +
-      "\001(\0132\025.com.moon.demo.ErrCtx\"#\n\tDemo20Req\022" +
-      "\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDemo20Rsp\022&\n\007" +
-      "err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"#\n\t" +
-      "Demo50Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 \001(\010\"3\n\tDem" +
-      "o50Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo." +
-      "ErrCtx\"#\n\tDemo90Req\022\t\n\001a\030\001 \001(\005\022\013\n\003udp\030\002 " +
-      "\001(\010\"3\n\tDemo90Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com." +
-      "moon.demo.ErrCtx\"\025\n\010Demo2Nfy\022\t\n\001a\030\001 \001(\005\"" +
-      "\025\n\010Demo4Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030" +
-      "\001 \001(\005*\265\001\n\tDemo4Flag\022\023\n\017DEMO_4_FLAG_MIN\020\000" +
-      "\022\032\n\026DEMO_4_FLAG_IO_TO_WORK\020\000\022\034\n\030DEMO_4_F" +
-      "LAG_WORK_TO_WORK\020\001\022\036\n\032DEMO_4_FLAG_WORK_T" +
-      "O_BURDEN\020\002\022 \n\034DEMO_4_FLAG_BURDEN_TO_BURD" +
-      "EN\020\003\022\023\n\017DEMO_4_FLAG_MAX\020\004\032\002\020\001b\006proto3"
+      "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo3" +
+      "Req\022\t\n\001a\030\001 \001(\005\"2\n\010Demo3Rsp\022&\n\007err_ctx\030\001 " +
+      "\001(\0132\025.com.moon.demo.ErrCtx\"a\n\010Demo4Req\022\t" +
+      "\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001" +
+      "(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon.demo.ss.Demo" +
+      "4Flag\"2\n\010Demo4Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com" +
+      ".moon.demo.ErrCtx\".\n\010Demo5Req\022\t\n\001a\030\001 \001(\005" +
+      "\022\027\n\017work_thread_idx\030\002 \001(\005\"2\n\010Demo5Rsp\022&\n" +
+      "\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n" +
+      "\010Demo6Req\022\t\n\001a\030\001 \001(\005\"2\n\010Demo6Rsp\022&\n\007err_" +
+      "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo" +
+      "7Req\022\t\n\001a\030\001 \001(\005\"2\n\010Demo7Rsp\022&\n\007err_ctx\030\001" +
+      " \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo8Req\022" +
+      "\t\n\001a\030\001 \001(\005\"2\n\010Demo8Rsp\022&\n\007err_ctx\030\001 \001(\0132" +
+      "\025.com.moon.demo.ErrCtx\"0\n\010Demo9Req\022\t\n\001a\030" +
+      "\001 \001(\005\022\031\n\021burden_thread_idx\030\002 \001(\005\"2\n\010Demo" +
+      "9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Er" +
+      "rCtx\"\026\n\tDemo10Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo10Rs" +
+      "p\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCt" +
+      "x\"\026\n\tDemo20Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo20Rsp\022&" +
+      "\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\026" +
+      "\n\tDemo50Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo50Rsp\022&\n\007e" +
+      "rr_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\026\n\tD" +
+      "emo90Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo90Rsp\022&\n\007err_" +
+      "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo" +
+      "2Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030\001 \001(\005\"\025" +
+      "\n\010Demo9Nfy\022\t\n\001a\030\001 \001(\005*a\n\tDemo4Flag\022\023\n\017DE" +
+      "MO_4_FLAG_MIN\020\000\022\022\n\016DEMO_4_FLAG_XX\020\000\022\022\n\016D" +
+      "EMO_4_FLAG_YY\020\001\022\023\n\017DEMO_4_FLAG_MAX\020\002\032\002\020\001" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15869,7 +15315,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo3Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo3Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo3Rsp_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_moon_demo_ss_Demo3Rsp_fieldAccessorTable = new
@@ -15905,7 +15351,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo6Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo6Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo6Rsp_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_com_moon_demo_ss_Demo6Rsp_fieldAccessorTable = new
@@ -15917,7 +15363,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo7Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo7Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo7Rsp_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_com_moon_demo_ss_Demo7Rsp_fieldAccessorTable = new
@@ -15929,7 +15375,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo8Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo8Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo8Rsp_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_com_moon_demo_ss_Demo8Rsp_fieldAccessorTable = new
@@ -15953,7 +15399,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo10Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo10Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo10Rsp_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_com_moon_demo_ss_Demo10Rsp_fieldAccessorTable = new
@@ -15965,7 +15411,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo20Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo20Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo20Rsp_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_com_moon_demo_ss_Demo20Rsp_fieldAccessorTable = new
@@ -15977,7 +15423,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo50Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo50Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo50Rsp_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_com_moon_demo_ss_Demo50Rsp_fieldAccessorTable = new
@@ -15989,7 +15435,7 @@ public final class SsMsg {
     internal_static_com_moon_demo_ss_Demo90Req_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo90Req_descriptor,
-        new java.lang.String[] { "A", "Udp", });
+        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo90Rsp_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_com_moon_demo_ss_Demo90Rsp_fieldAccessorTable = new
@@ -16002,17 +15448,17 @@ public final class SsMsg {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo2Nfy_descriptor,
         new java.lang.String[] { "A", });
-    internal_static_com_moon_demo_ss_Demo4Nfy_descriptor =
-      getDescriptor().getMessageTypes().get(25);
-    internal_static_com_moon_demo_ss_Demo4Nfy_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_moon_demo_ss_Demo4Nfy_descriptor,
-        new java.lang.String[] { "A", });
     internal_static_com_moon_demo_ss_Demo5Nfy_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_com_moon_demo_ss_Demo5Nfy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_moon_demo_ss_Demo5Nfy_descriptor,
+        new java.lang.String[] { "A", });
+    internal_static_com_moon_demo_ss_Demo9Nfy_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_com_moon_demo_ss_Demo9Nfy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_moon_demo_ss_Demo9Nfy_descriptor,
         new java.lang.String[] { "A", });
     com.moon.demo.Common.getDescriptor();
   }

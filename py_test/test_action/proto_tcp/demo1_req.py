@@ -22,10 +22,6 @@ class Demo1Req(object):
     def __init__(self, client):
         self.client = client
 
-    # TODO
-    def set_xx(self, xx):
-        self.xx = xx
-
     def __make_demo1_req(self):
         demo1_req = cs_msg_pb2.Demo1Req()
         demo1_req.a = 1
@@ -76,7 +72,7 @@ class Demo1Req(object):
 
         err_code = demo1_rsp.err_ctx.err_code
         if err_code != 0:
-            LOG_ERROR('demo1_rsp failed err code: %d' % err_code)
+            LOG_ERROR('failed err code: %d' % err_code)
             return err_code
 
         # 收Demo1Nfy

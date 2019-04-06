@@ -32,6 +32,31 @@ void Demo9ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    // TODO
+    LOG_TRACE(demo9_req.a());
+
+    ////////////////////////////////////////////////////////////////////////////////
+    ::proto::MsgHead demo90_req_msg_head = { 0, ss::MSG_ID_DEMO90_REQ };
+
+    ss::Demo90Req demo90_req;
+    demo90_req.set_a(90);
+
+    if (SendToBurdenThread(logic_ctx_->scheduler, conn_guid, demo90_req_msg_head, &demo90_req,
+                           demo9_req.burden_thread_idx()) != 0)
+    {
+        LOG_ERROR("failed to send to burden thread, msg id: " << demo90_req_msg_head.msg_id);
+        return;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    ::proto::MsgHead demo9_nfy_msg_head = { NFY_PASSBACK, ss::MSG_ID_DEMO9_NFY };
+
+    ss::Demo9Nfy demo9_nfy;
+    demo9_nfy.set_a(9);
+
+    if (SendToBurdenThread(logic_ctx_->scheduler, conn_guid, demo9_nfy_msg_head, &demo9_nfy, -1) != 0) // 广播
+    {
+        LOG_ERROR("failed to broadcast to burden threads, msg id: " << demo9_nfy_msg_head.msg_id);
+        return;
+    }
 }
 }
