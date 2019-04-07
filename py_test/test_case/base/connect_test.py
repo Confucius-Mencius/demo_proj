@@ -34,9 +34,9 @@ def proc1():
         assert False
 
 
-def test001():
-    run_multi_process(10000, proc1)
+def test_001():
+    run_multi_process(200, proc1)
 
 
 if __name__ == '__main__':
-    test001()
+    test_001()

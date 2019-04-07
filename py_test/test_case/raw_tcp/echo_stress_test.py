@@ -18,18 +18,18 @@ def proc1():
     assert send_to_server1() == 0
 
 
-def test001():
-    run_multi_process(10000, proc1)
+def test_001():
+    run_multi_process(200, proc1)
 
 
 def proc2():
     assert send_to_server2() == 0
 
 
-def test002():
-    run_multi_process(10000, proc2)
+def test_002():
+    run_multi_process(200, proc2)
 
 
 if __name__ == '__main__':
-    test001()
-    test002()
+    test_001()
+    test_002()

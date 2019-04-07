@@ -7,12 +7,13 @@
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
 # todo udp http ws
-TEST_CASE_DIR=(base raw_tcp)
+TEST_CASE_DIR=(base raw_tcp proto_tcp)
 
 for i in ${TEST_CASE_DIR[@]}; do
     DIR=${SCRIPT_PATH}/../test_case/$i
 
     for f in ${DIR}/*.py; do
+        # -v: --verbose, Be more verbose.  -s: --nocapture, Don't capture stdout (any stdout output will be printed immediately).
         # nosetests -v -s $f
         nosetests -v $f
     done

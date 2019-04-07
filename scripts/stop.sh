@@ -16,10 +16,10 @@ function MySleep()
     done
 }
 
-read -p "Want to stop? [Y/n]" input
-echo $input
+read -p "Want to stop? [Y/n]" INPUT
+echo ${INPUT}
 
-if [ $input = "Y" ]; then
+if [ ${INPUT} = "Y" -o ${INPUT} = "y" ]; then
     for i in ${STOP_SERVER_LIST[@]}; do
         SERVER=$i
         cd ${BIN_DIR}/${SERVER}

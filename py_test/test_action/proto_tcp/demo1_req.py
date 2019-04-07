@@ -43,6 +43,13 @@ class Demo1Req(object):
         LOG_DEBUG('%s%s' % (os.linesep, demo1_nfy))
         return demo1_nfy
 
+    def __make_demo3_nfy(self, nfy_msg_body):
+        demo3_nfy = cs_msg_pb2.Demo3Nfy()
+        demo3_nfy.ParseFromString(nfy_msg_body)
+
+        LOG_DEBUG('%s%s' % (os.linesep, demo3_nfy))
+        return demo3_nfy
+
     def demo1(self):
         LOG_DEBUG('----- demo1_req -----')
 
@@ -89,6 +96,22 @@ class Demo1Req(object):
 
         demo1_nfy = self.__make_demo1_nfy(demo1_nfy_msg_body)
         if demo1_nfy.a != 1:
+            return -1
+
+        # 收Demo3Nfy
+        demo3_nfy_msg_head = MsgHead()
+
+        ret, demo3_nfy_msg_head, demo3_nfy_msg_body = self.client.recv(conf.proto_tcp_do_checksum)
+        if ret != 0:
+            LOG_ERROR('ret: %d' % ret)
+            return -1
+
+        if demo3_nfy_msg_head.msg_id != cs_msg_id_pb2.MSG_ID_DEMO3_NFY:
+            LOG_ERROR('error rsp msg id: %d' % demo3_nfy_msg_head.msg_id)
+            return -1
+
+        demo3_nfy = self.__make_demo3_nfy(demo3_nfy_msg_body)
+        if demo3_nfy.a != 3:
             return -1
 
         return 0
