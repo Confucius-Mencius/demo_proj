@@ -119,7 +119,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         </proto>
 
         <!-- http和websocket -->
-        <ws>
+        <http_ws>
             <part_msg>
                 <!-- 定时检查不完整消息间隔，单位：秒。配置为0或者不配置则使用默认值：5秒 -->
                 <check_interval>5</check_interval>
@@ -143,14 +143,14 @@ XML中的特殊符号只有5种，<、>、&、’和”。
             <!-- tcp io线程数，>=1。建议等于CPU核心数 -->
             <thread_count>2</thread_count>
 
-            <!-- 一个tcp线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-            <common_logic_so>./libws_common_logic.so</common_logic_so>
+            <!-- 一个http-ws线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
+            <common_logic_so>./libhttp_ws_common_logic.so</common_logic_so>
 
-            <!-- tcp logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
+            <!-- http-ws logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
             <logic_so_group>
-                <logic_so>./libws_logic.so</logic_so>
+                <logic_so>./libhttp_ws_logic.so</logic_so>
             </logic_so_group>
-        </ws>
+        </http_ws>
     </tcp>
 
     <udp>

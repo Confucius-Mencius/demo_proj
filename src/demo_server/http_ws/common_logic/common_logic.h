@@ -1,9 +1,11 @@
-#ifndef DEMO_SERVER_WS_COMMON_LOGIC_COMMON_LOGIC_H_
-#define DEMO_SERVER_WS_COMMON_LOGIC_COMMON_LOGIC_H_
+#ifndef DEMO_SERVER_HTTP_WS_COMMON_LOGIC_COMMON_LOGIC_H_
+#define DEMO_SERVER_HTTP_WS_COMMON_LOGIC_COMMON_LOGIC_H_
 
-#include "ws_common_logic_interface.h"
+#include "http_ws_common_logic_interface.h"
 
-namespace ws
+namespace tcp
+{
+namespace http_ws
 {
 class CommonLogic : public TheCommonLogicInterface
 {
@@ -32,5 +34,6 @@ public:
 
 };
 }
+}
 
-#endif // DEMO_SERVER_WS_COMMON_LOGIC_COMMON_LOGIC_H_
+#endif // DEMO_SERVER_HTTP_WS_COMMON_LOGIC_COMMON_LOGIC_H_
