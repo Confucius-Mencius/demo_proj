@@ -16,25 +16,25 @@ function MySleep()
     done
 }
 
-read -p "Want to stop? [Y/n]" INPUT
-echo ${INPUT}
+for i in ${STOP_SERVER_LIST[@]}; do
+    SERVER=$i
+    cd ${BIN_DIR}/${SERVER}
 
-if [ ${INPUT} = "Y" -o ${INPUT} = "y" ]; then
-    for i in ${STOP_SERVER_LIST[@]}; do
-        SERVER=$i
-        cd ${BIN_DIR}/${SERVER}
+    if [ ! -f "./${SERVER}.pid" ]; then
+        continue
+    fi
 
-        if [ ! -f "./${SERVER}.pid" ]; then
-            continue
-        fi
+    PID=`cat ./${SERVER}.pid`
+    n=`ps --no-heading ${PID} | wc -l`
 
-        PID=`cat ./${SERVER}.pid`
-        n=`ps --no-heading ${PID} | wc -l`
+    if [ $n == 0 ]; then
+        continue
+    fi
 
-        if [ $n == 0 ]; then
-            continue
-        fi
+    read -p "Want to stop ${SERVER}? [Y/n]" INPUT
+    echo ${INPUT}
 
+    if [ ${INPUT} = "Y" -o ${INPUT} = "y" ]; then
         kill -3 ${PID}
 
         while [ $n != 0 ]; do
@@ -43,5 +43,5 @@ if [ ${INPUT} = "Y" -o ${INPUT} = "y" ]; then
         done
 
         echo "${SERVER} exit ok"
-    done
-fi
+    fi
+done
