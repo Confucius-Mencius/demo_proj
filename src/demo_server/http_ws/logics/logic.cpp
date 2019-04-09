@@ -1,8 +1,10 @@
 #include "logic.h"
 #include "log_util.h"
-#include "ws_scheduler_interface.h"
+#include "http_ws_scheduler_interface.h"
 
-namespace ws
+namespace tcp
+{
+namespace http_ws
 {
 Logic::Logic()
 {
@@ -70,8 +72,5 @@ void Logic::OnClientClosed(const ConnGUID* conn_guid)
 void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
 }
-
-void Logic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
-{
 }
 }

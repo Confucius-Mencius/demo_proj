@@ -1,9 +1,11 @@
-#ifndef DEMO_SERVER_WS_LOGICS_LOGIC_H_
-#define DEMO_SERVER_WS_LOGICS_LOGIC_H_
+#ifndef DEMO_SERVER_HTTP_WS_LOGICS_LOGIC_H_
+#define DEMO_SERVER_HTTP_WS_LOGICS_LOGIC_H_
 
-#include "ws_logic_interface.h"
+#include "http_ws_logic_interface.h"
 
-namespace ws
+namespace tcp
+{
+namespace http_ws
 {
 class Logic : public LogicInterface
 {
@@ -26,8 +28,8 @@ public:
     void OnClientConnected(const ConnGUID* conn_guid) override;
     void OnClientClosed(const ConnGUID* conn_guid) override;
     void OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len) override;
-    void OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len) override;
 };
 }
+}
 
-#endif // DEMO_SERVER_WS_LOGICS_LOGIC_H_
+#endif // DEMO_SERVER_HTTP_WS_LOGICS_LOGIC_H_

@@ -1,4 +1,4 @@
 #include "exporter.h"
 #include "logic.h"
 
-MODULE_EXPORTER_IMPL(ws::Logic);
+MODULE_EXPORTER_IMPL(tcp::http_ws::Logic);

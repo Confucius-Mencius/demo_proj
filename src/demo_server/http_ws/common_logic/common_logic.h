@@ -28,7 +28,6 @@ public:
     void OnClientConnected(const ConnGUID* conn_guid) override;
     void OnClientClosed(const ConnGUID* conn_guid) override;
     void OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len) override;
-    void OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len) override;
 
     ///////////////////////// TheCommonLogicInterface /////////////////////////
 

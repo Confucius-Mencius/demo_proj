@@ -3,9 +3,11 @@
 #include <string.h>
 #include <unistd.h>
 #include "log_util.h"
-#include "ws_scheduler_interface.h"
+#include "http_ws_scheduler_interface.h"
 
-namespace ws
+namespace tcp
+{
+namespace http_ws
 {
 CommonLogic::CommonLogic()
 {
@@ -76,8 +78,5 @@ void CommonLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, 
     LOG_DEBUG((char*) data << ", len: " << len);
     logic_ctx_.scheduler->SendToClient(conn_guid, data, len);
 }
-
-void CommonLogic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
-{
 }
 }
