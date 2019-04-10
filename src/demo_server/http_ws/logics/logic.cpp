@@ -6,7 +6,7 @@ namespace tcp
 {
 namespace http_ws
 {
-Logic::Logic()
+Logic::Logic() : http_msg_handler_mgr_()
 {
 }
 
@@ -36,20 +36,35 @@ int Logic::Initialize(const void* ctx)
         return -1;
     }
 
+    if (http_msg_handler_mgr_.Initialize(&logic_ctx_) != 0)
+    {
+        return -1;
+    }
+
     return 0;
 }
 
 void Logic::Finalize()
 {
+    http_msg_handler_mgr_.Finalize();
 }
 
 int Logic::Activate()
 {
+    http_msg_handler_mgr_.SetGlobalLogic((global::TheLogicInterface*) global_logic_);
+    http_msg_handler_mgr_.SetLogic(this);
+
+    if (http_msg_handler_mgr_.Activate() != 0)
+    {
+        return -1;
+    }
+
     return 0;
 }
 
 void Logic::Freeze()
 {
+    http_msg_handler_mgr_.Freeze();
 }
 
 void Logic::OnStop()
@@ -69,7 +84,7 @@ void Logic::OnClientClosed(const ConnGUID* conn_guid)
 {
 }
 
-void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
+void Logic::OnWSMsg(const ConnGUID* conn_guid, const void* data, size_t len)
 {
 }
 }

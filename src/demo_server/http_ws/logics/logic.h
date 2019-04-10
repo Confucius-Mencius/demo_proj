@@ -2,6 +2,7 @@
 #define DEMO_SERVER_HTTP_WS_LOGICS_LOGIC_H_
 
 #include "http_ws_logic_interface.h"
+#include "http/msg_handler_mgr.h"
 
 namespace tcp
 {
@@ -27,7 +28,10 @@ public:
     void OnReload() override;
     void OnClientConnected(const ConnGUID* conn_guid) override;
     void OnClientClosed(const ConnGUID* conn_guid) override;
-    void OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len) override;
+    void OnWSMsg(const ConnGUID* conn_guid, const void* data, size_t len) override;
+
+private:
+    tcp::http::MsgHandlerMgr http_msg_handler_mgr_;
 };
 }
 }

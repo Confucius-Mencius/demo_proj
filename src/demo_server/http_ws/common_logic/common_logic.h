@@ -27,7 +27,7 @@ public:
     void OnReload() override;
     void OnClientConnected(const ConnGUID* conn_guid) override;
     void OnClientClosed(const ConnGUID* conn_guid) override;
-    void OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len) override;
+    void OnWSMsg(const ConnGUID* conn_guid, const void* data, size_t len) override;
 
     ///////////////////////// TheCommonLogicInterface /////////////////////////
 

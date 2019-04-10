@@ -11,20 +11,23 @@ CreateVersionFile(${CMAKE_CURRENT_SOURCE_DIR} ${PROJ_NAME} ${LIB_NAME})
 
 ###############################################################################
 # include/link dir
-include_directories(${PROJ_INC_DIR} ${COMMON_UTIL_INC_DIR} ${PROTO_INC_DIR} ${COMMON_COMPONENT_INC_DIR}
-        ${LOG4CPLUS_INC_DIR} ${PROTOBUF_INC_DIR})
-link_directories(${COMMON_UTIL_LIB_DIR} ${PROTO_LIB_DIR} ${COMMON_COMPONENT_LIB_DIR} ${GPERFTOOLS_LIB_DIR})
+include_directories(${PROJ_INC_DIR} ${COMMON_UTIL_INC_DIR} ${PROTO_INC_DIR}
+        ${COMMON_COMPONENT_INC_DIR} ${LOG4CPLUS_INC_DIR} ${PROTOBUF_INC_DIR}
+        ${HTTP_PARSER_INC_DIR})
+link_directories(${COMMON_UTIL_LIB_DIR} ${PROTO_LIB_DIR} ${COMMON_COMPONENT_LIB_DIR}
+        ${HTTP_PARSER_LIB_DIR} ${GPERFTOOLS_LIB_DIR})
 
 ###############################################################################
 # target
 file(GLOB HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/*.h ${PROJ_INC_DIR}/*.h)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} CUR_DIR_SRCS)
-add_library(${LIB_NAME} SHARED ${HEADERS} ${CUR_DIR_SRCS})
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/http HTTP_DIR_SRCS)
+add_library(${LIB_NAME} SHARED ${HEADERS} ${CUR_DIR_SRCS} ${HTTP_DIR_SRCS})
 
 ###############################################################################
 # library dependence
-target_link_libraries(${LIB_NAME} ${UTIL_LIB_NAME} ${COMMON_UTIL_LIB_NAME} ${PROTO_LIB_NAME} ${BASE_LIB_NAME}
-        ${GPERFTOOLS_LIB_NAME})
+target_link_libraries(${LIB_NAME} ${UTIL_LIB_NAME} ${COMMON_UTIL_LIB_NAME} ${PROTO_LIB_NAME}
+        ${BASE_LIB_NAME} ${HTTP_PARSER_LIB_NAME} ${GPERFTOOLS_LIB_NAME})
 
 ###############################################################################
 # output dir
