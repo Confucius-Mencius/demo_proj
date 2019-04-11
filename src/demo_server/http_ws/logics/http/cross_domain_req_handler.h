@@ -5,6 +5,8 @@
 
 namespace tcp
 {
+namespace http_ws
+{
 namespace http
 {
 class CrossDomainReqHandler : public MsgHandler
@@ -16,8 +18,9 @@ public:
     ///////////////////////// MsgHandlerInterface /////////////////////////
     const char* GetPath() override;
     void OnGet(const ConnGUID* conn_guid, const char* client_ip,
-               const QueryParams& query_params, const Headers& headers) override;
+               const QueryMap& querys, const HeaderMap& headers) override;
 };
+}
 }
 }
 

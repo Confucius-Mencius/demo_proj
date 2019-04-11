@@ -21,7 +21,7 @@ def send_to_server1(s):
         if s:
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
                                    timeout=60,
-                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
@@ -29,7 +29,7 @@ def send_to_server1(s):
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
                                    timeout=60,
-                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
@@ -62,7 +62,7 @@ def send_to_server2(s):
         if s:
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
                                    timeout=60,
-                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
@@ -70,7 +70,7 @@ def send_to_server2(s):
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
                                    timeout=60,
-                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
@@ -100,14 +100,14 @@ def ping(s):
     try:
         if s:
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
-                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
-                                   header=["Sec-WebSocket-Protocol: protocol-ws"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))

@@ -2,6 +2,8 @@
 
 namespace tcp
 {
+namespace http_ws
+{
 namespace http
 {
 MsgHandler::MsgHandler()
@@ -22,8 +24,9 @@ int MsgHandler::Initialize(const void* ctx)
         return -1;
     }
 
-    common_logic_ = const_cast<tcp::http_ws::TheCommonLogicInterface*>(static_cast<tcp::http_ws::TheCommonLogicInterface*>(logic_ctx_->common_logic));
+    common_logic_ = const_cast<TheCommonLogicInterface*>(static_cast<TheCommonLogicInterface*>(logic_ctx_->common_logic));
     return 0;
+}
 }
 }
 }

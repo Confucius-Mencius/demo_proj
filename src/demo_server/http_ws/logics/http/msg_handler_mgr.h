@@ -9,7 +9,6 @@ namespace tcp
 namespace http_ws
 {
 class Logic;
-}
 
 namespace http
 {
@@ -24,7 +23,7 @@ public:
 
 public:
     void SetGlobalLogic(global::TheLogicInterface* global_logic);
-    void SetLogic(tcp::http_ws::Logic* logic);
+    void SetLogic(Logic* logic);
 
 private:
     ///////////////////////// MsgHandlerMgrTemplate /////////////////////////
@@ -34,6 +33,7 @@ private:
 private:
     CrossDomainReqHandler cross_domain_req_handler_;
 };
+}
 }
 }
 

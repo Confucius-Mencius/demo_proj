@@ -2,6 +2,8 @@
 
 namespace tcp
 {
+namespace http_ws
+{
 namespace http
 {
 MsgHandlerMgr::MsgHandlerMgr()
@@ -19,7 +21,7 @@ int MsgHandlerMgr::Initialize(const void* ctx)
         return -1;
     }
 
-    tcp::http_ws::LogicCtx* logic_ctx = (tcp::http_ws::LogicCtx*) ctx;
+    LogicCtx* logic_ctx = (LogicCtx*) ctx;
     msg_dispatcher_ = logic_ctx->http_msg_dispatcher;
 
     if (MsgHandlerMgrTemplate<MsgHandler>::Initialize(ctx) != 0)
@@ -42,7 +44,7 @@ void MsgHandlerMgr::SetGlobalLogic(global::TheLogicInterface* global_logic)
     }
 }
 
-void MsgHandlerMgr::SetLogic(tcp::http_ws::Logic* logic)
+void MsgHandlerMgr::SetLogic(Logic* logic)
 {
     for (MsgHandlerVec::iterator it = msg_handler_vec_.begin(); it != msg_handler_vec_.end(); ++it)
     {
@@ -60,6 +62,7 @@ int MsgHandlerMgr::InitializeMsgHandlerVec()
 void MsgHandlerMgr::FinalizeMsgHandlerVec()
 {
     msg_handler_vec_.clear();
+}
 }
 }
 }

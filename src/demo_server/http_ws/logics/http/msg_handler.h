@@ -12,7 +12,6 @@ namespace tcp
 namespace http_ws
 {
 class Logic;
-}
 
 namespace http
 {
@@ -30,16 +29,17 @@ public:
         global_logic_ = global_logic;
     }
 
-    void SetLogic(tcp::http_ws::Logic* logic)
+    void SetLogic(Logic* logic)
     {
         logic_ = logic;
     }
 
 protected:
     global::TheLogicInterface* global_logic_;
-    tcp::http_ws::TheCommonLogicInterface* common_logic_;
-    tcp::http_ws::Logic* logic_;
+    TheCommonLogicInterface* common_logic_;
+    Logic* logic_;
 };
+}
 }
 }
 

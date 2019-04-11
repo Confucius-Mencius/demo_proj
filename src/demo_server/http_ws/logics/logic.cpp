@@ -84,7 +84,7 @@ void Logic::OnClientClosed(const ConnGUID* conn_guid)
 {
 }
 
-void Logic::OnWSMsg(const ConnGUID* conn_guid, const void* data, size_t len)
+void Logic::OnWSMsg(const ConnGUID* conn_guid, int frame_type, const void* data, size_t len)
 {
 }
 }

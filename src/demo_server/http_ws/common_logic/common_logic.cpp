@@ -1,9 +1,7 @@
 #include "common_logic.h"
-#include <errno.h>
-#include <string.h>
-#include <unistd.h>
-#include "log_util.h"
 #include "http_ws_scheduler_interface.h"
+#include "log_util.h"
+#include "ws_frame_maker.h"
 
 namespace tcp
 {
@@ -72,11 +70,17 @@ void CommonLogic::OnClientClosed(const ConnGUID* conn_guid)
 {
 }
 
-void CommonLogic::OnWSMsg(const ConnGUID* conn_guid, const void* data, size_t len)
+void CommonLogic::OnWSMsg(const ConnGUID* conn_guid, int frame_type, const void* data, size_t len)
 {
-    // echo, for test only
+    // echo
     LOG_DEBUG((char*) data << ", len: " << len);
-    logic_ctx_.scheduler->SendToClient(conn_guid, data, len);
+
+    tcp::http_ws::ws::FrameMaker ws_frame_maker;
+    const std::string ws_frame = ws_frame_maker.SetFin(true)
+                                 .SetFrameType(frame_type)
+                                 .MakeFrame(data, len);
+
+    logic_ctx_.scheduler->SendToClient(conn_guid, ws_frame.data(), ws_frame.size());
 }
 }
 }
