@@ -1,4 +1,5 @@
-#include "cross_domain_req_handler.h"
+#include "crossdomain_req_handler.h"
+#include <string.h>
 #include "http_rsp_maker.h"
 #include "http_ws_scheduler_interface.h"
 #include "log_util.h"
@@ -9,20 +10,20 @@ namespace http_ws
 {
 namespace http
 {
-CrossDomainReqHandler::CrossDomainReqHandler()
+CrossdomainReqHandler::CrossdomainReqHandler()
 {
 }
 
-CrossDomainReqHandler::~CrossDomainReqHandler()
+CrossdomainReqHandler::~CrossdomainReqHandler()
 {
 }
 
-const char* CrossDomainReqHandler::GetPath()
+const char* CrossdomainReqHandler::GetPath()
 {
     return "/crossdomain.xml";
 }
 
-void CrossDomainReqHandler::OnGet(const ConnGUID* conn_guid, const char* client_ip,
+void CrossdomainReqHandler::OnGet(const ConnGUID* conn_guid, const char* client_ip,
                                   const QueryMap& queries, const HeaderMap& headers)
 {
     static const char flash_policy[] = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"

@@ -15,12 +15,10 @@ from websocket import create_connection
 from util.log_util import *
 
 
-# 发送小于16k的数据
-def send_to_server1(s):
+def ping(s):
     try:
         if s:
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
-                                   timeout=60,
                                    header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com',
@@ -28,19 +26,15 @@ def send_to_server1(s):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
-                                   timeout=60,
-                                   header=["Sec-WebSocket-Protocol: xxx"],
+                                   header=["Sec-WebSocket-Protocol: lws-minimal"],
                                    cookie='xx',
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
 
-        data = 'Hello, World'
-        ws.send(data)
+        ws.ping("i am a ping")
 
-        rsp = ws.recv()
+        rsp = ws.recv_frame()
         LOG_DEBUG(rsp)
-
-        assert rsp == data
 
         ws.close()
         ret = 0
@@ -52,16 +46,13 @@ def send_to_server1(s):
 
 
 def test001():
-    assert send_to_server1(False) == 0
-    # assert send_to_server1(True) == 0
+    assert ping(False) == 0
 
 
-# 发送大于16k的数据
-def send_to_server2(s):
+def pong(s):
     try:
         if s:
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
-                                   timeout=60,
                                    header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com',
@@ -69,18 +60,15 @@ def send_to_server2(s):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
-                                   timeout=60,
-                                   header=["Sec-WebSocket-Protocol: xxx"],
+                                   header=["Sec-WebSocket-Protocol: lws-minimal"],
                                    cookie='xx',
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
 
-        data = 'x' * 16 * 1024 + 'y'
-        ws.send(data)
+        ws.pong("i am a pong")
 
-        rsp = ws.recv()
+        rsp = ws.recv_frame()
         LOG_DEBUG(rsp)
-        assert rsp == data
 
         ws.close()
         ret = 0
@@ -92,10 +80,45 @@ def send_to_server2(s):
 
 
 def test002():
-    assert send_to_server2(False) == 0
-    # assert send_to_server2(True) == 0
+    assert pong(False) == 0
+
+
+def close(s):
+    try:
+        if s:
+            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
+                                   header=["Sec-WebSocket-Protocol: xxx"],
+                                   cookie='xx',
+                                   host='www.qq.com',
+                                   sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
+        else:
+            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
+                                   header=["Sec-WebSocket-Protocol: lws-minimal"],
+                                   cookie='xx',
+                                   host='www.qq.com')
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
+
+        ws.send_close()
+
+        rsp = ws.recv_frame()
+        LOG_DEBUG(rsp)
+        # assert rsp == data
+
+        ret = ws.recv()
+        print(ret)
+    except Exception as e:
+        LOG_ERROR('exception: %s' % e)
+        ret = -1
+
+    return ret
+
+
+def test003():
+    assert close(False) == 0
 
 
 if __name__ == '__main__':
     test001()
-    test002()
+    # test002()
+    # test003()

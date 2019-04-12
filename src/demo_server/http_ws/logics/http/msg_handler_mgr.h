@@ -2,7 +2,8 @@
 #define DEMO_SERVER_HTTP_WS_LOGICS_HTTP_MSG_HANDLER_MGR_H_
 
 #include "http_msg_handler_mgr_template.h"
-#include "cross_domain_req_handler.h"
+#include "crossdomain_req_handler.h"
+#include "echo_req_handler.h"
 
 namespace tcp
 {
@@ -31,7 +32,8 @@ private:
     void FinalizeMsgHandlerVec() override;
 
 private:
-    CrossDomainReqHandler cross_domain_req_handler_;
+    CrossdomainReqHandler crossdomain_req_handler_;
+    EchoReqHandler echo_req_handler_;
 };
 }
 }

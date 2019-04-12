@@ -28,7 +28,7 @@ public:
     void OnReload() override;
     void OnClientConnected(const ConnGUID* conn_guid) override;
     void OnClientClosed(const ConnGUID* conn_guid) override;
-    void OnWSMsg(const ConnGUID* conn_guid, int frame_type, const void* data, size_t len) override;
+    void OnWSMsg(const ConnGUID* conn_guid, ws::FrameType frame_type, const void* data, size_t len) override;
 
 private:
     tcp::http_ws::http::MsgHandlerMgr http_msg_handler_mgr_;

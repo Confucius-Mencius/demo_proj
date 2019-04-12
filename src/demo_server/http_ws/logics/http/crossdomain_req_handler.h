@@ -1,5 +1,5 @@
-#ifndef DEMO_SERVER_HTTP_WS_LOGICS_CROSS_DOMAIN_REQ_HANDLER_H_
-#define DEMO_SERVER_HTTP_WS_LOGICS_CROSS_DOMAIN_REQ_HANDLER_H_
+#ifndef DEMO_SERVER_HTTP_WS_LOGICS_CROSSDOMAIN_REQ_HANDLER_H_
+#define DEMO_SERVER_HTTP_WS_LOGICS_CROSSDOMAIN_REQ_HANDLER_H_
 
 #include "msg_handler.h"
 
@@ -9,11 +9,11 @@ namespace http_ws
 {
 namespace http
 {
-class CrossDomainReqHandler : public MsgHandler
+class CrossdomainReqHandler : public MsgHandler
 {
 public:
-    CrossDomainReqHandler();
-    virtual ~CrossDomainReqHandler();
+    CrossdomainReqHandler();
+    virtual ~CrossdomainReqHandler();
 
     ///////////////////////// MsgHandlerInterface /////////////////////////
     const char* GetPath() override;
@@ -24,4 +24,4 @@ public:
 }
 }
 
-#endif // DEMO_SERVER_HTTP_WS_LOGICS_CROSS_DOMAIN_REQ_HANDLER_H_
+#endif // DEMO_SERVER_HTTP_WS_LOGICS_CROSSDOMAIN_REQ_HANDLER_H_
