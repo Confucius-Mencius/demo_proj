@@ -3,7 +3,7 @@
 
 #include "http_msg_handler_mgr_template.h"
 #include "crossdomain_req_handler.h"
-#include "echo_req_handler.h"
+#include "demo_req_handler.h"
 
 namespace tcp
 {
@@ -33,7 +33,7 @@ private:
 
 private:
     CrossdomainReqHandler crossdomain_req_handler_;
-    EchoReqHandler echo_req_handler_;
+    DemoReqHandler demo_req_handler_;
 };
 }
 }

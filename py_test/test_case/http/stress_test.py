@@ -11,29 +11,26 @@ sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__fil
 # print(sys.path)
 
 from base.multitask_util import *
-import echo_test
+from demo_test import get1, post1
+from crossdomain_test import crossdomain
 
 
 def proc1():
-    echo_test.get1(False, False)
-    echo_test.get1(False, True)
-    echo_test.get1(True, False)
-    echo_test.get1(True, True)
+    get1(False, False)
+    get1(False, True)
 
-    echo_test.post1(False, False, 1024)
-    echo_test.post1(False, True, 1024)
-    echo_test.post1(True, False, 1024)
-    echo_test.post1(True, True, 1024)
+    post1(False, False, 1024)
+    post1(False, True, 1024)
 
-    echo_test.post1(False, False, 16385)
-    echo_test.post1(False, True, 16385)
-    echo_test.post1(True, False, 16385)
-    echo_test.post1(True, True, 16385)
+    post1(False, False, 16385)
+    post1(False, True, 16385)
+
+    crossdomain(False)
 
 
-def test001():
-    run_multi_process(10000, proc1)
+def test_001():
+    run_multi_process(200, proc1)
 
 
 if __name__ == '__main__':
-    test001()
+    test_001()

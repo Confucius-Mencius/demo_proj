@@ -26,7 +26,7 @@ def ping(s):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
-                                   header=["Sec-WebSocket-Protocol: lws-minimal"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
@@ -45,7 +45,7 @@ def ping(s):
     return ret
 
 
-def test001():
+def test_001():
     assert ping(False) == 0
 
 
@@ -60,15 +60,15 @@ def pong(s):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
-                                   header=["Sec-WebSocket-Protocol: lws-minimal"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
 
         ws.pong("i am a pong")
 
-        rsp = ws.recv_frame()
-        LOG_DEBUG(rsp)
+        # rsp = ws.recv_frame()
+        # LOG_DEBUG(rsp)
 
         ws.close()
         ret = 0
@@ -79,7 +79,7 @@ def pong(s):
     return ret
 
 
-def test002():
+def test_002():
     assert pong(False) == 0
 
 
@@ -94,19 +94,17 @@ def close(s):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
         else:
             ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
-                                   header=["Sec-WebSocket-Protocol: lws-minimal"],
+                                   header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
 
         ws.send_close()
+        ret = 0
 
-        rsp = ws.recv_frame()
-        LOG_DEBUG(rsp)
-        # assert rsp == data
 
-        ret = ws.recv()
-        print(ret)
+        # ret = ws.recv()
+        # print(ret)
     except Exception as e:
         LOG_ERROR('exception: %s' % e)
         ret = -1
@@ -114,11 +112,11 @@ def close(s):
     return ret
 
 
-def test003():
+def test_003():
     assert close(False) == 0
 
 
 if __name__ == '__main__':
-    test001()
+    # test001()
     # test002()
-    # test003()
+    test_003()

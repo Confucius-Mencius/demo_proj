@@ -55,7 +55,7 @@ void MsgHandlerMgr::SetLogic(Logic* logic)
 int MsgHandlerMgr::InitializeMsgHandlerVec()
 {
     msg_handler_vec_.push_back(&crossdomain_req_handler_);
-    msg_handler_vec_.push_back(&echo_req_handler_);
+    msg_handler_vec_.push_back(&demo_req_handler_);
 
     return 0;
 }

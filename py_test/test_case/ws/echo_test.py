@@ -51,7 +51,7 @@ def send_to_server1(s):
     return ret
 
 
-def test001():
+def test_001():
     assert send_to_server1(False) == 0
     # assert send_to_server1(True) == 0
 
@@ -91,11 +91,11 @@ def send_to_server2(s):
     return ret
 
 
-def test002():
+def test_002():
     assert send_to_server2(False) == 0
     # assert send_to_server2(True) == 0
 
 
 if __name__ == '__main__':
-    test001()
-    test002()
+    test_001()
+    # test_002()

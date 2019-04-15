@@ -12,7 +12,7 @@ from util.log_util import *
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-def cross_domain(s):
+def crossdomain(s):
     try:
         if s:
             http_conn = httplib.HTTPSConnection(conf.demo_server_addr, conf.demo_server_https_wss_port)
@@ -34,6 +34,11 @@ def cross_domain(s):
         rsp_body = http_rsp.read()
         LOG_DEBUG('rsp body: %s' % rsp_body)
 
+        assert rsp_body == '''<?xml version="1.0" encoding="UTF-8"?>
+<cross-domain-policy>
+<allow-access-from domain="*"/>
+</cross-domain-policy>'''
+
         http_conn.close()
         ret = 0
     except Exception as e:
@@ -43,9 +48,9 @@ def cross_domain(s):
     return ret
 
 
-def test001():
-    assert cross_domain(False) == 0
+def test_001():
+    assert crossdomain(False) == 0
 
 
 if __name__ == '__main__':
-    test001()
+    test_001()

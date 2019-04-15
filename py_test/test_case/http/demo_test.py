@@ -22,9 +22,9 @@ def get1(s, query):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
 
         if query:
-            http_conn.request('GET', '/echo?x=1&y=abc')
+            http_conn.request('GET', '/demo?x=1&y=abc')
         else:
-            http_conn.request('GET', '/echo')
+            http_conn.request('GET', '/demo')
 
         http_rsp = http_conn.getresponse()
         LOG_DEBUG('rsp code: %d(%s)' % (http_rsp.status, http_rsp.reason))
@@ -36,6 +36,7 @@ def get1(s, query):
 
         rsp_body = http_rsp.read()
         LOG_DEBUG('rsp body: %s' % rsp_body)
+        assert rsp_body == 'hello, world'
 
         http_conn.close()
         ret = 0
@@ -46,7 +47,7 @@ def get1(s, query):
     return ret
 
 
-def test001():
+def test_001():
     assert get1(False, False) == 0
     assert get1(False, True) == 0
     # assert get1(True, False) == 0 # 暂不支持ssl
@@ -54,8 +55,6 @@ def test001():
 
 
 def post1(s, query, body_len):
-    ret = 0
-
     try:
         if s:
             http_conn = httplib.HTTPSConnection(conf.demo_server_addr, conf.demo_server_https_wss_port)
@@ -65,9 +64,9 @@ def post1(s, query, body_len):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
 
         if query:
-            http_conn.request('POST', '/echo?x=aaa&y=100', 'x' * body_len)
+            http_conn.request('POST', '/demo?x=aaa&y=100', 'x' * body_len)
         else:
-            http_conn.request('POST', '/echo', 'x' * body_len)
+            http_conn.request('POST', '/demo', 'x' * body_len)
 
         http_rsp = http_conn.getresponse()
         LOG_DEBUG('rsp code: %d(%s)' % (http_rsp.status, http_rsp.reason if http_rsp.reason else ''))
@@ -79,16 +78,18 @@ def post1(s, query, body_len):
 
         rsp_body = http_rsp.read()
         LOG_DEBUG('rsp body: %s' % rsp_body)
+        assert rsp_body == 'x' * body_len
 
         http_conn.close()
+        ret = 0
     except Exception as e:
         LOG_ERROR('exception: %s' % e)
         ret = -1
 
-    assert ret == 0
+    return ret
 
 
-def test002():
+def test_002():
     assert post1(False, False, 1024) == 0
     assert post1(False, True, 1024) == 0
     # assert post1(True, False, 1024) == 0
@@ -101,5 +102,5 @@ def test002():
 
 
 if __name__ == '__main__':
-    test001()
-    test002()
+    test_001()
+    test_002()

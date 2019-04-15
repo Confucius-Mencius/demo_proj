@@ -12,26 +12,20 @@ sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__fil
 
 from base.multitask_util import *
 from echo_test import send_to_server1, send_to_server2
+from ctrl_frame_test import ping, pong, close
 
 
 def proc1():
     assert send_to_server1(False) == 0
-    assert send_to_server1(True) == 0
+    assert send_to_server1(False) == 0
+    assert ping(False) == 0
+    assert pong(False) == 0
+    assert close(False) == 0
 
 
-def test001():
-    run_multi_process(10000, proc1)
-
-
-def proc2():
-    assert send_to_server2(False) == 0
-    assert send_to_server2(True) == 0
-
-
-def test002():
-    run_multi_process(10000, proc2)
+def test_001():
+    run_multi_process(200, proc1)
 
 
 if __name__ == '__main__':
-    test001()
-    test002()
+    test_001()
