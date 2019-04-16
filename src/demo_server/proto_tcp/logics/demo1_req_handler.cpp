@@ -48,7 +48,7 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToClient(logic_ctx_->scheduler, conn_guid, demo1_rsp_msg_head, &demo1_rsp) != 0)
     {
-        LOG_ERROR("failed to send to client, " << conn_guid << ", msg id: " << demo1_rsp_msg_head.msg_id);
+        LOG_ERROR("failed to send to client, " << *conn_guid << ", msg id: " << demo1_rsp_msg_head.msg_id);
         return;
     }
 
@@ -60,7 +60,7 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToClient(logic_ctx_->scheduler, conn_guid, demo1_nfy_msg_head, &demo1_nfy) != 0)
     {
-        LOG_ERROR("failed to send to client, " << conn_guid << ", msg id: " << demo1_nfy_msg_head.msg_id);
+        LOG_ERROR("failed to send to client, " << *conn_guid << ", msg id: " << demo1_nfy_msg_head.msg_id);
         return;
     }
 
@@ -73,7 +73,7 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToGlobalThread(logic_ctx_->scheduler, conn_guid, demo2_req_msg_head, &demo2_req) != 0)
     {
-        LOG_ERROR("failed to send to global thread, " << conn_guid << ", msg id: " << demo2_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to global thread, " << *conn_guid << ", msg id: " << demo2_req_msg_head.msg_id);
         return;
     }
 
@@ -85,7 +85,7 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToTCPThread(logic_ctx_->scheduler, conn_guid, demo3_req_msg_head, &demo3_req, -1) != 0)
     {
-        LOG_ERROR("failed to send to tcp thread, " << conn_guid << ", msg id: " << demo3_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to tcp thread, " << *conn_guid << ", msg id: " << demo3_req_msg_head.msg_id);
         return;
     }
 
@@ -97,7 +97,7 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo4_req_msg_head, &demo4_req, -1) != 0)
     {
-        LOG_ERROR("failed to send to work thread, " << conn_guid << ", msg id: " << demo4_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to work thread, " << *conn_guid << ", msg id: " << demo4_req_msg_head.msg_id);
         return;
     }
 }

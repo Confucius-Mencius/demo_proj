@@ -45,7 +45,7 @@ void Demo4ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToGlobalThread(logic_ctx_->scheduler, conn_guid, demo5_req_msg_head, &demo5_req) != 0)
     {
-        LOG_ERROR("failed to send to global thread, " << conn_guid << ", msg id: " << demo5_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to global thread, " << *conn_guid << ", msg id: " << demo5_req_msg_head.msg_id);
         return;
     }
 
@@ -57,7 +57,7 @@ void Demo4ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo6_req_msg_head, &demo6_req, -1) != 0)
     {
-        LOG_ERROR("failed to send to work thread, " << conn_guid << ", msg id: " << demo6_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to work thread, " << *conn_guid << ", msg id: " << demo6_req_msg_head.msg_id);
         return;
     }
 
@@ -69,7 +69,7 @@ void Demo4ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToBurdenThread(logic_ctx_->scheduler, conn_guid, demo7_req_msg_head, &demo7_req, -1) != 0)
     {
-        LOG_ERROR("failed to send to burden thread, " << conn_guid << ", msg id: " << demo7_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to burden thread, " << *conn_guid << ", msg id: " << demo7_req_msg_head.msg_id);
         return;
     }
 
@@ -81,7 +81,7 @@ void Demo4ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToProtoTCPThread(logic_ctx_->scheduler, conn_guid, demo8_req_msg_head, &demo8_req, conn_guid->io_thread_idx) != 0)
     {
-        LOG_ERROR("failed to send to proto tcp thread, " << conn_guid << ", msg id: " << demo8_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to proto tcp thread, " << *conn_guid << ", msg id: " << demo8_req_msg_head.msg_id);
         return;
     }
 
@@ -93,7 +93,7 @@ void Demo4ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToClient(logic_ctx_->scheduler, conn_guid, demo3_nfy_msg_head, &demo3_nfy) != 0)
     {
-        LOG_ERROR("failed to send to client, " << conn_guid << ", msg id: " << demo3_nfy_msg_head.msg_id);
+        LOG_ERROR("failed to send to client, " << *conn_guid << ", msg id: " << demo3_nfy_msg_head.msg_id);
         return;
     }
 }
