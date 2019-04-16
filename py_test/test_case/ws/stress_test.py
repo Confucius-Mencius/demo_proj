@@ -11,16 +11,19 @@ sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__fil
 # print(sys.path)
 
 from base.multitask_util import *
-from echo_test import send_to_server1, send_to_server2
+from echo_test import send_to_server1, send_to_server2, send_to_server3, send_to_server4
 from ctrl_frame_test import ping, pong, close
+import websocket
 
 
 def proc1():
     assert send_to_server1(False) == 0
-    assert send_to_server1(False) == 0
+    assert send_to_server2(False) == 0
+    assert send_to_server3(False) == 0
+    assert send_to_server4(False) == 0
     assert ping(False) == 0
     assert pong(False) == 0
-    assert close(False) == 0
+    assert close(False, websocket.STATUS_NORMAL) == 0
 
 
 def test_001():

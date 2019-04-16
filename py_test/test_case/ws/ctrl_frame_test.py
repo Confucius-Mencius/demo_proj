@@ -11,7 +11,8 @@ import ssl
 sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__file__))[0])  # 导入上级目录中的模块
 # print(sys.path)
 
-from websocket import create_connection
+from websocket import create_connection, ABNF, STATUS_NORMAL, \
+    STATUS_MESSAGE_TOO_BIG, STATUS_INVALID_EXTENSION, STATUS_TLS_HANDSHAKE_ERROR
 from util.log_util import *
 
 
@@ -83,7 +84,7 @@ def test_002():
     assert pong(False) == 0
 
 
-def close(s):
+def close(s, close_code):
     try:
         if s:
             ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
@@ -99,9 +100,8 @@ def close(s):
                                    host='www.qq.com')
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
 
-        ws.send_close()
+        ws.send_close(close_code)
         ret = 0
-
 
         # ret = ws.recv()
         # print(ret)
@@ -113,10 +113,13 @@ def close(s):
 
 
 def test_003():
-    assert close(False) == 0
+    assert close(False, STATUS_NORMAL) == 0
+    assert close(False, STATUS_MESSAGE_TOO_BIG) == 0
+    assert close(False, STATUS_INVALID_EXTENSION) == 0
+    assert close(False, STATUS_TLS_HANDSHAKE_ERROR) == 0
 
 
 if __name__ == '__main__':
-    # test001()
-    # test002()
-    test_003()
+    # test_001()
+    test_002()
+    # test_003()

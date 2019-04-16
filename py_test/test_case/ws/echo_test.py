@@ -11,7 +11,7 @@ import ssl
 sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__file__))[0])  # 导入上级目录中的模块
 # print(sys.path)
 
-from websocket import create_connection
+from websocket import create_connection, ABNF
 from util.log_util import *
 
 
@@ -96,6 +96,96 @@ def test_002():
     # assert send_to_server2(True) == 0
 
 
+# 分帧发送text frames
+def send_to_server3(s):
+    try:
+        if s:
+            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
+                                   timeout=60,
+                                   header=["Sec-WebSocket-Protocol: xxx"],
+                                   cookie='xx',
+                                   host='www.qq.com',
+                                   sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
+        else:
+            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
+                                   timeout=60,
+                                   header=["Sec-WebSocket-Protocol: xxx"],
+                                   cookie='xx',
+                                   host='www.qq.com')
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
+
+        frame = ABNF.create_frame("Hello, ", ABNF.OPCODE_TEXT, 0)
+        ws.send_frame(frame)
+        cont_frame = ABNF.create_frame("My name is ", ABNF.OPCODE_CONT, 0)
+        ws.send_frame(cont_frame)
+        cont_frame = ABNF.create_frame("Foo Bar", ABNF.OPCODE_CONT, 1)
+        ws.send_frame(cont_frame)
+
+        rsp = ws.recv()
+        LOG_DEBUG(rsp)
+        assert rsp == 'Hello, My name is Foo Bar'
+
+        ws.close()
+        ret = 0
+    except Exception as e:
+        LOG_ERROR('exception: %s' % e)
+        ret = -1
+
+    return ret
+
+
+def test_003():
+    assert send_to_server3(False) == 0
+    # assert send_to_server3(True) == 0
+
+
+# 分帧发送binary frames
+def send_to_server4(s):
+    try:
+        if s:
+            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
+                                   timeout=60,
+                                   header=["Sec-WebSocket-Protocol: xxx"],
+                                   cookie='xx',
+                                   host='www.qq.com',
+                                   sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
+        else:
+            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
+                                   timeout=60,
+                                   header=["Sec-WebSocket-Protocol: xxx"],
+                                   cookie='xx',
+                                   host='www.qq.com')
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
+
+        frame = ABNF.create_frame("Hello, ", ABNF.OPCODE_BINARY, 0)
+        ws.send_frame(frame)
+        cont_frame = ABNF.create_frame("My name is ", ABNF.OPCODE_CONT, 0)
+        ws.send_frame(cont_frame)
+        cont_frame = ABNF.create_frame("Foo Bar", ABNF.OPCODE_CONT, 1)
+        ws.send_frame(cont_frame)
+
+        rsp = ws.recv()
+        LOG_DEBUG(rsp)
+        assert rsp == 'Hello, My name is Foo Bar'
+
+        ws.close()
+        ret = 0
+    except Exception as e:
+        LOG_ERROR('exception: %s' % e)
+        ret = -1
+
+    return ret
+
+
+def test_004():
+    assert send_to_server4(False) == 0
+    # assert send_to_server4(True) == 0
+
+
 if __name__ == '__main__':
-    test_001()
+    # test_001()
     # test_002()
+    # test_003()
+    test_004()
