@@ -165,6 +165,8 @@ XML中的特殊符号只有5种，<、>、&、’和”。
 
     <!-- udp数据报 -->
     <udp>
+        <recv_buffer_size>16384</recv_buffer_size>
+
         <inactive_conn>
             <!-- 定时检查不再活跃的客户端连接并关闭，不配置或配置为0则不启动该定时器 -->
             <check_interval>
