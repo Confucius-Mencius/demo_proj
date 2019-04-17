@@ -6,10 +6,5 @@
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
-LOG_DIR=${SCRIPT_PATH}/../logs/
-
-if [ $# -gt 0 ]; then
-    find ${LOG_DIR} -name "*.error.log" | xargs tail -F
-else
-    find ${LOG_DIR} -name "*.error.log" | xargs more
-fi
+find ${SCRIPT_PATH}/.. -name "my_app.lock" | xargs rm -rf
+find ${SCRIPT_PATH}/.. -name "my_app.log*" | xargs rm -rf
