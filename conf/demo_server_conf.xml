@@ -70,6 +70,9 @@ XML中的特殊符号只有5种，<、>、&、’和”。
 
         <!-- raw tcp，字节流内容需要在logic中自己解析 -->
         <raw>
+            <!-- 是否使用bufferevent实现，否则就使用event实现 -->
+            <use_bufferevent>1</use_bufferevent>
+
             <!-- tcp监听地址和端口，ip:port或者host:port格式 -->
             <addr>0.0.0.0</addr>
             <port>5555</port>
@@ -88,6 +91,9 @@ XML中的特殊符号只有5种，<、>、&、’和”。
 
         <!-- 框架自定义协议的tcp -->
         <proto>
+            <!-- 是否使用bufferevent实现，否则就使用event实现 -->
+            <use_bufferevent>1</use_bufferevent>
+
             <!-- =1：对消息做checksum校验，=0：不做。不配置则默认为1 -->
             <do_checksum>0</do_checksum>
 
@@ -120,6 +126,9 @@ XML中的特殊符号只有5种，<、>、&、’和”。
 
         <!-- http和websocket -->
         <http_ws>
+            <!-- 是否使用bufferevent实现，否则就使用event实现 -->
+            <use_bufferevent>1</use_bufferevent>
+
             <part_msg>
                 <!-- 定时检查不完整消息间隔，单位：秒。配置为0或者不配置则使用默认值：5秒 -->
                 <check_interval>5</check_interval>
@@ -154,6 +163,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         </http_ws>
     </tcp>
 
+    <!-- udp数据报 -->
     <udp>
         <inactive_conn>
             <!-- 定时检查不再活跃的客户端连接并关闭，不配置或配置为0则不启动该定时器 -->
