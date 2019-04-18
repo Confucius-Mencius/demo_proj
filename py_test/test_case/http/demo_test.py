@@ -48,10 +48,10 @@ def get1(s, query):
 
 
 def test_001():
-    assert get1(False, False) == 0
-    assert get1(False, True) == 0
-    # assert get1(True, False) == 0 # 暂不支持ssl
-    # assert get1(True, True) == 0
+    assert 0 == get1(False, False)
+    assert 0 == get1(False, True)
+    # assert 0 == get1(True, False) # 暂不支持ssl
+    # assert 0 == get1(True, True)
 
 
 def post1(s, query, body_len):
@@ -90,15 +90,15 @@ def post1(s, query, body_len):
 
 
 def test_002():
-    assert post1(False, False, 1024) == 0
-    assert post1(False, True, 1024) == 0
-    # assert post1(True, False, 1024) == 0
-    # assert post1(True, True, 1024) == 0
+    assert 0 == post1(False, False, 1024)
+    assert 0 == post1(False, True, 1024)
+    # assert 0 == post1(True, False, 1024)
+    # assert 0 == post1(True, True, 1024)
 
-    assert post1(False, False, 16385) == 0
-    assert post1(False, True, 16385) == 0
-    # assert post1(True, False, 16385) == 0
-    # assert post1(True, True, 16385) == 0
+    assert 0 == post1(False, False, 16385)
+    assert 0 == post1(False, True, 16385)
+    # assert 0 == post1(True, False, 16385)
+    # assert 0 == post1(True, True, 16385)
 
 
 if __name__ == '__main__':

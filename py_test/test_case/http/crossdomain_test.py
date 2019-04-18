@@ -49,7 +49,7 @@ def crossdomain(s):
 
 
 def test_001():
-    assert crossdomain(False) == 0
+    assert 0 == crossdomain(False)
 
 
 if __name__ == '__main__':

@@ -48,7 +48,7 @@ def send_to_server1():
 
 
 def test_001():
-    assert send_to_server1() == 0
+    assert 0 == send_to_server1()
 
 
 # 发送大于16k的数据
@@ -88,7 +88,7 @@ def send_to_server2():
 
 
 def test_002():
-    assert send_to_server2() == 0
+    assert 0 == send_to_server2()
 
 
 if __name__ == '__main__':

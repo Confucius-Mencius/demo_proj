@@ -52,8 +52,8 @@ def send_to_server1(s):
 
 
 def test_001():
-    assert send_to_server1(False) == 0
-    # assert send_to_server1(True) == 0
+    assert 0 == send_to_server1(False)
+    # assert 0 == send_to_server1(True)
 
 
 # 发送大于16k的数据
@@ -92,8 +92,8 @@ def send_to_server2(s):
 
 
 def test_002():
-    assert send_to_server2(False) == 0
-    # assert send_to_server2(True) == 0
+    assert 0 == send_to_server2(False)
+    # assert 0 == send_to_server2(True)
 
 
 # 分帧发送text frames
@@ -136,8 +136,8 @@ def send_to_server3(s):
 
 
 def test_003():
-    assert send_to_server3(False) == 0
-    # assert send_to_server3(True) == 0
+    assert 0 == send_to_server3(False)
+    # assert 0 == send_to_server3(True)
 
 
 # 分帧发送binary frames
@@ -180,12 +180,12 @@ def send_to_server4(s):
 
 
 def test_004():
-    assert send_to_server4(False) == 0
-    # assert send_to_server4(True) == 0
+    assert 0 == send_to_server4(False)
+    # assert 0 == send_to_server4(True)
 
 
 if __name__ == '__main__':
-    # test_001()
-    # test_002()
-    # test_003()
+    test_001()
+    test_002()
+    test_003()
     test_004()

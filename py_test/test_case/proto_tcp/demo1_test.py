@@ -14,11 +14,15 @@ from util.proto_tcp_client import *
 from test_action.proto_tcp.demo1_req import *
 
 
-def test_001():
+def demo1():
     client = Client(conf.demo_server_addr, conf.demo_server_proto_tcp_port)
     demo1_req = Demo1Req(client)
     ret = demo1_req.demo1()
-    assert ret == 0
+    return ret
+
+
+def test_001():
+    assert 0 == demo1()
 
 
 if __name__ == '__main__':

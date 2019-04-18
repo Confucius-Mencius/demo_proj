@@ -131,6 +131,330 @@ public final class SsMsgId {
      * <code>MSG_ID_DEMO9_NFY = 2026;</code>
      */
     MSG_ID_DEMO9_NFY(2026),
+    /**
+     * <code>MSG_ID_DEMO1002_REQ = 2027;</code>
+     */
+    MSG_ID_DEMO1002_REQ(2027),
+    /**
+     * <code>MSG_ID_DEMO1002_RSP = 2028;</code>
+     */
+    MSG_ID_DEMO1002_RSP(2028),
+    /**
+     * <code>MSG_ID_DEMO1003_REQ = 2029;</code>
+     */
+    MSG_ID_DEMO1003_REQ(2029),
+    /**
+     * <code>MSG_ID_DEMO1003_RSP = 2030;</code>
+     */
+    MSG_ID_DEMO1003_RSP(2030),
+    /**
+     * <code>MSG_ID_DEMO1004_REQ = 2031;</code>
+     */
+    MSG_ID_DEMO1004_REQ(2031),
+    /**
+     * <code>MSG_ID_DEMO1004_RSP = 2032;</code>
+     */
+    MSG_ID_DEMO1004_RSP(2032),
+    /**
+     * <code>MSG_ID_DEMO1005_REQ = 2033;</code>
+     */
+    MSG_ID_DEMO1005_REQ(2033),
+    /**
+     * <code>MSG_ID_DEMO1005_RSP = 2034;</code>
+     */
+    MSG_ID_DEMO1005_RSP(2034),
+    /**
+     * <code>MSG_ID_DEMO1006_REQ = 2035;</code>
+     */
+    MSG_ID_DEMO1006_REQ(2035),
+    /**
+     * <code>MSG_ID_DEMO1006_RSP = 2036;</code>
+     */
+    MSG_ID_DEMO1006_RSP(2036),
+    /**
+     * <code>MSG_ID_DEMO1007_REQ = 2037;</code>
+     */
+    MSG_ID_DEMO1007_REQ(2037),
+    /**
+     * <code>MSG_ID_DEMO1007_RSP = 2038;</code>
+     */
+    MSG_ID_DEMO1007_RSP(2038),
+    /**
+     * <code>MSG_ID_DEMO1008_REQ = 2039;</code>
+     */
+    MSG_ID_DEMO1008_REQ(2039),
+    /**
+     * <code>MSG_ID_DEMO1008_RSP = 2040;</code>
+     */
+    MSG_ID_DEMO1008_RSP(2040),
+    /**
+     * <code>MSG_ID_DEMO1009_REQ = 2041;</code>
+     */
+    MSG_ID_DEMO1009_REQ(2041),
+    /**
+     * <code>MSG_ID_DEMO1009_RSP = 2042;</code>
+     */
+    MSG_ID_DEMO1009_RSP(2042),
+    /**
+     * <code>MSG_ID_DEMO1010_REQ = 2043;</code>
+     */
+    MSG_ID_DEMO1010_REQ(2043),
+    /**
+     * <code>MSG_ID_DEMO1010_RSP = 2044;</code>
+     */
+    MSG_ID_DEMO1010_RSP(2044),
+    /**
+     * <code>MSG_ID_DEMO1020_REQ = 2045;</code>
+     */
+    MSG_ID_DEMO1020_REQ(2045),
+    /**
+     * <code>MSG_ID_DEMO1020_RSP = 2046;</code>
+     */
+    MSG_ID_DEMO1020_RSP(2046),
+    /**
+     * <code>MSG_ID_DEMO1050_REQ = 2047;</code>
+     */
+    MSG_ID_DEMO1050_REQ(2047),
+    /**
+     * <code>MSG_ID_DEMO1050_RSP = 2048;</code>
+     */
+    MSG_ID_DEMO1050_RSP(2048),
+    /**
+     * <code>MSG_ID_DEMO1090_REQ = 2049;</code>
+     */
+    MSG_ID_DEMO1090_REQ(2049),
+    /**
+     * <code>MSG_ID_DEMO1090_RSP = 2050;</code>
+     */
+    MSG_ID_DEMO1090_RSP(2050),
+    /**
+     * <code>MSG_ID_DEMO1002_NFY = 2051;</code>
+     */
+    MSG_ID_DEMO1002_NFY(2051),
+    /**
+     * <code>MSG_ID_DEMO1005_NFY = 2052;</code>
+     */
+    MSG_ID_DEMO1005_NFY(2052),
+    /**
+     * <code>MSG_ID_DEMO1009_NFY = 2053;</code>
+     */
+    MSG_ID_DEMO1009_NFY(2053),
+    /**
+     * <code>MSG_ID_DEMO2002_REQ = 2054;</code>
+     */
+    MSG_ID_DEMO2002_REQ(2054),
+    /**
+     * <code>MSG_ID_DEMO2002_RSP = 2055;</code>
+     */
+    MSG_ID_DEMO2002_RSP(2055),
+    /**
+     * <code>MSG_ID_DEMO2003_REQ = 2056;</code>
+     */
+    MSG_ID_DEMO2003_REQ(2056),
+    /**
+     * <code>MSG_ID_DEMO2003_RSP = 2057;</code>
+     */
+    MSG_ID_DEMO2003_RSP(2057),
+    /**
+     * <code>MSG_ID_DEMO2004_REQ = 2058;</code>
+     */
+    MSG_ID_DEMO2004_REQ(2058),
+    /**
+     * <code>MSG_ID_DEMO2004_RSP = 2059;</code>
+     */
+    MSG_ID_DEMO2004_RSP(2059),
+    /**
+     * <code>MSG_ID_DEMO2005_REQ = 2060;</code>
+     */
+    MSG_ID_DEMO2005_REQ(2060),
+    /**
+     * <code>MSG_ID_DEMO2005_RSP = 2061;</code>
+     */
+    MSG_ID_DEMO2005_RSP(2061),
+    /**
+     * <code>MSG_ID_DEMO2006_REQ = 2062;</code>
+     */
+    MSG_ID_DEMO2006_REQ(2062),
+    /**
+     * <code>MSG_ID_DEMO2006_RSP = 2063;</code>
+     */
+    MSG_ID_DEMO2006_RSP(2063),
+    /**
+     * <code>MSG_ID_DEMO2007_REQ = 2064;</code>
+     */
+    MSG_ID_DEMO2007_REQ(2064),
+    /**
+     * <code>MSG_ID_DEMO2007_RSP = 2065;</code>
+     */
+    MSG_ID_DEMO2007_RSP(2065),
+    /**
+     * <code>MSG_ID_DEMO2008_REQ = 2066;</code>
+     */
+    MSG_ID_DEMO2008_REQ(2066),
+    /**
+     * <code>MSG_ID_DEMO2008_RSP = 2067;</code>
+     */
+    MSG_ID_DEMO2008_RSP(2067),
+    /**
+     * <code>MSG_ID_DEMO2009_REQ = 2068;</code>
+     */
+    MSG_ID_DEMO2009_REQ(2068),
+    /**
+     * <code>MSG_ID_DEMO2009_RSP = 2069;</code>
+     */
+    MSG_ID_DEMO2009_RSP(2069),
+    /**
+     * <code>MSG_ID_DEMO2010_REQ = 2070;</code>
+     */
+    MSG_ID_DEMO2010_REQ(2070),
+    /**
+     * <code>MSG_ID_DEMO2010_RSP = 2071;</code>
+     */
+    MSG_ID_DEMO2010_RSP(2071),
+    /**
+     * <code>MSG_ID_DEMO2020_REQ = 2072;</code>
+     */
+    MSG_ID_DEMO2020_REQ(2072),
+    /**
+     * <code>MSG_ID_DEMO2020_RSP = 2073;</code>
+     */
+    MSG_ID_DEMO2020_RSP(2073),
+    /**
+     * <code>MSG_ID_DEMO2050_REQ = 2074;</code>
+     */
+    MSG_ID_DEMO2050_REQ(2074),
+    /**
+     * <code>MSG_ID_DEMO2050_RSP = 2075;</code>
+     */
+    MSG_ID_DEMO2050_RSP(2075),
+    /**
+     * <code>MSG_ID_DEMO2090_REQ = 2076;</code>
+     */
+    MSG_ID_DEMO2090_REQ(2076),
+    /**
+     * <code>MSG_ID_DEMO2090_RSP = 2077;</code>
+     */
+    MSG_ID_DEMO2090_RSP(2077),
+    /**
+     * <code>MSG_ID_DEMO2002_NFY = 2078;</code>
+     */
+    MSG_ID_DEMO2002_NFY(2078),
+    /**
+     * <code>MSG_ID_DEMO2005_NFY = 2079;</code>
+     */
+    MSG_ID_DEMO2005_NFY(2079),
+    /**
+     * <code>MSG_ID_DEMO2009_NFY = 2080;</code>
+     */
+    MSG_ID_DEMO2009_NFY(2080),
+    /**
+     * <code>MSG_ID_DEMO3002_REQ = 2081;</code>
+     */
+    MSG_ID_DEMO3002_REQ(2081),
+    /**
+     * <code>MSG_ID_DEMO3002_RSP = 2082;</code>
+     */
+    MSG_ID_DEMO3002_RSP(2082),
+    /**
+     * <code>MSG_ID_DEMO3003_REQ = 2083;</code>
+     */
+    MSG_ID_DEMO3003_REQ(2083),
+    /**
+     * <code>MSG_ID_DEMO3003_RSP = 2084;</code>
+     */
+    MSG_ID_DEMO3003_RSP(2084),
+    /**
+     * <code>MSG_ID_DEMO3004_REQ = 2085;</code>
+     */
+    MSG_ID_DEMO3004_REQ(2085),
+    /**
+     * <code>MSG_ID_DEMO3004_RSP = 2086;</code>
+     */
+    MSG_ID_DEMO3004_RSP(2086),
+    /**
+     * <code>MSG_ID_DEMO3005_REQ = 2087;</code>
+     */
+    MSG_ID_DEMO3005_REQ(2087),
+    /**
+     * <code>MSG_ID_DEMO3005_RSP = 2088;</code>
+     */
+    MSG_ID_DEMO3005_RSP(2088),
+    /**
+     * <code>MSG_ID_DEMO3006_REQ = 2089;</code>
+     */
+    MSG_ID_DEMO3006_REQ(2089),
+    /**
+     * <code>MSG_ID_DEMO3006_RSP = 2090;</code>
+     */
+    MSG_ID_DEMO3006_RSP(2090),
+    /**
+     * <code>MSG_ID_DEMO3007_REQ = 2091;</code>
+     */
+    MSG_ID_DEMO3007_REQ(2091),
+    /**
+     * <code>MSG_ID_DEMO3007_RSP = 2092;</code>
+     */
+    MSG_ID_DEMO3007_RSP(2092),
+    /**
+     * <code>MSG_ID_DEMO3008_REQ = 2093;</code>
+     */
+    MSG_ID_DEMO3008_REQ(2093),
+    /**
+     * <code>MSG_ID_DEMO3008_RSP = 2094;</code>
+     */
+    MSG_ID_DEMO3008_RSP(2094),
+    /**
+     * <code>MSG_ID_DEMO3009_REQ = 2095;</code>
+     */
+    MSG_ID_DEMO3009_REQ(2095),
+    /**
+     * <code>MSG_ID_DEMO3009_RSP = 2096;</code>
+     */
+    MSG_ID_DEMO3009_RSP(2096),
+    /**
+     * <code>MSG_ID_DEMO3010_REQ = 2097;</code>
+     */
+    MSG_ID_DEMO3010_REQ(2097),
+    /**
+     * <code>MSG_ID_DEMO3010_RSP = 2098;</code>
+     */
+    MSG_ID_DEMO3010_RSP(2098),
+    /**
+     * <code>MSG_ID_DEMO3020_REQ = 2099;</code>
+     */
+    MSG_ID_DEMO3020_REQ(2099),
+    /**
+     * <code>MSG_ID_DEMO3020_RSP = 2100;</code>
+     */
+    MSG_ID_DEMO3020_RSP(2100),
+    /**
+     * <code>MSG_ID_DEMO3050_REQ = 2101;</code>
+     */
+    MSG_ID_DEMO3050_REQ(2101),
+    /**
+     * <code>MSG_ID_DEMO3050_RSP = 2102;</code>
+     */
+    MSG_ID_DEMO3050_RSP(2102),
+    /**
+     * <code>MSG_ID_DEMO3090_REQ = 2103;</code>
+     */
+    MSG_ID_DEMO3090_REQ(2103),
+    /**
+     * <code>MSG_ID_DEMO3090_RSP = 2104;</code>
+     */
+    MSG_ID_DEMO3090_RSP(2104),
+    /**
+     * <code>MSG_ID_DEMO3002_NFY = 2105;</code>
+     */
+    MSG_ID_DEMO3002_NFY(2105),
+    /**
+     * <code>MSG_ID_DEMO3005_NFY = 2106;</code>
+     */
+    MSG_ID_DEMO3005_NFY(2106),
+    /**
+     * <code>MSG_ID_DEMO3009_NFY = 2107;</code>
+     */
+    MSG_ID_DEMO3009_NFY(2107),
     UNRECOGNIZED(-1),
     ;
 
@@ -246,6 +570,330 @@ public final class SsMsgId {
      * <code>MSG_ID_DEMO9_NFY = 2026;</code>
      */
     public static final int MSG_ID_DEMO9_NFY_VALUE = 2026;
+    /**
+     * <code>MSG_ID_DEMO1002_REQ = 2027;</code>
+     */
+    public static final int MSG_ID_DEMO1002_REQ_VALUE = 2027;
+    /**
+     * <code>MSG_ID_DEMO1002_RSP = 2028;</code>
+     */
+    public static final int MSG_ID_DEMO1002_RSP_VALUE = 2028;
+    /**
+     * <code>MSG_ID_DEMO1003_REQ = 2029;</code>
+     */
+    public static final int MSG_ID_DEMO1003_REQ_VALUE = 2029;
+    /**
+     * <code>MSG_ID_DEMO1003_RSP = 2030;</code>
+     */
+    public static final int MSG_ID_DEMO1003_RSP_VALUE = 2030;
+    /**
+     * <code>MSG_ID_DEMO1004_REQ = 2031;</code>
+     */
+    public static final int MSG_ID_DEMO1004_REQ_VALUE = 2031;
+    /**
+     * <code>MSG_ID_DEMO1004_RSP = 2032;</code>
+     */
+    public static final int MSG_ID_DEMO1004_RSP_VALUE = 2032;
+    /**
+     * <code>MSG_ID_DEMO1005_REQ = 2033;</code>
+     */
+    public static final int MSG_ID_DEMO1005_REQ_VALUE = 2033;
+    /**
+     * <code>MSG_ID_DEMO1005_RSP = 2034;</code>
+     */
+    public static final int MSG_ID_DEMO1005_RSP_VALUE = 2034;
+    /**
+     * <code>MSG_ID_DEMO1006_REQ = 2035;</code>
+     */
+    public static final int MSG_ID_DEMO1006_REQ_VALUE = 2035;
+    /**
+     * <code>MSG_ID_DEMO1006_RSP = 2036;</code>
+     */
+    public static final int MSG_ID_DEMO1006_RSP_VALUE = 2036;
+    /**
+     * <code>MSG_ID_DEMO1007_REQ = 2037;</code>
+     */
+    public static final int MSG_ID_DEMO1007_REQ_VALUE = 2037;
+    /**
+     * <code>MSG_ID_DEMO1007_RSP = 2038;</code>
+     */
+    public static final int MSG_ID_DEMO1007_RSP_VALUE = 2038;
+    /**
+     * <code>MSG_ID_DEMO1008_REQ = 2039;</code>
+     */
+    public static final int MSG_ID_DEMO1008_REQ_VALUE = 2039;
+    /**
+     * <code>MSG_ID_DEMO1008_RSP = 2040;</code>
+     */
+    public static final int MSG_ID_DEMO1008_RSP_VALUE = 2040;
+    /**
+     * <code>MSG_ID_DEMO1009_REQ = 2041;</code>
+     */
+    public static final int MSG_ID_DEMO1009_REQ_VALUE = 2041;
+    /**
+     * <code>MSG_ID_DEMO1009_RSP = 2042;</code>
+     */
+    public static final int MSG_ID_DEMO1009_RSP_VALUE = 2042;
+    /**
+     * <code>MSG_ID_DEMO1010_REQ = 2043;</code>
+     */
+    public static final int MSG_ID_DEMO1010_REQ_VALUE = 2043;
+    /**
+     * <code>MSG_ID_DEMO1010_RSP = 2044;</code>
+     */
+    public static final int MSG_ID_DEMO1010_RSP_VALUE = 2044;
+    /**
+     * <code>MSG_ID_DEMO1020_REQ = 2045;</code>
+     */
+    public static final int MSG_ID_DEMO1020_REQ_VALUE = 2045;
+    /**
+     * <code>MSG_ID_DEMO1020_RSP = 2046;</code>
+     */
+    public static final int MSG_ID_DEMO1020_RSP_VALUE = 2046;
+    /**
+     * <code>MSG_ID_DEMO1050_REQ = 2047;</code>
+     */
+    public static final int MSG_ID_DEMO1050_REQ_VALUE = 2047;
+    /**
+     * <code>MSG_ID_DEMO1050_RSP = 2048;</code>
+     */
+    public static final int MSG_ID_DEMO1050_RSP_VALUE = 2048;
+    /**
+     * <code>MSG_ID_DEMO1090_REQ = 2049;</code>
+     */
+    public static final int MSG_ID_DEMO1090_REQ_VALUE = 2049;
+    /**
+     * <code>MSG_ID_DEMO1090_RSP = 2050;</code>
+     */
+    public static final int MSG_ID_DEMO1090_RSP_VALUE = 2050;
+    /**
+     * <code>MSG_ID_DEMO1002_NFY = 2051;</code>
+     */
+    public static final int MSG_ID_DEMO1002_NFY_VALUE = 2051;
+    /**
+     * <code>MSG_ID_DEMO1005_NFY = 2052;</code>
+     */
+    public static final int MSG_ID_DEMO1005_NFY_VALUE = 2052;
+    /**
+     * <code>MSG_ID_DEMO1009_NFY = 2053;</code>
+     */
+    public static final int MSG_ID_DEMO1009_NFY_VALUE = 2053;
+    /**
+     * <code>MSG_ID_DEMO2002_REQ = 2054;</code>
+     */
+    public static final int MSG_ID_DEMO2002_REQ_VALUE = 2054;
+    /**
+     * <code>MSG_ID_DEMO2002_RSP = 2055;</code>
+     */
+    public static final int MSG_ID_DEMO2002_RSP_VALUE = 2055;
+    /**
+     * <code>MSG_ID_DEMO2003_REQ = 2056;</code>
+     */
+    public static final int MSG_ID_DEMO2003_REQ_VALUE = 2056;
+    /**
+     * <code>MSG_ID_DEMO2003_RSP = 2057;</code>
+     */
+    public static final int MSG_ID_DEMO2003_RSP_VALUE = 2057;
+    /**
+     * <code>MSG_ID_DEMO2004_REQ = 2058;</code>
+     */
+    public static final int MSG_ID_DEMO2004_REQ_VALUE = 2058;
+    /**
+     * <code>MSG_ID_DEMO2004_RSP = 2059;</code>
+     */
+    public static final int MSG_ID_DEMO2004_RSP_VALUE = 2059;
+    /**
+     * <code>MSG_ID_DEMO2005_REQ = 2060;</code>
+     */
+    public static final int MSG_ID_DEMO2005_REQ_VALUE = 2060;
+    /**
+     * <code>MSG_ID_DEMO2005_RSP = 2061;</code>
+     */
+    public static final int MSG_ID_DEMO2005_RSP_VALUE = 2061;
+    /**
+     * <code>MSG_ID_DEMO2006_REQ = 2062;</code>
+     */
+    public static final int MSG_ID_DEMO2006_REQ_VALUE = 2062;
+    /**
+     * <code>MSG_ID_DEMO2006_RSP = 2063;</code>
+     */
+    public static final int MSG_ID_DEMO2006_RSP_VALUE = 2063;
+    /**
+     * <code>MSG_ID_DEMO2007_REQ = 2064;</code>
+     */
+    public static final int MSG_ID_DEMO2007_REQ_VALUE = 2064;
+    /**
+     * <code>MSG_ID_DEMO2007_RSP = 2065;</code>
+     */
+    public static final int MSG_ID_DEMO2007_RSP_VALUE = 2065;
+    /**
+     * <code>MSG_ID_DEMO2008_REQ = 2066;</code>
+     */
+    public static final int MSG_ID_DEMO2008_REQ_VALUE = 2066;
+    /**
+     * <code>MSG_ID_DEMO2008_RSP = 2067;</code>
+     */
+    public static final int MSG_ID_DEMO2008_RSP_VALUE = 2067;
+    /**
+     * <code>MSG_ID_DEMO2009_REQ = 2068;</code>
+     */
+    public static final int MSG_ID_DEMO2009_REQ_VALUE = 2068;
+    /**
+     * <code>MSG_ID_DEMO2009_RSP = 2069;</code>
+     */
+    public static final int MSG_ID_DEMO2009_RSP_VALUE = 2069;
+    /**
+     * <code>MSG_ID_DEMO2010_REQ = 2070;</code>
+     */
+    public static final int MSG_ID_DEMO2010_REQ_VALUE = 2070;
+    /**
+     * <code>MSG_ID_DEMO2010_RSP = 2071;</code>
+     */
+    public static final int MSG_ID_DEMO2010_RSP_VALUE = 2071;
+    /**
+     * <code>MSG_ID_DEMO2020_REQ = 2072;</code>
+     */
+    public static final int MSG_ID_DEMO2020_REQ_VALUE = 2072;
+    /**
+     * <code>MSG_ID_DEMO2020_RSP = 2073;</code>
+     */
+    public static final int MSG_ID_DEMO2020_RSP_VALUE = 2073;
+    /**
+     * <code>MSG_ID_DEMO2050_REQ = 2074;</code>
+     */
+    public static final int MSG_ID_DEMO2050_REQ_VALUE = 2074;
+    /**
+     * <code>MSG_ID_DEMO2050_RSP = 2075;</code>
+     */
+    public static final int MSG_ID_DEMO2050_RSP_VALUE = 2075;
+    /**
+     * <code>MSG_ID_DEMO2090_REQ = 2076;</code>
+     */
+    public static final int MSG_ID_DEMO2090_REQ_VALUE = 2076;
+    /**
+     * <code>MSG_ID_DEMO2090_RSP = 2077;</code>
+     */
+    public static final int MSG_ID_DEMO2090_RSP_VALUE = 2077;
+    /**
+     * <code>MSG_ID_DEMO2002_NFY = 2078;</code>
+     */
+    public static final int MSG_ID_DEMO2002_NFY_VALUE = 2078;
+    /**
+     * <code>MSG_ID_DEMO2005_NFY = 2079;</code>
+     */
+    public static final int MSG_ID_DEMO2005_NFY_VALUE = 2079;
+    /**
+     * <code>MSG_ID_DEMO2009_NFY = 2080;</code>
+     */
+    public static final int MSG_ID_DEMO2009_NFY_VALUE = 2080;
+    /**
+     * <code>MSG_ID_DEMO3002_REQ = 2081;</code>
+     */
+    public static final int MSG_ID_DEMO3002_REQ_VALUE = 2081;
+    /**
+     * <code>MSG_ID_DEMO3002_RSP = 2082;</code>
+     */
+    public static final int MSG_ID_DEMO3002_RSP_VALUE = 2082;
+    /**
+     * <code>MSG_ID_DEMO3003_REQ = 2083;</code>
+     */
+    public static final int MSG_ID_DEMO3003_REQ_VALUE = 2083;
+    /**
+     * <code>MSG_ID_DEMO3003_RSP = 2084;</code>
+     */
+    public static final int MSG_ID_DEMO3003_RSP_VALUE = 2084;
+    /**
+     * <code>MSG_ID_DEMO3004_REQ = 2085;</code>
+     */
+    public static final int MSG_ID_DEMO3004_REQ_VALUE = 2085;
+    /**
+     * <code>MSG_ID_DEMO3004_RSP = 2086;</code>
+     */
+    public static final int MSG_ID_DEMO3004_RSP_VALUE = 2086;
+    /**
+     * <code>MSG_ID_DEMO3005_REQ = 2087;</code>
+     */
+    public static final int MSG_ID_DEMO3005_REQ_VALUE = 2087;
+    /**
+     * <code>MSG_ID_DEMO3005_RSP = 2088;</code>
+     */
+    public static final int MSG_ID_DEMO3005_RSP_VALUE = 2088;
+    /**
+     * <code>MSG_ID_DEMO3006_REQ = 2089;</code>
+     */
+    public static final int MSG_ID_DEMO3006_REQ_VALUE = 2089;
+    /**
+     * <code>MSG_ID_DEMO3006_RSP = 2090;</code>
+     */
+    public static final int MSG_ID_DEMO3006_RSP_VALUE = 2090;
+    /**
+     * <code>MSG_ID_DEMO3007_REQ = 2091;</code>
+     */
+    public static final int MSG_ID_DEMO3007_REQ_VALUE = 2091;
+    /**
+     * <code>MSG_ID_DEMO3007_RSP = 2092;</code>
+     */
+    public static final int MSG_ID_DEMO3007_RSP_VALUE = 2092;
+    /**
+     * <code>MSG_ID_DEMO3008_REQ = 2093;</code>
+     */
+    public static final int MSG_ID_DEMO3008_REQ_VALUE = 2093;
+    /**
+     * <code>MSG_ID_DEMO3008_RSP = 2094;</code>
+     */
+    public static final int MSG_ID_DEMO3008_RSP_VALUE = 2094;
+    /**
+     * <code>MSG_ID_DEMO3009_REQ = 2095;</code>
+     */
+    public static final int MSG_ID_DEMO3009_REQ_VALUE = 2095;
+    /**
+     * <code>MSG_ID_DEMO3009_RSP = 2096;</code>
+     */
+    public static final int MSG_ID_DEMO3009_RSP_VALUE = 2096;
+    /**
+     * <code>MSG_ID_DEMO3010_REQ = 2097;</code>
+     */
+    public static final int MSG_ID_DEMO3010_REQ_VALUE = 2097;
+    /**
+     * <code>MSG_ID_DEMO3010_RSP = 2098;</code>
+     */
+    public static final int MSG_ID_DEMO3010_RSP_VALUE = 2098;
+    /**
+     * <code>MSG_ID_DEMO3020_REQ = 2099;</code>
+     */
+    public static final int MSG_ID_DEMO3020_REQ_VALUE = 2099;
+    /**
+     * <code>MSG_ID_DEMO3020_RSP = 2100;</code>
+     */
+    public static final int MSG_ID_DEMO3020_RSP_VALUE = 2100;
+    /**
+     * <code>MSG_ID_DEMO3050_REQ = 2101;</code>
+     */
+    public static final int MSG_ID_DEMO3050_REQ_VALUE = 2101;
+    /**
+     * <code>MSG_ID_DEMO3050_RSP = 2102;</code>
+     */
+    public static final int MSG_ID_DEMO3050_RSP_VALUE = 2102;
+    /**
+     * <code>MSG_ID_DEMO3090_REQ = 2103;</code>
+     */
+    public static final int MSG_ID_DEMO3090_REQ_VALUE = 2103;
+    /**
+     * <code>MSG_ID_DEMO3090_RSP = 2104;</code>
+     */
+    public static final int MSG_ID_DEMO3090_RSP_VALUE = 2104;
+    /**
+     * <code>MSG_ID_DEMO3002_NFY = 2105;</code>
+     */
+    public static final int MSG_ID_DEMO3002_NFY_VALUE = 2105;
+    /**
+     * <code>MSG_ID_DEMO3005_NFY = 2106;</code>
+     */
+    public static final int MSG_ID_DEMO3005_NFY_VALUE = 2106;
+    /**
+     * <code>MSG_ID_DEMO3009_NFY = 2107;</code>
+     */
+    public static final int MSG_ID_DEMO3009_NFY_VALUE = 2107;
 
 
     public final int getNumber() {
@@ -294,6 +942,87 @@ public final class SsMsgId {
         case 2024: return MSG_ID_DEMO2_NFY;
         case 2025: return MSG_ID_DEMO5_NFY;
         case 2026: return MSG_ID_DEMO9_NFY;
+        case 2027: return MSG_ID_DEMO1002_REQ;
+        case 2028: return MSG_ID_DEMO1002_RSP;
+        case 2029: return MSG_ID_DEMO1003_REQ;
+        case 2030: return MSG_ID_DEMO1003_RSP;
+        case 2031: return MSG_ID_DEMO1004_REQ;
+        case 2032: return MSG_ID_DEMO1004_RSP;
+        case 2033: return MSG_ID_DEMO1005_REQ;
+        case 2034: return MSG_ID_DEMO1005_RSP;
+        case 2035: return MSG_ID_DEMO1006_REQ;
+        case 2036: return MSG_ID_DEMO1006_RSP;
+        case 2037: return MSG_ID_DEMO1007_REQ;
+        case 2038: return MSG_ID_DEMO1007_RSP;
+        case 2039: return MSG_ID_DEMO1008_REQ;
+        case 2040: return MSG_ID_DEMO1008_RSP;
+        case 2041: return MSG_ID_DEMO1009_REQ;
+        case 2042: return MSG_ID_DEMO1009_RSP;
+        case 2043: return MSG_ID_DEMO1010_REQ;
+        case 2044: return MSG_ID_DEMO1010_RSP;
+        case 2045: return MSG_ID_DEMO1020_REQ;
+        case 2046: return MSG_ID_DEMO1020_RSP;
+        case 2047: return MSG_ID_DEMO1050_REQ;
+        case 2048: return MSG_ID_DEMO1050_RSP;
+        case 2049: return MSG_ID_DEMO1090_REQ;
+        case 2050: return MSG_ID_DEMO1090_RSP;
+        case 2051: return MSG_ID_DEMO1002_NFY;
+        case 2052: return MSG_ID_DEMO1005_NFY;
+        case 2053: return MSG_ID_DEMO1009_NFY;
+        case 2054: return MSG_ID_DEMO2002_REQ;
+        case 2055: return MSG_ID_DEMO2002_RSP;
+        case 2056: return MSG_ID_DEMO2003_REQ;
+        case 2057: return MSG_ID_DEMO2003_RSP;
+        case 2058: return MSG_ID_DEMO2004_REQ;
+        case 2059: return MSG_ID_DEMO2004_RSP;
+        case 2060: return MSG_ID_DEMO2005_REQ;
+        case 2061: return MSG_ID_DEMO2005_RSP;
+        case 2062: return MSG_ID_DEMO2006_REQ;
+        case 2063: return MSG_ID_DEMO2006_RSP;
+        case 2064: return MSG_ID_DEMO2007_REQ;
+        case 2065: return MSG_ID_DEMO2007_RSP;
+        case 2066: return MSG_ID_DEMO2008_REQ;
+        case 2067: return MSG_ID_DEMO2008_RSP;
+        case 2068: return MSG_ID_DEMO2009_REQ;
+        case 2069: return MSG_ID_DEMO2009_RSP;
+        case 2070: return MSG_ID_DEMO2010_REQ;
+        case 2071: return MSG_ID_DEMO2010_RSP;
+        case 2072: return MSG_ID_DEMO2020_REQ;
+        case 2073: return MSG_ID_DEMO2020_RSP;
+        case 2074: return MSG_ID_DEMO2050_REQ;
+        case 2075: return MSG_ID_DEMO2050_RSP;
+        case 2076: return MSG_ID_DEMO2090_REQ;
+        case 2077: return MSG_ID_DEMO2090_RSP;
+        case 2078: return MSG_ID_DEMO2002_NFY;
+        case 2079: return MSG_ID_DEMO2005_NFY;
+        case 2080: return MSG_ID_DEMO2009_NFY;
+        case 2081: return MSG_ID_DEMO3002_REQ;
+        case 2082: return MSG_ID_DEMO3002_RSP;
+        case 2083: return MSG_ID_DEMO3003_REQ;
+        case 2084: return MSG_ID_DEMO3003_RSP;
+        case 2085: return MSG_ID_DEMO3004_REQ;
+        case 2086: return MSG_ID_DEMO3004_RSP;
+        case 2087: return MSG_ID_DEMO3005_REQ;
+        case 2088: return MSG_ID_DEMO3005_RSP;
+        case 2089: return MSG_ID_DEMO3006_REQ;
+        case 2090: return MSG_ID_DEMO3006_RSP;
+        case 2091: return MSG_ID_DEMO3007_REQ;
+        case 2092: return MSG_ID_DEMO3007_RSP;
+        case 2093: return MSG_ID_DEMO3008_REQ;
+        case 2094: return MSG_ID_DEMO3008_RSP;
+        case 2095: return MSG_ID_DEMO3009_REQ;
+        case 2096: return MSG_ID_DEMO3009_RSP;
+        case 2097: return MSG_ID_DEMO3010_REQ;
+        case 2098: return MSG_ID_DEMO3010_RSP;
+        case 2099: return MSG_ID_DEMO3020_REQ;
+        case 2100: return MSG_ID_DEMO3020_RSP;
+        case 2101: return MSG_ID_DEMO3050_REQ;
+        case 2102: return MSG_ID_DEMO3050_RSP;
+        case 2103: return MSG_ID_DEMO3090_REQ;
+        case 2104: return MSG_ID_DEMO3090_RSP;
+        case 2105: return MSG_ID_DEMO3002_NFY;
+        case 2106: return MSG_ID_DEMO3005_NFY;
+        case 2107: return MSG_ID_DEMO3009_NFY;
         default: return null;
       }
     }
@@ -355,7 +1084,7 @@ public final class SsMsgId {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017ss_msg_id.proto\022\020com.moon.demo.ss*\216\005\n\005" +
+      "\n\017ss_msg_id.proto\022\020com.moon.demo.ss*\310\025\n\005" +
       "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\025\n\020MSG_ID_DEMO2_" +
       "REQ\020\320\017\022\025\n\020MSG_ID_DEMO2_RSP\020\321\017\022\025\n\020MSG_ID_" +
       "DEMO3_REQ\020\322\017\022\025\n\020MSG_ID_DEMO3_RSP\020\323\017\022\025\n\020M" +
@@ -372,7 +1101,60 @@ public final class SsMsgId {
       "D_DEMO50_RSP\020\345\017\022\026\n\021MSG_ID_DEMO90_REQ\020\346\017\022" +
       "\026\n\021MSG_ID_DEMO90_RSP\020\347\017\022\025\n\020MSG_ID_DEMO2_" +
       "NFY\020\350\017\022\025\n\020MSG_ID_DEMO5_NFY\020\351\017\022\025\n\020MSG_ID_" +
-      "DEMO9_NFY\020\352\017b\006proto3"
+      "DEMO9_NFY\020\352\017\022\030\n\023MSG_ID_DEMO1002_REQ\020\353\017\022\030" +
+      "\n\023MSG_ID_DEMO1002_RSP\020\354\017\022\030\n\023MSG_ID_DEMO1" +
+      "003_REQ\020\355\017\022\030\n\023MSG_ID_DEMO1003_RSP\020\356\017\022\030\n\023" +
+      "MSG_ID_DEMO1004_REQ\020\357\017\022\030\n\023MSG_ID_DEMO100" +
+      "4_RSP\020\360\017\022\030\n\023MSG_ID_DEMO1005_REQ\020\361\017\022\030\n\023MS" +
+      "G_ID_DEMO1005_RSP\020\362\017\022\030\n\023MSG_ID_DEMO1006_" +
+      "REQ\020\363\017\022\030\n\023MSG_ID_DEMO1006_RSP\020\364\017\022\030\n\023MSG_" +
+      "ID_DEMO1007_REQ\020\365\017\022\030\n\023MSG_ID_DEMO1007_RS" +
+      "P\020\366\017\022\030\n\023MSG_ID_DEMO1008_REQ\020\367\017\022\030\n\023MSG_ID" +
+      "_DEMO1008_RSP\020\370\017\022\030\n\023MSG_ID_DEMO1009_REQ\020" +
+      "\371\017\022\030\n\023MSG_ID_DEMO1009_RSP\020\372\017\022\030\n\023MSG_ID_D" +
+      "EMO1010_REQ\020\373\017\022\030\n\023MSG_ID_DEMO1010_RSP\020\374\017" +
+      "\022\030\n\023MSG_ID_DEMO1020_REQ\020\375\017\022\030\n\023MSG_ID_DEM" +
+      "O1020_RSP\020\376\017\022\030\n\023MSG_ID_DEMO1050_REQ\020\377\017\022\030" +
+      "\n\023MSG_ID_DEMO1050_RSP\020\200\020\022\030\n\023MSG_ID_DEMO1" +
+      "090_REQ\020\201\020\022\030\n\023MSG_ID_DEMO1090_RSP\020\202\020\022\030\n\023" +
+      "MSG_ID_DEMO1002_NFY\020\203\020\022\030\n\023MSG_ID_DEMO100" +
+      "5_NFY\020\204\020\022\030\n\023MSG_ID_DEMO1009_NFY\020\205\020\022\030\n\023MS" +
+      "G_ID_DEMO2002_REQ\020\206\020\022\030\n\023MSG_ID_DEMO2002_" +
+      "RSP\020\207\020\022\030\n\023MSG_ID_DEMO2003_REQ\020\210\020\022\030\n\023MSG_" +
+      "ID_DEMO2003_RSP\020\211\020\022\030\n\023MSG_ID_DEMO2004_RE" +
+      "Q\020\212\020\022\030\n\023MSG_ID_DEMO2004_RSP\020\213\020\022\030\n\023MSG_ID" +
+      "_DEMO2005_REQ\020\214\020\022\030\n\023MSG_ID_DEMO2005_RSP\020" +
+      "\215\020\022\030\n\023MSG_ID_DEMO2006_REQ\020\216\020\022\030\n\023MSG_ID_D" +
+      "EMO2006_RSP\020\217\020\022\030\n\023MSG_ID_DEMO2007_REQ\020\220\020" +
+      "\022\030\n\023MSG_ID_DEMO2007_RSP\020\221\020\022\030\n\023MSG_ID_DEM" +
+      "O2008_REQ\020\222\020\022\030\n\023MSG_ID_DEMO2008_RSP\020\223\020\022\030" +
+      "\n\023MSG_ID_DEMO2009_REQ\020\224\020\022\030\n\023MSG_ID_DEMO2" +
+      "009_RSP\020\225\020\022\030\n\023MSG_ID_DEMO2010_REQ\020\226\020\022\030\n\023" +
+      "MSG_ID_DEMO2010_RSP\020\227\020\022\030\n\023MSG_ID_DEMO202" +
+      "0_REQ\020\230\020\022\030\n\023MSG_ID_DEMO2020_RSP\020\231\020\022\030\n\023MS" +
+      "G_ID_DEMO2050_REQ\020\232\020\022\030\n\023MSG_ID_DEMO2050_" +
+      "RSP\020\233\020\022\030\n\023MSG_ID_DEMO2090_REQ\020\234\020\022\030\n\023MSG_" +
+      "ID_DEMO2090_RSP\020\235\020\022\030\n\023MSG_ID_DEMO2002_NF" +
+      "Y\020\236\020\022\030\n\023MSG_ID_DEMO2005_NFY\020\237\020\022\030\n\023MSG_ID" +
+      "_DEMO2009_NFY\020\240\020\022\030\n\023MSG_ID_DEMO3002_REQ\020" +
+      "\241\020\022\030\n\023MSG_ID_DEMO3002_RSP\020\242\020\022\030\n\023MSG_ID_D" +
+      "EMO3003_REQ\020\243\020\022\030\n\023MSG_ID_DEMO3003_RSP\020\244\020" +
+      "\022\030\n\023MSG_ID_DEMO3004_REQ\020\245\020\022\030\n\023MSG_ID_DEM" +
+      "O3004_RSP\020\246\020\022\030\n\023MSG_ID_DEMO3005_REQ\020\247\020\022\030" +
+      "\n\023MSG_ID_DEMO3005_RSP\020\250\020\022\030\n\023MSG_ID_DEMO3" +
+      "006_REQ\020\251\020\022\030\n\023MSG_ID_DEMO3006_RSP\020\252\020\022\030\n\023" +
+      "MSG_ID_DEMO3007_REQ\020\253\020\022\030\n\023MSG_ID_DEMO300" +
+      "7_RSP\020\254\020\022\030\n\023MSG_ID_DEMO3008_REQ\020\255\020\022\030\n\023MS" +
+      "G_ID_DEMO3008_RSP\020\256\020\022\030\n\023MSG_ID_DEMO3009_" +
+      "REQ\020\257\020\022\030\n\023MSG_ID_DEMO3009_RSP\020\260\020\022\030\n\023MSG_" +
+      "ID_DEMO3010_REQ\020\261\020\022\030\n\023MSG_ID_DEMO3010_RS" +
+      "P\020\262\020\022\030\n\023MSG_ID_DEMO3020_REQ\020\263\020\022\030\n\023MSG_ID" +
+      "_DEMO3020_RSP\020\264\020\022\030\n\023MSG_ID_DEMO3050_REQ\020" +
+      "\265\020\022\030\n\023MSG_ID_DEMO3050_RSP\020\266\020\022\030\n\023MSG_ID_D" +
+      "EMO3090_REQ\020\267\020\022\030\n\023MSG_ID_DEMO3090_RSP\020\270\020" +
+      "\022\030\n\023MSG_ID_DEMO3002_NFY\020\271\020\022\030\n\023MSG_ID_DEM" +
+      "O3005_NFY\020\272\020\022\030\n\023MSG_ID_DEMO3009_NFY\020\273\020b\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

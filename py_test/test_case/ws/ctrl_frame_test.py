@@ -47,7 +47,7 @@ def ping(s):
 
 
 def test_001():
-    assert ping(False) == 0
+    assert 0 == ping(False)
 
 
 def pong(s):
@@ -81,7 +81,7 @@ def pong(s):
 
 
 def test_002():
-    assert pong(False) == 0
+    assert 0 == pong(False)
 
 
 def close(s, close_code):
@@ -113,13 +113,13 @@ def close(s, close_code):
 
 
 def test_003():
-    assert close(False, STATUS_NORMAL) == 0
-    assert close(False, STATUS_MESSAGE_TOO_BIG) == 0
-    assert close(False, STATUS_INVALID_EXTENSION) == 0
-    assert close(False, STATUS_TLS_HANDSHAKE_ERROR) == 0
+    assert 0 == close(False, STATUS_NORMAL)
+    assert 0 == close(False, STATUS_MESSAGE_TOO_BIG)
+    assert 0 == close(False, STATUS_INVALID_EXTENSION)
+    assert 0 == close(False, STATUS_TLS_HANDSHAKE_ERROR)
 
 
 if __name__ == '__main__':
-    # test_001()
+    test_001()
     test_002()
-    # test_003()
+    test_003()
