@@ -5,6 +5,9 @@
 #include "demo2_req_handler.h"
 #include "demo5_req_handler.h"
 #include "demo9_req_handler.h"
+#include "demo1002_req_handler.h"
+#include "demo1005_req_handler.h"
+#include "demo1009_req_handler.h"
 
 namespace global
 {
@@ -29,6 +32,9 @@ private:
     Demo2ReqHandler demo2_req_handler_;
     Demo5ReqHandler demo5_req_handler_;
     Demo9ReqHandler demo9_req_handler_;
+    Demo1002ReqHandler demo1002_req_handler_;
+    Demo1005ReqHandler demo1005_req_handler_;
+    Demo1009ReqHandler demo1009_req_handler_;
 };
 }
 

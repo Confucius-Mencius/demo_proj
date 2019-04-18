@@ -21,7 +21,8 @@ Demo5ReqHandler::~Demo5ReqHandler()
     return ss::MSG_ID_DEMO5_REQ;
 }
 
-void Demo5ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo5ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("global::Demo5ReqHandler::OnMsg");
 

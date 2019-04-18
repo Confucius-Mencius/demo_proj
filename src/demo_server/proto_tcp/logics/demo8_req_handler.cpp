@@ -23,7 +23,8 @@ Demo8ReqHandler::~Demo8ReqHandler()
     return ss::MSG_ID_DEMO8_REQ;
 }
 
-void Demo8ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo8ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("tcp::proto::Demo8ReqHandler::OnMsg");
 

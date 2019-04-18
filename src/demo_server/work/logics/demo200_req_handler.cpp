@@ -21,7 +21,8 @@ Demo200ReqHandler::~Demo200ReqHandler()
     return cs::MSG_ID_DEMO200_REQ;
 }
 
-void Demo200ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo200ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                              const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("Demo200ReqHandler::OnMsg");
 

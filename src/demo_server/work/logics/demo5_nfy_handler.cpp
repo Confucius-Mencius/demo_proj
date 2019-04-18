@@ -21,7 +21,8 @@ Demo5NfyHandler::~Demo5NfyHandler()
     return ss::MSG_ID_DEMO5_NFY;
 }
 
-void Demo5NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo5NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("work::Demo5NfyHandler::OnMsg");
 

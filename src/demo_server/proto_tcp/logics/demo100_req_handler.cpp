@@ -23,7 +23,8 @@ Demo100ReqHandler::~Demo100ReqHandler()
     return cs::MSG_ID_DEMO100_REQ;
 }
 
-void Demo100ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo100ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                              const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("tcp::proto::Demo100ReqHandler::OnMsg");
 

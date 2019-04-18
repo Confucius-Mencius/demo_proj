@@ -6,6 +6,10 @@
 #include "demo7_req_handler.h"
 #include "demo10_req_handler.h"
 #include "demo90_req_handler.h"
+#include "demo1009_nfy_handler.h"
+#include "demo1007_req_handler.h"
+#include "demo1010_req_handler.h"
+#include "demo1090_req_handler.h"
 
 namespace burden
 {
@@ -30,10 +34,14 @@ private:
     void FinalizeMsgHandlerVec() override;
 
 private:
-    Demo9NfyHandler demo5_nfy_handler_;
+    Demo9NfyHandler demo9_nfy_handler_;
     Demo7ReqHandler demo7_req_handler_;
     Demo10ReqHandler demo10_req_handler_;
     Demo90ReqHandler demo90_req_handler_;
+    Demo1009NfyHandler demo1009_nfy_handler_;
+    Demo1007ReqHandler demo1007_req_handler_;
+    Demo1010ReqHandler demo1010_req_handler_;
+    Demo1090ReqHandler demo1090_req_handler_;
 };
 }
 

@@ -21,7 +21,8 @@ Demo9NfyHandler::~Demo9NfyHandler()
     return ss::MSG_ID_DEMO9_NFY;
 }
 
-void Demo9NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo9NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("burden::Demo9NfyHandler::OnMsg");
 

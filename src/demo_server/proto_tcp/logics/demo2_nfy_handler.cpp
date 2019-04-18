@@ -23,7 +23,8 @@ Demo2NfyHandler::~Demo2NfyHandler()
     return ss::MSG_ID_DEMO2_NFY;
 }
 
-void Demo2NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo2NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("tcp::proto::Demo2NfyHandler::OnMsg");
 

@@ -23,7 +23,8 @@ Demo4ReqHandler::~Demo4ReqHandler()
     return ss::MSG_ID_DEMO4_REQ;
 }
 
-void Demo4ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo4ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("work::Demo4ReqHandler::OnMsg");
 

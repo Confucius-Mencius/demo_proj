@@ -1,6 +1,7 @@
 #ifndef DEMO_SERVER_RAW_TCP_LOGICS_LOGIC_H_
 #define DEMO_SERVER_RAW_TCP_LOGICS_LOGIC_H_
 
+#include "msg_handler_mgr.h"
 #include "raw_tcp_logic_interface.h"
 
 namespace tcp
@@ -29,6 +30,9 @@ public:
     void OnClientClosed(const ConnGUID* conn_guid) override;
     void OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len) override;
     void OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len) override;
+
+private:
+    MsgHandlerMgr msg_handler_mgr_;
 };
 }
 }

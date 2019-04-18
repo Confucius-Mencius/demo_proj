@@ -21,7 +21,8 @@ Demo9ReqHandler::~Demo9ReqHandler()
     return ss::MSG_ID_DEMO9_REQ;
 }
 
-void Demo9ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo9ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("global::Demo9ReqHandler::OnMsg");
 

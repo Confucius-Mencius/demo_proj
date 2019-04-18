@@ -21,7 +21,8 @@ Demo6ReqHandler::~Demo6ReqHandler()
     return ss::MSG_ID_DEMO6_REQ;
 }
 
-void Demo6ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo6ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("work::Demo6ReqHandler::OnMsg");
 

@@ -21,7 +21,8 @@ Demo10ReqHandler::~Demo10ReqHandler()
     return ss::MSG_ID_DEMO10_REQ;
 }
 
-void Demo10ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo10ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                             const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("burden::Demo10ReqHandler::OnMsg");
 

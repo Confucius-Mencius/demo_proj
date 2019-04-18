@@ -23,7 +23,8 @@ Demo3ReqHandler::~Demo3ReqHandler()
     return ss::MSG_ID_DEMO3_REQ;
 }
 
-void Demo3ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head, const void* msg_body, size_t msg_body_len)
+void Demo3ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                            const void* msg_body, size_t msg_body_len)
 {
     LOG_TRACE("tcp::proto::Demo3ReqHandler::OnMsg");
 
