@@ -6,18 +6,15 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
 namespace com {
 namespace moon {
@@ -27,67 +24,53 @@ namespace cs {
 }  // namespace demo
 }  // namespace moon
 }  // namespace com
-namespace protobuf_cs_5fmsg_5fid_2eproto {
-void InitDefaults() {
+void InitDefaults_cs_5fmsg_5fid_2eproto() {
 }
 
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
-const ::google::protobuf::uint32 TableStruct::offsets[1] = {};
-static const ::google::protobuf::internal::MigrationSchema* schemas = NULL;
-static const ::google::protobuf::Message* const* file_default_instances = NULL;
+constexpr ::google::protobuf::Metadata* file_level_metadata_cs_5fmsg_5fid_2eproto = nullptr;
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_cs_5fmsg_5fid_2eproto[1];
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_cs_5fmsg_5fid_2eproto = nullptr;
+const ::google::protobuf::uint32 TableStruct_cs_5fmsg_5fid_2eproto::offsets[1] = {};
+static constexpr ::google::protobuf::internal::MigrationSchema* schemas = nullptr;
+static constexpr ::google::protobuf::Message* const* file_default_instances = nullptr;
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "cs_msg_id.proto", schemas, file_default_instances, TableStruct::offsets,
-      NULL, file_level_enum_descriptors, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_cs_5fmsg_5fid_2eproto = {
+  {}, AddDescriptors_cs_5fmsg_5fid_2eproto, "cs_msg_id.proto", schemas,
+  file_default_instances, TableStruct_cs_5fmsg_5fid_2eproto::offsets,
+  file_level_metadata_cs_5fmsg_5fid_2eproto, 0, file_level_enum_descriptors_cs_5fmsg_5fid_2eproto, file_level_service_descriptors_cs_5fmsg_5fid_2eproto,
+};
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_cs_5fmsg_5fid_2eproto[] =
+  "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\331\001\n\005"
+  "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\025\n\020MSG_ID_DEMO1_"
+  "REQ\020\350\007\022\025\n\020MSG_ID_DEMO1_RSP\020\351\007\022\025\n\020MSG_ID_"
+  "DEMO1_NFY\020\352\007\022\025\n\020MSG_ID_DEMO3_NFY\020\353\007\022\027\n\022M"
+  "SG_ID_DEMO100_REQ\020\354\007\022\027\n\022MSG_ID_DEMO100_R"
+  "SP\020\355\007\022\027\n\022MSG_ID_DEMO200_REQ\020\356\007\022\027\n\022MSG_ID"
+  "_DEMO200_RSP\020\357\007b\006proto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_cs_5fmsg_5fid_2eproto = {
+  false, InitDefaults_cs_5fmsg_5fid_2eproto, 
+  descriptor_table_protodef_cs_5fmsg_5fid_2eproto,
+  "cs_msg_id.proto", &assign_descriptors_table_cs_5fmsg_5fid_2eproto, 263,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\331\001\n\005"
-      "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\025\n\020MSG_ID_DEMO1_"
-      "REQ\020\350\007\022\025\n\020MSG_ID_DEMO1_RSP\020\351\007\022\025\n\020MSG_ID_"
-      "DEMO1_NFY\020\352\007\022\025\n\020MSG_ID_DEMO3_NFY\020\353\007\022\027\n\022M"
-      "SG_ID_DEMO100_REQ\020\354\007\022\027\n\022MSG_ID_DEMO100_R"
-      "SP\020\355\007\022\027\n\022MSG_ID_DEMO200_REQ\020\356\007\022\027\n\022MSG_ID"
-      "_DEMO200_RSP\020\357\007b\006proto3"
+void AddDescriptors_cs_5fmsg_5fid_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
+  {
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 263);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "cs_msg_id.proto", &protobuf_RegisterTypes);
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_cs_5fmsg_5fid_2eproto, deps, 0);
 }
 
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_cs_5fmsg_5fid_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_cs_5fmsg_5fid_2eproto = []() { AddDescriptors_cs_5fmsg_5fid_2eproto(); return true; }();
 namespace com {
 namespace moon {
 namespace demo {
 namespace cs {
 const ::google::protobuf::EnumDescriptor* MsgID_descriptor() {
-  protobuf_cs_5fmsg_5fid_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_cs_5fmsg_5fid_2eproto::file_level_enum_descriptors[0];
+  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_cs_5fmsg_5fid_2eproto);
+  return file_level_enum_descriptors_cs_5fmsg_5fid_2eproto[0];
 }
 bool MsgID_IsValid(int value) {
   switch (value) {
@@ -118,3 +101,4 @@ namespace protobuf {
 }  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

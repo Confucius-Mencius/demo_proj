@@ -36,7 +36,6 @@ public final class CsMsg {
       super(builder);
     }
     private Demo1Req() {
-      a_ = 0;
     }
 
     @java.lang.Override
@@ -69,7 +68,7 @@ public final class CsMsg {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -154,11 +153,10 @@ public final class CsMsg {
       }
       com.moon.demo.cs.CsMsg.Demo1Req other = (com.moon.demo.cs.CsMsg.Demo1Req) obj;
 
-      boolean result = true;
-      result = result && (getA()
-          == other.getA());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getA()
+          != other.getA()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -338,35 +336,35 @@ public final class CsMsg {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -440,7 +438,7 @@ public final class CsMsg {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -560,7 +558,7 @@ public final class CsMsg {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -657,14 +655,13 @@ public final class CsMsg {
       }
       com.moon.demo.cs.CsMsg.Demo1Rsp other = (com.moon.demo.cs.CsMsg.Demo1Rsp) obj;
 
-      boolean result = true;
-      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx() != other.hasErrCtx()) return false;
       if (hasErrCtx()) {
-        result = result && getErrCtx()
-            .equals(other.getErrCtx());
+        if (!getErrCtx()
+            .equals(other.getErrCtx())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -854,35 +851,35 @@ public final class CsMsg {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -928,7 +925,7 @@ public final class CsMsg {
         return this;
       }
 
-      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.moon.demo.Common.ErrCtx errCtx_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
       /**
@@ -1047,7 +1044,7 @@ public final class CsMsg {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1119,7 +1116,6 @@ public final class CsMsg {
       super(builder);
     }
     private Demo1Nfy() {
-      a_ = 0;
     }
 
     @java.lang.Override
@@ -1152,7 +1148,7 @@ public final class CsMsg {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1237,11 +1233,10 @@ public final class CsMsg {
       }
       com.moon.demo.cs.CsMsg.Demo1Nfy other = (com.moon.demo.cs.CsMsg.Demo1Nfy) obj;
 
-      boolean result = true;
-      result = result && (getA()
-          == other.getA());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getA()
+          != other.getA()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1421,35 +1416,35 @@ public final class CsMsg {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1523,7 +1518,7 @@ public final class CsMsg {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1595,7 +1590,6 @@ public final class CsMsg {
       super(builder);
     }
     private Demo3Nfy() {
-      a_ = 0;
     }
 
     @java.lang.Override
@@ -1628,7 +1622,7 @@ public final class CsMsg {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1713,11 +1707,10 @@ public final class CsMsg {
       }
       com.moon.demo.cs.CsMsg.Demo3Nfy other = (com.moon.demo.cs.CsMsg.Demo3Nfy) obj;
 
-      boolean result = true;
-      result = result && (getA()
-          == other.getA());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getA()
+          != other.getA()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1897,35 +1890,35 @@ public final class CsMsg {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1999,7 +1992,7 @@ public final class CsMsg {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2071,7 +2064,6 @@ public final class CsMsg {
       super(builder);
     }
     private Demo100Req() {
-      a_ = 0;
     }
 
     @java.lang.Override
@@ -2104,7 +2096,7 @@ public final class CsMsg {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2189,11 +2181,10 @@ public final class CsMsg {
       }
       com.moon.demo.cs.CsMsg.Demo100Req other = (com.moon.demo.cs.CsMsg.Demo100Req) obj;
 
-      boolean result = true;
-      result = result && (getA()
-          == other.getA());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getA()
+          != other.getA()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2373,35 +2364,35 @@ public final class CsMsg {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2475,7 +2466,7 @@ public final class CsMsg {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2595,7 +2586,7 @@ public final class CsMsg {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2692,14 +2683,13 @@ public final class CsMsg {
       }
       com.moon.demo.cs.CsMsg.Demo100Rsp other = (com.moon.demo.cs.CsMsg.Demo100Rsp) obj;
 
-      boolean result = true;
-      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx() != other.hasErrCtx()) return false;
       if (hasErrCtx()) {
-        result = result && getErrCtx()
-            .equals(other.getErrCtx());
+        if (!getErrCtx()
+            .equals(other.getErrCtx())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2889,35 +2879,35 @@ public final class CsMsg {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2963,7 +2953,7 @@ public final class CsMsg {
         return this;
       }
 
-      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.moon.demo.Common.ErrCtx errCtx_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
       /**
@@ -3082,7 +3072,7 @@ public final class CsMsg {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3154,7 +3144,6 @@ public final class CsMsg {
       super(builder);
     }
     private Demo200Req() {
-      a_ = 0;
     }
 
     @java.lang.Override
@@ -3187,7 +3176,7 @@ public final class CsMsg {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3272,11 +3261,10 @@ public final class CsMsg {
       }
       com.moon.demo.cs.CsMsg.Demo200Req other = (com.moon.demo.cs.CsMsg.Demo200Req) obj;
 
-      boolean result = true;
-      result = result && (getA()
-          == other.getA());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getA()
+          != other.getA()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3456,35 +3444,35 @@ public final class CsMsg {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3558,7 +3546,7 @@ public final class CsMsg {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3678,7 +3666,7 @@ public final class CsMsg {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3775,14 +3763,13 @@ public final class CsMsg {
       }
       com.moon.demo.cs.CsMsg.Demo200Rsp other = (com.moon.demo.cs.CsMsg.Demo200Rsp) obj;
 
-      boolean result = true;
-      result = result && (hasErrCtx() == other.hasErrCtx());
+      if (hasErrCtx() != other.hasErrCtx()) return false;
       if (hasErrCtx()) {
-        result = result && getErrCtx()
-            .equals(other.getErrCtx());
+        if (!getErrCtx()
+            .equals(other.getErrCtx())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3972,35 +3959,35 @@ public final class CsMsg {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4046,7 +4033,7 @@ public final class CsMsg {
         return this;
       }
 
-      private com.moon.demo.Common.ErrCtx errCtx_ = null;
+      private com.moon.demo.Common.ErrCtx errCtx_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.moon.demo.Common.ErrCtx, com.moon.demo.Common.ErrCtx.Builder, com.moon.demo.Common.ErrCtxOrBuilder> errCtxBuilder_;
       /**
@@ -4165,7 +4152,7 @@ public final class CsMsg {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override

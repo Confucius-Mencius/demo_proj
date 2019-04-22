@@ -6,7 +6,6 @@
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
-# todo udp
 TEST_CASE_DIR=(base raw_tcp proto_tcp http ws)
 
 for i in ${TEST_CASE_DIR[@]}; do

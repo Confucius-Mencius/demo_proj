@@ -28,55 +28,32 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef GOOGLE_PROTOBUF_PYTHON_CPP_DESCRIPTOR_DATABASE_H__
-#define GOOGLE_PROTOBUF_PYTHON_CPP_DESCRIPTOR_DATABASE_H__
+#ifndef GOOGLE_PROTOBUF_PYTHON_CPP_FIELD_H__
+#define GOOGLE_PROTOBUF_PYTHON_CPP_FIELD_H__
 
 #include <Python.h>
 
-#include <google/protobuf/descriptor_database.h>
-
 namespace google {
 namespace protobuf {
+
+class FieldDescriptor;
+
 namespace python {
 
-class PyDescriptorDatabase : public DescriptorDatabase {
- public:
-  explicit PyDescriptorDatabase(PyObject* py_database);
-  ~PyDescriptorDatabase();
+// A data descriptor that represents a field in a Message class.
+struct PyMessageFieldProperty {
+  PyObject_HEAD;
 
-  // Implement the abstract interface. All these functions fill the output
-  // with a copy of FileDescriptorProto.
-
-  // Find a file by file name.
-  bool FindFileByName(const std::string& filename,
-                      FileDescriptorProto* output);
-
-  // Find the file that declares the given fully-qualified symbol name.
-  bool FindFileContainingSymbol(const std::string& symbol_name,
-                                FileDescriptorProto* output);
-
-  // Find the file which defines an extension extending the given message type
-  // with the given field number.
-  // Containing_type must be a fully-qualified type name.
-  // Python objects are not required to implement this method.
-  bool FindFileContainingExtension(const std::string& containing_type,
-                                   int field_number,
-                                   FileDescriptorProto* output);
-
-  // Finds the tag numbers used by all known extensions of
-  // containing_type, and appends them to output in an undefined
-  // order.
-  // Python objects are not required to implement this method.
-  bool FindAllExtensionNumbers(const std::string& containing_type,
-                               std::vector<int>* output);
-
- private:
-  // The python object that implements the database. The reference is owned.
-  PyObject* py_database_;
+  // This pointer is owned by the same pool as the Message class it belongs to.
+  const FieldDescriptor* field_descriptor;
 };
+
+extern PyTypeObject* CFieldProperty_Type;
+
+PyObject* NewFieldProperty(const FieldDescriptor* field_descriptor);
 
 }  // namespace python
 }  // namespace protobuf
 }  // namespace google
 
-#endif  // GOOGLE_PROTOBUF_PYTHON_CPP_DESCRIPTOR_DATABASE_H__
+#endif  // GOOGLE_PROTOBUF_PYTHON_CPP_FIELD_H__

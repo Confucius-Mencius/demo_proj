@@ -90,7 +90,7 @@ void Logic::OnClientClosed(const ConnGUID* conn_guid)
 
 void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
 {
-    const std::string d(data, len);
+    const std::string d((const char*) data, len);
     LOG_DEBUG("tcp::raw::CommonLogic::OnRecvClientData, " << *conn_guid << ", data: " << d);
 
     if ("req1001" == d)
@@ -106,9 +106,9 @@ void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t
 
         ss::Demo1002Req demo1002_req;
         demo1002_req.set_a(1002);
-        demo1002_req.set_raw_tcp_thread_idx(logic_ctx_->thread_idx);
+        demo1002_req.set_raw_tcp_thread_idx(logic_ctx_.thread_idx);
 
-        if (SendToGlobalThread(logic_ctx_->scheduler, conn_guid, demo1002_req_msg_head, &demo1002_req) != 0)
+        if (SendToGlobalThread(logic_ctx_.scheduler, conn_guid, demo1002_req_msg_head, &demo1002_req) != 0)
         {
             LOG_ERROR("failed to send to global thread, " << *conn_guid << ", msg id: " << demo1002_req_msg_head.msg_id);
             return;
@@ -120,7 +120,7 @@ void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t
         ss::Demo1003Req demo1003_req;
         demo1003_req.set_a(1003);
 
-        if (SendToTCPThread(logic_ctx_->scheduler, conn_guid, demo1003_req_msg_head, &demo1003_req, -1) != 0)
+        if (SendToTCPThread(logic_ctx_.scheduler, conn_guid, demo1003_req_msg_head, &demo1003_req, -1) != 0)
         {
             LOG_ERROR("failed to send to tcp thread, " << *conn_guid << ", msg id: " << demo1003_req_msg_head.msg_id);
             return;
@@ -132,7 +132,7 @@ void Logic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t
         ss::Demo1004Req demo1004_req;
         demo1004_req.set_a(1004);
 
-        if (SendToWorkThread(logic_ctx_->scheduler, conn_guid, demo1004_req_msg_head, &demo1004_req, -1) != 0)
+        if (SendToWorkThread(logic_ctx_.scheduler, conn_guid, demo1004_req_msg_head, &demo1004_req, -1) != 0)
         {
             LOG_ERROR("failed to send to work thread, " << *conn_guid << ", msg id: " << demo1004_req_msg_head.msg_id);
             return;

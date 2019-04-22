@@ -28,55 +28,63 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef GOOGLE_PROTOBUF_PYTHON_CPP_DESCRIPTOR_DATABASE_H__
-#define GOOGLE_PROTOBUF_PYTHON_CPP_DESCRIPTOR_DATABASE_H__
+#ifndef GOOGLE_PROTOBUF_PYTHON_CPP_UNKNOWN_FIELDS_H__
+#define GOOGLE_PROTOBUF_PYTHON_CPP_UNKNOWN_FIELDS_H__
 
 #include <Python.h>
 
-#include <google/protobuf/descriptor_database.h>
+#include <memory>
+#include <set>
+
+#include <google/protobuf/pyext/message.h>
 
 namespace google {
 namespace protobuf {
+
+class UnknownField;
+class UnknownFieldSet;
+
 namespace python {
+struct CMessage;
 
-class PyDescriptorDatabase : public DescriptorDatabase {
- public:
-  explicit PyDescriptorDatabase(PyObject* py_database);
-  ~PyDescriptorDatabase();
+typedef struct PyUnknownFields {
+  PyObject_HEAD;
+  // Strong pointer to the parent CMessage or PyUnknownFields.
+  // The top PyUnknownFields holds a reference to its parent CMessage
+  // object before release.
+  // Sub PyUnknownFields holds reference to parent PyUnknownFields.
+  PyObject* parent;
 
-  // Implement the abstract interface. All these functions fill the output
-  // with a copy of FileDescriptorProto.
+  // Pointer to the C++ UnknownFieldSet.
+  // PyUnknownFields does not own this pointer.
+  const UnknownFieldSet* fields;
 
-  // Find a file by file name.
-  bool FindFileByName(const std::string& filename,
-                      FileDescriptorProto* output);
+  // Weak references to child unknown fields.
+  std::set<PyUnknownFields*> sub_unknown_fields;
+} PyUnknownFields;
 
-  // Find the file that declares the given fully-qualified symbol name.
-  bool FindFileContainingSymbol(const std::string& symbol_name,
-                                FileDescriptorProto* output);
+typedef struct PyUnknownFieldRef {
+  PyObject_HEAD;
+  // Every Python PyUnknownFieldRef holds a reference to its parent
+  // PyUnknownFields in order to keep it alive.
+  PyUnknownFields* parent;
 
-  // Find the file which defines an extension extending the given message type
-  // with the given field number.
-  // Containing_type must be a fully-qualified type name.
-  // Python objects are not required to implement this method.
-  bool FindFileContainingExtension(const std::string& containing_type,
-                                   int field_number,
-                                   FileDescriptorProto* output);
+  // The UnknownField index in UnknownFields.
+  Py_ssize_t index;
+} UknownFieldRef;
 
-  // Finds the tag numbers used by all known extensions of
-  // containing_type, and appends them to output in an undefined
-  // order.
-  // Python objects are not required to implement this method.
-  bool FindAllExtensionNumbers(const std::string& containing_type,
-                               std::vector<int>* output);
+extern PyTypeObject PyUnknownFields_Type;
+extern PyTypeObject PyUnknownFieldRef_Type;
 
- private:
-  // The python object that implements the database. The reference is owned.
-  PyObject* py_database_;
-};
+namespace unknown_fields {
 
+// Builds an PyUnknownFields for a specific message.
+PyObject* NewPyUnknownFields(CMessage *parent);
+void Clear(PyUnknownFields* self);
+
+}  // namespace unknown_fields
 }  // namespace python
 }  // namespace protobuf
 }  // namespace google
 
-#endif  // GOOGLE_PROTOBUF_PYTHON_CPP_DESCRIPTOR_DATABASE_H__
+#endif  // GOOGLE_PROTOBUF_PYTHON_CPP_UNKNOWN_FIELDS_H__
