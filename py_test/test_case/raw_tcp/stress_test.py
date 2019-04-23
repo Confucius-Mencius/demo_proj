@@ -12,8 +12,8 @@ sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__fil
 
 from base.multitask_util import *
 import echo_test
-# import demo1001_test
-# import demo1100_test
+import demo1001_test
+import demo1100_test
 
 
 def proc1():
@@ -32,24 +32,24 @@ def test_002():
     run_multi_process(200, proc2)
 
 
-# def proc3():
-#     assert 0 == demo1001_test.demo1001()
+def proc3():
+    assert 0 == demo1001_test.demo1001()
 
 
-# def test_003():
-#     run_multi_process(200, proc3)
+def test_003():
+    run_multi_process(200, proc3)
 
 
-# def proc4():
-#     assert 0 == demo1100_test.demo1100()
+def proc4():
+    assert 0 == demo1100_test.demo1100()
 
 
-# def test_004():
-#     run_multi_process(200, proc4)
+def test_004():
+    run_multi_process(200, proc4)
 
 
 if __name__ == '__main__':
     test_001()
     test_002()
-    # test_003()
-    # test_004()
+    test_003()
+    test_004()

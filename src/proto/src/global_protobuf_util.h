@@ -74,4 +74,21 @@ inline int SendToProtoTCPThread(global::SchedulerInterface* scheduler, const Con
     return ret;
 }
 
+inline int SendToHTTPWSThread(global::SchedulerInterface* scheduler, const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                              const google::protobuf::Message* protobuf_msg, int http_ws_thread_idx)
+{
+    char* msg_body = nullptr;
+    size_t msg_body_len = 0;
+
+    if (SerializeProtobufMsg(&msg_body, msg_body_len, protobuf_msg) != 0)
+    {
+        LOG_ERROR("failed to serial msg, msg id: " << msg_head.msg_id);
+        return -1;
+    }
+
+    int ret = scheduler->SendToHTTPWSThread(conn_guid, msg_head, msg_body, msg_body_len, http_ws_thread_idx);
+    FreeProtobufMsgBuf(&msg_body);
+    return ret;
+}
+
 #endif // PROTO_SRC_GLOBAL_PROTOBUF_UTIL_H_

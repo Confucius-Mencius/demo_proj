@@ -196,7 +196,8 @@ XML中的特殊符号只有5种，<、>、&、’和”。
 
     <!-- 应用相关的配置 -->
     <app>
-        <test_mode>0</test_mode>
+        <!-- 测试模式，线上环境必须改为0 -->
+        <test_mode>1</test_mode>
 
         <mongodb>
             <db_conn_str>127.0.0.1</db_conn_str>

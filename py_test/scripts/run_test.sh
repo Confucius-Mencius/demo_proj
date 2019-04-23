@@ -13,7 +13,7 @@ for i in ${TEST_CASE_DIR[@]}; do
 
     for f in ${DIR}/*.py; do
         # -v: --verbose, Be more verbose.  -s: --nocapture, Don't capture stdout (any stdout output will be printed immediately).
-        # nosetests -v -s $f
+        # nosetests -v -s --processes=-1 --process-timeout=10 --process-restartworker $f
         nosetests -v $f
     done
 done

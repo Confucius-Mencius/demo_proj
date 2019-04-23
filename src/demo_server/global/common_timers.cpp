@@ -1,5 +1,6 @@
 #include "common_timers.h"
 #include "log_util.h"
+#include "the_global_logic_interface.h"
 
 namespace global
 {
@@ -29,12 +30,17 @@ void CommonTimers::Finalize()
 
 int CommonTimers::Activate()
 {
-    struct timeval tv = { 0, 1000 }; // 1毫秒打一次日志
+    global::TheLogicInterface* global_logic = static_cast<global::TheLogicInterface*>(logic_ctx_->global_logic);
 
-    if (logic_ctx_->timer_axis->SetTimer(this, DEMO_TIMER_ID, tv, nullptr, 0) != 0)
+    if (global_logic->GetConfMgr()->TestMode())
     {
-        LOG_ERROR("failed to add timer");
-        return -1;
+        struct timeval tv = { 0, 1000 }; // 1毫秒打一次日志
+
+        if (logic_ctx_->timer_axis->SetTimer(this, DEMO_TIMER_ID, tv, nullptr, 0) != 0)
+        {
+            LOG_ERROR("failed to add timer");
+            return -1;
+        }
     }
 
     return 0;

@@ -51,7 +51,7 @@ void Demo1004ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead
     }
 
     ////////////////////////////////////////////////////////////////////////////////
-    ::proto::MsgHead demo1006_req_msg_head = { 0, ss::MSG_ID_DEMO6_REQ };
+    ::proto::MsgHead demo1006_req_msg_head = { 0, ss::MSG_ID_DEMO1006_REQ };
 
     ss::Demo1006Req demo1006_req;
     demo1006_req.set_a(1006);
@@ -63,39 +63,30 @@ void Demo1004ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead
     }
 
     ////////////////////////////////////////////////////////////////////////////////
-    ::proto::MsgHead demo7_req_msg_head = { 0, ss::MSG_ID_DEMO7_REQ };
+    ::proto::MsgHead demo1007_req_msg_head = { 0, ss::MSG_ID_DEMO1007_REQ };
 
-    ss::Demo7Req demo7_req;
-    demo7_req.set_a(7);
+    ss::Demo1007Req demo1007_req;
+    demo1007_req.set_a(1007);
 
-    if (SendToBurdenThread(logic_ctx_->scheduler, conn_guid, demo7_req_msg_head, &demo7_req, -1) != 0)
+    if (SendToBurdenThread(logic_ctx_->scheduler, conn_guid, demo1007_req_msg_head, &demo1007_req, -1) != 0)
     {
-        LOG_ERROR("failed to send to burden thread, " << *conn_guid << ", msg id: " << demo7_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to burden thread, " << *conn_guid << ", msg id: " << demo1007_req_msg_head.msg_id);
         return;
     }
 
     ////////////////////////////////////////////////////////////////////////////////
-    ::proto::MsgHead demo8_req_msg_head = { 0, ss::MSG_ID_DEMO8_REQ };
+    ::proto::MsgHead demo1008_req_msg_head = { 0, ss::MSG_ID_DEMO1008_REQ };
 
-    ss::Demo8Req demo8_req;
-    demo8_req.set_a(8);
+    ss::Demo1008Req demo1008_req;
+    demo1008_req.set_a(1008);
 
-    if (SendToProtoTCPThread(logic_ctx_->scheduler, conn_guid, demo8_req_msg_head, &demo8_req, conn_guid->io_thread_idx) != 0)
+    if (SendToRawTCPThread(logic_ctx_->scheduler, conn_guid, demo1008_req_msg_head, &demo1008_req, conn_guid->io_thread_idx) != 0)
     {
-        LOG_ERROR("failed to send to proto tcp thread, " << *conn_guid << ", msg id: " << demo8_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to proto tcp thread, " << *conn_guid << ", msg id: " << demo1008_req_msg_head.msg_id);
         return;
     }
 
     ////////////////////////////////////////////////////////////////////////////////
-    ::proto::MsgHead demo3_nfy_msg_head = { NFY_PASSBACK, cs::MSG_ID_DEMO3_NFY };
-
-    cs::Demo3Nfy demo3_nfy;
-    demo3_nfy.set_a(3);
-
-    if (SendToClient(logic_ctx_->scheduler, conn_guid, demo3_nfy_msg_head, &demo3_nfy) != 0)
-    {
-        LOG_ERROR("failed to send to client, " << *conn_guid << ", msg id: " << demo3_nfy_msg_head.msg_id);
-        return;
-    }
+    logic_ctx_->scheduler->SendToClient(conn_guid, "nfy1003", strlen("nfy1003"));
 }
 }
