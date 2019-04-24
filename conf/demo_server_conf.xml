@@ -68,7 +68,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         <storm_interval>10</storm_interval>
         <storm_threshold>1000</storm_threshold>
 
-        <!-- raw tcp，字节流内容需要在logic中自己解析 -->
+        <!-- raw tcp，字节流内容需要在logic中自己解析 TODO 改为stream -->
         <raw>
             <!-- 是否使用bufferevent实现，否则就使用event实现 -->
             <use_bufferevent>1</use_bufferevent>
@@ -197,7 +197,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
     <!-- 应用相关的配置 -->
     <app>
         <!-- 测试模式，线上环境必须改为0 -->
-        <test_mode>1</test_mode>
+        <test_mode>0</test_mode>
 
         <mongodb>
             <db_conn_str>127.0.0.1</db_conn_str>

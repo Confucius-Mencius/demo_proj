@@ -82,7 +82,7 @@ void Demo1004ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead
 
     if (SendToRawTCPThread(logic_ctx_->scheduler, conn_guid, demo1008_req_msg_head, &demo1008_req, conn_guid->io_thread_idx) != 0)
     {
-        LOG_ERROR("failed to send to proto tcp thread, " << *conn_guid << ", msg id: " << demo1008_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to raw tcp thread, " << *conn_guid << ", msg id: " << demo1008_req_msg_head.msg_id);
         return;
     }
 

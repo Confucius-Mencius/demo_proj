@@ -56,7 +56,7 @@ void Demo7ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
 
     if (SendToBurdenThread(logic_ctx_->scheduler, conn_guid, demo10_req_msg_head, &demo10_req, -1) != 0)
     {
-        LOG_ERROR("failed to send to global thread, " << *conn_guid << ", msg id: " << demo10_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to burden thread, " << *conn_guid << ", msg id: " << demo10_req_msg_head.msg_id);
         return;
     }
 }
