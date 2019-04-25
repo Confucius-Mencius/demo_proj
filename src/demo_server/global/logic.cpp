@@ -100,6 +100,7 @@ void Logic::OnStop()
 void Logic::OnReload()
 {
     conf_mgr_.Reload();
+    common_timers_.OnReload();
 }
 
 ConfMgrInterface* Logic::GetConfMgr() const

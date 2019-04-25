@@ -22,6 +22,8 @@ public:
     ///////////////////////// TimerSinkInterface /////////////////////////
     void OnTimer(TimerID timer_id, void* data, size_t len, int times) override;
 
+    void OnReload();
+
 private:
     LogicCtx* logic_ctx_;
 };
