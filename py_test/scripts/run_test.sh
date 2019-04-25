@@ -6,7 +6,7 @@
 
 SCRIPT_PATH=$(cd `dirname $0`; pwd)
 
-TEST_CASE_DIR=(base raw_tcp proto_tcp http ws)
+TEST_CASE_DIR=(base tcp proto_tcp http ws)
 
 for i in ${TEST_CASE_DIR[@]}; do
     DIR=${SCRIPT_PATH}/../test_case/$i

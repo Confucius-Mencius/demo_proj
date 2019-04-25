@@ -2308,7 +2308,7 @@ const ::google::protobuf::uint32 TableStruct_ss_5fmsg_2eproto::offsets[] PROTOBU
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo1002Req, a_),
-  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo1002Req, raw_tcp_thread_idx_),
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo1002Req, tcp_thread_idx_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo1002Rsp, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -3068,105 +3068,105 @@ const char descriptor_table_protodef_ss_5fmsg_2eproto[] =
   "emo90Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo90Rsp\022&\n\007err_"
   "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo"
   "2Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030\001 \001(\005\"\025"
-  "\n\010Demo9Nfy\022\t\n\001a\030\001 \001(\005\"4\n\013Demo1002Req\022\t\n\001"
-  "a\030\001 \001(\005\022\032\n\022raw_tcp_thread_idx\030\002 \001(\005\"5\n\013D"
-  "emo1002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
-  "emo.ErrCtx\"\030\n\013Demo1003Req\022\t\n\001a\030\001 \001(\005\"5\n\013"
-  "Demo1003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon."
-  "demo.ErrCtx\"d\n\013Demo1004Req\022\t\n\001a\030\001 \001(\005\022\t\n"
+  "\n\010Demo9Nfy\022\t\n\001a\030\001 \001(\005\"0\n\013Demo1002Req\022\t\n\001"
+  "a\030\001 \001(\005\022\026\n\016tcp_thread_idx\030\002 \001(\005\"5\n\013Demo1"
+  "002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo."
+  "ErrCtx\"\030\n\013Demo1003Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo"
+  "1003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo"
+  ".ErrCtx\"d\n\013Demo1004Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002"
+  " \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\016"
+  "2\033.com.moon.demo.ss.Demo4Flag\"5\n\013Demo100"
+  "4Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Er"
+  "rCtx\"1\n\013Demo1005Req\022\t\n\001a\030\001 \001(\005\022\027\n\017work_t"
+  "hread_idx\030\002 \001(\005\"5\n\013Demo1005Rsp\022&\n\007err_ct"
+  "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo10"
+  "06Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1006Rsp\022&\n\007err_c"
+  "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1"
+  "007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1007Rsp\022&\n\007err_"
+  "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo"
+  "1008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1008Rsp\022&\n\007err"
+  "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"3\n\013Dem"
+  "o1009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread_idx"
+  "\030\002 \001(\005\"5\n\013Demo1009Rsp\022&\n\007err_ctx\030\001 \001(\0132\025"
+  ".com.moon.demo.ErrCtx\"\030\n\013Demo1010Req\022\t\n\001"
+  "a\030\001 \001(\005\"5\n\013Demo1010Rsp\022&\n\007err_ctx\030\001 \001(\0132"
+  "\025.com.moon.demo.ErrCtx\"\030\n\013Demo1020Req\022\t\n"
+  "\001a\030\001 \001(\005\"5\n\013Demo1020Rsp\022&\n\007err_ctx\030\001 \001(\013"
+  "2\025.com.moon.demo.ErrCtx\"\030\n\013Demo1050Req\022\t"
+  "\n\001a\030\001 \001(\005\"5\n\013Demo1050Rsp\022&\n\007err_ctx\030\001 \001("
+  "\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1090Req\022"
+  "\t\n\001a\030\001 \001(\005\"5\n\013Demo1090Rsp\022&\n\007err_ctx\030\001 \001"
+  "(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1002Nfy"
+  "\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo1005Nfy\022\t\n\001a\030\001 \001(\005\"\030\n"
+  "\013Demo1009Nfy\022\t\n\001a\030\001 \001(\005\"1\n\013Demo2002Req\022\t"
+  "\n\001a\030\001 \001(\005\022\027\n\017http_thread_idx\030\002 \001(\005\"5\n\013De"
+  "mo2002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.de"
+  "mo.ErrCtx\"\030\n\013Demo2003Req\022\t\n\001a\030\001 \001(\005\"5\n\013D"
+  "emo2003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
+  "emo.ErrCtx\"d\n\013Demo2004Req\022\t\n\001a\030\001 \001(\005\022\t\n\001"
+  "b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 "
+  "\001(\0162\033.com.moon.demo.ss.Demo4Flag\"5\n\013Demo"
+  "2004Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo"
+  ".ErrCtx\"1\n\013Demo2005Req\022\t\n\001a\030\001 \001(\005\022\027\n\017wor"
+  "k_thread_idx\030\002 \001(\005\"5\n\013Demo2005Rsp\022&\n\007err"
+  "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Dem"
+  "o2006Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2006Rsp\022&\n\007er"
+  "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013De"
+  "mo2007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2007Rsp\022&\n\007e"
+  "rr_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013D"
+  "emo2008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2008Rsp\022&\n\007"
+  "err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"3\n\013"
+  "Demo2009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread_"
+  "idx\030\002 \001(\005\"5\n\013Demo2009Rsp\022&\n\007err_ctx\030\001 \001("
+  "\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2010Req\022"
+  "\t\n\001a\030\001 \001(\005\"5\n\013Demo2010Rsp\022&\n\007err_ctx\030\001 \001"
+  "(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2020Req"
+  "\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2020Rsp\022&\n\007err_ctx\030\001 "
+  "\001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2050Re"
+  "q\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2050Rsp\022&\n\007err_ctx\030\001"
+  " \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2090R"
+  "eq\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2090Rsp\022&\n\007err_ctx\030"
+  "\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2002"
+  "Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo2005Nfy\022\t\n\001a\030\001 \001(\005"
+  "\"\030\n\013Demo2009Nfy\022\t\n\001a\030\001 \001(\005\"/\n\013Demo3002Re"
+  "q\022\t\n\001a\030\001 \001(\005\022\025\n\rws_thread_idx\030\002 \001(\005\"5\n\013D"
+  "emo3002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
+  "emo.ErrCtx\"\030\n\013Demo3003Req\022\t\n\001a\030\001 \001(\005\"5\n\013"
+  "Demo3003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon."
+  "demo.ErrCtx\"d\n\013Demo3004Req\022\t\n\001a\030\001 \001(\005\022\t\n"
   "\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005"
   " \001(\0162\033.com.moon.demo.ss.Demo4Flag\"5\n\013Dem"
-  "o1004Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.dem"
-  "o.ErrCtx\"1\n\013Demo1005Req\022\t\n\001a\030\001 \001(\005\022\027\n\017wo"
-  "rk_thread_idx\030\002 \001(\005\"5\n\013Demo1005Rsp\022&\n\007er"
+  "o3004Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.dem"
+  "o.ErrCtx\"1\n\013Demo3005Req\022\t\n\001a\030\001 \001(\005\022\027\n\017wo"
+  "rk_thread_idx\030\002 \001(\005\"5\n\013Demo3005Rsp\022&\n\007er"
   "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013De"
-  "mo1006Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1006Rsp\022&\n\007e"
+  "mo3006Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3006Rsp\022&\n\007e"
   "rr_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013D"
-  "emo1007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1007Rsp\022&\n\007"
+  "emo3007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3007Rsp\022&\n\007"
   "err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013"
-  "Demo1008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1008Rsp\022&\n"
+  "Demo3008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3008Rsp\022&\n"
   "\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"3\n"
-  "\013Demo1009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread"
-  "_idx\030\002 \001(\005\"5\n\013Demo1009Rsp\022&\n\007err_ctx\030\001 \001"
-  "(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1010Req"
-  "\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1010Rsp\022&\n\007err_ctx\030\001 "
-  "\001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1020Re"
-  "q\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1020Rsp\022&\n\007err_ctx\030\001"
-  " \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1050R"
-  "eq\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1050Rsp\022&\n\007err_ctx\030"
-  "\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1090"
-  "Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1090Rsp\022&\n\007err_ctx"
-  "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo100"
-  "2Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo1005Nfy\022\t\n\001a\030\001 \001("
-  "\005\"\030\n\013Demo1009Nfy\022\t\n\001a\030\001 \001(\005\"1\n\013Demo2002R"
-  "eq\022\t\n\001a\030\001 \001(\005\022\027\n\017http_thread_idx\030\002 \001(\005\"5"
-  "\n\013Demo2002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo"
-  "n.demo.ErrCtx\"\030\n\013Demo2003Req\022\t\n\001a\030\001 \001(\005\""
-  "5\n\013Demo2003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.mo"
-  "on.demo.ErrCtx\"d\n\013Demo2004Req\022\t\n\001a\030\001 \001(\005"
-  "\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004fla"
-  "g\030\005 \001(\0162\033.com.moon.demo.ss.Demo4Flag\"5\n\013"
-  "Demo2004Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon."
-  "demo.ErrCtx\"1\n\013Demo2005Req\022\t\n\001a\030\001 \001(\005\022\027\n"
-  "\017work_thread_idx\030\002 \001(\005\"5\n\013Demo2005Rsp\022&\n"
-  "\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n"
-  "\013Demo2006Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2006Rsp\022&"
-  "\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030"
-  "\n\013Demo2007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2007Rsp\022"
-  "&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\""
-  "\030\n\013Demo2008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2008Rsp"
-  "\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx"
-  "\"3\n\013Demo2009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thr"
-  "ead_idx\030\002 \001(\005\"5\n\013Demo2009Rsp\022&\n\007err_ctx\030"
-  "\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2010"
-  "Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2010Rsp\022&\n\007err_ctx"
-  "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo202"
-  "0Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2020Rsp\022&\n\007err_ct"
-  "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo20"
-  "50Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2050Rsp\022&\n\007err_c"
-  "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2"
-  "090Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2090Rsp\022&\n\007err_"
-  "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo"
-  "2002Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo2005Nfy\022\t\n\001a\030\001"
-  " \001(\005\"\030\n\013Demo2009Nfy\022\t\n\001a\030\001 \001(\005\"/\n\013Demo30"
-  "02Req\022\t\n\001a\030\001 \001(\005\022\025\n\rws_thread_idx\030\002 \001(\005\""
-  "5\n\013Demo3002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.mo"
-  "on.demo.ErrCtx\"\030\n\013Demo3003Req\022\t\n\001a\030\001 \001(\005"
-  "\"5\n\013Demo3003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.m"
-  "oon.demo.ErrCtx\"d\n\013Demo3004Req\022\t\n\001a\030\001 \001("
-  "\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004fl"
-  "ag\030\005 \001(\0162\033.com.moon.demo.ss.Demo4Flag\"5\n"
-  "\013Demo3004Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon"
-  ".demo.ErrCtx\"1\n\013Demo3005Req\022\t\n\001a\030\001 \001(\005\022\027"
-  "\n\017work_thread_idx\030\002 \001(\005\"5\n\013Demo3005Rsp\022&"
-  "\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030"
-  "\n\013Demo3006Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3006Rsp\022"
-  "&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\""
-  "\030\n\013Demo3007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3007Rsp"
-  "\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx"
-  "\"\030\n\013Demo3008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3008Rs"
-  "p\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCt"
-  "x\"3\n\013Demo3009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_th"
-  "read_idx\030\002 \001(\005\"5\n\013Demo3009Rsp\022&\n\007err_ctx"
-  "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo301"
-  "0Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3010Rsp\022&\n\007err_ct"
-  "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo30"
-  "20Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3020Rsp\022&\n\007err_c"
-  "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3"
-  "050Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3050Rsp\022&\n\007err_"
-  "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo"
-  "3090Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3090Rsp\022&\n\007err"
-  "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Dem"
-  "o3002Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo3005Nfy\022\t\n\001a\030"
-  "\001 \001(\005\"\030\n\013Demo3009Nfy\022\t\n\001a\030\001 \001(\005*a\n\tDemo4"
-  "Flag\022\023\n\017DEMO_4_FLAG_MIN\020\000\022\022\n\016DEMO_4_FLAG"
-  "_XX\020\000\022\022\n\016DEMO_4_FLAG_YY\020\001\022\023\n\017DEMO_4_FLAG"
-  "_MAX\020\002\032\002\020\001b\006proto3"
+  "\013Demo3009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread"
+  "_idx\030\002 \001(\005\"5\n\013Demo3009Rsp\022&\n\007err_ctx\030\001 \001"
+  "(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3010Req"
+  "\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3010Rsp\022&\n\007err_ctx\030\001 "
+  "\001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3020Re"
+  "q\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3020Rsp\022&\n\007err_ctx\030\001"
+  " \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3050R"
+  "eq\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3050Rsp\022&\n\007err_ctx\030"
+  "\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3090"
+  "Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3090Rsp\022&\n\007err_ctx"
+  "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo300"
+  "2Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo3005Nfy\022\t\n\001a\030\001 \001("
+  "\005\"\030\n\013Demo3009Nfy\022\t\n\001a\030\001 \001(\005*a\n\tDemo4Flag"
+  "\022\023\n\017DEMO_4_FLAG_MIN\020\000\022\022\n\016DEMO_4_FLAG_XX\020"
+  "\000\022\022\n\016DEMO_4_FLAG_YY\020\001\022\023\n\017DEMO_4_FLAG_MAX"
+  "\020\002\032\002\020\001b\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ss_5fmsg_2eproto = {
   false, InitDefaults_ss_5fmsg_2eproto, 
   descriptor_table_protodef_ss_5fmsg_2eproto,
-  "ss_msg.proto", &assign_descriptors_table_ss_5fmsg_2eproto, 4898,
+  "ss_msg.proto", &assign_descriptors_table_ss_5fmsg_2eproto, 4894,
 };
 
 void AddDescriptors_ss_5fmsg_2eproto() {
@@ -11004,7 +11004,7 @@ class Demo1002Req::HasBitSetters {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Demo1002Req::kAFieldNumber;
-const int Demo1002Req::kRawTcpThreadIdxFieldNumber;
+const int Demo1002Req::kTcpThreadIdxFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Demo1002Req::Demo1002Req()
@@ -11017,15 +11017,15 @@ Demo1002Req::Demo1002Req(const Demo1002Req& from)
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&a_, &from.a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&raw_tcp_thread_idx_) -
-    reinterpret_cast<char*>(&a_)) + sizeof(raw_tcp_thread_idx_));
+    static_cast<size_t>(reinterpret_cast<char*>(&tcp_thread_idx_) -
+    reinterpret_cast<char*>(&a_)) + sizeof(tcp_thread_idx_));
   // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo1002Req)
 }
 
 void Demo1002Req::SharedCtor() {
   ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&raw_tcp_thread_idx_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(raw_tcp_thread_idx_));
+      reinterpret_cast<char*>(&tcp_thread_idx_) -
+      reinterpret_cast<char*>(&a_)) + sizeof(tcp_thread_idx_));
 }
 
 Demo1002Req::~Demo1002Req() {
@@ -11052,8 +11052,8 @@ void Demo1002Req::Clear() {
   (void) cached_has_bits;
 
   ::memset(&a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&raw_tcp_thread_idx_) -
-      reinterpret_cast<char*>(&a_)) + sizeof(raw_tcp_thread_idx_));
+      reinterpret_cast<char*>(&tcp_thread_idx_) -
+      reinterpret_cast<char*>(&a_)) + sizeof(tcp_thread_idx_));
   _internal_metadata_.Clear();
 }
 
@@ -11077,10 +11077,10 @@ const char* Demo1002Req::_InternalParse(const char* begin, const char* end, void
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // int32 raw_tcp_thread_idx = 2;
+      // int32 tcp_thread_idx = 2;
       case 2: {
         if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
-        msg->set_raw_tcp_thread_idx(::google::protobuf::internal::ReadVarint(&ptr));
+        msg->set_tcp_thread_idx(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
@@ -11124,13 +11124,13 @@ bool Demo1002Req::MergePartialFromCodedStream(
         break;
       }
 
-      // int32 raw_tcp_thread_idx = 2;
+      // int32 tcp_thread_idx = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &raw_tcp_thread_idx_)));
+                 input, &tcp_thread_idx_)));
         } else {
           goto handle_unusual;
         }
@@ -11169,9 +11169,9 @@ void Demo1002Req::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
   }
 
-  // int32 raw_tcp_thread_idx = 2;
-  if (this->raw_tcp_thread_idx() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->raw_tcp_thread_idx(), output);
+  // int32 tcp_thread_idx = 2;
+  if (this->tcp_thread_idx() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->tcp_thread_idx(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -11192,9 +11192,9 @@ void Demo1002Req::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
   }
 
-  // int32 raw_tcp_thread_idx = 2;
-  if (this->raw_tcp_thread_idx() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->raw_tcp_thread_idx(), target);
+  // int32 tcp_thread_idx = 2;
+  if (this->tcp_thread_idx() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->tcp_thread_idx(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -11225,11 +11225,11 @@ size_t Demo1002Req::ByteSizeLong() const {
         this->a());
   }
 
-  // int32 raw_tcp_thread_idx = 2;
-  if (this->raw_tcp_thread_idx() != 0) {
+  // int32 tcp_thread_idx = 2;
+  if (this->tcp_thread_idx() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->raw_tcp_thread_idx());
+        this->tcp_thread_idx());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -11262,8 +11262,8 @@ void Demo1002Req::MergeFrom(const Demo1002Req& from) {
   if (from.a() != 0) {
     set_a(from.a());
   }
-  if (from.raw_tcp_thread_idx() != 0) {
-    set_raw_tcp_thread_idx(from.raw_tcp_thread_idx());
+  if (from.tcp_thread_idx() != 0) {
+    set_tcp_thread_idx(from.tcp_thread_idx());
   }
 }
 
@@ -11293,7 +11293,7 @@ void Demo1002Req::InternalSwap(Demo1002Req* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(a_, other->a_);
-  swap(raw_tcp_thread_idx_, other->raw_tcp_thread_idx_);
+  swap(tcp_thread_idx_, other->tcp_thread_idx_);
 }
 
 ::google::protobuf::Metadata Demo1002Req::GetMetadata() const {

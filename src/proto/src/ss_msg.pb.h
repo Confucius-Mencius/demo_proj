@@ -3750,11 +3750,11 @@ class Demo1002Req :
   ::google::protobuf::int32 a() const;
   void set_a(::google::protobuf::int32 value);
 
-  // int32 raw_tcp_thread_idx = 2;
-  void clear_raw_tcp_thread_idx();
-  static const int kRawTcpThreadIdxFieldNumber = 2;
-  ::google::protobuf::int32 raw_tcp_thread_idx() const;
-  void set_raw_tcp_thread_idx(::google::protobuf::int32 value);
+  // int32 tcp_thread_idx = 2;
+  void clear_tcp_thread_idx();
+  static const int kTcpThreadIdxFieldNumber = 2;
+  ::google::protobuf::int32 tcp_thread_idx() const;
+  void set_tcp_thread_idx(::google::protobuf::int32 value);
 
   // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo1002Req)
  private:
@@ -3762,7 +3762,7 @@ class Demo1002Req :
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::int32 a_;
-  ::google::protobuf::int32 raw_tcp_thread_idx_;
+  ::google::protobuf::int32 tcp_thread_idx_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ss_5fmsg_2eproto;
 };
@@ -14081,18 +14081,18 @@ inline void Demo1002Req::set_a(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo1002Req.a)
 }
 
-// int32 raw_tcp_thread_idx = 2;
-inline void Demo1002Req::clear_raw_tcp_thread_idx() {
-  raw_tcp_thread_idx_ = 0;
+// int32 tcp_thread_idx = 2;
+inline void Demo1002Req::clear_tcp_thread_idx() {
+  tcp_thread_idx_ = 0;
 }
-inline ::google::protobuf::int32 Demo1002Req::raw_tcp_thread_idx() const {
-  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo1002Req.raw_tcp_thread_idx)
-  return raw_tcp_thread_idx_;
+inline ::google::protobuf::int32 Demo1002Req::tcp_thread_idx() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo1002Req.tcp_thread_idx)
+  return tcp_thread_idx_;
 }
-inline void Demo1002Req::set_raw_tcp_thread_idx(::google::protobuf::int32 value) {
+inline void Demo1002Req::set_tcp_thread_idx(::google::protobuf::int32 value) {
   
-  raw_tcp_thread_idx_ = value;
-  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo1002Req.raw_tcp_thread_idx)
+  tcp_thread_idx_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo1002Req.tcp_thread_idx)
 }
 
 // -------------------------------------------------------------------

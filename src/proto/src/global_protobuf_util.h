@@ -40,8 +40,8 @@ inline int SendToBurdenThread(global::SchedulerInterface* scheduler, const ConnG
     return ret;
 }
 
-inline int SendToRawTCPThread(global::SchedulerInterface* scheduler, const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
-                              const google::protobuf::Message* protobuf_msg, int raw_tcp_thread_idx)
+inline int SendToTCPThread(global::SchedulerInterface* scheduler, const ConnGUID* conn_guid, const ::proto::MsgHead& msg_head,
+                           const google::protobuf::Message* protobuf_msg, int tcp_thread_idx)
 {
     char* msg_body = nullptr;
     size_t msg_body_len = 0;
@@ -52,7 +52,7 @@ inline int SendToRawTCPThread(global::SchedulerInterface* scheduler, const ConnG
         return -1;
     }
 
-    int ret = scheduler->SendToRawTCPThread(conn_guid, msg_head, msg_body, msg_body_len, raw_tcp_thread_idx);
+    int ret = scheduler->SendToTCPThread(conn_guid, msg_head, msg_body, msg_body_len, tcp_thread_idx);
     FreeProtobufMsgBuf(&msg_body);
     return ret;
 }

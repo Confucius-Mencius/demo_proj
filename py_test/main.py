@@ -8,7 +8,7 @@
 # 本文件只是为了方便命令行执行，把需要执行的文件import进来
 
 from test_case.base import connect_test
-from test_case.raw_tcp import echo_test
+from test_case.tcp import echo_test
 from test_case.proto_tcp import demo100_test, demo200_test, demo1_test
 
 if __name__ == '__main__':
