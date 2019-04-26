@@ -33,6 +33,6 @@ void Demo6ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    LOG_TRACE(demo6_req.a());
+    LOG_DEBUG(demo6_req.a());
 }
 }

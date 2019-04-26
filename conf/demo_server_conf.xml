@@ -194,6 +194,30 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         </logic_so_group>
     </udp>
 
+    <peer>
+        <!-- 定时检查超时未回复的消息间隔，单位：秒。配置为0或者不配置则使用默认值：1秒 -->
+        <rsp_check_interval>1</rsp_check_interval>
+
+        <tcp>
+            <proto>
+                <!-- 定时重连间隔。配置为0表示不做定时重连，不配置则使用默认值：1秒 -->
+                <conn_interval>
+                    <sec>1</sec>
+                    <usec>0</usec>
+                </conn_interval>
+            </proto>
+        </tcp>
+
+        <http>
+            <!-- 测试发现，不配置conn_timeout和conn_max_retry的情况下，通过libevent发送http请求给对端，如果可以连接到对端，但是没有起服务，则1秒就会超时；如果对端不存在，根本连接不上，30秒会超时。libevent默认50秒超时 -->
+            <!-- 多久没有消息传递则关闭连接，单位：秒。不配置或配置为0则使用系统默认值(见上面的注释) -->
+            <conn_timeout>0</conn_timeout>
+            
+            <!-- 最大重试次数。不配置或配置为0则使用系统默认值(0) -->
+            <conn_max_retry>0</conn_max_retry>
+        </http>
+    </peer>
+
     <!-- 应用相关的配置 -->
     <app>
         <!-- 测试模式，线上环境必须改为0 -->

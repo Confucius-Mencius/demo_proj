@@ -130,4 +130,21 @@ inline int SendToHTTPWSThread(work::SchedulerInterface* scheduler, const ConnGUI
     return ret;
 }
 
+inline TransID SendToServer(work::SchedulerInterface* scheduler, const Peer& peer, const ::proto::MsgHead& msg_head,
+                            const google::protobuf::Message* protobuf_msg, const AsyncCtx* async_ctx)
+{
+    char* msg_body = nullptr;
+    size_t msg_body_len = 0;
+
+    if (SerializeProtobufMsg(&msg_body, msg_body_len, protobuf_msg) != 0)
+    {
+        LOG_ERROR("failed to serial msg, msg id: " << msg_head.msg_id);
+        return INVALID_TRANS_ID;
+    }
+
+    TransID trans_id = scheduler->SendToServer(peer, msg_head, msg_body, msg_body_len, async_ctx);
+    FreeProtobufMsgBuf(&msg_body);
+    return trans_id;
+}
+
 #endif // PROTO_SRC_WORK_PROTOBUF_UTIL_H_

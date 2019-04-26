@@ -12,7 +12,8 @@ CreateVersionFile(${CMAKE_CURRENT_SOURCE_DIR} ${PROJ_NAME} ${LIB_NAME})
 ###############################################################################
 # include/link dir
 include_directories(${PROJ_INC_DIR} ${COMMON_UTIL_INC_DIR} ${PROTO_INC_DIR}
-        ${COMMON_COMPONENT_INC_DIR} ${LOG4CPLUS_INC_DIR} ${PROTOBUF_INC_DIR})
+        ${COMMON_COMPONENT_INC_DIR} ${LOG4CPLUS_INC_DIR} ${PROTOBUF_INC_DIR}
+        ${GPERFTOOLS_INC_DIR})
 link_directories(${COMMON_UTIL_LIB_DIR} ${PROTO_LIB_DIR} ${COMMON_COMPONENT_LIB_DIR}
         ${PROTOBUF_LIB_DIR} ${GPERFTOOLS_LIB_DIR})
 

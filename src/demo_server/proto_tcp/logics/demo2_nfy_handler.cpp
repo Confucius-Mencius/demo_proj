@@ -35,7 +35,7 @@ void Demo2NfyHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    LOG_TRACE(demo2_nfy.a());
+    LOG_DEBUG(demo2_nfy.a());
 }
 }
 }

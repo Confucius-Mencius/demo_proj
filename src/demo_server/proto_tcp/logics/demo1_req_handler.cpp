@@ -38,7 +38,7 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
         return;
     }
 
-    LOG_TRACE(demo1_req.a());
+    LOG_DEBUG(demo1_req.a());
 
     ////////////////////////////////////////////////////////////////////////////////
     ::proto::MsgHead demo1_rsp_msg_head = msg_head;

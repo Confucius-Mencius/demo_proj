@@ -15,6 +15,8 @@ public:
     virtual ~TheCommonLogicInterface()
     {
     }
+
+    virtual int StartSendNfyTimer(const ConnGUID* conn_guid) = 0;
 };
 }
 }

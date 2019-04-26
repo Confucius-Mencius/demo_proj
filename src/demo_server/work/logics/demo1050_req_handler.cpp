@@ -33,6 +33,6 @@ void Demo1050ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead
         return;
     }
 
-    LOG_TRACE(demo1050_req.a());
+    LOG_DEBUG(demo1050_req.a());
 }
 }

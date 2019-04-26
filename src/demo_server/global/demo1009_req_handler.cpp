@@ -33,7 +33,7 @@ void Demo1009ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead
         return;
     }
 
-    LOG_TRACE(demo1009_req.a());
+    LOG_DEBUG(demo1009_req.a());
 
     ////////////////////////////////////////////////////////////////////////////////
     ::proto::MsgHead demo1090_req_msg_head = { 0, ss::MSG_ID_DEMO1090_REQ };

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='com.moon.demo.cs',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0f\x63s_msg_id.proto\x12\x10\x63om.moon.demo.cs*\xd9\x01\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x15\n\x10MSG_ID_DEMO1_REQ\x10\xe8\x07\x12\x15\n\x10MSG_ID_DEMO1_RSP\x10\xe9\x07\x12\x15\n\x10MSG_ID_DEMO1_NFY\x10\xea\x07\x12\x15\n\x10MSG_ID_DEMO3_NFY\x10\xeb\x07\x12\x17\n\x12MSG_ID_DEMO100_REQ\x10\xec\x07\x12\x17\n\x12MSG_ID_DEMO100_RSP\x10\xed\x07\x12\x17\n\x12MSG_ID_DEMO200_REQ\x10\xee\x07\x12\x17\n\x12MSG_ID_DEMO200_RSP\x10\xef\x07\x62\x06proto3')
+  serialized_pb=_b('\n\x0f\x63s_msg_id.proto\x12\x10\x63om.moon.demo.cs*\x8b\x02\n\x05MsgID\x12\x10\n\x0cPLACE_HOLDER\x10\x00\x12\x15\n\x10MSG_ID_DEMO1_REQ\x10\xe8\x07\x12\x15\n\x10MSG_ID_DEMO1_RSP\x10\xe9\x07\x12\x15\n\x10MSG_ID_DEMO1_NFY\x10\xea\x07\x12\x15\n\x10MSG_ID_DEMO3_NFY\x10\xeb\x07\x12\x17\n\x12MSG_ID_DEMO100_REQ\x10\xec\x07\x12\x17\n\x12MSG_ID_DEMO100_RSP\x10\xed\x07\x12\x17\n\x12MSG_ID_DEMO200_REQ\x10\xee\x07\x12\x17\n\x12MSG_ID_DEMO200_RSP\x10\xef\x07\x12\x17\n\x12MSG_ID_DEMO300_REQ\x10\xf0\x07\x12\x17\n\x12MSG_ID_DEMO300_RSP\x10\xf1\x07\x62\x06proto3')
 )
 
 _MSGID = _descriptor.EnumDescriptor(
@@ -66,11 +66,19 @@ _MSGID = _descriptor.EnumDescriptor(
       name='MSG_ID_DEMO200_RSP', index=8, number=1007,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO300_REQ', index=9, number=1008,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MSG_ID_DEMO300_RSP', index=10, number=1009,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=38,
-  serialized_end=255,
+  serialized_end=305,
 )
 _sym_db.RegisterEnumDescriptor(_MSGID)
 
@@ -84,6 +92,8 @@ MSG_ID_DEMO100_REQ = 1004
 MSG_ID_DEMO100_RSP = 1005
 MSG_ID_DEMO200_REQ = 1006
 MSG_ID_DEMO200_RSP = 1007
+MSG_ID_DEMO300_REQ = 1008
+MSG_ID_DEMO300_RSP = 1009
 
 
 DESCRIPTOR.enum_types_by_name['MsgID'] = _MSGID

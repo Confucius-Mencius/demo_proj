@@ -66,12 +66,14 @@ enum MsgID {
   MSG_ID_DEMO100_RSP = 1005,
   MSG_ID_DEMO200_REQ = 1006,
   MSG_ID_DEMO200_RSP = 1007,
+  MSG_ID_DEMO300_REQ = 1008,
+  MSG_ID_DEMO300_RSP = 1009,
   MsgID_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::min(),
   MsgID_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::max()
 };
 bool MsgID_IsValid(int value);
 const MsgID MsgID_MIN = PLACE_HOLDER;
-const MsgID MsgID_MAX = MSG_ID_DEMO200_RSP;
+const MsgID MsgID_MAX = MSG_ID_DEMO300_RSP;
 const int MsgID_ARRAYSIZE = MsgID_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MsgID_descriptor();

@@ -10,7 +10,8 @@ set(BUILD_VERSION 1.0.0)
 
 ###############################################################################
 # include/link dir
-include_directories(${PROJ_INC_DIR} ${COMMON_COMPONENT_INC_DIR} ${LOG4CPLUS_INC_DIR})
+include_directories(${PROJ_INC_DIR} ${COMMON_COMPONENT_INC_DIR} ${LOG4CPLUS_INC_DIR}
+        ${GPERFTOOLS_INC_DIR})
 link_directories(${COMMON_COMPONENT_LIB_DIR} ${GPERFTOOLS_LIB_DIR})
 
 ###############################################################################

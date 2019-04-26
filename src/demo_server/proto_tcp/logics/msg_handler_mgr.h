@@ -8,6 +8,8 @@
 #include "demo3_req_handler.h"
 #include "demo8_req_handler.h"
 #include "demo20_req_handler.h"
+#include "demo301_req_handler.h"
+#include "demo302_req_handler.h"
 
 namespace tcp
 {
@@ -40,6 +42,8 @@ private:
     Demo3ReqHandler demo3_req_handler_;
     Demo8ReqHandler demo8_req_handler_;
     Demo20ReqHandler demo20_req_handler_;
+    Demo301ReqHandler demo301_req_handler_;
+    Demo302ReqHandler demo302_req_handler_;
 };
 }
 }

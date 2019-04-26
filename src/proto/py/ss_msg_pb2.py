@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='com.moon.demo.ss',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0css_msg.proto\x12\x10\x63om.moon.demo.ss\x1a\x0c\x63ommon.proto\"3\n\x08\x44\x65mo2Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x1c\n\x14proto_tcp_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo2Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo3Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo3Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"a\n\x08\x44\x65mo4Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"2\n\x08\x44\x65mo4Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\".\n\x08\x44\x65mo5Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo5Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo6Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo6Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo7Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo7Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo8Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo8Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"0\n\x08\x44\x65mo9Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo9Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo10Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo10Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo20Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo20Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo50Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo50Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo90Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo90Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo2Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo5Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo9Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"0\n\x0b\x44\x65mo1002Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x16\n\x0etcp_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo1002Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1003Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1003Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"d\n\x0b\x44\x65mo1004Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"5\n\x0b\x44\x65mo1004Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"1\n\x0b\x44\x65mo1005Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo1005Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1006Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1006Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1007Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1007Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1008Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1008Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"3\n\x0b\x44\x65mo1009Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo1009Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1010Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1010Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1020Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1020Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1050Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1050Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1090Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1090Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1002Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo1005Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo1009Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"1\n\x0b\x44\x65mo2002Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fhttp_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo2002Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2003Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2003Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"d\n\x0b\x44\x65mo2004Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"5\n\x0b\x44\x65mo2004Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"1\n\x0b\x44\x65mo2005Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo2005Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2006Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2006Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2007Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2007Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2008Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2008Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"3\n\x0b\x44\x65mo2009Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo2009Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2010Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2010Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2020Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2020Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2050Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2050Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2090Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2090Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2002Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo2005Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo2009Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"/\n\x0b\x44\x65mo3002Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x15\n\rws_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo3002Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3003Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3003Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"d\n\x0b\x44\x65mo3004Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"5\n\x0b\x44\x65mo3004Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"1\n\x0b\x44\x65mo3005Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo3005Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3006Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3006Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3007Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3007Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3008Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3008Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"3\n\x0b\x44\x65mo3009Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo3009Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3010Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3010Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3020Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3020Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3050Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3050Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3090Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3090Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3002Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo3005Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo3009Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05*a\n\tDemo4Flag\x12\x13\n\x0f\x44\x45MO_4_FLAG_MIN\x10\x00\x12\x12\n\x0e\x44\x45MO_4_FLAG_XX\x10\x00\x12\x12\n\x0e\x44\x45MO_4_FLAG_YY\x10\x01\x12\x13\n\x0f\x44\x45MO_4_FLAG_MAX\x10\x02\x1a\x02\x10\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x0css_msg.proto\x12\x10\x63om.moon.demo.ss\x1a\x0c\x63ommon.proto\"3\n\x08\x44\x65mo2Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x1c\n\x14proto_tcp_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo2Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo3Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo3Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"a\n\x08\x44\x65mo4Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"2\n\x08\x44\x65mo4Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\".\n\x08\x44\x65mo5Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo5Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo6Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo6Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo7Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo7Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo8Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo8Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"0\n\x08\x44\x65mo9Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"2\n\x08\x44\x65mo9Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo10Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo10Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo20Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo20Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo50Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo50Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x16\n\tDemo90Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"3\n\tDemo90Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo2Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo5Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo9Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x17\n\nDemo301Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"4\n\nDemo301Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x17\n\nDemo301Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x17\n\nDemo302Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"4\n\nDemo302Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"0\n\x0b\x44\x65mo1002Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x16\n\x0etcp_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo1002Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1003Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1003Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"d\n\x0b\x44\x65mo1004Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"5\n\x0b\x44\x65mo1004Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"1\n\x0b\x44\x65mo1005Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo1005Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1006Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1006Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1007Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1007Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1008Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1008Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"3\n\x0b\x44\x65mo1009Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo1009Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1010Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1010Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1020Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1020Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1050Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1050Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1090Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo1090Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo1002Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo1005Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo1009Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"1\n\x0b\x44\x65mo2002Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fhttp_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo2002Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2003Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2003Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"d\n\x0b\x44\x65mo2004Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"5\n\x0b\x44\x65mo2004Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"1\n\x0b\x44\x65mo2005Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo2005Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2006Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2006Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2007Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2007Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2008Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2008Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"3\n\x0b\x44\x65mo2009Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo2009Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2010Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2010Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2020Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2020Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2050Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2050Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2090Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo2090Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo2002Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo2005Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo2009Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"/\n\x0b\x44\x65mo3002Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x15\n\rws_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo3002Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3003Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3003Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"d\n\x0b\x44\x65mo3004Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x03\x12\t\n\x01\x63\x18\x03 \x01(\t\x12\t\n\x01\x64\x18\x04 \x01(\x0c\x12)\n\x04\x66lag\x18\x05 \x01(\x0e\x32\x1b.com.moon.demo.ss.Demo4Flag\"5\n\x0b\x44\x65mo3004Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"1\n\x0b\x44\x65mo3005Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x17\n\x0fwork_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo3005Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3006Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3006Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3007Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3007Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3008Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3008Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"3\n\x0b\x44\x65mo3009Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\x19\n\x11\x62urden_thread_idx\x18\x02 \x01(\x05\"5\n\x0b\x44\x65mo3009Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3010Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3010Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3020Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3020Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3050Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3050Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3090Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"5\n\x0b\x44\x65mo3090Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x18\n\x0b\x44\x65mo3002Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo3005Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x18\n\x0b\x44\x65mo3009Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05*a\n\tDemo4Flag\x12\x13\n\x0f\x44\x45MO_4_FLAG_MIN\x10\x00\x12\x12\n\x0e\x44\x45MO_4_FLAG_XX\x10\x00\x12\x12\n\x0e\x44\x45MO_4_FLAG_YY\x10\x01\x12\x13\n\x0f\x44\x45MO_4_FLAG_MAX\x10\x02\x1a\x02\x10\x01\x62\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
@@ -51,8 +51,8 @@ _DEMO4FLAG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=_b('\020\001'),
-  serialized_start=4789,
-  serialized_end=4886,
+  serialized_start=4972,
+  serialized_end=5069,
 )
 _sym_db.RegisterEnumDescriptor(_DEMO4FLAG)
 
@@ -950,6 +950,161 @@ _DEMO9NFY = _descriptor.Descriptor(
 )
 
 
+_DEMO301REQ = _descriptor.Descriptor(
+  name='Demo301Req',
+  full_name='com.moon.demo.ss.Demo301Req',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='a', full_name='com.moon.demo.ss.Demo301Req.a', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1183,
+  serialized_end=1206,
+)
+
+
+_DEMO301RSP = _descriptor.Descriptor(
+  name='Demo301Rsp',
+  full_name='com.moon.demo.ss.Demo301Rsp',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='err_ctx', full_name='com.moon.demo.ss.Demo301Rsp.err_ctx', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1208,
+  serialized_end=1260,
+)
+
+
+_DEMO301NFY = _descriptor.Descriptor(
+  name='Demo301Nfy',
+  full_name='com.moon.demo.ss.Demo301Nfy',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='a', full_name='com.moon.demo.ss.Demo301Nfy.a', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1262,
+  serialized_end=1285,
+)
+
+
+_DEMO302REQ = _descriptor.Descriptor(
+  name='Demo302Req',
+  full_name='com.moon.demo.ss.Demo302Req',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='a', full_name='com.moon.demo.ss.Demo302Req.a', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1287,
+  serialized_end=1310,
+)
+
+
+_DEMO302RSP = _descriptor.Descriptor(
+  name='Demo302Rsp',
+  full_name='com.moon.demo.ss.Demo302Rsp',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='err_ctx', full_name='com.moon.demo.ss.Demo302Rsp.err_ctx', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1312,
+  serialized_end=1364,
+)
+
+
 _DEMO1002REQ = _descriptor.Descriptor(
   name='Demo1002Req',
   full_name='com.moon.demo.ss.Demo1002Req',
@@ -983,8 +1138,8 @@ _DEMO1002REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1183,
-  serialized_end=1231,
+  serialized_start=1366,
+  serialized_end=1414,
 )
 
 
@@ -1014,8 +1169,8 @@ _DEMO1002RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1233,
-  serialized_end=1286,
+  serialized_start=1416,
+  serialized_end=1469,
 )
 
 
@@ -1045,8 +1200,8 @@ _DEMO1003REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1288,
-  serialized_end=1312,
+  serialized_start=1471,
+  serialized_end=1495,
 )
 
 
@@ -1076,8 +1231,8 @@ _DEMO1003RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1314,
-  serialized_end=1367,
+  serialized_start=1497,
+  serialized_end=1550,
 )
 
 
@@ -1135,8 +1290,8 @@ _DEMO1004REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1369,
-  serialized_end=1469,
+  serialized_start=1552,
+  serialized_end=1652,
 )
 
 
@@ -1166,8 +1321,8 @@ _DEMO1004RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1471,
-  serialized_end=1524,
+  serialized_start=1654,
+  serialized_end=1707,
 )
 
 
@@ -1204,8 +1359,8 @@ _DEMO1005REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1526,
-  serialized_end=1575,
+  serialized_start=1709,
+  serialized_end=1758,
 )
 
 
@@ -1235,8 +1390,8 @@ _DEMO1005RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1577,
-  serialized_end=1630,
+  serialized_start=1760,
+  serialized_end=1813,
 )
 
 
@@ -1266,8 +1421,8 @@ _DEMO1006REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1632,
-  serialized_end=1656,
+  serialized_start=1815,
+  serialized_end=1839,
 )
 
 
@@ -1297,8 +1452,8 @@ _DEMO1006RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1658,
-  serialized_end=1711,
+  serialized_start=1841,
+  serialized_end=1894,
 )
 
 
@@ -1328,8 +1483,8 @@ _DEMO1007REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1713,
-  serialized_end=1737,
+  serialized_start=1896,
+  serialized_end=1920,
 )
 
 
@@ -1359,8 +1514,8 @@ _DEMO1007RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1739,
-  serialized_end=1792,
+  serialized_start=1922,
+  serialized_end=1975,
 )
 
 
@@ -1390,8 +1545,8 @@ _DEMO1008REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1794,
-  serialized_end=1818,
+  serialized_start=1977,
+  serialized_end=2001,
 )
 
 
@@ -1421,8 +1576,8 @@ _DEMO1008RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1820,
-  serialized_end=1873,
+  serialized_start=2003,
+  serialized_end=2056,
 )
 
 
@@ -1459,8 +1614,8 @@ _DEMO1009REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1875,
-  serialized_end=1926,
+  serialized_start=2058,
+  serialized_end=2109,
 )
 
 
@@ -1490,8 +1645,8 @@ _DEMO1009RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1928,
-  serialized_end=1981,
+  serialized_start=2111,
+  serialized_end=2164,
 )
 
 
@@ -1521,8 +1676,8 @@ _DEMO1010REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1983,
-  serialized_end=2007,
+  serialized_start=2166,
+  serialized_end=2190,
 )
 
 
@@ -1552,8 +1707,8 @@ _DEMO1010RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2009,
-  serialized_end=2062,
+  serialized_start=2192,
+  serialized_end=2245,
 )
 
 
@@ -1583,8 +1738,8 @@ _DEMO1020REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2064,
-  serialized_end=2088,
+  serialized_start=2247,
+  serialized_end=2271,
 )
 
 
@@ -1614,8 +1769,8 @@ _DEMO1020RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2090,
-  serialized_end=2143,
+  serialized_start=2273,
+  serialized_end=2326,
 )
 
 
@@ -1645,8 +1800,8 @@ _DEMO1050REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2145,
-  serialized_end=2169,
+  serialized_start=2328,
+  serialized_end=2352,
 )
 
 
@@ -1676,8 +1831,8 @@ _DEMO1050RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2171,
-  serialized_end=2224,
+  serialized_start=2354,
+  serialized_end=2407,
 )
 
 
@@ -1707,8 +1862,8 @@ _DEMO1090REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2226,
-  serialized_end=2250,
+  serialized_start=2409,
+  serialized_end=2433,
 )
 
 
@@ -1738,8 +1893,8 @@ _DEMO1090RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2252,
-  serialized_end=2305,
+  serialized_start=2435,
+  serialized_end=2488,
 )
 
 
@@ -1769,8 +1924,8 @@ _DEMO1002NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2307,
-  serialized_end=2331,
+  serialized_start=2490,
+  serialized_end=2514,
 )
 
 
@@ -1800,8 +1955,8 @@ _DEMO1005NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2333,
-  serialized_end=2357,
+  serialized_start=2516,
+  serialized_end=2540,
 )
 
 
@@ -1831,8 +1986,8 @@ _DEMO1009NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2359,
-  serialized_end=2383,
+  serialized_start=2542,
+  serialized_end=2566,
 )
 
 
@@ -1869,8 +2024,8 @@ _DEMO2002REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2385,
-  serialized_end=2434,
+  serialized_start=2568,
+  serialized_end=2617,
 )
 
 
@@ -1900,8 +2055,8 @@ _DEMO2002RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2436,
-  serialized_end=2489,
+  serialized_start=2619,
+  serialized_end=2672,
 )
 
 
@@ -1931,8 +2086,8 @@ _DEMO2003REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2491,
-  serialized_end=2515,
+  serialized_start=2674,
+  serialized_end=2698,
 )
 
 
@@ -1962,8 +2117,8 @@ _DEMO2003RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2517,
-  serialized_end=2570,
+  serialized_start=2700,
+  serialized_end=2753,
 )
 
 
@@ -2021,8 +2176,8 @@ _DEMO2004REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2572,
-  serialized_end=2672,
+  serialized_start=2755,
+  serialized_end=2855,
 )
 
 
@@ -2052,8 +2207,8 @@ _DEMO2004RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2674,
-  serialized_end=2727,
+  serialized_start=2857,
+  serialized_end=2910,
 )
 
 
@@ -2090,8 +2245,8 @@ _DEMO2005REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2729,
-  serialized_end=2778,
+  serialized_start=2912,
+  serialized_end=2961,
 )
 
 
@@ -2121,8 +2276,8 @@ _DEMO2005RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2780,
-  serialized_end=2833,
+  serialized_start=2963,
+  serialized_end=3016,
 )
 
 
@@ -2152,8 +2307,8 @@ _DEMO2006REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2835,
-  serialized_end=2859,
+  serialized_start=3018,
+  serialized_end=3042,
 )
 
 
@@ -2183,8 +2338,8 @@ _DEMO2006RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2861,
-  serialized_end=2914,
+  serialized_start=3044,
+  serialized_end=3097,
 )
 
 
@@ -2214,8 +2369,8 @@ _DEMO2007REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2916,
-  serialized_end=2940,
+  serialized_start=3099,
+  serialized_end=3123,
 )
 
 
@@ -2245,8 +2400,8 @@ _DEMO2007RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2942,
-  serialized_end=2995,
+  serialized_start=3125,
+  serialized_end=3178,
 )
 
 
@@ -2276,8 +2431,8 @@ _DEMO2008REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2997,
-  serialized_end=3021,
+  serialized_start=3180,
+  serialized_end=3204,
 )
 
 
@@ -2307,8 +2462,8 @@ _DEMO2008RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3023,
-  serialized_end=3076,
+  serialized_start=3206,
+  serialized_end=3259,
 )
 
 
@@ -2345,8 +2500,8 @@ _DEMO2009REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3078,
-  serialized_end=3129,
+  serialized_start=3261,
+  serialized_end=3312,
 )
 
 
@@ -2376,8 +2531,8 @@ _DEMO2009RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3131,
-  serialized_end=3184,
+  serialized_start=3314,
+  serialized_end=3367,
 )
 
 
@@ -2407,8 +2562,8 @@ _DEMO2010REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3186,
-  serialized_end=3210,
+  serialized_start=3369,
+  serialized_end=3393,
 )
 
 
@@ -2438,8 +2593,8 @@ _DEMO2010RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3212,
-  serialized_end=3265,
+  serialized_start=3395,
+  serialized_end=3448,
 )
 
 
@@ -2469,8 +2624,8 @@ _DEMO2020REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3267,
-  serialized_end=3291,
+  serialized_start=3450,
+  serialized_end=3474,
 )
 
 
@@ -2500,8 +2655,8 @@ _DEMO2020RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3293,
-  serialized_end=3346,
+  serialized_start=3476,
+  serialized_end=3529,
 )
 
 
@@ -2531,8 +2686,8 @@ _DEMO2050REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3348,
-  serialized_end=3372,
+  serialized_start=3531,
+  serialized_end=3555,
 )
 
 
@@ -2562,8 +2717,8 @@ _DEMO2050RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3374,
-  serialized_end=3427,
+  serialized_start=3557,
+  serialized_end=3610,
 )
 
 
@@ -2593,8 +2748,8 @@ _DEMO2090REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3429,
-  serialized_end=3453,
+  serialized_start=3612,
+  serialized_end=3636,
 )
 
 
@@ -2624,8 +2779,8 @@ _DEMO2090RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3455,
-  serialized_end=3508,
+  serialized_start=3638,
+  serialized_end=3691,
 )
 
 
@@ -2655,8 +2810,8 @@ _DEMO2002NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3510,
-  serialized_end=3534,
+  serialized_start=3693,
+  serialized_end=3717,
 )
 
 
@@ -2686,8 +2841,8 @@ _DEMO2005NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3536,
-  serialized_end=3560,
+  serialized_start=3719,
+  serialized_end=3743,
 )
 
 
@@ -2717,8 +2872,8 @@ _DEMO2009NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3562,
-  serialized_end=3586,
+  serialized_start=3745,
+  serialized_end=3769,
 )
 
 
@@ -2755,8 +2910,8 @@ _DEMO3002REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3588,
-  serialized_end=3635,
+  serialized_start=3771,
+  serialized_end=3818,
 )
 
 
@@ -2786,8 +2941,8 @@ _DEMO3002RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3637,
-  serialized_end=3690,
+  serialized_start=3820,
+  serialized_end=3873,
 )
 
 
@@ -2817,8 +2972,8 @@ _DEMO3003REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3692,
-  serialized_end=3716,
+  serialized_start=3875,
+  serialized_end=3899,
 )
 
 
@@ -2848,8 +3003,8 @@ _DEMO3003RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3718,
-  serialized_end=3771,
+  serialized_start=3901,
+  serialized_end=3954,
 )
 
 
@@ -2907,8 +3062,8 @@ _DEMO3004REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3773,
-  serialized_end=3873,
+  serialized_start=3956,
+  serialized_end=4056,
 )
 
 
@@ -2938,8 +3093,8 @@ _DEMO3004RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3875,
-  serialized_end=3928,
+  serialized_start=4058,
+  serialized_end=4111,
 )
 
 
@@ -2976,8 +3131,8 @@ _DEMO3005REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3930,
-  serialized_end=3979,
+  serialized_start=4113,
+  serialized_end=4162,
 )
 
 
@@ -3007,8 +3162,8 @@ _DEMO3005RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3981,
-  serialized_end=4034,
+  serialized_start=4164,
+  serialized_end=4217,
 )
 
 
@@ -3038,8 +3193,8 @@ _DEMO3006REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4036,
-  serialized_end=4060,
+  serialized_start=4219,
+  serialized_end=4243,
 )
 
 
@@ -3069,8 +3224,8 @@ _DEMO3006RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4062,
-  serialized_end=4115,
+  serialized_start=4245,
+  serialized_end=4298,
 )
 
 
@@ -3100,8 +3255,8 @@ _DEMO3007REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4117,
-  serialized_end=4141,
+  serialized_start=4300,
+  serialized_end=4324,
 )
 
 
@@ -3131,8 +3286,8 @@ _DEMO3007RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4143,
-  serialized_end=4196,
+  serialized_start=4326,
+  serialized_end=4379,
 )
 
 
@@ -3162,8 +3317,8 @@ _DEMO3008REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4198,
-  serialized_end=4222,
+  serialized_start=4381,
+  serialized_end=4405,
 )
 
 
@@ -3193,8 +3348,8 @@ _DEMO3008RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4224,
-  serialized_end=4277,
+  serialized_start=4407,
+  serialized_end=4460,
 )
 
 
@@ -3231,8 +3386,8 @@ _DEMO3009REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4279,
-  serialized_end=4330,
+  serialized_start=4462,
+  serialized_end=4513,
 )
 
 
@@ -3262,8 +3417,8 @@ _DEMO3009RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4332,
-  serialized_end=4385,
+  serialized_start=4515,
+  serialized_end=4568,
 )
 
 
@@ -3293,8 +3448,8 @@ _DEMO3010REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4387,
-  serialized_end=4411,
+  serialized_start=4570,
+  serialized_end=4594,
 )
 
 
@@ -3324,8 +3479,8 @@ _DEMO3010RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4413,
-  serialized_end=4466,
+  serialized_start=4596,
+  serialized_end=4649,
 )
 
 
@@ -3355,8 +3510,8 @@ _DEMO3020REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4468,
-  serialized_end=4492,
+  serialized_start=4651,
+  serialized_end=4675,
 )
 
 
@@ -3386,8 +3541,8 @@ _DEMO3020RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4494,
-  serialized_end=4547,
+  serialized_start=4677,
+  serialized_end=4730,
 )
 
 
@@ -3417,8 +3572,8 @@ _DEMO3050REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4549,
-  serialized_end=4573,
+  serialized_start=4732,
+  serialized_end=4756,
 )
 
 
@@ -3448,8 +3603,8 @@ _DEMO3050RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4575,
-  serialized_end=4628,
+  serialized_start=4758,
+  serialized_end=4811,
 )
 
 
@@ -3479,8 +3634,8 @@ _DEMO3090REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4630,
-  serialized_end=4654,
+  serialized_start=4813,
+  serialized_end=4837,
 )
 
 
@@ -3510,8 +3665,8 @@ _DEMO3090RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4656,
-  serialized_end=4709,
+  serialized_start=4839,
+  serialized_end=4892,
 )
 
 
@@ -3541,8 +3696,8 @@ _DEMO3002NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4711,
-  serialized_end=4735,
+  serialized_start=4894,
+  serialized_end=4918,
 )
 
 
@@ -3572,8 +3727,8 @@ _DEMO3005NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4737,
-  serialized_end=4761,
+  serialized_start=4920,
+  serialized_end=4944,
 )
 
 
@@ -3603,8 +3758,8 @@ _DEMO3009NFY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4763,
-  serialized_end=4787,
+  serialized_start=4946,
+  serialized_end=4970,
 )
 
 _DEMO2RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
@@ -3620,6 +3775,8 @@ _DEMO10RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 _DEMO20RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 _DEMO50RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 _DEMO90RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
+_DEMO301RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
+_DEMO302RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 _DEMO1002RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 _DEMO1003RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 _DEMO1004REQ.fields_by_name['flag'].enum_type = _DEMO4FLAG
@@ -3686,6 +3843,11 @@ DESCRIPTOR.message_types_by_name['Demo90Rsp'] = _DEMO90RSP
 DESCRIPTOR.message_types_by_name['Demo2Nfy'] = _DEMO2NFY
 DESCRIPTOR.message_types_by_name['Demo5Nfy'] = _DEMO5NFY
 DESCRIPTOR.message_types_by_name['Demo9Nfy'] = _DEMO9NFY
+DESCRIPTOR.message_types_by_name['Demo301Req'] = _DEMO301REQ
+DESCRIPTOR.message_types_by_name['Demo301Rsp'] = _DEMO301RSP
+DESCRIPTOR.message_types_by_name['Demo301Nfy'] = _DEMO301NFY
+DESCRIPTOR.message_types_by_name['Demo302Req'] = _DEMO302REQ
+DESCRIPTOR.message_types_by_name['Demo302Rsp'] = _DEMO302RSP
 DESCRIPTOR.message_types_by_name['Demo1002Req'] = _DEMO1002REQ
 DESCRIPTOR.message_types_by_name['Demo1002Rsp'] = _DEMO1002RSP
 DESCRIPTOR.message_types_by_name['Demo1003Req'] = _DEMO1003REQ
@@ -3958,6 +4120,41 @@ Demo9Nfy = _reflection.GeneratedProtocolMessageType('Demo9Nfy', (_message.Messag
   # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo9Nfy)
   ))
 _sym_db.RegisterMessage(Demo9Nfy)
+
+Demo301Req = _reflection.GeneratedProtocolMessageType('Demo301Req', (_message.Message,), dict(
+  DESCRIPTOR = _DEMO301REQ,
+  __module__ = 'ss_msg_pb2'
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo301Req)
+  ))
+_sym_db.RegisterMessage(Demo301Req)
+
+Demo301Rsp = _reflection.GeneratedProtocolMessageType('Demo301Rsp', (_message.Message,), dict(
+  DESCRIPTOR = _DEMO301RSP,
+  __module__ = 'ss_msg_pb2'
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo301Rsp)
+  ))
+_sym_db.RegisterMessage(Demo301Rsp)
+
+Demo301Nfy = _reflection.GeneratedProtocolMessageType('Demo301Nfy', (_message.Message,), dict(
+  DESCRIPTOR = _DEMO301NFY,
+  __module__ = 'ss_msg_pb2'
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo301Nfy)
+  ))
+_sym_db.RegisterMessage(Demo301Nfy)
+
+Demo302Req = _reflection.GeneratedProtocolMessageType('Demo302Req', (_message.Message,), dict(
+  DESCRIPTOR = _DEMO302REQ,
+  __module__ = 'ss_msg_pb2'
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo302Req)
+  ))
+_sym_db.RegisterMessage(Demo302Req)
+
+Demo302Rsp = _reflection.GeneratedProtocolMessageType('Demo302Rsp', (_message.Message,), dict(
+  DESCRIPTOR = _DEMO302RSP,
+  __module__ = 'ss_msg_pb2'
+  # @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo302Rsp)
+  ))
+_sym_db.RegisterMessage(Demo302Rsp)
 
 Demo1002Req = _reflection.GeneratedProtocolMessageType('Demo1002Req', (_message.Message,), dict(
   DESCRIPTOR = _DEMO1002REQ,

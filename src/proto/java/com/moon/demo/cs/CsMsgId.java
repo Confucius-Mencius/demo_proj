@@ -55,6 +55,14 @@ public final class CsMsgId {
      * <code>MSG_ID_DEMO200_RSP = 1007;</code>
      */
     MSG_ID_DEMO200_RSP(1007),
+    /**
+     * <code>MSG_ID_DEMO300_REQ = 1008;</code>
+     */
+    MSG_ID_DEMO300_REQ(1008),
+    /**
+     * <code>MSG_ID_DEMO300_RSP = 1009;</code>
+     */
+    MSG_ID_DEMO300_RSP(1009),
     UNRECOGNIZED(-1),
     ;
 
@@ -94,6 +102,14 @@ public final class CsMsgId {
      * <code>MSG_ID_DEMO200_RSP = 1007;</code>
      */
     public static final int MSG_ID_DEMO200_RSP_VALUE = 1007;
+    /**
+     * <code>MSG_ID_DEMO300_REQ = 1008;</code>
+     */
+    public static final int MSG_ID_DEMO300_REQ_VALUE = 1008;
+    /**
+     * <code>MSG_ID_DEMO300_RSP = 1009;</code>
+     */
+    public static final int MSG_ID_DEMO300_RSP_VALUE = 1009;
 
 
     public final int getNumber() {
@@ -123,6 +139,8 @@ public final class CsMsgId {
         case 1005: return MSG_ID_DEMO100_RSP;
         case 1006: return MSG_ID_DEMO200_REQ;
         case 1007: return MSG_ID_DEMO200_RSP;
+        case 1008: return MSG_ID_DEMO300_REQ;
+        case 1009: return MSG_ID_DEMO300_RSP;
         default: return null;
       }
     }
@@ -184,13 +202,14 @@ public final class CsMsgId {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\331\001\n\005" +
+      "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\213\002\n\005" +
       "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\025\n\020MSG_ID_DEMO1_" +
       "REQ\020\350\007\022\025\n\020MSG_ID_DEMO1_RSP\020\351\007\022\025\n\020MSG_ID_" +
       "DEMO1_NFY\020\352\007\022\025\n\020MSG_ID_DEMO3_NFY\020\353\007\022\027\n\022M" +
       "SG_ID_DEMO100_REQ\020\354\007\022\027\n\022MSG_ID_DEMO100_R" +
       "SP\020\355\007\022\027\n\022MSG_ID_DEMO200_REQ\020\356\007\022\027\n\022MSG_ID" +
-      "_DEMO200_RSP\020\357\007b\006proto3"
+      "_DEMO200_RSP\020\357\007\022\027\n\022MSG_ID_DEMO300_REQ\020\360\007" +
+      "\022\027\n\022MSG_ID_DEMO300_RSP\020\361\007b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

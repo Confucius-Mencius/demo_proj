@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='com.moon.demo.cs',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0c\x63s_msg.proto\x12\x10\x63om.moon.demo.cs\x1a\x0c\x63ommon.proto\"\x15\n\x08\x44\x65mo1Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo1Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo1Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo3Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x17\n\nDemo100Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"4\n\nDemo100Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x17\n\nDemo200Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"4\n\nDemo200Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtxb\x06proto3')
+  serialized_pb=_b('\n\x0c\x63s_msg.proto\x12\x10\x63om.moon.demo.cs\x1a\x0c\x63ommon.proto\"\x15\n\x08\x44\x65mo1Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"2\n\x08\x44\x65mo1Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x15\n\x08\x44\x65mo1Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x15\n\x08\x44\x65mo3Nfy\x12\t\n\x01\x61\x18\x01 \x01(\x05\"\x17\n\nDemo100Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"4\n\nDemo100Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x17\n\nDemo200Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"4\n\nDemo200Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtx\"\x17\n\nDemo300Req\x12\t\n\x01\x61\x18\x01 \x01(\x05\"4\n\nDemo300Rsp\x12&\n\x07\x65rr_ctx\x18\x01 \x01(\x0b\x32\x15.com.moon.demo.ErrCtxb\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 
@@ -275,9 +275,72 @@ _DEMO200RSP = _descriptor.Descriptor(
   serialized_end=325,
 )
 
+
+_DEMO300REQ = _descriptor.Descriptor(
+  name='Demo300Req',
+  full_name='com.moon.demo.cs.Demo300Req',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='a', full_name='com.moon.demo.cs.Demo300Req.a', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=327,
+  serialized_end=350,
+)
+
+
+_DEMO300RSP = _descriptor.Descriptor(
+  name='Demo300Rsp',
+  full_name='com.moon.demo.cs.Demo300Rsp',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='err_ctx', full_name='com.moon.demo.cs.Demo300Rsp.err_ctx', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=352,
+  serialized_end=404,
+)
+
 _DEMO1RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 _DEMO100RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 _DEMO200RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
+_DEMO300RSP.fields_by_name['err_ctx'].message_type = common__pb2._ERRCTX
 DESCRIPTOR.message_types_by_name['Demo1Req'] = _DEMO1REQ
 DESCRIPTOR.message_types_by_name['Demo1Rsp'] = _DEMO1RSP
 DESCRIPTOR.message_types_by_name['Demo1Nfy'] = _DEMO1NFY
@@ -286,6 +349,8 @@ DESCRIPTOR.message_types_by_name['Demo100Req'] = _DEMO100REQ
 DESCRIPTOR.message_types_by_name['Demo100Rsp'] = _DEMO100RSP
 DESCRIPTOR.message_types_by_name['Demo200Req'] = _DEMO200REQ
 DESCRIPTOR.message_types_by_name['Demo200Rsp'] = _DEMO200RSP
+DESCRIPTOR.message_types_by_name['Demo300Req'] = _DEMO300REQ
+DESCRIPTOR.message_types_by_name['Demo300Rsp'] = _DEMO300RSP
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Demo1Req = _reflection.GeneratedProtocolMessageType('Demo1Req', (_message.Message,), dict(
@@ -343,6 +408,20 @@ Demo200Rsp = _reflection.GeneratedProtocolMessageType('Demo200Rsp', (_message.Me
   # @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo200Rsp)
   ))
 _sym_db.RegisterMessage(Demo200Rsp)
+
+Demo300Req = _reflection.GeneratedProtocolMessageType('Demo300Req', (_message.Message,), dict(
+  DESCRIPTOR = _DEMO300REQ,
+  __module__ = 'cs_msg_pb2'
+  # @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo300Req)
+  ))
+_sym_db.RegisterMessage(Demo300Req)
+
+Demo300Rsp = _reflection.GeneratedProtocolMessageType('Demo300Rsp', (_message.Message,), dict(
+  DESCRIPTOR = _DEMO300RSP,
+  __module__ = 'cs_msg_pb2'
+  # @@protoc_insertion_point(class_scope:com.moon.demo.cs.Demo300Rsp)
+  ))
+_sym_db.RegisterMessage(Demo300Rsp)
 
 
 # @@protoc_insertion_point(module_scope)

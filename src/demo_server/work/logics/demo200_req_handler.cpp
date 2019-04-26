@@ -34,7 +34,7 @@ void Demo200ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
         return;
     }
 
-    LOG_TRACE(demo200_req.a());
+    LOG_DEBUG(demo200_req.a());
 
     // 关闭连接
     logic_ctx_->scheduler->CloseClient(conn_guid);

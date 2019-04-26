@@ -11,6 +11,8 @@
 #include "demo1004_req_handler.h"
 #include "demo1006_req_handler.h"
 #include "demo1050_req_handler.h"
+#include "demo300_req_handler.h"
+#include "demo301_nfy_handler.h"
 
 namespace work
 {
@@ -44,6 +46,8 @@ private:
     Demo1004ReqHandler demo1004_req_handler_;
     Demo1006ReqHandler demo1006_req_handler_;
     Demo1050ReqHandler demo1050_req_handler_;
+    Demo300ReqHandler demo300_req_handler_;
+    Demo301NfyHandler demo301_nfy_handler_;
 };
 }
 

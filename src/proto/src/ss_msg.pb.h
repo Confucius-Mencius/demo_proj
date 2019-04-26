@@ -43,7 +43,7 @@ struct TableStruct_ss_5fmsg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[108]
+  static const ::google::protobuf::internal::ParseTable schema[113]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -300,12 +300,27 @@ extern Demo3010ReqDefaultTypeInternal _Demo3010Req_default_instance_;
 class Demo3010Rsp;
 class Demo3010RspDefaultTypeInternal;
 extern Demo3010RspDefaultTypeInternal _Demo3010Rsp_default_instance_;
+class Demo301Nfy;
+class Demo301NfyDefaultTypeInternal;
+extern Demo301NfyDefaultTypeInternal _Demo301Nfy_default_instance_;
+class Demo301Req;
+class Demo301ReqDefaultTypeInternal;
+extern Demo301ReqDefaultTypeInternal _Demo301Req_default_instance_;
+class Demo301Rsp;
+class Demo301RspDefaultTypeInternal;
+extern Demo301RspDefaultTypeInternal _Demo301Rsp_default_instance_;
 class Demo3020Req;
 class Demo3020ReqDefaultTypeInternal;
 extern Demo3020ReqDefaultTypeInternal _Demo3020Req_default_instance_;
 class Demo3020Rsp;
 class Demo3020RspDefaultTypeInternal;
 extern Demo3020RspDefaultTypeInternal _Demo3020Rsp_default_instance_;
+class Demo302Req;
+class Demo302ReqDefaultTypeInternal;
+extern Demo302ReqDefaultTypeInternal _Demo302Req_default_instance_;
+class Demo302Rsp;
+class Demo302RspDefaultTypeInternal;
+extern Demo302RspDefaultTypeInternal _Demo302Rsp_default_instance_;
 class Demo3050Req;
 class Demo3050ReqDefaultTypeInternal;
 extern Demo3050ReqDefaultTypeInternal _Demo3050Req_default_instance_;
@@ -466,8 +481,13 @@ template<> ::com::moon::demo::ss::Demo3009Req* Arena::CreateMaybeMessage<::com::
 template<> ::com::moon::demo::ss::Demo3009Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3009Rsp>(Arena*);
 template<> ::com::moon::demo::ss::Demo3010Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3010Req>(Arena*);
 template<> ::com::moon::demo::ss::Demo3010Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3010Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo301Nfy* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo301Nfy>(Arena*);
+template<> ::com::moon::demo::ss::Demo301Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo301Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo301Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo301Rsp>(Arena*);
 template<> ::com::moon::demo::ss::Demo3020Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3020Req>(Arena*);
 template<> ::com::moon::demo::ss::Demo3020Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3020Rsp>(Arena*);
+template<> ::com::moon::demo::ss::Demo302Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo302Req>(Arena*);
+template<> ::com::moon::demo::ss::Demo302Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo302Rsp>(Arena*);
 template<> ::com::moon::demo::ss::Demo3050Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3050Req>(Arena*);
 template<> ::com::moon::demo::ss::Demo3050Rsp* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3050Rsp>(Arena*);
 template<> ::com::moon::demo::ss::Demo3090Req* Arena::CreateMaybeMessage<::com::moon::demo::ss::Demo3090Req>(Arena*);
@@ -3649,6 +3669,572 @@ class Demo9Nfy :
 };
 // -------------------------------------------------------------------
 
+class Demo301Req :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo301Req) */ {
+ public:
+  Demo301Req();
+  virtual ~Demo301Req();
+
+  Demo301Req(const Demo301Req& from);
+
+  inline Demo301Req& operator=(const Demo301Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo301Req(Demo301Req&& from) noexcept
+    : Demo301Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo301Req& operator=(Demo301Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const Demo301Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo301Req* internal_default_instance() {
+    return reinterpret_cast<const Demo301Req*>(
+               &_Demo301Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    27;
+
+  void Swap(Demo301Req* other);
+  friend void swap(Demo301Req& a, Demo301Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo301Req* New() const final {
+    return CreateMaybeMessage<Demo301Req>(nullptr);
+  }
+
+  Demo301Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo301Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo301Req& from);
+  void MergeFrom(const Demo301Req& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo301Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo301Req)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ss_5fmsg_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Demo301Rsp :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo301Rsp) */ {
+ public:
+  Demo301Rsp();
+  virtual ~Demo301Rsp();
+
+  Demo301Rsp(const Demo301Rsp& from);
+
+  inline Demo301Rsp& operator=(const Demo301Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo301Rsp(Demo301Rsp&& from) noexcept
+    : Demo301Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo301Rsp& operator=(Demo301Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const Demo301Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo301Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo301Rsp*>(
+               &_Demo301Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    28;
+
+  void Swap(Demo301Rsp* other);
+  friend void swap(Demo301Rsp& a, Demo301Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo301Rsp* New() const final {
+    return CreateMaybeMessage<Demo301Rsp>(nullptr);
+  }
+
+  Demo301Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo301Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo301Rsp& from);
+  void MergeFrom(const Demo301Rsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo301Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo301Rsp)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ss_5fmsg_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Demo301Nfy :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo301Nfy) */ {
+ public:
+  Demo301Nfy();
+  virtual ~Demo301Nfy();
+
+  Demo301Nfy(const Demo301Nfy& from);
+
+  inline Demo301Nfy& operator=(const Demo301Nfy& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo301Nfy(Demo301Nfy&& from) noexcept
+    : Demo301Nfy() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo301Nfy& operator=(Demo301Nfy&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const Demo301Nfy& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo301Nfy* internal_default_instance() {
+    return reinterpret_cast<const Demo301Nfy*>(
+               &_Demo301Nfy_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    29;
+
+  void Swap(Demo301Nfy* other);
+  friend void swap(Demo301Nfy& a, Demo301Nfy& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo301Nfy* New() const final {
+    return CreateMaybeMessage<Demo301Nfy>(nullptr);
+  }
+
+  Demo301Nfy* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo301Nfy>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo301Nfy& from);
+  void MergeFrom(const Demo301Nfy& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo301Nfy* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo301Nfy)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ss_5fmsg_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Demo302Req :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo302Req) */ {
+ public:
+  Demo302Req();
+  virtual ~Demo302Req();
+
+  Demo302Req(const Demo302Req& from);
+
+  inline Demo302Req& operator=(const Demo302Req& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo302Req(Demo302Req&& from) noexcept
+    : Demo302Req() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo302Req& operator=(Demo302Req&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const Demo302Req& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo302Req* internal_default_instance() {
+    return reinterpret_cast<const Demo302Req*>(
+               &_Demo302Req_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    30;
+
+  void Swap(Demo302Req* other);
+  friend void swap(Demo302Req& a, Demo302Req& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo302Req* New() const final {
+    return CreateMaybeMessage<Demo302Req>(nullptr);
+  }
+
+  Demo302Req* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo302Req>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo302Req& from);
+  void MergeFrom(const Demo302Req& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo302Req* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 a = 1;
+  void clear_a();
+  static const int kAFieldNumber = 1;
+  ::google::protobuf::int32 a() const;
+  void set_a(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo302Req)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 a_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ss_5fmsg_2eproto;
+};
+// -------------------------------------------------------------------
+
+class Demo302Rsp :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo302Rsp) */ {
+ public:
+  Demo302Rsp();
+  virtual ~Demo302Rsp();
+
+  Demo302Rsp(const Demo302Rsp& from);
+
+  inline Demo302Rsp& operator=(const Demo302Rsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Demo302Rsp(Demo302Rsp&& from) noexcept
+    : Demo302Rsp() {
+    *this = ::std::move(from);
+  }
+
+  inline Demo302Rsp& operator=(Demo302Rsp&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const Demo302Rsp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Demo302Rsp* internal_default_instance() {
+    return reinterpret_cast<const Demo302Rsp*>(
+               &_Demo302Rsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    31;
+
+  void Swap(Demo302Rsp* other);
+  friend void swap(Demo302Rsp& a, Demo302Rsp& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Demo302Rsp* New() const final {
+    return CreateMaybeMessage<Demo302Rsp>(nullptr);
+  }
+
+  Demo302Rsp* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Demo302Rsp>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Demo302Rsp& from);
+  void MergeFrom(const Demo302Rsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Demo302Rsp* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  bool has_err_ctx() const;
+  void clear_err_ctx();
+  static const int kErrCtxFieldNumber = 1;
+  const ::com::moon::demo::ErrCtx& err_ctx() const;
+  ::com::moon::demo::ErrCtx* release_err_ctx();
+  ::com::moon::demo::ErrCtx* mutable_err_ctx();
+  void set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx);
+
+  // @@protoc_insertion_point(class_scope:com.moon.demo.ss.Demo302Rsp)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::com::moon::demo::ErrCtx* err_ctx_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_ss_5fmsg_2eproto;
+};
+// -------------------------------------------------------------------
+
 class Demo1002Req :
     public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:com.moon.demo.ss.Demo1002Req) */ {
  public:
@@ -3687,7 +4273,7 @@ class Demo1002Req :
                &_Demo1002Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    32;
 
   void Swap(Demo1002Req* other);
   friend void swap(Demo1002Req& a, Demo1002Req& b) {
@@ -3806,7 +4392,7 @@ class Demo1002Rsp :
                &_Demo1002Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    33;
 
   void Swap(Demo1002Rsp* other);
   friend void swap(Demo1002Rsp& a, Demo1002Rsp& b) {
@@ -3921,7 +4507,7 @@ class Demo1003Req :
                &_Demo1003Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    34;
 
   void Swap(Demo1003Req* other);
   friend void swap(Demo1003Req& a, Demo1003Req& b) {
@@ -4033,7 +4619,7 @@ class Demo1003Rsp :
                &_Demo1003Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    35;
 
   void Swap(Demo1003Rsp* other);
   friend void swap(Demo1003Rsp& a, Demo1003Rsp& b) {
@@ -4148,7 +4734,7 @@ class Demo1004Req :
                &_Demo1004Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    36;
 
   void Swap(Demo1004Req* other);
   friend void swap(Demo1004Req& a, Demo1004Req& b) {
@@ -4304,7 +4890,7 @@ class Demo1004Rsp :
                &_Demo1004Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    37;
 
   void Swap(Demo1004Rsp* other);
   friend void swap(Demo1004Rsp& a, Demo1004Rsp& b) {
@@ -4419,7 +5005,7 @@ class Demo1005Req :
                &_Demo1005Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    38;
 
   void Swap(Demo1005Req* other);
   friend void swap(Demo1005Req& a, Demo1005Req& b) {
@@ -4538,7 +5124,7 @@ class Demo1005Rsp :
                &_Demo1005Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    39;
 
   void Swap(Demo1005Rsp* other);
   friend void swap(Demo1005Rsp& a, Demo1005Rsp& b) {
@@ -4653,7 +5239,7 @@ class Demo1006Req :
                &_Demo1006Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    40;
 
   void Swap(Demo1006Req* other);
   friend void swap(Demo1006Req& a, Demo1006Req& b) {
@@ -4765,7 +5351,7 @@ class Demo1006Rsp :
                &_Demo1006Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    41;
 
   void Swap(Demo1006Rsp* other);
   friend void swap(Demo1006Rsp& a, Demo1006Rsp& b) {
@@ -4880,7 +5466,7 @@ class Demo1007Req :
                &_Demo1007Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    42;
 
   void Swap(Demo1007Req* other);
   friend void swap(Demo1007Req& a, Demo1007Req& b) {
@@ -4992,7 +5578,7 @@ class Demo1007Rsp :
                &_Demo1007Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    43;
 
   void Swap(Demo1007Rsp* other);
   friend void swap(Demo1007Rsp& a, Demo1007Rsp& b) {
@@ -5107,7 +5693,7 @@ class Demo1008Req :
                &_Demo1008Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    44;
 
   void Swap(Demo1008Req* other);
   friend void swap(Demo1008Req& a, Demo1008Req& b) {
@@ -5219,7 +5805,7 @@ class Demo1008Rsp :
                &_Demo1008Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    45;
 
   void Swap(Demo1008Rsp* other);
   friend void swap(Demo1008Rsp& a, Demo1008Rsp& b) {
@@ -5334,7 +5920,7 @@ class Demo1009Req :
                &_Demo1009Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    46;
 
   void Swap(Demo1009Req* other);
   friend void swap(Demo1009Req& a, Demo1009Req& b) {
@@ -5453,7 +6039,7 @@ class Demo1009Rsp :
                &_Demo1009Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    47;
 
   void Swap(Demo1009Rsp* other);
   friend void swap(Demo1009Rsp& a, Demo1009Rsp& b) {
@@ -5568,7 +6154,7 @@ class Demo1010Req :
                &_Demo1010Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    48;
 
   void Swap(Demo1010Req* other);
   friend void swap(Demo1010Req& a, Demo1010Req& b) {
@@ -5680,7 +6266,7 @@ class Demo1010Rsp :
                &_Demo1010Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    49;
 
   void Swap(Demo1010Rsp* other);
   friend void swap(Demo1010Rsp& a, Demo1010Rsp& b) {
@@ -5795,7 +6381,7 @@ class Demo1020Req :
                &_Demo1020Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    50;
 
   void Swap(Demo1020Req* other);
   friend void swap(Demo1020Req& a, Demo1020Req& b) {
@@ -5907,7 +6493,7 @@ class Demo1020Rsp :
                &_Demo1020Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    51;
 
   void Swap(Demo1020Rsp* other);
   friend void swap(Demo1020Rsp& a, Demo1020Rsp& b) {
@@ -6022,7 +6608,7 @@ class Demo1050Req :
                &_Demo1050Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    52;
 
   void Swap(Demo1050Req* other);
   friend void swap(Demo1050Req& a, Demo1050Req& b) {
@@ -6134,7 +6720,7 @@ class Demo1050Rsp :
                &_Demo1050Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    53;
 
   void Swap(Demo1050Rsp* other);
   friend void swap(Demo1050Rsp& a, Demo1050Rsp& b) {
@@ -6249,7 +6835,7 @@ class Demo1090Req :
                &_Demo1090Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    54;
 
   void Swap(Demo1090Req* other);
   friend void swap(Demo1090Req& a, Demo1090Req& b) {
@@ -6361,7 +6947,7 @@ class Demo1090Rsp :
                &_Demo1090Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    55;
 
   void Swap(Demo1090Rsp* other);
   friend void swap(Demo1090Rsp& a, Demo1090Rsp& b) {
@@ -6476,7 +7062,7 @@ class Demo1002Nfy :
                &_Demo1002Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    56;
 
   void Swap(Demo1002Nfy* other);
   friend void swap(Demo1002Nfy& a, Demo1002Nfy& b) {
@@ -6588,7 +7174,7 @@ class Demo1005Nfy :
                &_Demo1005Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    57;
 
   void Swap(Demo1005Nfy* other);
   friend void swap(Demo1005Nfy& a, Demo1005Nfy& b) {
@@ -6700,7 +7286,7 @@ class Demo1009Nfy :
                &_Demo1009Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    58;
 
   void Swap(Demo1009Nfy* other);
   friend void swap(Demo1009Nfy& a, Demo1009Nfy& b) {
@@ -6812,7 +7398,7 @@ class Demo2002Req :
                &_Demo2002Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    59;
 
   void Swap(Demo2002Req* other);
   friend void swap(Demo2002Req& a, Demo2002Req& b) {
@@ -6931,7 +7517,7 @@ class Demo2002Rsp :
                &_Demo2002Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    60;
 
   void Swap(Demo2002Rsp* other);
   friend void swap(Demo2002Rsp& a, Demo2002Rsp& b) {
@@ -7046,7 +7632,7 @@ class Demo2003Req :
                &_Demo2003Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    61;
 
   void Swap(Demo2003Req* other);
   friend void swap(Demo2003Req& a, Demo2003Req& b) {
@@ -7158,7 +7744,7 @@ class Demo2003Rsp :
                &_Demo2003Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    62;
 
   void Swap(Demo2003Rsp* other);
   friend void swap(Demo2003Rsp& a, Demo2003Rsp& b) {
@@ -7273,7 +7859,7 @@ class Demo2004Req :
                &_Demo2004Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    63;
 
   void Swap(Demo2004Req* other);
   friend void swap(Demo2004Req& a, Demo2004Req& b) {
@@ -7429,7 +8015,7 @@ class Demo2004Rsp :
                &_Demo2004Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    64;
 
   void Swap(Demo2004Rsp* other);
   friend void swap(Demo2004Rsp& a, Demo2004Rsp& b) {
@@ -7544,7 +8130,7 @@ class Demo2005Req :
                &_Demo2005Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    65;
 
   void Swap(Demo2005Req* other);
   friend void swap(Demo2005Req& a, Demo2005Req& b) {
@@ -7663,7 +8249,7 @@ class Demo2005Rsp :
                &_Demo2005Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    66;
 
   void Swap(Demo2005Rsp* other);
   friend void swap(Demo2005Rsp& a, Demo2005Rsp& b) {
@@ -7778,7 +8364,7 @@ class Demo2006Req :
                &_Demo2006Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    62;
+    67;
 
   void Swap(Demo2006Req* other);
   friend void swap(Demo2006Req& a, Demo2006Req& b) {
@@ -7890,7 +8476,7 @@ class Demo2006Rsp :
                &_Demo2006Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    63;
+    68;
 
   void Swap(Demo2006Rsp* other);
   friend void swap(Demo2006Rsp& a, Demo2006Rsp& b) {
@@ -8005,7 +8591,7 @@ class Demo2007Req :
                &_Demo2007Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    64;
+    69;
 
   void Swap(Demo2007Req* other);
   friend void swap(Demo2007Req& a, Demo2007Req& b) {
@@ -8117,7 +8703,7 @@ class Demo2007Rsp :
                &_Demo2007Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    65;
+    70;
 
   void Swap(Demo2007Rsp* other);
   friend void swap(Demo2007Rsp& a, Demo2007Rsp& b) {
@@ -8232,7 +8818,7 @@ class Demo2008Req :
                &_Demo2008Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    66;
+    71;
 
   void Swap(Demo2008Req* other);
   friend void swap(Demo2008Req& a, Demo2008Req& b) {
@@ -8344,7 +8930,7 @@ class Demo2008Rsp :
                &_Demo2008Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    67;
+    72;
 
   void Swap(Demo2008Rsp* other);
   friend void swap(Demo2008Rsp& a, Demo2008Rsp& b) {
@@ -8459,7 +9045,7 @@ class Demo2009Req :
                &_Demo2009Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    68;
+    73;
 
   void Swap(Demo2009Req* other);
   friend void swap(Demo2009Req& a, Demo2009Req& b) {
@@ -8578,7 +9164,7 @@ class Demo2009Rsp :
                &_Demo2009Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    69;
+    74;
 
   void Swap(Demo2009Rsp* other);
   friend void swap(Demo2009Rsp& a, Demo2009Rsp& b) {
@@ -8693,7 +9279,7 @@ class Demo2010Req :
                &_Demo2010Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    70;
+    75;
 
   void Swap(Demo2010Req* other);
   friend void swap(Demo2010Req& a, Demo2010Req& b) {
@@ -8805,7 +9391,7 @@ class Demo2010Rsp :
                &_Demo2010Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    71;
+    76;
 
   void Swap(Demo2010Rsp* other);
   friend void swap(Demo2010Rsp& a, Demo2010Rsp& b) {
@@ -8920,7 +9506,7 @@ class Demo2020Req :
                &_Demo2020Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    72;
+    77;
 
   void Swap(Demo2020Req* other);
   friend void swap(Demo2020Req& a, Demo2020Req& b) {
@@ -9032,7 +9618,7 @@ class Demo2020Rsp :
                &_Demo2020Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    73;
+    78;
 
   void Swap(Demo2020Rsp* other);
   friend void swap(Demo2020Rsp& a, Demo2020Rsp& b) {
@@ -9147,7 +9733,7 @@ class Demo2050Req :
                &_Demo2050Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    74;
+    79;
 
   void Swap(Demo2050Req* other);
   friend void swap(Demo2050Req& a, Demo2050Req& b) {
@@ -9259,7 +9845,7 @@ class Demo2050Rsp :
                &_Demo2050Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    75;
+    80;
 
   void Swap(Demo2050Rsp* other);
   friend void swap(Demo2050Rsp& a, Demo2050Rsp& b) {
@@ -9374,7 +9960,7 @@ class Demo2090Req :
                &_Demo2090Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    76;
+    81;
 
   void Swap(Demo2090Req* other);
   friend void swap(Demo2090Req& a, Demo2090Req& b) {
@@ -9486,7 +10072,7 @@ class Demo2090Rsp :
                &_Demo2090Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    77;
+    82;
 
   void Swap(Demo2090Rsp* other);
   friend void swap(Demo2090Rsp& a, Demo2090Rsp& b) {
@@ -9601,7 +10187,7 @@ class Demo2002Nfy :
                &_Demo2002Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    78;
+    83;
 
   void Swap(Demo2002Nfy* other);
   friend void swap(Demo2002Nfy& a, Demo2002Nfy& b) {
@@ -9713,7 +10299,7 @@ class Demo2005Nfy :
                &_Demo2005Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    79;
+    84;
 
   void Swap(Demo2005Nfy* other);
   friend void swap(Demo2005Nfy& a, Demo2005Nfy& b) {
@@ -9825,7 +10411,7 @@ class Demo2009Nfy :
                &_Demo2009Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    80;
+    85;
 
   void Swap(Demo2009Nfy* other);
   friend void swap(Demo2009Nfy& a, Demo2009Nfy& b) {
@@ -9937,7 +10523,7 @@ class Demo3002Req :
                &_Demo3002Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    81;
+    86;
 
   void Swap(Demo3002Req* other);
   friend void swap(Demo3002Req& a, Demo3002Req& b) {
@@ -10056,7 +10642,7 @@ class Demo3002Rsp :
                &_Demo3002Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    82;
+    87;
 
   void Swap(Demo3002Rsp* other);
   friend void swap(Demo3002Rsp& a, Demo3002Rsp& b) {
@@ -10171,7 +10757,7 @@ class Demo3003Req :
                &_Demo3003Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    83;
+    88;
 
   void Swap(Demo3003Req* other);
   friend void swap(Demo3003Req& a, Demo3003Req& b) {
@@ -10283,7 +10869,7 @@ class Demo3003Rsp :
                &_Demo3003Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    84;
+    89;
 
   void Swap(Demo3003Rsp* other);
   friend void swap(Demo3003Rsp& a, Demo3003Rsp& b) {
@@ -10398,7 +10984,7 @@ class Demo3004Req :
                &_Demo3004Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    85;
+    90;
 
   void Swap(Demo3004Req* other);
   friend void swap(Demo3004Req& a, Demo3004Req& b) {
@@ -10554,7 +11140,7 @@ class Demo3004Rsp :
                &_Demo3004Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    86;
+    91;
 
   void Swap(Demo3004Rsp* other);
   friend void swap(Demo3004Rsp& a, Demo3004Rsp& b) {
@@ -10669,7 +11255,7 @@ class Demo3005Req :
                &_Demo3005Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    87;
+    92;
 
   void Swap(Demo3005Req* other);
   friend void swap(Demo3005Req& a, Demo3005Req& b) {
@@ -10788,7 +11374,7 @@ class Demo3005Rsp :
                &_Demo3005Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    88;
+    93;
 
   void Swap(Demo3005Rsp* other);
   friend void swap(Demo3005Rsp& a, Demo3005Rsp& b) {
@@ -10903,7 +11489,7 @@ class Demo3006Req :
                &_Demo3006Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    89;
+    94;
 
   void Swap(Demo3006Req* other);
   friend void swap(Demo3006Req& a, Demo3006Req& b) {
@@ -11015,7 +11601,7 @@ class Demo3006Rsp :
                &_Demo3006Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    90;
+    95;
 
   void Swap(Demo3006Rsp* other);
   friend void swap(Demo3006Rsp& a, Demo3006Rsp& b) {
@@ -11130,7 +11716,7 @@ class Demo3007Req :
                &_Demo3007Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    91;
+    96;
 
   void Swap(Demo3007Req* other);
   friend void swap(Demo3007Req& a, Demo3007Req& b) {
@@ -11242,7 +11828,7 @@ class Demo3007Rsp :
                &_Demo3007Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    92;
+    97;
 
   void Swap(Demo3007Rsp* other);
   friend void swap(Demo3007Rsp& a, Demo3007Rsp& b) {
@@ -11357,7 +11943,7 @@ class Demo3008Req :
                &_Demo3008Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    93;
+    98;
 
   void Swap(Demo3008Req* other);
   friend void swap(Demo3008Req& a, Demo3008Req& b) {
@@ -11469,7 +12055,7 @@ class Demo3008Rsp :
                &_Demo3008Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    94;
+    99;
 
   void Swap(Demo3008Rsp* other);
   friend void swap(Demo3008Rsp& a, Demo3008Rsp& b) {
@@ -11584,7 +12170,7 @@ class Demo3009Req :
                &_Demo3009Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    95;
+    100;
 
   void Swap(Demo3009Req* other);
   friend void swap(Demo3009Req& a, Demo3009Req& b) {
@@ -11703,7 +12289,7 @@ class Demo3009Rsp :
                &_Demo3009Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    96;
+    101;
 
   void Swap(Demo3009Rsp* other);
   friend void swap(Demo3009Rsp& a, Demo3009Rsp& b) {
@@ -11818,7 +12404,7 @@ class Demo3010Req :
                &_Demo3010Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    97;
+    102;
 
   void Swap(Demo3010Req* other);
   friend void swap(Demo3010Req& a, Demo3010Req& b) {
@@ -11930,7 +12516,7 @@ class Demo3010Rsp :
                &_Demo3010Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    98;
+    103;
 
   void Swap(Demo3010Rsp* other);
   friend void swap(Demo3010Rsp& a, Demo3010Rsp& b) {
@@ -12045,7 +12631,7 @@ class Demo3020Req :
                &_Demo3020Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    99;
+    104;
 
   void Swap(Demo3020Req* other);
   friend void swap(Demo3020Req& a, Demo3020Req& b) {
@@ -12157,7 +12743,7 @@ class Demo3020Rsp :
                &_Demo3020Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    100;
+    105;
 
   void Swap(Demo3020Rsp* other);
   friend void swap(Demo3020Rsp& a, Demo3020Rsp& b) {
@@ -12272,7 +12858,7 @@ class Demo3050Req :
                &_Demo3050Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    101;
+    106;
 
   void Swap(Demo3050Req* other);
   friend void swap(Demo3050Req& a, Demo3050Req& b) {
@@ -12384,7 +12970,7 @@ class Demo3050Rsp :
                &_Demo3050Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    102;
+    107;
 
   void Swap(Demo3050Rsp* other);
   friend void swap(Demo3050Rsp& a, Demo3050Rsp& b) {
@@ -12499,7 +13085,7 @@ class Demo3090Req :
                &_Demo3090Req_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    103;
+    108;
 
   void Swap(Demo3090Req* other);
   friend void swap(Demo3090Req& a, Demo3090Req& b) {
@@ -12611,7 +13197,7 @@ class Demo3090Rsp :
                &_Demo3090Rsp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    104;
+    109;
 
   void Swap(Demo3090Rsp* other);
   friend void swap(Demo3090Rsp& a, Demo3090Rsp& b) {
@@ -12726,7 +13312,7 @@ class Demo3002Nfy :
                &_Demo3002Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    105;
+    110;
 
   void Swap(Demo3002Nfy* other);
   friend void swap(Demo3002Nfy& a, Demo3002Nfy& b) {
@@ -12838,7 +13424,7 @@ class Demo3005Nfy :
                &_Demo3005Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    106;
+    111;
 
   void Swap(Demo3005Nfy* other);
   friend void swap(Demo3005Nfy& a, Demo3005Nfy& b) {
@@ -12950,7 +13536,7 @@ class Demo3009Nfy :
                &_Demo3009Nfy_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    107;
+    112;
 
   void Swap(Demo3009Nfy* other);
   friend void swap(Demo3009Nfy& a, Demo3009Nfy& b) {
@@ -14061,6 +14647,158 @@ inline void Demo9Nfy::set_a(::google::protobuf::int32 value) {
   
   a_ = value;
   // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo9Nfy.a)
+}
+
+// -------------------------------------------------------------------
+
+// Demo301Req
+
+// int32 a = 1;
+inline void Demo301Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo301Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo301Req.a)
+  return a_;
+}
+inline void Demo301Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo301Req.a)
+}
+
+// -------------------------------------------------------------------
+
+// Demo301Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo301Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != nullptr;
+}
+inline const ::com::moon::demo::ErrCtx& Demo301Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo301Rsp.err_ctx)
+  return p != nullptr ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo301Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo301Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = nullptr;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo301Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == nullptr) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo301Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo301Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo301Rsp.err_ctx)
+}
+
+// -------------------------------------------------------------------
+
+// Demo301Nfy
+
+// int32 a = 1;
+inline void Demo301Nfy::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo301Nfy::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo301Nfy.a)
+  return a_;
+}
+inline void Demo301Nfy::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo301Nfy.a)
+}
+
+// -------------------------------------------------------------------
+
+// Demo302Req
+
+// int32 a = 1;
+inline void Demo302Req::clear_a() {
+  a_ = 0;
+}
+inline ::google::protobuf::int32 Demo302Req::a() const {
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo302Req.a)
+  return a_;
+}
+inline void Demo302Req::set_a(::google::protobuf::int32 value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:com.moon.demo.ss.Demo302Req.a)
+}
+
+// -------------------------------------------------------------------
+
+// Demo302Rsp
+
+// .com.moon.demo.ErrCtx err_ctx = 1;
+inline bool Demo302Rsp::has_err_ctx() const {
+  return this != internal_default_instance() && err_ctx_ != nullptr;
+}
+inline const ::com::moon::demo::ErrCtx& Demo302Rsp::err_ctx() const {
+  const ::com::moon::demo::ErrCtx* p = err_ctx_;
+  // @@protoc_insertion_point(field_get:com.moon.demo.ss.Demo302Rsp.err_ctx)
+  return p != nullptr ? *p : *reinterpret_cast<const ::com::moon::demo::ErrCtx*>(
+      &::com::moon::demo::_ErrCtx_default_instance_);
+}
+inline ::com::moon::demo::ErrCtx* Demo302Rsp::release_err_ctx() {
+  // @@protoc_insertion_point(field_release:com.moon.demo.ss.Demo302Rsp.err_ctx)
+  
+  ::com::moon::demo::ErrCtx* temp = err_ctx_;
+  err_ctx_ = nullptr;
+  return temp;
+}
+inline ::com::moon::demo::ErrCtx* Demo302Rsp::mutable_err_ctx() {
+  
+  if (err_ctx_ == nullptr) {
+    auto* p = CreateMaybeMessage<::com::moon::demo::ErrCtx>(GetArenaNoVirtual());
+    err_ctx_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:com.moon.demo.ss.Demo302Rsp.err_ctx)
+  return err_ctx_;
+}
+inline void Demo302Rsp::set_allocated_err_ctx(::com::moon::demo::ErrCtx* err_ctx) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(err_ctx_);
+  }
+  if (err_ctx) {
+    ::google::protobuf::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      err_ctx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, err_ctx, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  err_ctx_ = err_ctx;
+  // @@protoc_insertion_point(field_set_allocated:com.moon.demo.ss.Demo302Rsp.err_ctx)
 }
 
 // -------------------------------------------------------------------
@@ -17168,6 +17906,16 @@ inline void Demo3009Nfy::set_a(::google::protobuf::int32 value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

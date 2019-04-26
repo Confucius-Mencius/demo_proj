@@ -129,6 +129,26 @@ class Demo9NfyDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Demo9Nfy> _instance;
 } _Demo9Nfy_default_instance_;
+class Demo301ReqDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Demo301Req> _instance;
+} _Demo301Req_default_instance_;
+class Demo301RspDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Demo301Rsp> _instance;
+} _Demo301Rsp_default_instance_;
+class Demo301NfyDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Demo301Nfy> _instance;
+} _Demo301Nfy_default_instance_;
+class Demo302ReqDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Demo302Req> _instance;
+} _Demo302Req_default_instance_;
+class Demo302RspDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Demo302Rsp> _instance;
+} _Demo302Rsp_default_instance_;
 class Demo1002ReqDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Demo1002Req> _instance;
@@ -846,6 +866,78 @@ static void InitDefaultsDemo9Nfy_ss_5fmsg_2eproto() {
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_Demo9Nfy_ss_5fmsg_2eproto =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDemo9Nfy_ss_5fmsg_2eproto}, {}};
+
+static void InitDefaultsDemo301Req_ss_5fmsg_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::moon::demo::ss::_Demo301Req_default_instance_;
+    new (ptr) ::com::moon::demo::ss::Demo301Req();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::com::moon::demo::ss::Demo301Req::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Demo301Req_ss_5fmsg_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDemo301Req_ss_5fmsg_2eproto}, {}};
+
+static void InitDefaultsDemo301Rsp_ss_5fmsg_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::moon::demo::ss::_Demo301Rsp_default_instance_;
+    new (ptr) ::com::moon::demo::ss::Demo301Rsp();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::com::moon::demo::ss::Demo301Rsp::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_Demo301Rsp_ss_5fmsg_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDemo301Rsp_ss_5fmsg_2eproto}, {
+      &scc_info_ErrCtx_common_2eproto.base,}};
+
+static void InitDefaultsDemo301Nfy_ss_5fmsg_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::moon::demo::ss::_Demo301Nfy_default_instance_;
+    new (ptr) ::com::moon::demo::ss::Demo301Nfy();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::com::moon::demo::ss::Demo301Nfy::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Demo301Nfy_ss_5fmsg_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDemo301Nfy_ss_5fmsg_2eproto}, {}};
+
+static void InitDefaultsDemo302Req_ss_5fmsg_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::moon::demo::ss::_Demo302Req_default_instance_;
+    new (ptr) ::com::moon::demo::ss::Demo302Req();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::com::moon::demo::ss::Demo302Req::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Demo302Req_ss_5fmsg_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDemo302Req_ss_5fmsg_2eproto}, {}};
+
+static void InitDefaultsDemo302Rsp_ss_5fmsg_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::moon::demo::ss::_Demo302Rsp_default_instance_;
+    new (ptr) ::com::moon::demo::ss::Demo302Rsp();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::com::moon::demo::ss::Demo302Rsp::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_Demo302Rsp_ss_5fmsg_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDemo302Rsp_ss_5fmsg_2eproto}, {
+      &scc_info_ErrCtx_common_2eproto.base,}};
 
 static void InitDefaultsDemo1002Req_ss_5fmsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -2045,6 +2137,11 @@ void InitDefaults_ss_5fmsg_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_Demo2Nfy_ss_5fmsg_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Demo5Nfy_ss_5fmsg_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Demo9Nfy_ss_5fmsg_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Demo301Req_ss_5fmsg_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Demo301Rsp_ss_5fmsg_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Demo301Nfy_ss_5fmsg_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Demo302Req_ss_5fmsg_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Demo302Rsp_ss_5fmsg_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Demo1002Req_ss_5fmsg_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Demo1002Rsp_ss_5fmsg_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Demo1003Req_ss_5fmsg_2eproto.base);
@@ -2128,7 +2225,7 @@ void InitDefaults_ss_5fmsg_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_Demo3009Nfy_ss_5fmsg_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_ss_5fmsg_2eproto[108];
+::google::protobuf::Metadata file_level_metadata_ss_5fmsg_2eproto[113];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_ss_5fmsg_2eproto[1];
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_ss_5fmsg_2eproto = nullptr;
 
@@ -2302,6 +2399,36 @@ const ::google::protobuf::uint32 TableStruct_ss_5fmsg_2eproto::offsets[] PROTOBU
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo9Nfy, a_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo301Req, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo301Req, a_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo301Rsp, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo301Rsp, err_ctx_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo301Nfy, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo301Nfy, a_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo302Req, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo302Req, a_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo302Rsp, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo302Rsp, err_ctx_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::moon::demo::ss::Demo1002Req, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2838,87 +2965,92 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 151, -1, sizeof(::com::moon::demo::ss::Demo2Nfy)},
   { 157, -1, sizeof(::com::moon::demo::ss::Demo5Nfy)},
   { 163, -1, sizeof(::com::moon::demo::ss::Demo9Nfy)},
-  { 169, -1, sizeof(::com::moon::demo::ss::Demo1002Req)},
-  { 176, -1, sizeof(::com::moon::demo::ss::Demo1002Rsp)},
-  { 182, -1, sizeof(::com::moon::demo::ss::Demo1003Req)},
-  { 188, -1, sizeof(::com::moon::demo::ss::Demo1003Rsp)},
-  { 194, -1, sizeof(::com::moon::demo::ss::Demo1004Req)},
-  { 204, -1, sizeof(::com::moon::demo::ss::Demo1004Rsp)},
-  { 210, -1, sizeof(::com::moon::demo::ss::Demo1005Req)},
-  { 217, -1, sizeof(::com::moon::demo::ss::Demo1005Rsp)},
-  { 223, -1, sizeof(::com::moon::demo::ss::Demo1006Req)},
-  { 229, -1, sizeof(::com::moon::demo::ss::Demo1006Rsp)},
-  { 235, -1, sizeof(::com::moon::demo::ss::Demo1007Req)},
-  { 241, -1, sizeof(::com::moon::demo::ss::Demo1007Rsp)},
-  { 247, -1, sizeof(::com::moon::demo::ss::Demo1008Req)},
-  { 253, -1, sizeof(::com::moon::demo::ss::Demo1008Rsp)},
-  { 259, -1, sizeof(::com::moon::demo::ss::Demo1009Req)},
-  { 266, -1, sizeof(::com::moon::demo::ss::Demo1009Rsp)},
-  { 272, -1, sizeof(::com::moon::demo::ss::Demo1010Req)},
-  { 278, -1, sizeof(::com::moon::demo::ss::Demo1010Rsp)},
-  { 284, -1, sizeof(::com::moon::demo::ss::Demo1020Req)},
-  { 290, -1, sizeof(::com::moon::demo::ss::Demo1020Rsp)},
-  { 296, -1, sizeof(::com::moon::demo::ss::Demo1050Req)},
-  { 302, -1, sizeof(::com::moon::demo::ss::Demo1050Rsp)},
-  { 308, -1, sizeof(::com::moon::demo::ss::Demo1090Req)},
-  { 314, -1, sizeof(::com::moon::demo::ss::Demo1090Rsp)},
-  { 320, -1, sizeof(::com::moon::demo::ss::Demo1002Nfy)},
-  { 326, -1, sizeof(::com::moon::demo::ss::Demo1005Nfy)},
-  { 332, -1, sizeof(::com::moon::demo::ss::Demo1009Nfy)},
-  { 338, -1, sizeof(::com::moon::demo::ss::Demo2002Req)},
-  { 345, -1, sizeof(::com::moon::demo::ss::Demo2002Rsp)},
-  { 351, -1, sizeof(::com::moon::demo::ss::Demo2003Req)},
-  { 357, -1, sizeof(::com::moon::demo::ss::Demo2003Rsp)},
-  { 363, -1, sizeof(::com::moon::demo::ss::Demo2004Req)},
-  { 373, -1, sizeof(::com::moon::demo::ss::Demo2004Rsp)},
-  { 379, -1, sizeof(::com::moon::demo::ss::Demo2005Req)},
-  { 386, -1, sizeof(::com::moon::demo::ss::Demo2005Rsp)},
-  { 392, -1, sizeof(::com::moon::demo::ss::Demo2006Req)},
-  { 398, -1, sizeof(::com::moon::demo::ss::Demo2006Rsp)},
-  { 404, -1, sizeof(::com::moon::demo::ss::Demo2007Req)},
-  { 410, -1, sizeof(::com::moon::demo::ss::Demo2007Rsp)},
-  { 416, -1, sizeof(::com::moon::demo::ss::Demo2008Req)},
-  { 422, -1, sizeof(::com::moon::demo::ss::Demo2008Rsp)},
-  { 428, -1, sizeof(::com::moon::demo::ss::Demo2009Req)},
-  { 435, -1, sizeof(::com::moon::demo::ss::Demo2009Rsp)},
-  { 441, -1, sizeof(::com::moon::demo::ss::Demo2010Req)},
-  { 447, -1, sizeof(::com::moon::demo::ss::Demo2010Rsp)},
-  { 453, -1, sizeof(::com::moon::demo::ss::Demo2020Req)},
-  { 459, -1, sizeof(::com::moon::demo::ss::Demo2020Rsp)},
-  { 465, -1, sizeof(::com::moon::demo::ss::Demo2050Req)},
-  { 471, -1, sizeof(::com::moon::demo::ss::Demo2050Rsp)},
-  { 477, -1, sizeof(::com::moon::demo::ss::Demo2090Req)},
-  { 483, -1, sizeof(::com::moon::demo::ss::Demo2090Rsp)},
-  { 489, -1, sizeof(::com::moon::demo::ss::Demo2002Nfy)},
-  { 495, -1, sizeof(::com::moon::demo::ss::Demo2005Nfy)},
-  { 501, -1, sizeof(::com::moon::demo::ss::Demo2009Nfy)},
-  { 507, -1, sizeof(::com::moon::demo::ss::Demo3002Req)},
-  { 514, -1, sizeof(::com::moon::demo::ss::Demo3002Rsp)},
-  { 520, -1, sizeof(::com::moon::demo::ss::Demo3003Req)},
-  { 526, -1, sizeof(::com::moon::demo::ss::Demo3003Rsp)},
-  { 532, -1, sizeof(::com::moon::demo::ss::Demo3004Req)},
-  { 542, -1, sizeof(::com::moon::demo::ss::Demo3004Rsp)},
-  { 548, -1, sizeof(::com::moon::demo::ss::Demo3005Req)},
-  { 555, -1, sizeof(::com::moon::demo::ss::Demo3005Rsp)},
-  { 561, -1, sizeof(::com::moon::demo::ss::Demo3006Req)},
-  { 567, -1, sizeof(::com::moon::demo::ss::Demo3006Rsp)},
-  { 573, -1, sizeof(::com::moon::demo::ss::Demo3007Req)},
-  { 579, -1, sizeof(::com::moon::demo::ss::Demo3007Rsp)},
-  { 585, -1, sizeof(::com::moon::demo::ss::Demo3008Req)},
-  { 591, -1, sizeof(::com::moon::demo::ss::Demo3008Rsp)},
-  { 597, -1, sizeof(::com::moon::demo::ss::Demo3009Req)},
-  { 604, -1, sizeof(::com::moon::demo::ss::Demo3009Rsp)},
-  { 610, -1, sizeof(::com::moon::demo::ss::Demo3010Req)},
-  { 616, -1, sizeof(::com::moon::demo::ss::Demo3010Rsp)},
-  { 622, -1, sizeof(::com::moon::demo::ss::Demo3020Req)},
-  { 628, -1, sizeof(::com::moon::demo::ss::Demo3020Rsp)},
-  { 634, -1, sizeof(::com::moon::demo::ss::Demo3050Req)},
-  { 640, -1, sizeof(::com::moon::demo::ss::Demo3050Rsp)},
-  { 646, -1, sizeof(::com::moon::demo::ss::Demo3090Req)},
-  { 652, -1, sizeof(::com::moon::demo::ss::Demo3090Rsp)},
-  { 658, -1, sizeof(::com::moon::demo::ss::Demo3002Nfy)},
-  { 664, -1, sizeof(::com::moon::demo::ss::Demo3005Nfy)},
-  { 670, -1, sizeof(::com::moon::demo::ss::Demo3009Nfy)},
+  { 169, -1, sizeof(::com::moon::demo::ss::Demo301Req)},
+  { 175, -1, sizeof(::com::moon::demo::ss::Demo301Rsp)},
+  { 181, -1, sizeof(::com::moon::demo::ss::Demo301Nfy)},
+  { 187, -1, sizeof(::com::moon::demo::ss::Demo302Req)},
+  { 193, -1, sizeof(::com::moon::demo::ss::Demo302Rsp)},
+  { 199, -1, sizeof(::com::moon::demo::ss::Demo1002Req)},
+  { 206, -1, sizeof(::com::moon::demo::ss::Demo1002Rsp)},
+  { 212, -1, sizeof(::com::moon::demo::ss::Demo1003Req)},
+  { 218, -1, sizeof(::com::moon::demo::ss::Demo1003Rsp)},
+  { 224, -1, sizeof(::com::moon::demo::ss::Demo1004Req)},
+  { 234, -1, sizeof(::com::moon::demo::ss::Demo1004Rsp)},
+  { 240, -1, sizeof(::com::moon::demo::ss::Demo1005Req)},
+  { 247, -1, sizeof(::com::moon::demo::ss::Demo1005Rsp)},
+  { 253, -1, sizeof(::com::moon::demo::ss::Demo1006Req)},
+  { 259, -1, sizeof(::com::moon::demo::ss::Demo1006Rsp)},
+  { 265, -1, sizeof(::com::moon::demo::ss::Demo1007Req)},
+  { 271, -1, sizeof(::com::moon::demo::ss::Demo1007Rsp)},
+  { 277, -1, sizeof(::com::moon::demo::ss::Demo1008Req)},
+  { 283, -1, sizeof(::com::moon::demo::ss::Demo1008Rsp)},
+  { 289, -1, sizeof(::com::moon::demo::ss::Demo1009Req)},
+  { 296, -1, sizeof(::com::moon::demo::ss::Demo1009Rsp)},
+  { 302, -1, sizeof(::com::moon::demo::ss::Demo1010Req)},
+  { 308, -1, sizeof(::com::moon::demo::ss::Demo1010Rsp)},
+  { 314, -1, sizeof(::com::moon::demo::ss::Demo1020Req)},
+  { 320, -1, sizeof(::com::moon::demo::ss::Demo1020Rsp)},
+  { 326, -1, sizeof(::com::moon::demo::ss::Demo1050Req)},
+  { 332, -1, sizeof(::com::moon::demo::ss::Demo1050Rsp)},
+  { 338, -1, sizeof(::com::moon::demo::ss::Demo1090Req)},
+  { 344, -1, sizeof(::com::moon::demo::ss::Demo1090Rsp)},
+  { 350, -1, sizeof(::com::moon::demo::ss::Demo1002Nfy)},
+  { 356, -1, sizeof(::com::moon::demo::ss::Demo1005Nfy)},
+  { 362, -1, sizeof(::com::moon::demo::ss::Demo1009Nfy)},
+  { 368, -1, sizeof(::com::moon::demo::ss::Demo2002Req)},
+  { 375, -1, sizeof(::com::moon::demo::ss::Demo2002Rsp)},
+  { 381, -1, sizeof(::com::moon::demo::ss::Demo2003Req)},
+  { 387, -1, sizeof(::com::moon::demo::ss::Demo2003Rsp)},
+  { 393, -1, sizeof(::com::moon::demo::ss::Demo2004Req)},
+  { 403, -1, sizeof(::com::moon::demo::ss::Demo2004Rsp)},
+  { 409, -1, sizeof(::com::moon::demo::ss::Demo2005Req)},
+  { 416, -1, sizeof(::com::moon::demo::ss::Demo2005Rsp)},
+  { 422, -1, sizeof(::com::moon::demo::ss::Demo2006Req)},
+  { 428, -1, sizeof(::com::moon::demo::ss::Demo2006Rsp)},
+  { 434, -1, sizeof(::com::moon::demo::ss::Demo2007Req)},
+  { 440, -1, sizeof(::com::moon::demo::ss::Demo2007Rsp)},
+  { 446, -1, sizeof(::com::moon::demo::ss::Demo2008Req)},
+  { 452, -1, sizeof(::com::moon::demo::ss::Demo2008Rsp)},
+  { 458, -1, sizeof(::com::moon::demo::ss::Demo2009Req)},
+  { 465, -1, sizeof(::com::moon::demo::ss::Demo2009Rsp)},
+  { 471, -1, sizeof(::com::moon::demo::ss::Demo2010Req)},
+  { 477, -1, sizeof(::com::moon::demo::ss::Demo2010Rsp)},
+  { 483, -1, sizeof(::com::moon::demo::ss::Demo2020Req)},
+  { 489, -1, sizeof(::com::moon::demo::ss::Demo2020Rsp)},
+  { 495, -1, sizeof(::com::moon::demo::ss::Demo2050Req)},
+  { 501, -1, sizeof(::com::moon::demo::ss::Demo2050Rsp)},
+  { 507, -1, sizeof(::com::moon::demo::ss::Demo2090Req)},
+  { 513, -1, sizeof(::com::moon::demo::ss::Demo2090Rsp)},
+  { 519, -1, sizeof(::com::moon::demo::ss::Demo2002Nfy)},
+  { 525, -1, sizeof(::com::moon::demo::ss::Demo2005Nfy)},
+  { 531, -1, sizeof(::com::moon::demo::ss::Demo2009Nfy)},
+  { 537, -1, sizeof(::com::moon::demo::ss::Demo3002Req)},
+  { 544, -1, sizeof(::com::moon::demo::ss::Demo3002Rsp)},
+  { 550, -1, sizeof(::com::moon::demo::ss::Demo3003Req)},
+  { 556, -1, sizeof(::com::moon::demo::ss::Demo3003Rsp)},
+  { 562, -1, sizeof(::com::moon::demo::ss::Demo3004Req)},
+  { 572, -1, sizeof(::com::moon::demo::ss::Demo3004Rsp)},
+  { 578, -1, sizeof(::com::moon::demo::ss::Demo3005Req)},
+  { 585, -1, sizeof(::com::moon::demo::ss::Demo3005Rsp)},
+  { 591, -1, sizeof(::com::moon::demo::ss::Demo3006Req)},
+  { 597, -1, sizeof(::com::moon::demo::ss::Demo3006Rsp)},
+  { 603, -1, sizeof(::com::moon::demo::ss::Demo3007Req)},
+  { 609, -1, sizeof(::com::moon::demo::ss::Demo3007Rsp)},
+  { 615, -1, sizeof(::com::moon::demo::ss::Demo3008Req)},
+  { 621, -1, sizeof(::com::moon::demo::ss::Demo3008Rsp)},
+  { 627, -1, sizeof(::com::moon::demo::ss::Demo3009Req)},
+  { 634, -1, sizeof(::com::moon::demo::ss::Demo3009Rsp)},
+  { 640, -1, sizeof(::com::moon::demo::ss::Demo3010Req)},
+  { 646, -1, sizeof(::com::moon::demo::ss::Demo3010Rsp)},
+  { 652, -1, sizeof(::com::moon::demo::ss::Demo3020Req)},
+  { 658, -1, sizeof(::com::moon::demo::ss::Demo3020Rsp)},
+  { 664, -1, sizeof(::com::moon::demo::ss::Demo3050Req)},
+  { 670, -1, sizeof(::com::moon::demo::ss::Demo3050Rsp)},
+  { 676, -1, sizeof(::com::moon::demo::ss::Demo3090Req)},
+  { 682, -1, sizeof(::com::moon::demo::ss::Demo3090Rsp)},
+  { 688, -1, sizeof(::com::moon::demo::ss::Demo3002Nfy)},
+  { 694, -1, sizeof(::com::moon::demo::ss::Demo3005Nfy)},
+  { 700, -1, sizeof(::com::moon::demo::ss::Demo3009Nfy)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -2949,6 +3081,11 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo2Nfy_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo5Nfy_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo9Nfy_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo301Req_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo301Rsp_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo301Nfy_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo302Req_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo302Rsp_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo1002Req_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo1002Rsp_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::com::moon::demo::ss::_Demo1003Req_default_instance_),
@@ -3035,7 +3172,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_ss_5fmsg_2eproto = {
   {}, AddDescriptors_ss_5fmsg_2eproto, "ss_msg.proto", schemas,
   file_default_instances, TableStruct_ss_5fmsg_2eproto::offsets,
-  file_level_metadata_ss_5fmsg_2eproto, 108, file_level_enum_descriptors_ss_5fmsg_2eproto, file_level_service_descriptors_ss_5fmsg_2eproto,
+  file_level_metadata_ss_5fmsg_2eproto, 113, file_level_enum_descriptors_ss_5fmsg_2eproto, file_level_service_descriptors_ss_5fmsg_2eproto,
 };
 
 const char descriptor_table_protodef_ss_5fmsg_2eproto[] =
@@ -3068,105 +3205,109 @@ const char descriptor_table_protodef_ss_5fmsg_2eproto[] =
   "emo90Req\022\t\n\001a\030\001 \001(\005\"3\n\tDemo90Rsp\022&\n\007err_"
   "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\025\n\010Demo"
   "2Nfy\022\t\n\001a\030\001 \001(\005\"\025\n\010Demo5Nfy\022\t\n\001a\030\001 \001(\005\"\025"
-  "\n\010Demo9Nfy\022\t\n\001a\030\001 \001(\005\"0\n\013Demo1002Req\022\t\n\001"
-  "a\030\001 \001(\005\022\026\n\016tcp_thread_idx\030\002 \001(\005\"5\n\013Demo1"
-  "002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo."
-  "ErrCtx\"\030\n\013Demo1003Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo"
-  "1003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo"
-  ".ErrCtx\"d\n\013Demo1004Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002"
-  " \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\016"
-  "2\033.com.moon.demo.ss.Demo4Flag\"5\n\013Demo100"
-  "4Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Er"
-  "rCtx\"1\n\013Demo1005Req\022\t\n\001a\030\001 \001(\005\022\027\n\017work_t"
-  "hread_idx\030\002 \001(\005\"5\n\013Demo1005Rsp\022&\n\007err_ct"
-  "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo10"
-  "06Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1006Rsp\022&\n\007err_c"
-  "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1"
-  "007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1007Rsp\022&\n\007err_"
+  "\n\010Demo9Nfy\022\t\n\001a\030\001 \001(\005\"\027\n\nDemo301Req\022\t\n\001a"
+  "\030\001 \001(\005\"4\n\nDemo301Rsp\022&\n\007err_ctx\030\001 \001(\0132\025."
+  "com.moon.demo.ErrCtx\"\027\n\nDemo301Nfy\022\t\n\001a\030"
+  "\001 \001(\005\"\027\n\nDemo302Req\022\t\n\001a\030\001 \001(\005\"4\n\nDemo30"
+  "2Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Er"
+  "rCtx\"0\n\013Demo1002Req\022\t\n\001a\030\001 \001(\005\022\026\n\016tcp_th"
+  "read_idx\030\002 \001(\005\"5\n\013Demo1002Rsp\022&\n\007err_ctx"
+  "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo100"
+  "3Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1003Rsp\022&\n\007err_ct"
+  "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"d\n\013Demo10"
+  "04Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t"
+  "\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon.demo."
+  "ss.Demo4Flag\"5\n\013Demo1004Rsp\022&\n\007err_ctx\030\001"
+  " \001(\0132\025.com.moon.demo.ErrCtx\"1\n\013Demo1005R"
+  "eq\022\t\n\001a\030\001 \001(\005\022\027\n\017work_thread_idx\030\002 \001(\005\"5"
+  "\n\013Demo1005Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moo"
+  "n.demo.ErrCtx\"\030\n\013Demo1006Req\022\t\n\001a\030\001 \001(\005\""
+  "5\n\013Demo1006Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.mo"
+  "on.demo.ErrCtx\"\030\n\013Demo1007Req\022\t\n\001a\030\001 \001(\005"
+  "\"5\n\013Demo1007Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.m"
+  "oon.demo.ErrCtx\"\030\n\013Demo1008Req\022\t\n\001a\030\001 \001("
+  "\005\"5\n\013Demo1008Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com."
+  "moon.demo.ErrCtx\"3\n\013Demo1009Req\022\t\n\001a\030\001 \001"
+  "(\005\022\031\n\021burden_thread_idx\030\002 \001(\005\"5\n\013Demo100"
+  "9Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.Er"
+  "rCtx\"\030\n\013Demo1010Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo10"
+  "10Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo.E"
+  "rrCtx\"\030\n\013Demo1020Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1"
+  "020Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo."
+  "ErrCtx\"\030\n\013Demo1050Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo"
+  "1050Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo"
+  ".ErrCtx\"\030\n\013Demo1090Req\022\t\n\001a\030\001 \001(\005\"5\n\013Dem"
+  "o1090Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.dem"
+  "o.ErrCtx\"\030\n\013Demo1002Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013De"
+  "mo1005Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo1009Nfy\022\t\n\001a"
+  "\030\001 \001(\005\"1\n\013Demo2002Req\022\t\n\001a\030\001 \001(\005\022\027\n\017http"
+  "_thread_idx\030\002 \001(\005\"5\n\013Demo2002Rsp\022&\n\007err_"
   "ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo"
-  "1008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo1008Rsp\022&\n\007err"
-  "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"3\n\013Dem"
-  "o1009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread_idx"
-  "\030\002 \001(\005\"5\n\013Demo1009Rsp\022&\n\007err_ctx\030\001 \001(\0132\025"
-  ".com.moon.demo.ErrCtx\"\030\n\013Demo1010Req\022\t\n\001"
-  "a\030\001 \001(\005\"5\n\013Demo1010Rsp\022&\n\007err_ctx\030\001 \001(\0132"
-  "\025.com.moon.demo.ErrCtx\"\030\n\013Demo1020Req\022\t\n"
-  "\001a\030\001 \001(\005\"5\n\013Demo1020Rsp\022&\n\007err_ctx\030\001 \001(\013"
-  "2\025.com.moon.demo.ErrCtx\"\030\n\013Demo1050Req\022\t"
-  "\n\001a\030\001 \001(\005\"5\n\013Demo1050Rsp\022&\n\007err_ctx\030\001 \001("
-  "\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1090Req\022"
-  "\t\n\001a\030\001 \001(\005\"5\n\013Demo1090Rsp\022&\n\007err_ctx\030\001 \001"
-  "(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo1002Nfy"
-  "\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo1005Nfy\022\t\n\001a\030\001 \001(\005\"\030\n"
-  "\013Demo1009Nfy\022\t\n\001a\030\001 \001(\005\"1\n\013Demo2002Req\022\t"
-  "\n\001a\030\001 \001(\005\022\027\n\017http_thread_idx\030\002 \001(\005\"5\n\013De"
-  "mo2002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.de"
-  "mo.ErrCtx\"\030\n\013Demo2003Req\022\t\n\001a\030\001 \001(\005\"5\n\013D"
-  "emo2003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
-  "emo.ErrCtx\"d\n\013Demo2004Req\022\t\n\001a\030\001 \001(\005\022\t\n\001"
-  "b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 "
-  "\001(\0162\033.com.moon.demo.ss.Demo4Flag\"5\n\013Demo"
-  "2004Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo"
-  ".ErrCtx\"1\n\013Demo2005Req\022\t\n\001a\030\001 \001(\005\022\027\n\017wor"
-  "k_thread_idx\030\002 \001(\005\"5\n\013Demo2005Rsp\022&\n\007err"
+  "2003Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2003Rsp\022&\n\007err"
+  "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"d\n\013Dem"
+  "o2004Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001("
+  "\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon.de"
+  "mo.ss.Demo4Flag\"5\n\013Demo2004Rsp\022&\n\007err_ct"
+  "x\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"1\n\013Demo20"
+  "05Req\022\t\n\001a\030\001 \001(\005\022\027\n\017work_thread_idx\030\002 \001("
+  "\005\"5\n\013Demo2005Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com."
+  "moon.demo.ErrCtx\"\030\n\013Demo2006Req\022\t\n\001a\030\001 \001"
+  "(\005\"5\n\013Demo2006Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com"
+  ".moon.demo.ErrCtx\"\030\n\013Demo2007Req\022\t\n\001a\030\001 "
+  "\001(\005\"5\n\013Demo2007Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.co"
+  "m.moon.demo.ErrCtx\"\030\n\013Demo2008Req\022\t\n\001a\030\001"
+  " \001(\005\"5\n\013Demo2008Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.c"
+  "om.moon.demo.ErrCtx\"3\n\013Demo2009Req\022\t\n\001a\030"
+  "\001 \001(\005\022\031\n\021burden_thread_idx\030\002 \001(\005\"5\n\013Demo"
+  "2009Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.demo"
+  ".ErrCtx\"\030\n\013Demo2010Req\022\t\n\001a\030\001 \001(\005\"5\n\013Dem"
+  "o2010Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.dem"
+  "o.ErrCtx\"\030\n\013Demo2020Req\022\t\n\001a\030\001 \001(\005\"5\n\013De"
+  "mo2020Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.de"
+  "mo.ErrCtx\"\030\n\013Demo2050Req\022\t\n\001a\030\001 \001(\005\"5\n\013D"
+  "emo2050Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
+  "emo.ErrCtx\"\030\n\013Demo2090Req\022\t\n\001a\030\001 \001(\005\"5\n\013"
+  "Demo2090Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon."
+  "demo.ErrCtx\"\030\n\013Demo2002Nfy\022\t\n\001a\030\001 \001(\005\"\030\n"
+  "\013Demo2005Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo2009Nfy\022\t"
+  "\n\001a\030\001 \001(\005\"/\n\013Demo3002Req\022\t\n\001a\030\001 \001(\005\022\025\n\rw"
+  "s_thread_idx\030\002 \001(\005\"5\n\013Demo3002Rsp\022&\n\007err"
   "_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Dem"
-  "o2006Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2006Rsp\022&\n\007er"
-  "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013De"
-  "mo2007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2007Rsp\022&\n\007e"
-  "rr_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013D"
-  "emo2008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2008Rsp\022&\n\007"
-  "err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"3\n\013"
-  "Demo2009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread_"
-  "idx\030\002 \001(\005\"5\n\013Demo2009Rsp\022&\n\007err_ctx\030\001 \001("
-  "\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2010Req\022"
-  "\t\n\001a\030\001 \001(\005\"5\n\013Demo2010Rsp\022&\n\007err_ctx\030\001 \001"
-  "(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2020Req"
-  "\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2020Rsp\022&\n\007err_ctx\030\001 "
-  "\001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2050Re"
-  "q\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2050Rsp\022&\n\007err_ctx\030\001"
-  " \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2090R"
-  "eq\022\t\n\001a\030\001 \001(\005\"5\n\013Demo2090Rsp\022&\n\007err_ctx\030"
-  "\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo2002"
-  "Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo2005Nfy\022\t\n\001a\030\001 \001(\005"
-  "\"\030\n\013Demo2009Nfy\022\t\n\001a\030\001 \001(\005\"/\n\013Demo3002Re"
-  "q\022\t\n\001a\030\001 \001(\005\022\025\n\rws_thread_idx\030\002 \001(\005\"5\n\013D"
-  "emo3002Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
-  "emo.ErrCtx\"\030\n\013Demo3003Req\022\t\n\001a\030\001 \001(\005\"5\n\013"
-  "Demo3003Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon."
-  "demo.ErrCtx\"d\n\013Demo3004Req\022\t\n\001a\030\001 \001(\005\022\t\n"
-  "\001b\030\002 \001(\003\022\t\n\001c\030\003 \001(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005"
-  " \001(\0162\033.com.moon.demo.ss.Demo4Flag\"5\n\013Dem"
-  "o3004Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.dem"
-  "o.ErrCtx\"1\n\013Demo3005Req\022\t\n\001a\030\001 \001(\005\022\027\n\017wo"
-  "rk_thread_idx\030\002 \001(\005\"5\n\013Demo3005Rsp\022&\n\007er"
-  "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013De"
-  "mo3006Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3006Rsp\022&\n\007e"
-  "rr_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013D"
-  "emo3007Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3007Rsp\022&\n\007"
-  "err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013"
-  "Demo3008Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3008Rsp\022&\n"
-  "\007err_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"3\n"
-  "\013Demo3009Req\022\t\n\001a\030\001 \001(\005\022\031\n\021burden_thread"
-  "_idx\030\002 \001(\005\"5\n\013Demo3009Rsp\022&\n\007err_ctx\030\001 \001"
-  "(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3010Req"
-  "\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3010Rsp\022&\n\007err_ctx\030\001 "
-  "\001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3020Re"
-  "q\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3020Rsp\022&\n\007err_ctx\030\001"
-  " \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3050R"
-  "eq\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3050Rsp\022&\n\007err_ctx\030"
-  "\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo3090"
-  "Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3090Rsp\022&\n\007err_ctx"
-  "\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"\030\n\013Demo300"
-  "2Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo3005Nfy\022\t\n\001a\030\001 \001("
-  "\005\"\030\n\013Demo3009Nfy\022\t\n\001a\030\001 \001(\005*a\n\tDemo4Flag"
-  "\022\023\n\017DEMO_4_FLAG_MIN\020\000\022\022\n\016DEMO_4_FLAG_XX\020"
-  "\000\022\022\n\016DEMO_4_FLAG_YY\020\001\022\023\n\017DEMO_4_FLAG_MAX"
-  "\020\002\032\002\020\001b\006proto3"
+  "o3003Req\022\t\n\001a\030\001 \001(\005\"5\n\013Demo3003Rsp\022&\n\007er"
+  "r_ctx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"d\n\013De"
+  "mo3004Req\022\t\n\001a\030\001 \001(\005\022\t\n\001b\030\002 \001(\003\022\t\n\001c\030\003 \001"
+  "(\t\022\t\n\001d\030\004 \001(\014\022)\n\004flag\030\005 \001(\0162\033.com.moon.d"
+  "emo.ss.Demo4Flag\"5\n\013Demo3004Rsp\022&\n\007err_c"
+  "tx\030\001 \001(\0132\025.com.moon.demo.ErrCtx\"1\n\013Demo3"
+  "005Req\022\t\n\001a\030\001 \001(\005\022\027\n\017work_thread_idx\030\002 \001"
+  "(\005\"5\n\013Demo3005Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com"
+  ".moon.demo.ErrCtx\"\030\n\013Demo3006Req\022\t\n\001a\030\001 "
+  "\001(\005\"5\n\013Demo3006Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.co"
+  "m.moon.demo.ErrCtx\"\030\n\013Demo3007Req\022\t\n\001a\030\001"
+  " \001(\005\"5\n\013Demo3007Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.c"
+  "om.moon.demo.ErrCtx\"\030\n\013Demo3008Req\022\t\n\001a\030"
+  "\001 \001(\005\"5\n\013Demo3008Rsp\022&\n\007err_ctx\030\001 \001(\0132\025."
+  "com.moon.demo.ErrCtx\"3\n\013Demo3009Req\022\t\n\001a"
+  "\030\001 \001(\005\022\031\n\021burden_thread_idx\030\002 \001(\005\"5\n\013Dem"
+  "o3009Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.dem"
+  "o.ErrCtx\"\030\n\013Demo3010Req\022\t\n\001a\030\001 \001(\005\"5\n\013De"
+  "mo3010Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.de"
+  "mo.ErrCtx\"\030\n\013Demo3020Req\022\t\n\001a\030\001 \001(\005\"5\n\013D"
+  "emo3020Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon.d"
+  "emo.ErrCtx\"\030\n\013Demo3050Req\022\t\n\001a\030\001 \001(\005\"5\n\013"
+  "Demo3050Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon."
+  "demo.ErrCtx\"\030\n\013Demo3090Req\022\t\n\001a\030\001 \001(\005\"5\n"
+  "\013Demo3090Rsp\022&\n\007err_ctx\030\001 \001(\0132\025.com.moon"
+  ".demo.ErrCtx\"\030\n\013Demo3002Nfy\022\t\n\001a\030\001 \001(\005\"\030"
+  "\n\013Demo3005Nfy\022\t\n\001a\030\001 \001(\005\"\030\n\013Demo3009Nfy\022"
+  "\t\n\001a\030\001 \001(\005*a\n\tDemo4Flag\022\023\n\017DEMO_4_FLAG_M"
+  "IN\020\000\022\022\n\016DEMO_4_FLAG_XX\020\000\022\022\n\016DEMO_4_FLAG_"
+  "YY\020\001\022\023\n\017DEMO_4_FLAG_MAX\020\002\032\002\020\001b\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ss_5fmsg_2eproto = {
   false, InitDefaults_ss_5fmsg_2eproto, 
   descriptor_table_protodef_ss_5fmsg_2eproto,
-  "ss_msg.proto", &assign_descriptors_table_ss_5fmsg_2eproto, 4894,
+  "ss_msg.proto", &assign_descriptors_table_ss_5fmsg_2eproto, 5077,
 };
 
 void AddDescriptors_ss_5fmsg_2eproto() {
@@ -10989,6 +11130,1372 @@ void Demo9Nfy::InternalSwap(Demo9Nfy* other) {
 }
 
 ::google::protobuf::Metadata Demo9Nfy::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ss_5fmsg_2eproto);
+  return ::file_level_metadata_ss_5fmsg_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void Demo301Req::InitAsDefaultInstance() {
+}
+class Demo301Req::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Demo301Req::kAFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Demo301Req::Demo301Req()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:com.moon.demo.ss.Demo301Req)
+}
+Demo301Req::Demo301Req(const Demo301Req& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  a_ = from.a_;
+  // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo301Req)
+}
+
+void Demo301Req::SharedCtor() {
+  a_ = 0;
+}
+
+Demo301Req::~Demo301Req() {
+  // @@protoc_insertion_point(destructor:com.moon.demo.ss.Demo301Req)
+  SharedDtor();
+}
+
+void Demo301Req::SharedDtor() {
+}
+
+void Demo301Req::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Demo301Req& Demo301Req::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_Demo301Req_ss_5fmsg_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Demo301Req::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.moon.demo.ss.Demo301Req)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  a_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Demo301Req::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<Demo301Req*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int32 a = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_a(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool Demo301Req::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:com.moon.demo.ss.Demo301Req)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 a = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &a_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:com.moon.demo.ss.Demo301Req)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:com.moon.demo.ss.Demo301Req)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void Demo301Req::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:com.moon.demo.ss.Demo301Req)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:com.moon.demo.ss.Demo301Req)
+}
+
+::google::protobuf::uint8* Demo301Req::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.ss.Demo301Req)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.ss.Demo301Req)
+  return target;
+}
+
+size_t Demo301Req::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.ss.Demo301Req)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->a());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Demo301Req::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.ss.Demo301Req)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Demo301Req* source =
+      ::google::protobuf::DynamicCastToGenerated<Demo301Req>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.ss.Demo301Req)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.ss.Demo301Req)
+    MergeFrom(*source);
+  }
+}
+
+void Demo301Req::MergeFrom(const Demo301Req& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.ss.Demo301Req)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.a() != 0) {
+    set_a(from.a());
+  }
+}
+
+void Demo301Req::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.ss.Demo301Req)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Demo301Req::CopyFrom(const Demo301Req& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.ss.Demo301Req)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Demo301Req::IsInitialized() const {
+  return true;
+}
+
+void Demo301Req::Swap(Demo301Req* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Demo301Req::InternalSwap(Demo301Req* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(a_, other->a_);
+}
+
+::google::protobuf::Metadata Demo301Req::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ss_5fmsg_2eproto);
+  return ::file_level_metadata_ss_5fmsg_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void Demo301Rsp::InitAsDefaultInstance() {
+  ::com::moon::demo::ss::_Demo301Rsp_default_instance_._instance.get_mutable()->err_ctx_ = const_cast< ::com::moon::demo::ErrCtx*>(
+      ::com::moon::demo::ErrCtx::internal_default_instance());
+}
+class Demo301Rsp::HasBitSetters {
+ public:
+  static const ::com::moon::demo::ErrCtx& err_ctx(const Demo301Rsp* msg);
+};
+
+const ::com::moon::demo::ErrCtx&
+Demo301Rsp::HasBitSetters::err_ctx(const Demo301Rsp* msg) {
+  return *msg->err_ctx_;
+}
+void Demo301Rsp::clear_err_ctx() {
+  if (GetArenaNoVirtual() == nullptr && err_ctx_ != nullptr) {
+    delete err_ctx_;
+  }
+  err_ctx_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Demo301Rsp::kErrCtxFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Demo301Rsp::Demo301Rsp()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:com.moon.demo.ss.Demo301Rsp)
+}
+Demo301Rsp::Demo301Rsp(const Demo301Rsp& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_err_ctx()) {
+    err_ctx_ = new ::com::moon::demo::ErrCtx(*from.err_ctx_);
+  } else {
+    err_ctx_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo301Rsp)
+}
+
+void Demo301Rsp::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_Demo301Rsp_ss_5fmsg_2eproto.base);
+  err_ctx_ = nullptr;
+}
+
+Demo301Rsp::~Demo301Rsp() {
+  // @@protoc_insertion_point(destructor:com.moon.demo.ss.Demo301Rsp)
+  SharedDtor();
+}
+
+void Demo301Rsp::SharedDtor() {
+  if (this != internal_default_instance()) delete err_ctx_;
+}
+
+void Demo301Rsp::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Demo301Rsp& Demo301Rsp::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_Demo301Rsp_ss_5fmsg_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Demo301Rsp::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.moon.demo.ss.Demo301Rsp)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && err_ctx_ != nullptr) {
+    delete err_ctx_;
+  }
+  err_ctx_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Demo301Rsp::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<Demo301Rsp*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .com.moon.demo.ErrCtx err_ctx = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::com::moon::demo::ErrCtx::_InternalParse;
+        object = msg->mutable_err_ctx();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool Demo301Rsp::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:com.moon.demo.ss.Demo301Rsp)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .com.moon.demo.ErrCtx err_ctx = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_err_ctx()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:com.moon.demo.ss.Demo301Rsp)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:com.moon.demo.ss.Demo301Rsp)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void Demo301Rsp::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:com.moon.demo.ss.Demo301Rsp)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  if (this->has_err_ctx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::err_ctx(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:com.moon.demo.ss.Demo301Rsp)
+}
+
+::google::protobuf::uint8* Demo301Rsp::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.ss.Demo301Rsp)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  if (this->has_err_ctx()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::err_ctx(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.ss.Demo301Rsp)
+  return target;
+}
+
+size_t Demo301Rsp::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.ss.Demo301Rsp)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  if (this->has_err_ctx()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *err_ctx_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Demo301Rsp::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.ss.Demo301Rsp)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Demo301Rsp* source =
+      ::google::protobuf::DynamicCastToGenerated<Demo301Rsp>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.ss.Demo301Rsp)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.ss.Demo301Rsp)
+    MergeFrom(*source);
+  }
+}
+
+void Demo301Rsp::MergeFrom(const Demo301Rsp& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.ss.Demo301Rsp)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_err_ctx()) {
+    mutable_err_ctx()->::com::moon::demo::ErrCtx::MergeFrom(from.err_ctx());
+  }
+}
+
+void Demo301Rsp::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.ss.Demo301Rsp)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Demo301Rsp::CopyFrom(const Demo301Rsp& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.ss.Demo301Rsp)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Demo301Rsp::IsInitialized() const {
+  return true;
+}
+
+void Demo301Rsp::Swap(Demo301Rsp* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Demo301Rsp::InternalSwap(Demo301Rsp* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(err_ctx_, other->err_ctx_);
+}
+
+::google::protobuf::Metadata Demo301Rsp::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ss_5fmsg_2eproto);
+  return ::file_level_metadata_ss_5fmsg_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void Demo301Nfy::InitAsDefaultInstance() {
+}
+class Demo301Nfy::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Demo301Nfy::kAFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Demo301Nfy::Demo301Nfy()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:com.moon.demo.ss.Demo301Nfy)
+}
+Demo301Nfy::Demo301Nfy(const Demo301Nfy& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  a_ = from.a_;
+  // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo301Nfy)
+}
+
+void Demo301Nfy::SharedCtor() {
+  a_ = 0;
+}
+
+Demo301Nfy::~Demo301Nfy() {
+  // @@protoc_insertion_point(destructor:com.moon.demo.ss.Demo301Nfy)
+  SharedDtor();
+}
+
+void Demo301Nfy::SharedDtor() {
+}
+
+void Demo301Nfy::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Demo301Nfy& Demo301Nfy::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_Demo301Nfy_ss_5fmsg_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Demo301Nfy::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.moon.demo.ss.Demo301Nfy)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  a_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Demo301Nfy::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<Demo301Nfy*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int32 a = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_a(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool Demo301Nfy::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:com.moon.demo.ss.Demo301Nfy)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 a = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &a_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:com.moon.demo.ss.Demo301Nfy)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:com.moon.demo.ss.Demo301Nfy)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void Demo301Nfy::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:com.moon.demo.ss.Demo301Nfy)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:com.moon.demo.ss.Demo301Nfy)
+}
+
+::google::protobuf::uint8* Demo301Nfy::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.ss.Demo301Nfy)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.ss.Demo301Nfy)
+  return target;
+}
+
+size_t Demo301Nfy::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.ss.Demo301Nfy)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->a());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Demo301Nfy::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.ss.Demo301Nfy)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Demo301Nfy* source =
+      ::google::protobuf::DynamicCastToGenerated<Demo301Nfy>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.ss.Demo301Nfy)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.ss.Demo301Nfy)
+    MergeFrom(*source);
+  }
+}
+
+void Demo301Nfy::MergeFrom(const Demo301Nfy& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.ss.Demo301Nfy)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.a() != 0) {
+    set_a(from.a());
+  }
+}
+
+void Demo301Nfy::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.ss.Demo301Nfy)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Demo301Nfy::CopyFrom(const Demo301Nfy& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.ss.Demo301Nfy)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Demo301Nfy::IsInitialized() const {
+  return true;
+}
+
+void Demo301Nfy::Swap(Demo301Nfy* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Demo301Nfy::InternalSwap(Demo301Nfy* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(a_, other->a_);
+}
+
+::google::protobuf::Metadata Demo301Nfy::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ss_5fmsg_2eproto);
+  return ::file_level_metadata_ss_5fmsg_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void Demo302Req::InitAsDefaultInstance() {
+}
+class Demo302Req::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Demo302Req::kAFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Demo302Req::Demo302Req()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:com.moon.demo.ss.Demo302Req)
+}
+Demo302Req::Demo302Req(const Demo302Req& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  a_ = from.a_;
+  // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo302Req)
+}
+
+void Demo302Req::SharedCtor() {
+  a_ = 0;
+}
+
+Demo302Req::~Demo302Req() {
+  // @@protoc_insertion_point(destructor:com.moon.demo.ss.Demo302Req)
+  SharedDtor();
+}
+
+void Demo302Req::SharedDtor() {
+}
+
+void Demo302Req::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Demo302Req& Demo302Req::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_Demo302Req_ss_5fmsg_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Demo302Req::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.moon.demo.ss.Demo302Req)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  a_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Demo302Req::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<Demo302Req*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int32 a = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_a(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool Demo302Req::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:com.moon.demo.ss.Demo302Req)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // int32 a = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &a_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:com.moon.demo.ss.Demo302Req)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:com.moon.demo.ss.Demo302Req)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void Demo302Req::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:com.moon.demo.ss.Demo302Req)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->a(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:com.moon.demo.ss.Demo302Req)
+}
+
+::google::protobuf::uint8* Demo302Req::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.ss.Demo302Req)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->a(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.ss.Demo302Req)
+  return target;
+}
+
+size_t Demo302Req::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.ss.Demo302Req)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 a = 1;
+  if (this->a() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->a());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Demo302Req::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.ss.Demo302Req)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Demo302Req* source =
+      ::google::protobuf::DynamicCastToGenerated<Demo302Req>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.ss.Demo302Req)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.ss.Demo302Req)
+    MergeFrom(*source);
+  }
+}
+
+void Demo302Req::MergeFrom(const Demo302Req& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.ss.Demo302Req)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.a() != 0) {
+    set_a(from.a());
+  }
+}
+
+void Demo302Req::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.ss.Demo302Req)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Demo302Req::CopyFrom(const Demo302Req& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.ss.Demo302Req)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Demo302Req::IsInitialized() const {
+  return true;
+}
+
+void Demo302Req::Swap(Demo302Req* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Demo302Req::InternalSwap(Demo302Req* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(a_, other->a_);
+}
+
+::google::protobuf::Metadata Demo302Req::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ss_5fmsg_2eproto);
+  return ::file_level_metadata_ss_5fmsg_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void Demo302Rsp::InitAsDefaultInstance() {
+  ::com::moon::demo::ss::_Demo302Rsp_default_instance_._instance.get_mutable()->err_ctx_ = const_cast< ::com::moon::demo::ErrCtx*>(
+      ::com::moon::demo::ErrCtx::internal_default_instance());
+}
+class Demo302Rsp::HasBitSetters {
+ public:
+  static const ::com::moon::demo::ErrCtx& err_ctx(const Demo302Rsp* msg);
+};
+
+const ::com::moon::demo::ErrCtx&
+Demo302Rsp::HasBitSetters::err_ctx(const Demo302Rsp* msg) {
+  return *msg->err_ctx_;
+}
+void Demo302Rsp::clear_err_ctx() {
+  if (GetArenaNoVirtual() == nullptr && err_ctx_ != nullptr) {
+    delete err_ctx_;
+  }
+  err_ctx_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Demo302Rsp::kErrCtxFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Demo302Rsp::Demo302Rsp()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:com.moon.demo.ss.Demo302Rsp)
+}
+Demo302Rsp::Demo302Rsp(const Demo302Rsp& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_err_ctx()) {
+    err_ctx_ = new ::com::moon::demo::ErrCtx(*from.err_ctx_);
+  } else {
+    err_ctx_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:com.moon.demo.ss.Demo302Rsp)
+}
+
+void Demo302Rsp::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_Demo302Rsp_ss_5fmsg_2eproto.base);
+  err_ctx_ = nullptr;
+}
+
+Demo302Rsp::~Demo302Rsp() {
+  // @@protoc_insertion_point(destructor:com.moon.demo.ss.Demo302Rsp)
+  SharedDtor();
+}
+
+void Demo302Rsp::SharedDtor() {
+  if (this != internal_default_instance()) delete err_ctx_;
+}
+
+void Demo302Rsp::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Demo302Rsp& Demo302Rsp::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_Demo302Rsp_ss_5fmsg_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Demo302Rsp::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.moon.demo.ss.Demo302Rsp)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && err_ctx_ != nullptr) {
+    delete err_ctx_;
+  }
+  err_ctx_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Demo302Rsp::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<Demo302Rsp*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .com.moon.demo.ErrCtx err_ctx = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::com::moon::demo::ErrCtx::_InternalParse;
+        object = msg->mutable_err_ctx();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool Demo302Rsp::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:com.moon.demo.ss.Demo302Rsp)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .com.moon.demo.ErrCtx err_ctx = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_err_ctx()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:com.moon.demo.ss.Demo302Rsp)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:com.moon.demo.ss.Demo302Rsp)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void Demo302Rsp::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:com.moon.demo.ss.Demo302Rsp)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  if (this->has_err_ctx()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::err_ctx(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:com.moon.demo.ss.Demo302Rsp)
+}
+
+::google::protobuf::uint8* Demo302Rsp::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.moon.demo.ss.Demo302Rsp)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  if (this->has_err_ctx()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::err_ctx(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.moon.demo.ss.Demo302Rsp)
+  return target;
+}
+
+size_t Demo302Rsp::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.moon.demo.ss.Demo302Rsp)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .com.moon.demo.ErrCtx err_ctx = 1;
+  if (this->has_err_ctx()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *err_ctx_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Demo302Rsp::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.moon.demo.ss.Demo302Rsp)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Demo302Rsp* source =
+      ::google::protobuf::DynamicCastToGenerated<Demo302Rsp>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.moon.demo.ss.Demo302Rsp)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.moon.demo.ss.Demo302Rsp)
+    MergeFrom(*source);
+  }
+}
+
+void Demo302Rsp::MergeFrom(const Demo302Rsp& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.moon.demo.ss.Demo302Rsp)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_err_ctx()) {
+    mutable_err_ctx()->::com::moon::demo::ErrCtx::MergeFrom(from.err_ctx());
+  }
+}
+
+void Demo302Rsp::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.moon.demo.ss.Demo302Rsp)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Demo302Rsp::CopyFrom(const Demo302Rsp& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.moon.demo.ss.Demo302Rsp)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Demo302Rsp::IsInitialized() const {
+  return true;
+}
+
+void Demo302Rsp::Swap(Demo302Rsp* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Demo302Rsp::InternalSwap(Demo302Rsp* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(err_ctx_, other->err_ctx_);
+}
+
+::google::protobuf::Metadata Demo302Rsp::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ss_5fmsg_2eproto);
   return ::file_level_metadata_ss_5fmsg_2eproto[kIndexInFileMessages];
 }
@@ -34466,6 +35973,21 @@ template<> PROTOBUF_NOINLINE ::com::moon::demo::ss::Demo5Nfy* Arena::CreateMaybe
 }
 template<> PROTOBUF_NOINLINE ::com::moon::demo::ss::Demo9Nfy* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo9Nfy >(Arena* arena) {
   return Arena::CreateInternal< ::com::moon::demo::ss::Demo9Nfy >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::moon::demo::ss::Demo301Req* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo301Req >(Arena* arena) {
+  return Arena::CreateInternal< ::com::moon::demo::ss::Demo301Req >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::moon::demo::ss::Demo301Rsp* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo301Rsp >(Arena* arena) {
+  return Arena::CreateInternal< ::com::moon::demo::ss::Demo301Rsp >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::moon::demo::ss::Demo301Nfy* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo301Nfy >(Arena* arena) {
+  return Arena::CreateInternal< ::com::moon::demo::ss::Demo301Nfy >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::moon::demo::ss::Demo302Req* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo302Req >(Arena* arena) {
+  return Arena::CreateInternal< ::com::moon::demo::ss::Demo302Req >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::moon::demo::ss::Demo302Rsp* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo302Rsp >(Arena* arena) {
+  return Arena::CreateInternal< ::com::moon::demo::ss::Demo302Rsp >(arena);
 }
 template<> PROTOBUF_NOINLINE ::com::moon::demo::ss::Demo1002Req* Arena::CreateMaybeMessage< ::com::moon::demo::ss::Demo1002Req >(Arena* arena) {
   return Arena::CreateInternal< ::com::moon::demo::ss::Demo1002Req >(arena);

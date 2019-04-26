@@ -41,18 +41,19 @@ static constexpr ::google::protobuf::Message* const* file_default_instances = nu
 };
 
 const char descriptor_table_protodef_cs_5fmsg_5fid_2eproto[] =
-  "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\331\001\n\005"
+  "\n\017cs_msg_id.proto\022\020com.moon.demo.cs*\213\002\n\005"
   "MsgID\022\020\n\014PLACE_HOLDER\020\000\022\025\n\020MSG_ID_DEMO1_"
   "REQ\020\350\007\022\025\n\020MSG_ID_DEMO1_RSP\020\351\007\022\025\n\020MSG_ID_"
   "DEMO1_NFY\020\352\007\022\025\n\020MSG_ID_DEMO3_NFY\020\353\007\022\027\n\022M"
   "SG_ID_DEMO100_REQ\020\354\007\022\027\n\022MSG_ID_DEMO100_R"
   "SP\020\355\007\022\027\n\022MSG_ID_DEMO200_REQ\020\356\007\022\027\n\022MSG_ID"
-  "_DEMO200_RSP\020\357\007b\006proto3"
+  "_DEMO200_RSP\020\357\007\022\027\n\022MSG_ID_DEMO300_REQ\020\360\007"
+  "\022\027\n\022MSG_ID_DEMO300_RSP\020\361\007b\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_cs_5fmsg_5fid_2eproto = {
   false, InitDefaults_cs_5fmsg_5fid_2eproto, 
   descriptor_table_protodef_cs_5fmsg_5fid_2eproto,
-  "cs_msg_id.proto", &assign_descriptors_table_cs_5fmsg_5fid_2eproto, 263,
+  "cs_msg_id.proto", &assign_descriptors_table_cs_5fmsg_5fid_2eproto, 313,
 };
 
 void AddDescriptors_cs_5fmsg_5fid_2eproto() {
@@ -83,6 +84,8 @@ bool MsgID_IsValid(int value) {
     case 1005:
     case 1006:
     case 1007:
+    case 1008:
+    case 1009:
       return true;
     default:
       return false;
