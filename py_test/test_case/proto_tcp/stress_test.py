@@ -15,13 +15,15 @@ import demo1_test
 import demo100_test
 import demo200_test
 
+PROC_COUNT = 2000
+
 
 def proc1():
     assert 0 == demo1_test.demo1()
 
 
 def test_001():
-    run_multi_process(200, proc1)
+    run_multi_process(PROC_COUNT, proc1)
 
 
 def proc2():
@@ -29,7 +31,7 @@ def proc2():
 
 
 def test_002():
-    run_multi_process(200, proc2)
+    run_multi_process(PROC_COUNT, proc2)
 
 
 def proc3():
@@ -37,7 +39,7 @@ def proc3():
 
 
 def test_003():
-    run_multi_process(200, proc3)
+    run_multi_process(PROC_COUNT, proc3)
 
 
 if __name__ == '__main__':

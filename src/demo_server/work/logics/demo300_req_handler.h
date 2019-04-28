@@ -18,12 +18,12 @@ public:
                const void* msg_body, size_t msg_body_len) override;
 
     ///////////////////////// PeerSinkInterface /////////////////////////
-    void OnConnected(TransID trans_id, const Peer& peer, const void* data, size_t len) override;
-    void OnClosed(TransID trans_id, const Peer& peer, const void* data, size_t len) override;
+    void OnConnected(TransID trans_id, const Peer& peer, void* data, size_t len) override;
+    void OnClosed(TransID trans_id, const Peer& peer, void* data, size_t len) override;
     void OnRecvRsp(TransID trans_id, const Peer& peer, const ::proto::MsgHead& msg_head,
-                   const void* msg_body, size_t msg_body_len, const void* data, size_t len) override;
-    void OnRecvHTTPRsp(TransID trans_id, const Peer& peer, const http::Rsp* http_rsp, const void* data, size_t len) override;
-    void OnTimeout(TransID trans_id, const Peer& peer, const void* data, size_t len) override;
+                   const void* msg_body, size_t msg_body_len, void* data, size_t len) override;
+    void OnRecvHTTPRsp(TransID trans_id, const Peer& peer, const http::Rsp* http_rsp, void* data, size_t len) override;
+    void OnTimeout(TransID trans_id, const Peer& peer, void* data, size_t len) override;
 
 private:
     void SendErrRsp(const ConnGUID* conn_guid, const ::proto::MsgHead& req_msg_head, int err_code) const;

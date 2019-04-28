@@ -49,7 +49,7 @@ void Demo300ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
 
         AsyncCtx async_ctx;
         async_ctx.sink = this;
-        async_ctx.data = conn_guid; // 内部会拷贝一份
+        async_ctx.data = (void*) conn_guid; // 内部会拷贝一份
         async_ctx.len = sizeof(ConnGUID);
 
         TransID trans_id = SendToServer(logic_ctx_->scheduler, peer, req301_msg_head, &demo301_req, &async_ctx);
@@ -87,18 +87,18 @@ void Demo300ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
     }
 }
 
-void Demo300ReqHandler::OnConnected(TransID trans_id, const Peer& peer, const void* data, size_t len)
+void Demo300ReqHandler::OnConnected(TransID trans_id, const Peer& peer, void* data, size_t len)
 {
     LOG_TRACE("work::Demo300ReqHandler::OnConnected, trans id: " << trans_id);
 }
 
-void Demo300ReqHandler::OnClosed(TransID trans_id, const Peer& peer, const void* data, size_t len)
+void Demo300ReqHandler::OnClosed(TransID trans_id, const Peer& peer, void* data, size_t len)
 {
     LOG_TRACE("work::Demo300ReqHandler::OnClosed, trans id: " << trans_id);
 }
 
 void Demo300ReqHandler::OnRecvRsp(TransID trans_id, const Peer& peer, const proto::MsgHead& msg_head,
-                                  const void* msg_body, size_t msg_body_len, const void* data, size_t len)
+                                  const void* msg_body, size_t msg_body_len, void* data, size_t len)
 {
     LOG_TRACE("work::Demo300ReqHandler::OnRecvRsp, trans id: " << trans_id);
 
@@ -124,12 +124,12 @@ void Demo300ReqHandler::OnRecvRsp(TransID trans_id, const Peer& peer, const prot
     }
 }
 
-void Demo300ReqHandler::OnRecvHTTPRsp(TransID trans_id, const Peer& peer, const http::Rsp* http_rsp, const void* data, size_t len)
+void Demo300ReqHandler::OnRecvHTTPRsp(TransID trans_id, const Peer& peer, const http::Rsp* http_rsp, void* data, size_t len)
 {
     LOG_TRACE("work::Demo300ReqHandler::OnRecvHTTPRsp, trans id: " << trans_id);
 }
 
-void Demo300ReqHandler::OnTimeout(TransID trans_id, const Peer& peer, const void* data, size_t len)
+void Demo300ReqHandler::OnTimeout(TransID trans_id, const Peer& peer, void* data, size_t len)
 {
     LOG_TRACE("work::Demo300ReqHandler::OnTimeout, trans id: " << trans_id);
 }

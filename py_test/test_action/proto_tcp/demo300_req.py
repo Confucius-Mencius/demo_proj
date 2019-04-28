@@ -22,13 +22,9 @@ class Demo300Req(object):
     def __init__(self, client):
         self.client = client
 
-    # TODO
-    def set_xx(self, xx):
-        self.xx = xx
-
     def __make_demo300_req(self):
         demo300_req = cs_msg_pb2.Demo300Req()
-        # TODO
+        demo300_req.a = 300
 
         LOG_DEBUG('%s%s' % (os.linesep, demo300_req))
         return demo300_req

@@ -66,12 +66,4 @@ void CommonLogic::OnClientConnected(const ConnGUID* conn_guid)
 void CommonLogic::OnClientClosed(const ConnGUID* conn_guid)
 {
 }
-
-void CommonLogic::OnRecvClientData(const ConnGUID* conn_guid, const void* data, size_t len)
-{
-}
-
-void CommonLogic::OnTask(const ConnGUID* conn_guid, ThreadInterface* source_thread, const void* data, size_t len)
-{
-}
 }

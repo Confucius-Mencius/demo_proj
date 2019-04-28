@@ -15,13 +15,15 @@ import echo_test
 import demo1001_test
 import demo1100_test
 
+PROC_COUNT = 200
+
 
 def proc1():
     assert 0 == echo_test.send_to_server1()
 
 
 def test_001():
-    run_multi_process(200, proc1)
+    run_multi_process(PROC_COUNT, proc1)
 
 
 def proc2():
@@ -29,7 +31,7 @@ def proc2():
 
 
 def test_002():
-    run_multi_process(200, proc2)
+    run_multi_process(PROC_COUNT, proc2)
 
 
 def proc3():
@@ -37,7 +39,7 @@ def proc3():
 
 
 def test_003():
-    run_multi_process(200, proc3)
+    run_multi_process(PROC_COUNT, proc3)
 
 
 def proc4():
@@ -45,7 +47,7 @@ def proc4():
 
 
 def test_004():
-    run_multi_process(200, proc4)
+    run_multi_process(PROC_COUNT, proc4)
 
 
 if __name__ == '__main__':

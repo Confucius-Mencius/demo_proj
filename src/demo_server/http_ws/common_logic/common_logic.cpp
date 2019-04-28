@@ -1,6 +1,4 @@
 #include "common_logic.h"
-#include "conn.h"
-#include "http_ws_scheduler_interface.h"
 #include "log_util.h"
 
 namespace tcp
@@ -68,18 +66,6 @@ void CommonLogic::OnClientConnected(const ConnGUID* conn_guid)
 
 void CommonLogic::OnClientClosed(const ConnGUID* conn_guid)
 {
-}
-
-void CommonLogic::OnWSMsg(const ConnGUID* conn_guid, ws::FrameType frame_type, const void* data, size_t len)
-{
-    // echo
-    LOG_DEBUG((char*) data << ", len: " << len);
-
-    if (logic_ctx_.scheduler->SendWSMsgToClient(conn_guid, ws::TEXT_FRAME, data, len) != 0)
-    {
-        LOG_ERROR("failed to send ws msg to " << *conn_guid);
-        return;
-    }
 }
 }
 }

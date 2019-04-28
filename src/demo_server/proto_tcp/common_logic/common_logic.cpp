@@ -1,6 +1,7 @@
 #include "common_logic.h"
 #include "ss_msg.pb.h"
 #include "ss_msg_id.pb.h"
+#include "proto_msg_codec.h"
 #include "proto_tcp_protobuf_util.h"
 
 using namespace com::moon::demo;
@@ -118,10 +119,28 @@ void CommonLogic::OnTimer(TimerID timer_id, void* data, size_t len, int times)
         return;
     }
 
-    for (ConnSet::const_iterator cit = conn_set_.cbegin(); cit != conn_set_.cend(); ++cit)
+    do
     {
-        logic_ctx_.scheduler->SendToClient(&(*cit), msg_head, msg_body, msg_body_len);
-    }
+        std::unique_ptr<char []> buf(new char[MIN_DATA_LEN + msg_body_len + 1]);
+        if (nullptr == buf)
+        {
+            LOG_ERROR("failed to alloc memory");
+            break;
+        }
+
+        char* data = buf.get();
+        size_t len;
+
+        if (logic_ctx_.msg_codec->EncodeMsg(&data, len, msg_head, msg_body, msg_body_len) != 0)
+        {
+            break;
+        }
+
+        for (ConnSet::const_iterator cit = conn_set_.cbegin(); cit != conn_set_.cend(); ++cit)
+        {
+            logic_ctx_.scheduler->SendToClient(&(*cit), data, len);
+        }
+    } while (0);
 
     FreeProtobufMsgBuf(&msg_body);
 }

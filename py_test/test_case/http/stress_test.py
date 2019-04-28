@@ -14,13 +14,15 @@ from base.multitask_util import *
 import demo_test
 import crossdomain_test
 
+PROC_COUNT = 200
+
 
 def proc1():
     assert 0 == demo_test.get1(False, False)
 
 
 def test_001():
-    run_multi_process(200, proc1)
+    run_multi_process(PROC_COUNT, proc1)
 
 
 def proc2():
@@ -28,7 +30,7 @@ def proc2():
 
 
 def test_002():
-    run_multi_process(200, proc2)
+    run_multi_process(PROC_COUNT, proc2)
 
 
 def proc3():
@@ -36,7 +38,7 @@ def proc3():
 
 
 def test_003():
-    run_multi_process(200, proc3)
+    run_multi_process(PROC_COUNT, proc3)
 
 
 def proc4():
@@ -44,7 +46,7 @@ def proc4():
 
 
 def test_004():
-    run_multi_process(200, proc4)
+    run_multi_process(PROC_COUNT, proc4)
 
 
 def proc5():
@@ -52,7 +54,7 @@ def proc5():
 
 
 def test_005():
-    run_multi_process(200, proc5)
+    run_multi_process(PROC_COUNT, proc5)
 
 
 def proc6():
@@ -60,7 +62,7 @@ def proc6():
 
 
 def test_006():
-    run_multi_process(200, proc6)
+    run_multi_process(PROC_COUNT, proc6)
 
 
 def proc7():
@@ -68,7 +70,7 @@ def proc7():
 
 
 def test_007():
-    run_multi_process(200, proc7)
+    run_multi_process(PROC_COUNT, proc7)
 
 
 if __name__ == '__main__':
