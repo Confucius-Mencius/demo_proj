@@ -53,8 +53,8 @@ void CommonTimers::Freeze()
 
 void CommonTimers::OnTimer(TimerID timer_id, void* data, size_t len, int times)
 {
-    LOG_ERROR("in common timers");
-    LOG_ALWAYS("in common timers");
+//    LOG_ERROR("in common timers");
+//    LOG_ALWAYS("in common timers");
 }
 
 void CommonTimers::OnReload()

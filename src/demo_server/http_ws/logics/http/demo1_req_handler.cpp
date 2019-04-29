@@ -1,4 +1,4 @@
-#include "demo_req_handler.h"
+#include "demo1_req_handler.h"
 #include <string.h>
 #include "http_rsp_maker.h"
 #include "http_ws_scheduler_interface.h"
@@ -10,21 +10,23 @@ namespace http_ws
 {
 namespace http
 {
-DemoReqHandler::DemoReqHandler()
+Demo1ReqHandler::Demo1ReqHandler()
 {
 }
 
-DemoReqHandler::~DemoReqHandler()
+Demo1ReqHandler::~Demo1ReqHandler()
 {
 }
 
-const char* DemoReqHandler::GetPath()
+const char* Demo1ReqHandler::GetPath()
 {
-    return "/demo";
+    return "/demo1";
 }
 
-void DemoReqHandler::OnGet(const ConnGUID* conn_guid, const char* client_ip, const QueryMap& queries, const HeaderMap& headers)
+void Demo1ReqHandler::OnGet(const ConnGUID* conn_guid, const char* client_ip, const QueryMap& queries, const HeaderMap& headers)
 {
+    LOG_TRACE("tcp::http_ws::http::Demo1ReqHandler::OnGet");
+
     ::http::RspMaker http_rsp_maker;
     const std::string http_rsp = http_rsp_maker.SetStatusCode(HTTP_STATUS_OK)
                                  .SetContentType("text/plain;charset=UTF-8")
@@ -33,10 +35,12 @@ void DemoReqHandler::OnGet(const ConnGUID* conn_guid, const char* client_ip, con
     logic_ctx_->scheduler->SendToClient(conn_guid, http_rsp.data(), http_rsp.size());
 }
 
-void DemoReqHandler::OnPost(const ConnGUID* conn_guid, const char* client_ip,
+void Demo1ReqHandler::OnPost(const ConnGUID* conn_guid, const char* client_ip,
                             const QueryMap& queries, const HeaderMap& headers,
                             const char* body, size_t len)
 {
+    LOG_TRACE("tcp::http_ws::http::Demo1ReqHandler::OnPost");
+
     ::http::RspMaker http_rsp_maker;
     const std::string http_rsp = http_rsp_maker.SetStatusCode(HTTP_STATUS_OK)
                                  .SetContentType("text/plain;charset=UTF-8")

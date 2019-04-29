@@ -4,6 +4,8 @@
 #include "http_msg_handler_mgr_template.h"
 #include "crossdomain_req_handler.h"
 #include "demo_req_handler.h"
+#include "demo1_req_handler.h"
+#include "demo2_req_handler.h"
 
 namespace tcp
 {
@@ -34,6 +36,8 @@ private:
 private:
     CrossdomainReqHandler crossdomain_req_handler_;
     DemoReqHandler demo_req_handler_;
+    Demo1ReqHandler demo1_req_handler_;
+    Demo2ReqHandler demo2_req_handler_;
 };
 }
 }

@@ -49,22 +49,24 @@ class Demo300Req(object):
             LOG_ERROR('failed to send to server %s' % self.client.server())
             return -1
 
-        demo300_rsp_msg_head = MsgHead()
+        # 收3个回复
+        for i in range(0, 3):
+            demo300_rsp_msg_head = MsgHead()
 
-        ret, demo300_rsp_msg_head, demo300_rsp_msg_body = self.client.recv(conf.proto_tcp_do_checksum)
-        if ret != 0:
-            LOG_ERROR('ret: %d' % ret)
-            return -1
+            ret, demo300_rsp_msg_head, demo300_rsp_msg_body = self.client.recv(conf.proto_tcp_do_checksum)
+            if ret != 0:
+                LOG_ERROR('ret: %d' % ret)
+                return -1
 
-        if demo300_rsp_msg_head.msg_id != cs_msg_id_pb2.MSG_ID_DEMO300_RSP:
-            LOG_ERROR('error rsp msg id: %d' % demo300_rsp_msg_head.msg_id)
-            return -1
+            if demo300_rsp_msg_head.msg_id != cs_msg_id_pb2.MSG_ID_DEMO300_RSP:
+                LOG_ERROR('error rsp msg id: %d' % demo300_rsp_msg_head.msg_id)
+                return -1
 
-        demo300_rsp = self.__make_demo300_rsp(demo300_rsp_msg_body)
+            demo300_rsp = self.__make_demo300_rsp(demo300_rsp_msg_body)
 
-        err_code = demo300_rsp.err_ctx.err_code
-        if err_code != 0:
-            LOG_ERROR('failed err code: %d' % err_code)
-            return err_code
+            err_code = demo300_rsp.err_ctx.err_code
+            if err_code != 0:
+                LOG_ERROR('failed err code: %d' % err_code)
+                return err_code
 
         return 0

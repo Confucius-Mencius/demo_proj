@@ -15,7 +15,7 @@ import demo1_test
 import demo100_test
 import demo200_test
 
-PROC_COUNT = 2000
+PROC_COUNT = 200
 
 
 def proc1():

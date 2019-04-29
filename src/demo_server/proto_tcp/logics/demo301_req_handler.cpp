@@ -51,8 +51,7 @@ void Demo301ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
         return;
     }
 
-    TheCommonLogicInterface* common_logic = (TheCommonLogicInterface*) logic_ctx_->common_logic;
-    common_logic->StartSendNfyTimer(conn_guid);
+//    TheCommonLogicInterface* common_logic = (TheCommonLogicInterface*) logic_ctx_->common_logic;
 }
 
 void Demo301ReqHandler::SendErrRsp(const ConnGUID* conn_guid, const ::proto::MsgHead& req_msg_head, int err_code) const
