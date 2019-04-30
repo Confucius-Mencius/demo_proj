@@ -27,6 +27,10 @@ public:
 
 private:
     void SendErrRsp(const ConnGUID* conn_guid, const ::proto::MsgHead& req_msg_head, int err_code) const;
+
+private:
+    typedef std::map<TransID, std::string> MyTransIDMap;
+    MyTransIDMap my_trans_id_map_;
 };
 }
 

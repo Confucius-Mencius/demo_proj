@@ -75,6 +75,8 @@ void Demo300ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
         AsyncCtx async_ctx;
         async_ctx.sink = this;
         async_ctx.timeout_sec = 2;
+        async_ctx.data = (void*) "timeout-proto-tcp";
+        async_ctx.len = strlen("timeout-proto-tcp");
 
         TransID trans_id = SendToServer(logic_ctx_->scheduler, peer, req302_msg_head, &demo302_req, &async_ctx);
         if (INVALID_TRANS_ID == trans_id)
@@ -84,6 +86,7 @@ void Demo300ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
         }
 
         LOG_DEBUG("trans id: " << trans_id);
+        my_trans_id_map_.insert(MyTransIDMap::value_type(trans_id, "proto-tcp"));
     }
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -114,8 +117,8 @@ void Demo300ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
 
         ::http::PostParams post_params;
         post_params.get_params.uri = "/demo1";
-        post_params.data = "hello"; // TODO 改为json
-        post_params.len = strlen("hello");
+        post_params.data = "hello, world";
+        post_params.len = strlen("hello, world");
 
         AsyncCtx async_ctx;
         async_ctx.sink = this;
@@ -142,6 +145,8 @@ void Demo300ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
         AsyncCtx async_ctx;
         async_ctx.sink = this;
         async_ctx.timeout_sec = 2;
+        async_ctx.data = (void*) "timeout-http-get";
+        async_ctx.len = strlen("timeout-http-get");
 
         TransID trans_id = logic_ctx_->scheduler->HTTPGet(peer, get_params, &async_ctx);
         if (INVALID_TRANS_ID == trans_id)
@@ -159,12 +164,14 @@ void Demo300ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
 
         ::http::PostParams post_params;
         post_params.get_params.uri = "/demo2";
-        post_params.data = "hello"; // TODO 改为json
-        post_params.len = strlen("hello");
+        post_params.data = "hello, world";
+        post_params.len = strlen("hello, world");
 
         AsyncCtx async_ctx;
         async_ctx.sink = this;
         async_ctx.timeout_sec = 2;
+        async_ctx.data = (void*) "timeout-http-post";
+        async_ctx.len = strlen("timeout-http-post");
 
         TransID trans_id = logic_ctx_->scheduler->HTTPPost(peer, post_params, &async_ctx);
         if (INVALID_TRANS_ID == trans_id)
@@ -174,6 +181,7 @@ void Demo300ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead&
         }
 
         LOG_DEBUG("trans id: " << trans_id);
+        my_trans_id_map_.insert(MyTransIDMap::value_type(trans_id, "http-post"));
     }
 }
 
@@ -249,6 +257,58 @@ void Demo300ReqHandler::OnRecvHTTPRsp(TransID trans_id, const Peer& peer, const 
 void Demo300ReqHandler::OnTimeout(TransID trans_id, const Peer& peer, void* data, size_t len)
 {
     LOG_TRACE("work::Demo300ReqHandler::OnTimeout, trans id: " << trans_id);
+
+    if (data != nullptr && len > 0)
+    {
+        LOG_DEBUG("data: " << data << ", len: " << len);
+    }
+
+    // 如果记录过，则发送303
+    MyTransIDMap::const_iterator cit = my_trans_id_map_.find(trans_id);
+    if (cit != my_trans_id_map_.end())
+    {
+        if (0 == strcmp("proto-tcp", cit->second.c_str()))
+        {
+            ::proto::MsgHead req303_msg_head;
+            req303_msg_head.msg_id = ss::MSG_ID_DEMO303_REQ;
+
+            ss::Demo303Req demo303_req;
+            demo303_req.set_a(303);
+
+            Peer peer = { PEER_TYPE_PROTO_TCP, "127.0.0.1", 6666 };
+
+            AsyncCtx async_ctx;
+            async_ctx.sink = this;
+
+            TransID trans_id = SendToServer(logic_ctx_->scheduler, peer, req303_msg_head, &demo303_req, &async_ctx);
+            if (INVALID_TRANS_ID == trans_id)
+            {
+                LOG_ERROR("failed to send to server, " << peer << ", msg id: " << req303_msg_head.msg_id);
+                return;
+            }
+
+            LOG_DEBUG("trans id: " << trans_id);
+        }
+        else if (0 == strcmp("http-post", cit->second.c_str()))
+        {
+            Peer peer = { PEER_TYPE_PROTO_TCP, "127.0.0.1", 10080 };
+
+            ::http::GetParams get_params;
+            get_params.uri = "/demo3";
+
+            AsyncCtx async_ctx;
+            async_ctx.sink = this;
+
+            TransID trans_id = logic_ctx_->scheduler->HTTPGet(peer, get_params, &async_ctx);
+            if (INVALID_TRANS_ID == trans_id)
+            {
+                LOG_ERROR("failed to do http get, " << peer);
+                return;
+            }
+
+            LOG_DEBUG("trans id: " << trans_id);
+        }
+    }
 }
 
 void Demo300ReqHandler::SendErrRsp(const ConnGUID* conn_guid, const ::proto::MsgHead& req_msg_head, int err_code) const

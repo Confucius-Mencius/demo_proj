@@ -58,6 +58,7 @@ int MsgHandlerMgr::InitializeMsgHandlerVec()
     msg_handler_vec_.push_back(&demo_req_handler_);
     msg_handler_vec_.push_back(&demo1_req_handler_);
     msg_handler_vec_.push_back(&demo2_req_handler_);
+    msg_handler_vec_.push_back(&demo3_req_handler_);
 
     return 0;
 }

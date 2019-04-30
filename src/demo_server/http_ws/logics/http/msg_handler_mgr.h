@@ -6,6 +6,7 @@
 #include "demo_req_handler.h"
 #include "demo1_req_handler.h"
 #include "demo2_req_handler.h"
+#include "demo3_req_handler.h"
 
 namespace tcp
 {
@@ -38,6 +39,7 @@ private:
     DemoReqHandler demo_req_handler_;
     Demo1ReqHandler demo1_req_handler_;
     Demo2ReqHandler demo2_req_handler_;
+    Demo3ReqHandler demo3_req_handler_;
 };
 }
 }
