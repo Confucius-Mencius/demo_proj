@@ -19,18 +19,18 @@ from util.log_util import *
 def ping(s):
     try:
         if s:
-            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
+            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_web_security_port),
                                    header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_security_port))
         else:
-            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
+            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_web_port),
                                    header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_port))
 
         ws.ping("i am a ping")
 
@@ -53,18 +53,18 @@ def test_001():
 def pong(s):
     try:
         if s:
-            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
+            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_web_security_port),
                                    header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_security_port))
         else:
-            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
+            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_web_port),
                                    header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_port))
 
         ws.pong("i am a pong")
 
@@ -87,18 +87,18 @@ def test_002():
 def close(s, close_code):
     try:
         if s:
-            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_https_wss_port),
+            ws = create_connection('wss://%s:%d/' % (conf.demo_server_addr, conf.demo_server_web_security_port),
                                    header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com',
                                    sslopt={"cert_reqs": ssl.CERT_NONE})  # disable ssl cert verification
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_security_port))
         else:
-            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_http_ws_port),
+            ws = create_connection('ws://%s:%d/' % (conf.demo_server_addr, conf.demo_server_web_port),
                                    header=["Sec-WebSocket-Protocol: xxx"],
                                    cookie='xx',
                                    host='www.qq.com')
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_port))
 
         ws.send_close(close_code)
         ret = 0

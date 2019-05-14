@@ -1,19 +1,19 @@
-#ifndef DEMO_SERVER_HTTP_WS_LOGICS_DEMO_REQ_HANDLER_H_
-#define DEMO_SERVER_HTTP_WS_LOGICS_DEMO_REQ_HANDLER_H_
+#ifndef DEMO_SERVER_WEB_LOGICS_DEMO1_REQ_HANDLER_H_
+#define DEMO_SERVER_WEB_LOGICS_DEMO1_REQ_HANDLER_H_
 
 #include "msg_handler.h"
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
 namespace http
 {
-class DemoReqHandler : public MsgHandler
+class Demo1ReqHandler : public MsgHandler
 {
 public:
-    DemoReqHandler();
-    virtual ~DemoReqHandler();
+    Demo1ReqHandler();
+    virtual ~Demo1ReqHandler();
 
     ///////////////////////// MsgHandlerInterface /////////////////////////
     const char* GetPath() override;
@@ -27,4 +27,4 @@ public:
 }
 }
 
-#endif // DEMO_SERVER_HTTP_WS_LOGICS_DEMO_REQ_HANDLER_H_
+#endif // DEMO_SERVER_WEB_LOGICS_DEMO1_REQ_HANDLER_H_

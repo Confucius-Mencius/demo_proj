@@ -1,11 +1,11 @@
 #include "logic.h"
 #include "conn.h"
 #include "log_util.h"
-#include "http_ws_scheduler_interface.h"
+#include "web_scheduler_interface.h"
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
 Logic::Logic() : http_msg_handler_mgr_()
 {

@@ -1,12 +1,12 @@
 #include "demo2_req_handler.h"
 #include <string.h>
 #include "http_rsp_maker.h"
-#include "http_ws_scheduler_interface.h"
+#include "web_scheduler_interface.h"
 #include "log_util.h"
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
 namespace http
 {
@@ -25,14 +25,14 @@ const char* Demo2ReqHandler::GetPath()
 
 void Demo2ReqHandler::OnGet(const ConnGUID* conn_guid, const char* client_ip, const QueryMap& queries, const HeaderMap& headers)
 {
-    LOG_TRACE("tcp::http_ws::http::Demo2ReqHandler::OnGet");
+    LOG_TRACE("tcp::web::http::Demo2ReqHandler::OnGet");
 }
 
 void Demo2ReqHandler::OnPost(const ConnGUID* conn_guid, const char* client_ip,
-                            const QueryMap& queries, const HeaderMap& headers,
-                            const char* body, size_t len)
+                             const QueryMap& queries, const HeaderMap& headers,
+                             const char* body, size_t len)
 {
-    LOG_TRACE("tcp::http_ws::http::Demo2ReqHandler::OnPost");
+    LOG_TRACE("tcp::web::http::Demo2ReqHandler::OnPost");
 }
 }
 }

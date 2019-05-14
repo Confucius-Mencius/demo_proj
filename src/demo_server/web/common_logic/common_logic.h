@@ -1,18 +1,17 @@
-#ifndef DEMO_SERVER_HTTP_WS_LOGICS_LOGIC_H_
-#define DEMO_SERVER_HTTP_WS_LOGICS_LOGIC_H_
+#ifndef DEMO_SERVER_WEB_COMMON_LOGIC_COMMON_LOGIC_H_
+#define DEMO_SERVER_WEB_COMMON_LOGIC_COMMON_LOGIC_H_
 
-#include "http_ws_logic_interface.h"
-#include "http/msg_handler_mgr.h"
+#include "web_common_logic_interface.h"
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
-class Logic : public LogicInterface
+class CommonLogic : public TheCommonLogicInterface
 {
 public:
-    Logic();
-    virtual ~Logic();
+    CommonLogic();
+    virtual ~CommonLogic();
 
     ///////////////////////// ModuleInterface /////////////////////////
     const char* GetVersion() const override;
@@ -23,17 +22,16 @@ public:
     int Activate() override;
     void Freeze() override;
 
-    ///////////////////////// ws::LogicInterface /////////////////////////
+    ///////////////////////// tcp::LogicInterface /////////////////////////
     void OnStop() override;
     void OnReload() override;
     void OnClientConnected(const ConnGUID* conn_guid) override;
     void OnClientClosed(const ConnGUID* conn_guid) override;
-    void OnWSMsg(const ConnGUID* conn_guid, ws::FrameType frame_type, const void* data, size_t len) override;
 
-private:
-    tcp::http_ws::http::MsgHandlerMgr http_msg_handler_mgr_;
+    ///////////////////////// TheCommonLogicInterface /////////////////////////
+
 };
 }
 }
 
-#endif // DEMO_SERVER_HTTP_WS_LOGICS_LOGIC_H_
+#endif // DEMO_SERVER_WEB_COMMON_LOGIC_COMMON_LOGIC_H_

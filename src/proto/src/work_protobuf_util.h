@@ -57,7 +57,7 @@ inline int BroadcastToClient(work::SchedulerInterface* scheduler, ::proto::MsgCo
             break;
         }
 
-        for (const auto& conn_guid: conn_guid_vec)
+        for (const auto& conn_guid : conn_guid_vec)
         {
             scheduler->SendToClient(conn_guid, data, len);
         }
@@ -158,9 +158,9 @@ inline int SendToProtoTCPThread(work::SchedulerInterface* scheduler, const ConnG
     return ret;
 }
 
-inline int SendToHTTPWSThread(work::SchedulerInterface* scheduler, const ConnGUID* conn_guid,
-                              const ::proto::MsgHead& msg_head, const google::protobuf::Message* protobuf_msg,
-                              int http_ws_thread_idx)
+inline int SendToWebThread(work::SchedulerInterface* scheduler, const ConnGUID* conn_guid,
+                           const ::proto::MsgHead& msg_head, const google::protobuf::Message* protobuf_msg,
+                           int web_thread_idx)
 {
     char* msg_body = nullptr;
     size_t msg_body_len = 0;
@@ -171,7 +171,7 @@ inline int SendToHTTPWSThread(work::SchedulerInterface* scheduler, const ConnGUI
         return -1;
     }
 
-    int ret = scheduler->SendToHTTPWSThread(conn_guid, msg_head, msg_body, msg_body_len, http_ws_thread_idx);
+    int ret = scheduler->SendToWebThread(conn_guid, msg_head, msg_body, msg_body_len, web_thread_idx);
     FreeProtobufMsgBuf(&msg_body);
     return ret;
 }

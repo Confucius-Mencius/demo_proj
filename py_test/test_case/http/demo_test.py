@@ -15,11 +15,11 @@ ssl._create_default_https_context = ssl._create_unverified_context
 def get1(s, query):
     try:
         if s:
-            http_conn = httplib.HTTPSConnection(conf.demo_server_addr, conf.demo_server_https_wss_port)
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
+            http_conn = httplib.HTTPSConnection(conf.demo_server_addr, conf.demo_server_web_security_port)
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_security_port))
         else:
-            http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_http_ws_port)
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
+            http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_web_port)
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_port))
 
         if query:
             http_conn.request('GET', '/demo?x=1&y=abc')
@@ -57,11 +57,11 @@ def test_001():
 def post1(s, query, body_len):
     try:
         if s:
-            http_conn = httplib.HTTPSConnection(conf.demo_server_addr, conf.demo_server_https_wss_port)
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_https_wss_port))
+            http_conn = httplib.HTTPSConnection(conf.demo_server_addr, conf.demo_server_web_security_port)
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_security_port))
         else:
-            http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_http_ws_port)
-            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_http_ws_port))
+            http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_web_port)
+            LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_port))
 
         if query:
             http_conn.request('POST', '/demo?x=aaa&y=100', 'x' * body_len)

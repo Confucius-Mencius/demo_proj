@@ -3,7 +3,7 @@
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
 CommonLogic::CommonLogic()
 {

@@ -1,12 +1,12 @@
 #include "demo_req_handler.h"
 #include <string.h>
 #include "http_rsp_maker.h"
-#include "http_ws_scheduler_interface.h"
+#include "web_scheduler_interface.h"
 #include "log_util.h"
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
 namespace http
 {

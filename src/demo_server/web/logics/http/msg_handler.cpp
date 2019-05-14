@@ -2,7 +2,7 @@
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
 namespace http
 {

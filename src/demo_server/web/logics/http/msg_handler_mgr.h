@@ -1,5 +1,5 @@
-#ifndef DEMO_SERVER_HTTP_WS_LOGICS_HTTP_MSG_HANDLER_MGR_H_
-#define DEMO_SERVER_HTTP_WS_LOGICS_HTTP_MSG_HANDLER_MGR_H_
+#ifndef DEMO_SERVER_WEB_LOGICS_HTTP_MSG_HANDLER_MGR_H_
+#define DEMO_SERVER_WEB_LOGICS_HTTP_MSG_HANDLER_MGR_H_
 
 #include "http_msg_handler_mgr_template.h"
 #include "crossdomain_req_handler.h"
@@ -10,7 +10,7 @@
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
 class Logic;
 
@@ -45,4 +45,4 @@ private:
 }
 }
 
-#endif // DEMO_SERVER_HTTP_WS_LOGICS_HTTP_MSG_HANDLER_MGR_H_
+#endif // DEMO_SERVER_WEB_LOGICS_HTTP_MSG_HANDLER_MGR_H_

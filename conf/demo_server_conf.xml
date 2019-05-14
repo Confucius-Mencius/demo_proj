@@ -125,7 +125,7 @@ XML中的特殊符号只有5种，<、>、&、’和”。
         </proto>
 
         <!-- http和websocket -->
-        <http_ws>
+        <web>
             <!-- 是否使用bufferevent实现，否则就使用event实现 -->
             <use_bufferevent>1</use_bufferevent>
 
@@ -154,13 +154,13 @@ XML中的特殊符号只有5种，<、>、&、’和”。
             <thread_count>2</thread_count>
 
             <!-- 一个http-ws线程内所有的logic so共享的逻辑，其中的代码一般不需要加锁。没有则不配置 -->
-            <common_logic_so>./libhttp_ws_common_logic.so</common_logic_so>
+            <common_logic_so>./libweb_common_logic.so</common_logic_so>
 
             <!-- http-ws logic so group，可配置多个logic so，没有则不配置，但此时必须配置work_logic_so，用于处理任务 -->
             <logic_so_group>
-                <logic_so>./libhttp_ws_logic.so</logic_so>
+                <logic_so>./libweb_logic.so</logic_so>
             </logic_so_group>
-        </http_ws>
+        </web>
     </tcp>
 
     <!-- udp数据报 -->

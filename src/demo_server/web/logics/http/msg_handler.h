@@ -1,15 +1,15 @@
-#ifndef DEMO_SERVER_HTTP_WS_LOGICS_HTTP_MSG_HANDLER_H_
-#define DEMO_SERVER_HTTP_WS_LOGICS_HTTP_MSG_HANDLER_H_
+#ifndef DEMO_SERVER_WEB_LOGICS_HTTP_MSG_HANDLER_H_
+#define DEMO_SERVER_WEB_LOGICS_HTTP_MSG_HANDLER_H_
 
 // 一般做一个MsgHandler的基类，放消息处理器公用的一些函数
 
 #include "http_msg_handler_interface.h"
-#include "http_ws_common_logic_interface.h"
+#include "web_common_logic_interface.h"
 #include "the_global_logic_interface.h"
 
 namespace tcp
 {
-namespace http_ws
+namespace web
 {
 class Logic;
 
@@ -43,4 +43,4 @@ protected:
 }
 }
 
-#endif // DEMO_SERVER_HTTP_WS_LOGICS_HTTP_MSG_HANDLER_H_
+#endif // DEMO_SERVER_WEB_LOGICS_HTTP_MSG_HANDLER_H_
