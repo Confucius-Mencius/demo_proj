@@ -22,9 +22,9 @@ def get1(s, query):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_port))
 
         if query:
-            http_conn.request('GET', '/demo?x=1&y=abc')
+            http_conn.request(method='GET', url='/demo?x=1&y=abc')
         else:
-            http_conn.request('GET', '/demo')
+            http_conn.request(method='GET', url='/demo')
 
         http_rsp = http_conn.getresponse()
         LOG_DEBUG('rsp code: %d(%s)' % (http_rsp.status, http_rsp.reason))
@@ -64,9 +64,9 @@ def post1(s, query, body_len):
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_port))
 
         if query:
-            http_conn.request('POST', '/demo?x=aaa&y=100', 'x' * body_len)
+            http_conn.request(method='POST', url='/demo?x=aaa&y=100', body='x' * body_len)
         else:
-            http_conn.request('POST', '/demo', 'x' * body_len)
+            http_conn.request(method='POST', url='/demo', body='x' * body_len)
 
         http_rsp = http_conn.getresponse()
         LOG_DEBUG('rsp code: %d(%s)' % (http_rsp.status, http_rsp.reason if http_rsp.reason else ''))

@@ -21,7 +21,7 @@ def crossdomain(s):
             http_conn = httplib.HTTPConnection(conf.demo_server_addr, conf.demo_server_web_port)
             LOG_DEBUG('connect to %s:%d ok' % (conf.demo_server_addr, conf.demo_server_web_port))
 
-        http_conn.request('GET', '/crossdomain.xml')
+        http_conn.request(method='GET', url='/crossdomain.xml')
 
         http_rsp = http_conn.getresponse()
         LOG_DEBUG('rsp code: %d(%s)' % (http_rsp.status, http_rsp.reason))
