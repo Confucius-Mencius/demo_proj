@@ -154,6 +154,6 @@ def test_003():
 
 
 if __name__ == '__main__':
-    test_001()
-    test_002()
-    # test_003()
+    # test_001()
+    # test_002()
+    test_003()
