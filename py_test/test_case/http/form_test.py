@@ -14,7 +14,6 @@ import json
 import random
 import string
 
-sys.path.append('%s/../../../../py_tools' % os.path.split(os.path.realpath(__file__))[0])  # 导入上级目录中的模块
 
 # 全局取消证书验证
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -116,9 +115,9 @@ def test_002():
 def multipart_post1(s, file_path):
     try:
         if s:
-            url = 'http://%s:%d' % (conf.demo_server_addr, conf.demo_server_web_security_port)
+            url = 'http://%s:%d' % (conf.demo_server_addr, conf.demo_server_web_security_port) + '/multipart1'
         else:
-            url = 'http://%s:%d' % (conf.demo_server_addr, conf.demo_server_web_port)
+            url = 'http://%s:%d' % (conf.demo_server_addr, conf.demo_server_web_port) + '/multipart1'
 
         files = {'app_key': (None, '123456'),
                  'version': (None, '2256'),
@@ -136,15 +135,15 @@ def multipart_post1(s, file_path):
 
 
 def test_003():
-    assert 0 == multipart_post1(False, './demo_test.py')
+    assert 0 == multipart_post1(False, os.path.split(os.path.realpath(__file__))[0] + '/../../data/err_code.py')
 
 
 def multipart_post2(s, file_path):
     try:
         if s:
-            url = 'http://%s:%d' % (conf.demo_server_addr, conf.demo_server_web_security_port)
+            url = 'http://%s:%d' % (conf.demo_server_addr, conf.demo_server_web_security_port) + '/multipart2'
         else:
-            url = 'http://%s:%d' % (conf.demo_server_addr, conf.demo_server_web_port)
+            url = 'http://%s:%d' % (conf.demo_server_addr, conf.demo_server_web_port) + '/multipart2'
 
         # 头部
         headers = {
@@ -175,11 +174,13 @@ def multipart_post2(s, file_path):
             },
             boundary=boundary
         )
-        headers['Content-Type'] = multipart_encoder.content_type
+
         # 请求头必须包含一个特殊的头信息,类似于Content-Type: multipart/form-data; boundary=${bound}
-        # 注意：这里请求头也可以自己设置Content-Type信息，用于自定义boundary
-        r = requests.post(url, data=multipart_encoder, headers=headers)
-        print(r.text)
+        headers['Content-Type'] = multipart_encoder.content_type
+
+        rsp = requests.post(url, data=multipart_encoder, headers=headers)
+        LOG_DEBUG(rsp.status_code, rsp.text)
+
         # 注意,不要设置cookies等其他参数,否则会报错
 
         ret = 0
@@ -191,11 +192,11 @@ def multipart_post2(s, file_path):
 
 
 def test_004():
-    assert 0 == multipart_post2(False, './demo_test.py')
+    assert 0 == multipart_post2(False, os.path.split(os.path.realpath(__file__))[0] + '/../../data/err_code.py')
 
 
 if __name__ == '__main__':
     # test_001()
     # test_002()
-    # test_003()
+    test_003()
     test_004()
