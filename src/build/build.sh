@@ -13,7 +13,9 @@ function Usage()
          -b debug|release  build projects.
          -r debug|release  rebuild projects.
          -c debug|release  clear tmp files.
-         -p debug|release  pack projects."
+         -p debug|release  pack projects.
+         [PROJ_LIST]" # eg. "proto common_util demo_server"
+
     exit 0   
 }
 
@@ -52,18 +54,26 @@ while getopts "b:c:r:p:h" opt; do
                 echo "invalid build type: ${OPTARG}"
                 exit 1
             fi
-            
+
             MakeDir ${OUTPUT_DIR}
+
+            # 可以由外部输入需要编译的proj list，替换预定义的值。格式：./build.sh -b debug "proto common_util"，需要几个就写几个，用空格分隔
+            if [ $# == 3 ]; then
+                PROJ_LIST=($3)
+            fi
 
             ###############################################################################
             for i in ${PROJ_LIST[@]}; do
                 PROJ=$i
+                echo "----------" ${PROJ} "----------"
 
                 cd ${CODE_BASE_DIR}
                 BuildProj ${PROJ} ${SCRIPT_PATH}/../${PROJ} ${BUILD_PARENT_DIR}/${PROJ} ${BUILD_TYPE} ${INSTALL_PREFIX} ${RUN_TEST}
-								
+
                 # cd ${CODE_BASE_DIR}
                 # InstallProj ${PROJ} ${BUILD_PARENT_DIR}/${PROJ}
+
+                echo ""
             done
 
             Pack ${OPTARG} ${PACK_CONF}
@@ -86,15 +96,23 @@ while getopts "b:c:r:p:h" opt; do
             
             MakeDir ${OUTPUT_DIR}
 
+            # 可以由外部输入需要重新编译的proj list，替换预定义的值。格式：./build.sh -r debug "proto common_util"，需要几个就写几个，用空格分隔
+            if [ $# == 3 ]; then
+                PROJ_LIST=($3)
+            fi
+
             ###############################################################################
             for i in ${PROJ_LIST[@]}; do
                 PROJ=$i
+                echo "----------" ${PROJ} "----------"
 
                 cd ${CODE_BASE_DIR}
                 RebuildProj ${PROJ} ${SCRIPT_PATH}/../${PROJ} ${BUILD_PARENT_DIR}/${PROJ} ${BUILD_TYPE} ${INSTALL_PREFIX} ${RUN_TEST}
 
                 # cd ${CODE_BASE_DIR}
                 # InstallProj ${PROJ} ${BUILD_PARENT_DIR}/${PROJ}
+
+                echo ""
             done
 
             Pack ${OPTARG} ${PACK_CONF}
@@ -109,11 +127,20 @@ while getopts "b:c:r:p:h" opt; do
                 exit 1
             fi
 
+            # 可以由外部输入需要清理的proj list，替换预定义的值。格式：./build.sh -c debug "proto common_util"，需要几个就写几个，用空格分隔
+            if [ $# == 3 ]; then
+                PROJ_LIST=($3)
+            fi
+
             ###############################################################################
             for i in ${PROJ_LIST[@]}; do
                 PROJ=$i
+                echo "----------" ${PROJ} "----------"
+
                 cd ${CODE_BASE_DIR}
                 ClearProj ${PROJ} ${BUILD_PARENT_DIR}/${PROJ}
+
+                echo "done."
             done
         ;;
         p)
