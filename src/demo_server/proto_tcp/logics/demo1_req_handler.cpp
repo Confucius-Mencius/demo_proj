@@ -84,9 +84,9 @@ void Demo1ReqHandler::OnMsg(const ConnGUID* conn_guid, const ::proto::MsgHead& m
     ss::Demo3Req demo3_req;
     demo3_req.set_a(3);
 
-    if (SendToTCPThread(logic_ctx_->scheduler, conn_guid, demo3_req_msg_head, &demo3_req, -1) != 0)
+    if (SendToProtoTCPThread(logic_ctx_->scheduler, conn_guid, demo3_req_msg_head, &demo3_req, -1) != 0)
     {
-        LOG_ERROR("failed to send to tcp thread, " << *conn_guid << ", msg id: " << demo3_req_msg_head.msg_id);
+        LOG_ERROR("failed to send to proto tcp thread, " << *conn_guid << ", msg id: " << demo3_req_msg_head.msg_id);
         return;
     }
 
