@@ -56,7 +56,7 @@ inline int BroadcastToClient(tcp::proto::SchedulerInterface* scheduler, ::proto:
             break;
         }
 
-        for (const auto& conn_guid: conn_guid_vec)
+        for (const auto& conn_guid : conn_guid_vec)
         {
             scheduler->SendToClient(conn_guid, data, len);
         }
@@ -103,9 +103,9 @@ inline int SendToWorkThread(tcp::proto::SchedulerInterface* scheduler, const Con
     return ret;
 }
 
-inline int SendToTCPThread(tcp::proto::SchedulerInterface* scheduler, const ConnGUID* conn_guid,
-                           const ::proto::MsgHead& msg_head, const google::protobuf::Message* protobuf_msg,
-                           int tcp_thread_idx)
+inline int SendToProtoTCPThread(tcp::proto::SchedulerInterface* scheduler, const ConnGUID* conn_guid,
+                                const ::proto::MsgHead& msg_head, const google::protobuf::Message* protobuf_msg,
+                                int proto_tcp_thread_idx)
 {
     char* msg_body = nullptr;
     size_t msg_body_len = 0;
@@ -116,7 +116,7 @@ inline int SendToTCPThread(tcp::proto::SchedulerInterface* scheduler, const Conn
         return -1;
     }
 
-    int ret = scheduler->SendToTCPThread(conn_guid, msg_head, msg_body, msg_body_len, tcp_thread_idx);
+    int ret = scheduler->SendToProtoTCPThread(conn_guid, msg_head, msg_body, msg_body_len, proto_tcp_thread_idx);
     FreeProtobufMsgBuf(&msg_body);
     return ret;
 }
