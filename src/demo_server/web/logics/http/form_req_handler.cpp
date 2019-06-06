@@ -5,8 +5,8 @@
 #include <rapidjson/writer.h>
 #include <rapidjson/stringbuffer.h>
 #include "http_rsp_maker.h"
-#include "web_scheduler_interface.h"
 #include "log_util.h"
+#include "web_scheduler_interface.h"
 
 namespace tcp
 {
